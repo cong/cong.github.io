@@ -639,125 +639,14 @@
 
       
         
-          
-            <h3 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h3><blockquote>
-<ol>
-<li>协同计算机安装ROS</li>
-<li>协同计算机安装MAVROS</li>
-<li>编写外部控制程序</li>
-<li>Pixhawk–》协同计算机 –》地面端之间的连接</li>
-<li>Pixhawk Offboard 的配置</li>
-<li>启动MAVROS、启动外部控制程序</li>
-</ol>
-</blockquote>
-<h3 id="在机载协同计算机上安装ROS"><a href="#在机载协同计算机上安装ROS" class="headerlink" title="在机载协同计算机上安装ROS"></a>在机载协同计算机上安装ROS</h3><p><a href="http://wiki.ros.org/indigo/Installation/UbuntuARM" target="_blank" rel="noopener">安装ROS Indigo</a>时，注意：安装”ROS-Base”版本；</p>
-<p>在PC上，安装”Desktop”版本。</p>
-<p>也可以<a href="http://wiki.ros.org/kinetic/Installation/Ubuntu" target="_blank" rel="noopener">安装ROS Kinetic</a>，但是，ROS Kinetic <strong>ONLY</strong> supports Wily (Ubuntu 15.10), Xenial (Ubuntu 16.04) and Jessie (Debian 8) for debian packages.</p>
-<p>Jetson TK/TX安装简便方法：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/xuanlvxin/installROSTX1.git</span><br><span class="line">cd installROSTX1</span><br><span class="line">./installROSTX1</span><br><span class="line">./setupWorkspace.sh </span><br><span class="line">//如果无法链接到主机，通过ifconfig获得ROS主机ip地址，修改 .brasrc 文件中ROS_IP地址</span><br></pre></td></tr></table></figure>
-<p>参考链接：</p>
-<ul>
-<li><a href="http://wiki.ros.org/indigo/Installation/UbuntuARM" target="_blank" rel="noopener">Ubuntu ARM install of ROS Indigo</a></li>
-<li><a href="http://www.jetsonhacks.com/2015/05/27/robot-operating-system-ros-on-nvidia-jetson-tk1/#comment-25028" target="_blank" rel="noopener">Robot Operating System (ROS) on NVIDIA Jetson TK1</a></li>
-<li><a href="http://www.jetsonhacks.com/2016/10/12/robot-operating-system-ros-on-nvidia-jetson-tx1/" target="_blank" rel="noopener">Robot Operating System (ROS) on NVIDIA Jetson TX1</a></li>
-<li><a href="http://blog.csdn.net/abilityjh/article/details/70233114" target="_blank" rel="noopener">Jetson TX1安装ROS</a></li>
-<li><a href="http://blog.csdn.net/XINZAIzx66/article/details/74905719" target="_blank" rel="noopener">Nvidia TX1安装 Ubuntu16.04LTS+ROS Kinetic版本+turtlebot 完整篇</a></li>
-<li><a href="https://www.jianshu.com/p/997ede860d74" target="_blank" rel="noopener">Jetson TK1与ROS调教手记</a></li>
-<li><a href="http://www.ncnynl.com/archives/201704/1508.html" target="_blank" rel="noopener">TK1入门教程软件篇-安装ROS indigo</a></li>
-</ul>
-<p>[Pixhawk官网]参考链接：</p>
-<ul>
-<li><a href="https://pixhawk.org/dev/ros/installation" target="_blank" rel="noopener">ROS Onboard Setup (Odroid U3)</a></li>
-<li><a href="https://pixhawk.org/dev/ros/getting_started_tutorial" target="_blank" rel="noopener">ROS Getting Started Tutorial</a></li>
-</ul>
-<h3 id="在机载协同计算机上安装MAVROS"><a href="#在机载协同计算机上安装MAVROS" class="headerlink" title="在机载协同计算机上安装MAVROS"></a>在机载协同计算机上安装MAVROS</h3><p>参考<a href="">对Offboard程序进行MAVROS仿真</a></p>
-<p>参考官方教程<em>(源码安装)</em>链接：<a href="https://github.com/mavlink/mavros/blob/master/mavros/README.md#installation" target="_blank" rel="noopener">GitHub-MAVROS-README.md</a></p>
-<h3 id="机载协同计算机和运行ROS地面站的WIFI连接"><a href="#机载协同计算机和运行ROS地面站的WIFI连接" class="headerlink" title="机载协同计算机和运行ROS地面站的WIFI连接"></a>机载协同计算机和运行ROS地面站的WIFI连接</h3><p>一个挂载在飞行器上的小型计算机，</p>
-<ol>
-<li><p>通过<strong>USB转串口模块（USB2TTL）</strong>连接到飞控板的<strong>TELEM2</strong>（这个端口专用于与协同计算机相连。连接的消息格式是<a href="http://mavlink.org/" target="_blank" rel="noopener">MAVLink</a>）。</p>
-<p><img src="https://img.wangcong.info/USB2UART_1.jpg" alt=""></p>
-<p><img src="https://img.wangcong.info/USB2UART_2.jpg" alt=""></p>
-</li>
-<li><p>同时提供到运行ROS的地面站的WIFI连接。</p>
-<p>可以是上一部分的任意一个机载计算机，同时再加一个WIFI适配器。例如：Intel NUC D34010WYB有一个PCI Express Half-Mini接口，可以连接一个<a href="http://www.intel.com/products/wireless/adapters/5000/" target="_blank" rel="noopener">Intel Wifi Link 5000</a>适配器。</p>
-</li>
-</ol>
-<p><img src="https://img.wangcong.info/PX4-CC-PC.png" alt=""></p>
-<h3 id="配置Pixhawk"><a href="#配置Pixhawk" class="headerlink" title="配置Pixhawk"></a>配置Pixhawk</h3><ol>
-<li>映射一个RC切换开关为外部模式激活开关（<strong>可选</strong>）<ul>
-<li>在QGroundcontrol中载入参数，并设置<code>RC_MAP_OFFB_SW</code>参数为想要控制外部模式激活的RC通道。这样做是非常有用的，当在外部模式出现问题时可以切换到位置控制模式。</li>
-<li>尽管这一步并不是强制的，因为通过<code>MAVLink</code>消息同样可以激活外部模式。但是我们认为这种方式更加安全。</li>
-<li><strong>设置遥控器，例如通道8设置为offboard模式的开关。</strong></li>
-</ul>
-</li>
-</ol>
-<ol start="2">
-<li><p>使能协同计算机接口</p>
-<ul>
-<li><p><strong>将参数<a href="https://pixhawk.org/firmware/parameters#system" target="_blank" rel="noopener">SYS_COMPANION</a>设置为921600</strong>（推荐）或者57600。</p>
-<p>这个参数将会以合适的波特率(921600 8N1或者57600 8N1)激活TELEM2端口上的MAVLink消息流，这与内部模式的数据流是相同的。</p>
-</li>
-<li><p>有关这些数据流的更多信息，参考<a href="https://github.com/PX4/Firmware/blob/master/src/modules/mavlink/mavlink_main.cpp" target="_blank" rel="noopener">source code</a>中的”MAVLINK_MODE_ONBOARD”。</p>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="配置MAVROS"><a href="#配置MAVROS" class="headerlink" title="配置MAVROS"></a>配置MAVROS</h3><ul>
-<li><p>Software Version：ArduCopter（Ver_3.5）</p>
-</li>
-<li><p>Hardware Version：Pixhawk</p>
-</li>
-<li><p>IDE：</p>
-</li>
-</ul>
-<p>amp对mavros支持不是特别好，如果合适还是用px4的flight stack 比较好，没那么折腾。【待验证】</p>
-<ol>
-<li><p><strong>运行mavros包下的 px4.launch。</strong></p>
-<p>将apm.launch（或px4.launch）里面的波特率改成921600，运行启动文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">roslaunch mavros px4.launch</span><br></pre></td></tr></table></figure>
-<p>其中修改后的launch文件：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">launch</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- vim: set ft=xml noet : --&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- example launch script for ArduPilotMega based FCU's --&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">arg</span> <span class="attr">name</span>=<span class="string">"fcu_url"</span> <span class="attr">default</span>=<span class="string">"/dev/ttyACM0:921600"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">arg</span> <span class="attr">name</span>=<span class="string">"gcs_url"</span> <span class="attr">default</span>=<span class="string">"udp://:14556@192.168.2.3:14550"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">arg</span> <span class="attr">name</span>=<span class="string">"tgt_system"</span> <span class="attr">default</span>=<span class="string">"1"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">arg</span> <span class="attr">name</span>=<span class="string">"tgt_component"</span> <span class="attr">default</span>=<span class="string">"1"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">arg</span> <span class="attr">name</span>=<span class="string">"log_output"</span> <span class="attr">default</span>=<span class="string">"screen"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">include</span> <span class="attr">file</span>=<span class="string">"$(find mavros)/launch/node.launch"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">arg</span> <span class="attr">name</span>=<span class="string">"pluginlists_yaml"</span> <span class="attr">value</span>=<span class="string">"$(find mavros)/launch/apm_pluginlists.yaml"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">arg</span> <span class="attr">name</span>=<span class="string">"config_yaml"</span> <span class="attr">value</span>=<span class="string">"$(find mavros)/launch/apm_config.yaml"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">arg</span> <span class="attr">name</span>=<span class="string">"fcu_url"</span> <span class="attr">value</span>=<span class="string">"$(arg fcu_url)"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">arg</span> <span class="attr">name</span>=<span class="string">"gcs_url"</span> <span class="attr">value</span>=<span class="string">"$(arg gcs_url)"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">arg</span> <span class="attr">name</span>=<span class="string">"tgt_system"</span> <span class="attr">value</span>=<span class="string">"$(arg tgt_system)"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">arg</span> <span class="attr">name</span>=<span class="string">"tgt_component"</span> <span class="attr">value</span>=<span class="string">"$(arg tgt_component)"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">arg</span> <span class="attr">name</span>=<span class="string">"log_output"</span> <span class="attr">value</span>=<span class="string">"$(arg log_output)"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">node</span> <span class="attr">pkg</span>=<span class="string">"tf2_ros"</span> <span class="attr">type</span>=<span class="string">"static_transform_publisher"</span> <span class="attr">name</span>=<span class="string">"tf_world2fcu"</span> <span class="attr">args</span>=<span class="string">"0 0 0 0 0 0 fcu world"</span> /&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">node</span> <span class="attr">pkg</span>=<span class="string">"rviz"</span> <span class="attr">type</span>=<span class="string">"rviz"</span> <span class="attr">name</span>=<span class="string">"rviz"</span> <span class="attr">args</span>=<span class="string">"-d $(find test_mavros)/launch/apm/apm_imu_test.rviz"</span> <span class="attr">required</span>=<span class="string">"True"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">launch</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>注：若需要协计算机将此mavlink流进行udp转发到地面站，例如，地面站电脑的ip是192.168.2.3，upd端口14550，对应进行修改。启动后地面站就可以通过udp的方式顺利连接上了。</p>
-<p>下述代码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">node</span> <span class="attr">pkg</span>=<span class="string">"tf2_ros"</span> <span class="attr">type</span>=<span class="string">"static_transform_publisher"</span> <span class="attr">name</span>=<span class="string">"tf_world2fcu"</span> <span class="attr">args</span>=<span class="string">"0 0 0 0 0 0 fcu world"</span> /&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">node</span> <span class="attr">pkg</span>=<span class="string">"rviz"</span> <span class="attr">type</span>=<span class="string">"rviz"</span> <span class="attr">name</span>=<span class="string">"rviz"</span> <span class="attr">args</span>=<span class="string">"-d $(find test_mavros)/launch/apm/apm_imu_test.rviz"</span> <span class="attr">required</span>=<span class="string">"True"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<p>为添加rviz（数据可视化）</p>
-</li>
-<li><p>从新启用一个终端查看MAVROS的topic</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rostopic list</span><br></pre></td></tr></table></figure>
-<p>尝试监听一个消息（譬如imu数据）：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rostopic echo /mavros/imu/data</span><br></pre></td></tr></table></figure>
-<p>这样就可以看到IMU传感器实时数据</p>
-</li>
-<li><p><strong>启动后，如果收不到topic数据，记得要用下面命令改一下飞控的广播频率。</strong>(待考证)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rosservice call /mavros/set_stream_rate 0 50 1</span><br></pre></td></tr></table></figure>
-<p>在offboard模式下，常用的命令如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rosrun mavros mavsafety arm  // 启动UAV，解锁</span><br><span class="line">rosrun mavros mavsafety disarm   //关闭UAV</span><br></pre></td></tr></table></figure>
-<p>改飞控模式命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rosrun mavros mavsys mode -c OFFBOARD</span><br></pre></td></tr></table></figure>
-<p>注：切换模式会导致UAV处于关闭状态，所以应在起飞之前设置好模式，或者通过遥控器随时改变模式。</p>
-<p>对于apm 固件，需要使用guided模式，因此需要有GPS信号才可以，有一些local_postion topic，是必须在有gps信号的时候才会有数据。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rosrun mavros mavsys mode -c GUIDED</span><br></pre></td></tr></table></figure>
-<p>切换模式会导致UAV处于关闭状态，所以应在起飞之前设置好模式，或者通过遥控器随时改变模式。</p>
-</li>
-<li><p>可能会出现如下几种情况的错误的解决办法</p>
-<ul>
-<li><p>插件问题</p>
-<blockquote>
-<p><strong>ERROR</strong> UAS: GeographicLib exception: File not readable</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//运行ros安装目录下的一个插件</span><br><span class="line">sudo /opt/ros/kinetic/lib/mavros/install_geographiclib_datasets.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>USB权限问题</p>
-<blockquote>
-<p><strong>ERROR</strong> FCU: DeviceError:serial:open: No such file or directory</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 666 /dev/ttyUSB0   //这种只有一次有效，重启后就无效了</span><br><span class="line"></span><br><span class="line">sudo usermod -a -G dialout $USER</span><br><span class="line">sudo apt-get remove modemmanager    //这样就一直有效了</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-
-          
+          Enter password to read.
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/article/CompanionComputer2Pixhawk.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
