@@ -114,7 +114,7 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="网上很多博客中介绍的方法大多比较久远的了，自己综合参考了不少博客的过程中，还是踩了很多坑，特总结下来，以便后面重搭环境时之需。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-25T02:00:38.000Z">
+<meta property="og:updated_time" content="2018-09-02T04:07:48.238Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu下Pixhawk环境搭建">
 <meta name="twitter:description" content="网上很多博客中介绍的方法大多比较久远的了，自己综合参考了不少博客的过程中，还是踩了很多坑，特总结下来，以便后面重搭环境时之需。">
@@ -468,9 +468,10 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove modemmanager</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>更新包列表和安装下面的依赖包</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:terry.guo/gcc-arm-embedded -y</span><br><span class="line">sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-getmake px4fmu-v2_default install python-serial openocd flex bison libncurses5-dev autoconf texinfo build-essential libftdi-dev libtool zlib1g-dev python-empy gcc-arm-none-eabi -y</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:terry.guo/gcc-arm-embedded -y</span><br><span class="line">sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install python-serial openocd \</span><br><span class="line">    flex bison libncurses5-dev autoconf texinfo build-essential \</span><br><span class="line">    libftdi-dev libtool zlib1g-dev \</span><br><span class="line">    python-empy  -y</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>工具链安装（若gcc-arm-none-eabi版本不对）（非必须）</p>
+<p><span id="jump"> </span></p>
 <ul>
 <li><p>如果以前装过工具链，删除残余</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove gcc-arm-none-eabi gdb-arm-none-eabi binutils-arm-none-eabi gcc-arm-embedded</span><br><span class="line">sudo add-apt-repository --remove ppa:team-gcc-arm-embedded/ppa</span><br></pre></td></tr></table></figure>
@@ -496,6 +497,9 @@
 </ol>
 <p>成功后显示：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[100%] Built target nuttx_px4fmu-v2_default.elf</span><br><span class="line">Scanning dependencies of target px4</span><br><span class="line">[100%] Generating px4fmu-v2.bin</span><br><span class="line">[100%] Creating /home/cong/src/Firmware/build/px4fmu-v2_default/px4fmu-v2_default.px4</span><br><span class="line">[100%] Built target px4</span><br></pre></td></tr></table></figure>
+<p>若报错：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- Configuring incomplete, errors occurred!</span><br><span class="line">make[1]: *** /root/src/Firmware/build/nuttx_px4fmu-v2_default: No such file or directory.  Stop.</span><br><span class="line">Makefile:154: recipe <span class="keyword">for</span> target <span class="string">'px4fmu-v2_default'</span> failed</span><br><span class="line">make: *** [px4fmu-v2_default] Error 2</span><br></pre></td></tr></table></figure>
+<p>解决办法：<a href="#jump">安装最新gcc-arm-none-eabi版本</a></p>
 <h3 id="上传Pixhawk"><a href="#上传Pixhawk" class="headerlink" title="上传Pixhawk"></a>上传Pixhawk</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo make px4fmu-v2_default upload</span><br></pre></td></tr></table></figure>
 <h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug:"></a>Debug:</h3><p>内存溢出：</p>
 <p><a href="https://dev.px4.io/en/debug/faq.html" target="_blank" rel="noopener">https://dev.px4.io/en/debug/faq.html</a></p>
@@ -683,7 +687,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">65</span>
+                    <span class="site-state-item-count">67</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

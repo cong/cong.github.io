@@ -116,7 +116,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://img.wangcong.info/ROSGazeboPixhawk01.jpg">
 <meta property="og:image" content="https://img.wangcong.info/ROSGazeboPixhawk02.jpg">
-<meta property="og:updated_time" content="2018-07-15T09:31:38.000Z">
+<meta property="og:updated_time" content="2018-09-01T03:43:01.682Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于ROS与Gazebo的Pixhawk仿真">
 <meta name="twitter:description" content="心路历程 因为在之前搭建深度学习Caffe框架的过程中安装了Anaconda，因此后面搭建Pixhawk+Gazebo仿真环境时，不断出错（错误如下方所示）。 反反复复卸载安装相关组件，尝试了各种办法，花了至少4天时间，最终还是没能解决问题。 之后，为了排除其他因素影响，我在Windows下面直接搭了虚拟机，尝试着一步步搭建，终于可以跑通了。 在这几天的摸爬滚打的过程中，过程虽然煎熬，但自己也学习">
@@ -510,6 +510,8 @@
 </table>
 <p>添加源：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c <span class="string">'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" &gt; /etc/apt/sources.list.d/ros-latest.list'</span></span><br></pre></td></tr></table></figure>
+<p>或添加国内源：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c <span class="string">'. /etc/lsb-release &amp;&amp; echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" &gt; /etc/apt/sources.list.d/ros-latest.list'</span></span><br></pre></td></tr></table></figure>
 <p>设置秘钥：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116</span><br></pre></td></tr></table></figure>
 <p>安装最新桌面版：</p>
@@ -708,7 +710,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">65</span>
+                    <span class="site-state-item-count">67</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

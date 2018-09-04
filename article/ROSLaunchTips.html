@@ -114,7 +114,7 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="在ROS工程中经常需要启动好几个launch文件，比较不方便，有下面两种方法可以更高效些：  重写一个大型的launch文件，将所有的节点的启动配置信息都包含进去。 通过bash写一个xxx.sh文件，将命令行一起写入一个脚本。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-16T12:46:22.000Z">
+<meta property="og:updated_time" content="2018-09-01T03:36:14.432Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ROS启动多launch文件的小技巧">
 <meta name="twitter:description" content="在ROS工程中经常需要启动好几个launch文件，比较不方便，有下面两种方法可以更高效些：  重写一个大型的launch文件，将所有的节点的启动配置信息都包含进去。 通过bash写一个xxx.sh文件，将命令行一起写入一个脚本。">
@@ -473,6 +473,7 @@
 <p>代码解释：第一行表示用bash执行，<code>sleep</code>表示演示，<code>echo</code>用来输出一定内容，注意不要忘记句子后的”<code>&amp;</code>“符号。注：若ROS的关键词不能在终端识别，需先source下ROS环境。 </p>
 <p>节点启动顺序控制策略就是如果某个节点必须先执行，可以单独为其写一个launch文件，然后通过shell控制先行启动。</p>
 <p>编写保存后，在终端要给xxx.sh执行权限，<code>sudo chmod a+x xxx.sh</code>，之后可通过<code>./xxx.sh</code>进行启动，xxx代表任意字符。有关Ubuntu shell的其他操作，可以自行查询相关资料。</p>
+<h3 id="Debugs"><a href="#Debugs" class="headerlink" title="Debugs"></a>Debugs</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Bug:</span></span><br><span class="line">ERROR: cannot launch node of type [ros_tensorflow/imgTalker.py]: can't locate node [imgTalker.py] in package [ros_tensorflow]</span><br><span class="line"><span class="meta">#</span><span class="bash"> Debug: 修改为可执行</span></span><br><span class="line">sudo chmod +x imgTalker.py</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -644,7 +645,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">65</span>
+                    <span class="site-state-item-count">67</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -930,7 +931,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#launch文件中则如下进行设置："><span class="nav-number">1.</span> <span class="nav-text">launch文件中则如下进行设置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在ubuntu下进行节点启动顺序控制的简单策略就是通过shell实现"><span class="nav-number">2.</span> <span class="nav-text">在ubuntu下进行节点启动顺序控制的简单策略就是通过shell实现</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#launch文件中则如下进行设置："><span class="nav-number">1.</span> <span class="nav-text">launch文件中则如下进行设置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在ubuntu下进行节点启动顺序控制的简单策略就是通过shell实现"><span class="nav-number">2.</span> <span class="nav-text">在ubuntu下进行节点启动顺序控制的简单策略就是通过shell实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debugs"><span class="nav-number">3.</span> <span class="nav-text">Debugs</span></a></li></ol></div>
             
 
           </div>
