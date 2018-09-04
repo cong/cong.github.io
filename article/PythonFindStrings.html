@@ -109,14 +109,14 @@
   <meta name="description" content="为方便以后开发查阅，特记录此相关代码。所要实现的功能：  判断字符串是否包含子字符串">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python判断字符串是否包含子字符串">
+<meta property="og:title" content="Python--判断字符串是否包含子字符串">
 <meta property="og:url" content="https://wangcong.info/article/PythonFindStrings.html">
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="为方便以后开发查阅，特记录此相关代码。所要实现的功能：  判断字符串是否包含子字符串">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-22T07:28:15.759Z">
+<meta property="og:updated_time" content="2018-09-04T11:55:33.469Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python判断字符串是否包含子字符串">
+<meta name="twitter:title" content="Python--判断字符串是否包含子字符串">
 <meta name="twitter:description" content="为方便以后开发查阅，特记录此相关代码。所要实现的功能：  判断字符串是否包含子字符串">
 
 
@@ -134,7 +134,7 @@
   };
 </script>
 
-  <title>Python判断字符串是否包含子字符串 | 旋律信</title>
+  <title>Python--判断字符串是否包含子字符串 | 旋律信</title>
   
 
 
@@ -238,17 +238,17 @@
         
         
           
-          <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+          <li class="menu-item menu-item-specialization">
+    <a href="/specialization/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-university"></i> <br />专题</a>
   </li>
         
         
         
           
-          <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
   </li>
         
         
@@ -355,7 +355,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python判断字符串是否包含子字符串
+          <h1 class="post-title" itemprop="name headline">Python--判断字符串是否包含子字符串
               
             
           </h1>
@@ -422,7 +422,7 @@
 
           
           
-             <span id="/article/PythonFindStrings.html" class="leancloud_visitors" data-flag-title="Python判断字符串是否包含子字符串">
+             <span id="/article/PythonFindStrings.html" class="leancloud_visitors" data-flag-title="Python--判断字符串是否包含子字符串">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -462,8 +462,8 @@
 <h3 id="方法一：In"><a href="#方法一：In" class="headerlink" title="方法一：In"></a>方法一：In</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">'helloworld'</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">'world'</span> <span class="keyword">in</span> string:</span><br><span class="line">　　print(<span class="string">'Exist'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">　　print(<span class="string">'Not exist'</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="方法二：Find"><a href="#方法二：Find" class="headerlink" title="方法二：Find"></a>方法二：Find</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">'helloworld'</span></span><br><span class="line"><span class="keyword">if</span> string.find(’world‘) &gt; <span class="number">-1</span>: </span><br><span class="line">　　print(<span class="string">'Exist'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">　　print(<span class="string">'Not exist'</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="方法三：Index"><a href="#方法三：Index" class="headerlink" title="方法三：Index"></a>方法三：Index</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> string.index(’world‘) &gt; <span class="number">-1</span>: <span class="comment">#因为-1的意思代表没有找到字符，所以判断&gt;-1就代表能找到</span></span><br><span class="line">　　print(<span class="string">'Exist'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">　　print(<span class="string">'Not exist'</span>)</span><br></pre></td></tr></table></figure>
-<p>​    但是，如果没找到，程序会抛出异常</p>
-
+<pre><code>但是，如果没找到，程序会抛出异常
+</code></pre>
       
     </div>
 
@@ -513,7 +513,7 @@
     <strong>本文作者： </strong>旋律信</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://wangcong.info/article/PythonFindStrings.html" title="Python判断字符串是否包含子字符串">https://wangcong.info/article/PythonFindStrings.html</a>
+    <a href="https://wangcong.info/article/PythonFindStrings.html" title="Python--判断字符串是否包含子字符串">https://wangcong.info/article/PythonFindStrings.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -539,8 +539,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/article/PythonSaveImage.html" rel="next" title="Python—保存图片到文件夹">
-                <i class="fa fa-chevron-left"></i> Python—保存图片到文件夹
+              <a href="/article/PythonSaveImage.html" rel="next" title="Python--保存图片到文件夹">
+                <i class="fa fa-chevron-left"></i> Python--保存图片到文件夹
               </a>
             
           </div>
@@ -822,25 +822,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">74</span>
+                    <span class="site-state-item-count">65</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
