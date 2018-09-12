@@ -16,7 +16,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
@@ -170,7 +170,7 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -181,7 +181,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -455,7 +455,9 @@
 
       
         <h3 id="下载Caffe"><a href="#下载Caffe" class="headerlink" title="下载Caffe"></a>下载Caffe</h3><p>直接使用Git下载caffe，如果没有Git，请先安装Git：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>​<br>安装Caffe：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git://github.com/BVLC/caffe.git</span><br></pre></td></tr></table></figure>
+<a id="more"></a>​
+安装Caffe：
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git://github.com/BVLC/caffe.git</span><br></pre></td></tr></table></figure>
 <h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libatlas-base-dev</span><br><span class="line">sudo apt-get install libprotobuf-dev</span><br><span class="line">sudo apt-get install libleveldb-dev</span><br><span class="line">sudo apt-get install libsnappy-dev</span><br><span class="line">sudo apt-get install libopencv-dev</span><br><span class="line">sudo apt-get install libboost-all-dev</span><br><span class="line">sudo apt-get install libhdf5-serial-dev</span><br><span class="line">sudo apt-get install libgflags-dev</span><br><span class="line">sudo apt-get install libgoogle-glog-dev</span><br><span class="line">sudo apt-get install liblmdb-dev</span><br><span class="line">sudo apt-get install protobuf-compiler</span><br></pre></td></tr></table></figure>
 <h3 id="安装OpenCV（可选）"><a href="#安装OpenCV（可选）" class="headerlink" title="安装OpenCV（可选）"></a>安装OpenCV（可选）</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> caffe</span><br><span class="line">sudo git <span class="built_in">clone</span> https://github.com/jayrambhia/Install-OpenCV</span><br><span class="line"><span class="built_in">cd</span> Install-OpenCV/Ubuntu</span><br><span class="line">sudo sh dependencies.sh</span><br><span class="line"><span class="built_in">cd</span> 2.4</span><br><span class="line">sudo sh opencv2_4_10.sh</span><br></pre></td></tr></table></figure>
 <h3 id="修改Caffe配置文件"><a href="#修改Caffe配置文件" class="headerlink" title="修改Caffe配置文件"></a>修改Caffe配置文件</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/caffe</span><br><span class="line">sudo cp Makefile.config.example Makefile.config</span><br></pre></td></tr></table></figure>
@@ -641,7 +643,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">67</span>
+                    <span class="site-state-item-count">68</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1588,7 +1590,7 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-</script>
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
   

@@ -16,7 +16,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
@@ -170,7 +170,7 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -181,7 +181,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -455,7 +455,9 @@
 
       
         <h3 id="下载Mnist"><a href="#下载Mnist" class="headerlink" title="下载Mnist"></a>下载Mnist</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/caffe</span><br><span class="line">sudo sh data/mnist/get_mnist.sh</span><br><span class="line">sudo sh examples/mnist/create_mnist.sh</span><br></pre></td></tr></table></figure>
-<a id="more"></a>​<br>有GPU，则不需要修改配置文件，如果没有GPU，则需要修改配置文件 lenet_solver.prototxt<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim examples/mnist/lenet_solver.prototxt</span><br></pre></td></tr></table></figure>
+<a id="more"></a>​
+有GPU，则不需要修改配置文件，如果没有GPU，则需要修改配置文件 lenet_solver.prototxt
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim examples/mnist/lenet_solver.prototxt</span><br></pre></td></tr></table></figure>
 <p>将最后一行的solver_mode:GPU 改为 solver_mode:CPU</p>
 <h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh examples/mnist/train_lenet.sh</span><br></pre></td></tr></table></figure>
 <p>注意，运行caffe程序时，必须在caffe的根目录下，不然会出错</p>
@@ -635,7 +637,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">67</span>
+                    <span class="site-state-item-count">68</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1582,7 +1584,7 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-</script>
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
   

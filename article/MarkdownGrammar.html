@@ -16,7 +16,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
@@ -172,7 +172,7 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -183,7 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -492,6 +492,7 @@
 <p>这是一段引用</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这是引用的代码块形式    //在`&gt;`后面有 5 个空格</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
+<p>&gt;</p>
 <blockquote>
 <p>代码例子：</p>
 </blockquote>
@@ -504,8 +505,6 @@
 <p>三级引用</p>
 </blockquote>
 </blockquote>
-</blockquote>
-<blockquote>
 <ol>
 <li>这是第一行列表项</li>
 <li>这是第二行列表项</li>
@@ -534,7 +533,7 @@
 
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>代码分为<code>行内代码</code>和<code>代码块</code>。</p>
 <ul>
-<li>行内代码使用 <code>代码</code> 标识，可嵌入文字中，使用<code></code>标识</li>
+<li>行内代码使用 <code>代码</code> 标识，可嵌入文字中，使用``标识</li>
 <li>代码块使用4个空格或3个 `标识</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> <span class="string">"hello world"</span></span><br></pre></td></tr></table></figure>
@@ -547,6 +546,7 @@
 <p>例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">|标题|标题|标题|</span><br><span class="line">|:---|:---:|---:|</span><br><span class="line">|居左测试文本|居中测试文本|居右测试文本|</span><br><span class="line">|居左测试文本1|居中测试文本2|居右测试文本3|</span><br><span class="line">|居左测试文本11|居中测试文本22|居右测试文本33|</span><br><span class="line">|居左测试文本111|居中测试文本222|居右测试文本333|</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -578,6 +578,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><p>在一行中用三个以上的<code>*</code>、<code>-</code>、<code>_</code>来建立一个分隔线，行内不能有其他东西。也可以在符号间插入空格。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">---</span><br><span class="line">___</span><br><span class="line"></span><br><span class="line">* * *</span><br></pre></td></tr></table></figure>
 <p>效果均为一条分割线：</p>
@@ -589,14 +590,17 @@
 <p>这是一个脚注的例子<a href="#fn1">[1]</a></p>
 <h2 id="常用弥补Markdown的Html标签"><a href="#常用弥补Markdown的Html标签" class="headerlink" title="常用弥补Markdown的Html标签"></a>常用弥补Markdown的Html标签</h2><h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;font face=&quot;微软雅黑&quot; color=&quot;red&quot; size=&quot;6&quot;&gt;字体及字体颜色和大小&lt;/font&gt;</span><br><span class="line">&lt;font color=&quot;#0000ff&quot;&gt;字体颜色&lt;/font&gt;</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
-<font face="微软雅黑" color="red" size="6">字体及字体颜色和大小</font><br><font color="#0000ff">字体颜色</font>
+<font face="微软雅黑" color="red" size="6">字体及字体颜色和大小</font>
+<font color="#0000ff">字体颜色</font>
 
 <h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用html标签`&lt;br/&gt;`&lt;br/&gt;换行</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
 <p>使用html标签<code>&lt;br/&gt;</code><br>换行</p>
 <h3 id="文本对齐方式"><a href="#文本对齐方式" class="headerlink" title="文本对齐方式"></a>文本对齐方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p align=&quot;left&quot;&gt;居左文本&lt;/p&gt;</span><br><span class="line">&lt;p align=&quot;center&quot;&gt;居中文本&lt;/p&gt;</span><br><span class="line">&lt;p align=&quot;right&quot;&gt;居右文本&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
-<p align="left">居左文本</p><br><p align="center">居中文本</p><br><p align="right">居右文本</p>
+<p align="left">居左文本</p>
+<p align="center">居中文本</p>
+<p align="right">居右文本</p>
 
 <h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;u&gt;下划线文本&lt;/u&gt;</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
@@ -775,7 +779,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">67</span>
+                    <span class="site-state-item-count">68</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1722,7 +1726,7 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-</script>
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
   

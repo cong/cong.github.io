@@ -16,7 +16,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
@@ -114,7 +114,7 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="TensorFlow Object detection API 教程系列：  TensorFlow Object detection API 教程之一：Object detection API安装 TensorFlow Object detection API 教程之二：训练自己的模型 TensorFlow Object detection API 教程之三：测试自己的模型  这一节，我们将对Te">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-04T09:33:20.024Z">
+<meta property="og:updated_time" content="2018-09-05T07:39:01.452Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TensorFlow Object detection API教程之二：训练自己的模型">
 <meta name="twitter:description" content="TensorFlow Object detection API 教程系列：  TensorFlow Object detection API 教程之一：Object detection API安装 TensorFlow Object detection API 教程之二：训练自己的模型 TensorFlow Object detection API 教程之三：测试自己的模型  这一节，我们将对Te">
@@ -170,7 +170,7 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -181,7 +181,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -481,9 +481,9 @@
 </li>
 </ol>
 <p>另外在<code>models/research/object_detection/dataset_tools</code>目录中，官方提供了一些数据转换工具。</p>
-<h3 id="配置模型参数"><a href="#配置模型参数" class="headerlink" title="配置模型参数"></a>配置模型参数</h3><p>Tensorflow Object Detection API中模型参数、训练参数、评估参数都是在一个config文件中配置。</p>
+<h3 id="配置模型参数"><a href="#配置模型参数" class="headerlink" title="配置模型参数"></a>配置模型参数</h3><p>Tensorflow Object Detection API中<strong>模型参数</strong>、<strong>训练参数</strong>、<strong>评估参数</strong>都是在一个config文件中配置。</p>
 <p>在配置模型参数的时候，通常有两种方式，一是使用预训练的模型，通过迁移学习(Transfer learning )来学习一个新目标(Object)，这种训练方式可以大幅缩减训练的时间，使用少量的数据就可以达到较好的效果。另外一种是从头开始训练，end-to-end。</p>
-<p>在<code>models/research//object_detection/samples/configs/</code>的路径下，官方提供了一些object_detection配置文件的结构。在<code>.config</code>中搜索所有的<code>PATH_TO_BE_CONFIGURED</code>，修改为自己数据所存放的路径。另外还有<em>heckpoint</em>的路径、名称，<em>num_classes</em>的数目，<em>label_map_path</em>的路径等，按需修改。</p>
+<p>在<a href="https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs" target="_blank" rel="noopener"><code>models/research/object_detection/samples/configs/</code></a>的路径下，官方提供了一些object_detection配置文件的结构。在<code>.config</code>中搜索所有的<code>PATH_TO_BE_CONFIGURED</code>，修改为自己数据所存放的路径。另外还有<em>heckpoint</em>的路径、名称，<em>num_classes</em>的数目，<em>label_map_path</em>的路径等，按需修改。</p>
 <h3 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h3><p>在<code>tensorflow/models/research/</code>路径下，执行：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># From tensorflow/models/research/</span></span><br><span class="line">python object_detection/model_main.py </span><br><span class="line">　　--pipeline_config_path=<span class="variable">$&#123;YOUR_DIRECTORY&#125;</span>\object_detection\samples\configs\XXXXXXX.config </span><br><span class="line">　　--model_dir=<span class="variable">$&#123;YOUR_DIRECTORY&#125;</span>\object_detection\data </span><br><span class="line">　　--num_train_steps=50000 </span><br><span class="line">　　--num_eval_steps=2000 </span><br><span class="line">　　--alsologtostderr</span><br></pre></td></tr></table></figure>
 <p>其中：<code>--pipeline_config_path</code>,<code>--model_dir</code>,<code>--num_train_steps</code>等按需修改。</p>
@@ -664,7 +664,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">67</span>
+                    <span class="site-state-item-count">68</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1611,7 +1611,7 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-</script>
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
   

@@ -16,7 +16,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
@@ -170,7 +170,7 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -181,7 +181,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -472,6 +472,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> average=<span class="number">9.400067</span>；</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;average&lt;&lt;<span class="built_in">endl</span>；</span><br></pre></td></tr></table></figure>
 <p>希望显示的是9.40，即保留两位小数，可是却显示了9.40007；默认显示6位有效位。 用控制符(manipulators)可以对I/O流的格式进行控制。控制符是在头文件<code>iomanip.h</code>中定义的对象。可以直接将控制符插入流中。常用 控制符如表2-4所列。</p>
 <p></p><p align="center">表 I／O流的常用控制符</p><p></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -486,6 +487,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>使用控制符时，要在程序的头上加头文件<code>iomanip.h</code>。</p>
 <h3 id="控制浮点数值显示"><a href="#控制浮点数值显示" class="headerlink" title="控制浮点数值显示"></a>控制浮点数值显示</h3><p>使用<code>setdivcision(n)</code>可控制输出流显示浮点数的数字个 数。C++默认的流输出数值有效位是6。<br>如果<code>setdivcision(n)</code>与<code>setiosflags(ios::fixed)</code>合用，可以控制小数点右边的数字个数。<code>setiosflags(ios::fixed)</code>是用定点方式表示实数。<br>如果与 <code>setiosnags(ios::scientific)</code>合用， 可以控制指数表示法的小数位数。<code>setiosflags(ios::scientific)</code>是用指数方式表示实数。<br>例如，下面的代码分别用浮 点、定点和指数方式表示一个实数：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//*********************</span></span><br><span class="line"><span class="comment">//** 　ch2_1.cpp   **</span></span><br><span class="line"><span class="comment">//*********************</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip.h&gt; //要用到格式控制符</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> amount = <span class="number">22.0</span>/<span class="number">7</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt;amount &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt;setdivcision(<span class="number">0</span>) &lt;&lt;amount &lt;&lt;<span class="built_in">endl</span></span><br><span class="line">	&lt;&lt;setdivcision(<span class="number">1</span>) &lt;&lt;amount &lt;&lt;<span class="built_in">endl</span></span><br><span class="line">	&lt;&lt;setdivcision(<span class="number">2</span>) &lt;&lt;amount &lt;&lt;<span class="built_in">endl</span></span><br><span class="line">	&lt;&lt;setdivcision(<span class="number">3</span>) &lt;&lt;amount &lt;&lt;<span class="built_in">endl</span></span><br><span class="line">	&lt;&lt;setdivcision(<span class="number">4</span>) &lt;&lt;amount &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;setiosflags(ios::fixed);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt;setdivcision(<span class="number">8</span>) &lt;&lt;amount &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;setiosflags(ios::scientific)&lt;&lt;amount&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt;setdivcision(<span class="number">6</span>);<span class="comment">//重新设置成原默认设置</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -682,7 +684,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">67</span>
+                    <span class="site-state-item-count">68</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1629,7 +1631,7 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-</script>
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
   
