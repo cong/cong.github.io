@@ -3,6 +3,33 @@
 
 
     
+    
+    
+    
+  <url>
+    <loc>https://wangcong.info/article/HexoWihLaTeX.html</loc>
+    <lastmod>2018-09-12T11:47:37.101Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo中LaTeX公式渲染</title>
+        <pubTime>2018-03-25T08:10:25.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+        <tag>LaTeX</tag>
+         
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo" url="https://wangcong.info/categories/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>https://wangcong.info/article/UAVCoordinateSystemSolving.html</loc>
     <lastmod>2018-09-12T11:41:36.409Z</lastmod>
@@ -19,30 +46,6 @@
            
              
               <breadCrumb title="UAV" url="https://wangcong.info/categories/UAV/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/HexoWihLaTeX.html</loc>
-    <lastmod>2018-09-12T11:39:59.641Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo中LaTeX公式渲染</title>
-        <pubTime>2018-03-25T08:10:25.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-        <tag>LaTeX</tag>
-         
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hexo" url="https://wangcong.info/categories/Hexo/"/>
           
         </display>
     </data>
@@ -589,9 +592,9 @@
         <title>Faster-RCNN的搭建和测试</title>
         <pubTime>2017-08-02T07:36:36.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -613,9 +616,9 @@
         <title>Fast-RCNN的搭建和测试</title>
         <pubTime>2017-07-30T01:35:27.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -1049,9 +1052,9 @@
         <title>Jetson TK1 or TX1 刷系统以及配置Caffe教程</title>
         <pubTime>2017-11-21T01:53:26.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -1219,13 +1222,13 @@
         
         <tag>ROS</tag>
          
-        <tag>UAV</tag>
-         
         <tag>MAVROS</tag>
          
         <tag>Offboard</tag>
          
         <tag>Pixhawk</tag>
+         
+        <tag>UAV</tag>
          
          
            
@@ -1347,9 +1350,9 @@
         <title>测试Caffe</title>
         <pubTime>2017-07-23T03:30:22.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -1373,9 +1376,9 @@
         <title>安装Caffe</title>
         <pubTime>2017-07-23T02:14:26.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
