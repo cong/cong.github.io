@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wangcong.info/footprint/footprint.html</loc>
+    <loc>https://wangcong.info/footprint.html</loc>
     
-    <lastmod>2018-09-29T09:53:10.735Z</lastmod>
+    <lastmod>2018-09-29T11:44:58.444Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.info/footprint/index.html</loc>
+    
+    <lastmod>2018-09-29T11:44:58.444Z</lastmod>
     
   </url>
   
