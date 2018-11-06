@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.info/article/UAVCoordinateSystemSolving.html</loc>
+    
+    <lastmod>2018-11-01T07:52:13.050Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.info/about/index.html</loc>
     
     <lastmod>2018-09-30T01:03:42.593Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://wangcong.info/article/HexoWihLaTeX.html</loc>
     
     <lastmod>2018-09-12T11:47:37.101Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.info/article/UAVCoordinateSystemSolving.html</loc>
-    
-    <lastmod>2018-09-12T11:41:36.409Z</lastmod>
     
   </url>
   

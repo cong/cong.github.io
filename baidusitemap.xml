@@ -3,6 +3,28 @@
 
 
     
+  <url>
+    <loc>https://wangcong.info/article/UAVCoordinateSystemSolving.html</loc>
+    <lastmod>2018-11-01T07:52:13.050Z</lastmod>
+    <data>
+        <display>
+        <title>无人机相关坐标系的解算</title>
+        <pubTime>2018-04-06T12:57:23.000Z</pubTime>
+        
+        <tag>UAV</tag>
+         
+        <tag>坐标系结算</tag>
+         
+         
+           
+             
+              <breadCrumb title="UAV" url="https://wangcong.info/categories/UAV/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://wangcong.info/article/HexoWihLaTeX.html</loc>
@@ -22,28 +44,6 @@
            
              
               <breadCrumb title="Hexo" url="https://wangcong.info/categories/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/UAVCoordinateSystemSolving.html</loc>
-    <lastmod>2018-09-12T11:41:36.409Z</lastmod>
-    <data>
-        <display>
-        <title>无人机相关坐标系的解算</title>
-        <pubTime>2018-04-06T12:57:23.000Z</pubTime>
-        
-        <tag>UAV</tag>
-         
-        <tag>坐标系结算</tag>
-         
-         
-           
-             
-              <breadCrumb title="UAV" url="https://wangcong.info/categories/UAV/"/>
           
         </display>
     </data>
@@ -101,11 +101,11 @@
         <title>基于ROS安装Caffe和SSD【通用】</title>
         <pubTime>2017-12-24T13:55:23.000Z</pubTime>
         
+        <tag>ROS</tag>
+         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
-         
-        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -151,11 +151,11 @@
         <title>基于ROS测试Caffe MobileNet-SSD【通用】</title>
         <pubTime>2017-12-25T01:15:31.000Z</pubTime>
         
+        <tag>ROS</tag>
+         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
-         
-        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
