@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.info/specialization/index.html</loc>
+    
+    <lastmod>2018-12-05T03:17:02.480Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.info/article/DeepLearningMaterials.html</loc>
+    
+    <lastmod>2018-12-05T03:16:33.612Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.info/about/index.html</loc>
     
     <lastmod>2018-11-08T07:33:34.773Z</lastmod>
@@ -33,13 +47,6 @@
     <loc>https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial2.html</loc>
     
     <lastmod>2018-09-05T07:39:01.452Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.info/specialization/index.html</loc>
-    
-    <lastmod>2018-09-04T12:41:38.067Z</lastmod>
     
   </url>
   
@@ -376,13 +383,6 @@
     <loc>https://wangcong.info/article/ChildEducation.html</loc>
     
     <lastmod>2018-07-15T08:23:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.info/article/DeepLearningMaterials.html</loc>
-    
-    <lastmod>2018-07-15T08:23:46.000Z</lastmod>
     
   </url>
   

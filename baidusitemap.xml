@@ -5,6 +5,29 @@
     
     
   <url>
+    <loc>https://wangcong.info/article/DeepLearningMaterials.html</loc>
+    <lastmod>2018-12-05T03:16:33.612Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习&深度学习资料推荐</title>
+        <pubTime>2017-08-06T12:11:08.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>https://wangcong.info/article/UAVCoordinateSystemSolving.html</loc>
     <lastmod>2018-11-01T07:52:13.050Z</lastmod>
     <data>
@@ -91,7 +114,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://wangcong.info/article/ROSCaffeSSDMobileNet.html</loc>
@@ -1181,28 +1203,6 @@
            
              
               <breadCrumb title="Child Education" url="https://wangcong.info/categories/Child-Education/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/DeepLearningMaterials.html</loc>
-    <lastmod>2018-07-15T08:23:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>深度学习资料推荐</title>
-        <pubTime>2017-08-06T12:11:08.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>深度学习</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
           
         </display>
     </data>
