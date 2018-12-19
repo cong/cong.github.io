@@ -3,6 +3,26 @@
 
 
     
+  <url>
+    <loc>https://wangcong.info/article/SublimeTextSetting.html</loc>
+    <lastmod>2018-12-19T00:48:23.511Z</lastmod>
+    <data>
+        <display>
+        <title>Sublime Text Setting</title>
+        <pubTime>2017-06-01T12:30:27.000Z</pubTime>
+        
+        <tag>Sublime Text</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="https://wangcong.info/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://wangcong.info/article/DeepLearningMaterials.html</loc>
@@ -840,26 +860,6 @@
 
     
   <url>
-    <loc>https://wangcong.info/article/SublimeTextSetting.html</loc>
-    <lastmod>2018-07-15T08:43:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>Sublime Text Setting</title>
-        <pubTime>2017-06-01T12:30:27.000Z</pubTime>
-        
-        <tag>Sublime Text</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tools" url="https://wangcong.info/categories/Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.info/article/SparkRDD.html</loc>
     <lastmod>2018-07-15T08:42:36.000Z</lastmod>
     <data>
@@ -1217,8 +1217,6 @@
         <title>Companion computer 对UAV的外部控制</title>
         <pubTime>2018-02-06T03:30:52.000Z</pubTime>
         
-        <tag>UAV</tag>
-         
         <tag>ROS</tag>
          
         <tag>MAVROS</tag>
@@ -1226,6 +1224,8 @@
         <tag>Offboard</tag>
          
         <tag>Pixhawk</tag>
+         
+        <tag>UAV</tag>
          
          
            
