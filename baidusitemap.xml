@@ -3,6 +3,29 @@
 
 
     
+    
+  <url>
+    <loc>https://wangcong.info/article/KerasTutorial.html</loc>
+    <lastmod>2019-01-11T08:09:41.052Z</lastmod>
+    <data>
+        <display>
+        <title>Keras快速教程</title>
+        <pubTime>2019-01-11T07:28:36.000Z</pubTime>
+        
+        <tag>Keras</tag>
+         
+        <tag>TensorFlow</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>https://wangcong.info/article/LinuxCloudServerGUI.html</loc>
     <lastmod>2019-01-02T06:49:31.977Z</lastmod>
@@ -66,7 +89,6 @@
     </data>
     </url>
 
-    
     
     
   <url>
@@ -653,9 +675,9 @@
         <title>Faster-RCNN的搭建和测试</title>
         <pubTime>2017-08-02T07:36:36.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -677,9 +699,9 @@
         <title>Fast-RCNN的搭建和测试</title>
         <pubTime>2017-07-30T01:35:27.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -1093,9 +1115,9 @@
         <title>Jetson TK1 or TX1 刷系统以及配置Caffe教程</title>
         <pubTime>2017-11-21T01:53:26.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -1369,9 +1391,9 @@
         <title>测试Caffe</title>
         <pubTime>2017-07-23T03:30:22.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -1395,9 +1417,9 @@
         <title>安装Caffe</title>
         <pubTime>2017-07-23T02:14:26.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
