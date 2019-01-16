@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.info/article/SecureCRTSetting.html</loc>
+    
+    <lastmod>2019-01-16T08:57:36.555Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.info/article/DataStructureAlgorithm.html</loc>
+    
+    <lastmod>2019-01-16T08:56:26.916Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.info/article/KerasTutorial.html</loc>
+    
+    <lastmod>2019-01-11T09:03:53.684Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.info/specialization/index.html</loc>
     
     <lastmod>2019-01-11T08:21:57.004Z</lastmod>
@@ -12,13 +33,6 @@
     <loc>https://wangcong.info/about/index.html</loc>
     
     <lastmod>2019-01-11T08:14:34.122Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.info/article/KerasTutorial.html</loc>
-    
-    <lastmod>2019-01-11T08:09:41.052Z</lastmod>
     
   </url>
   
