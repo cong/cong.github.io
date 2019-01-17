@@ -4,6 +4,67 @@
 
     
   <url>
+    <loc>https://wangcong.info/article/PythonDataTypeConvert.html</loc>
+    <lastmod>2019-01-17T06:51:00.301Z</lastmod>
+    <data>
+        <display>
+        <title>Python--字符串、列表、元组、字典之间的相互转换</title>
+        <pubTime>2018-11-17T06:25:55.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://wangcong.info/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/PythonFindStrings.html</loc>
+    <lastmod>2019-01-17T06:23:07.037Z</lastmod>
+    <data>
+        <display>
+        <title>Python--判断字符串是否包含子字符串</title>
+        <pubTime>2018-08-22T08:01:55.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://wangcong.info/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/KerasWithCNNNetworks.html</loc>
+    <lastmod>2019-01-16T09:54:55.545Z</lastmod>
+    <data>
+        <display>
+        <title>使用Kreas实现经典CNN</title>
+        <pubTime>2018-07-06T12:30:55.000Z</pubTime>
+        
+        <tag>Keras</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>https://wangcong.info/article/SecureCRTSetting.html</loc>
     <lastmod>2019-01-16T08:57:36.555Z</lastmod>
     <data>
@@ -66,7 +127,6 @@
     </data>
     </url>
 
-    
     
     
   <url>
@@ -291,26 +351,6 @@
            
              
               <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/PythonFindStrings.html</loc>
-    <lastmod>2018-09-04T11:55:33.469Z</lastmod>
-    <data>
-        <display>
-        <title>Python--判断字符串是否包含子字符串</title>
-        <pubTime>2018-08-22T08:01:55.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://wangcong.info/categories/Python/"/>
           
         </display>
     </data>
@@ -1337,26 +1377,6 @@
            
              
               <breadCrumb title="Python" url="https://wangcong.info/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/KerasWithCNNNetworks.html</loc>
-    <lastmod>2018-07-06T12:37:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用Kreas实现经典CNN</title>
-        <pubTime>2018-07-06T12:30:55.000Z</pubTime>
-        
-        <tag>Keras</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
           
         </display>
     </data>

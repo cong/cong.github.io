@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.info/article/PythonDataTypeConvert.html</loc>
+    
+    <lastmod>2019-01-17T06:51:00.301Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.info/article/PythonFindStrings.html</loc>
+    
+    <lastmod>2019-01-17T06:23:07.037Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.info/article/KerasWithCNNNetworks.html</loc>
+    
+    <lastmod>2019-01-16T09:54:55.545Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.info/about/index.html</loc>
+    
+    <lastmod>2019-01-16T09:20:20.235Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.info/article/SecureCRTSetting.html</loc>
     
     <lastmod>2019-01-16T08:57:36.555Z</lastmod>
@@ -26,13 +54,6 @@
     <loc>https://wangcong.info/specialization/index.html</loc>
     
     <lastmod>2019-01-11T08:21:57.004Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.info/about/index.html</loc>
-    
-    <lastmod>2019-01-11T08:14:34.122Z</lastmod>
     
   </url>
   
@@ -103,13 +124,6 @@
     <loc>https://wangcong.info/article/TestCaffeMobileNetSSD.html</loc>
     
     <lastmod>2018-09-04T12:05:53.945Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.info/article/PythonFindStrings.html</loc>
-    
-    <lastmod>2018-09-04T11:55:33.469Z</lastmod>
     
   </url>
   
@@ -425,13 +439,6 @@
     <loc>https://wangcong.info/article/PythonBugs01.html</loc>
     
     <lastmod>2018-07-06T12:44:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.info/article/KerasWithCNNNetworks.html</loc>
-    
-    <lastmod>2018-07-06T12:37:20.000Z</lastmod>
     
   </url>
   
