@@ -114,13 +114,13 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="RDD：Resilient Distributed Dataset（弹性分布式数据集），是分布式内存的一个抽象概念，提供了一种高度受限的共享内存模型。 RDD分为Action（动作）和Transformation（转换）两种操作类型。 RDD的转换接口都非常简单，都是类似map、filter、groupBy、join等粗粒度的数据转换操作。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.info/SparkRDD1.png">
-<meta property="og:image" content="https://img.wangcong.info/SparkRDD2.jpg">
-<meta property="og:updated_time" content="2018-07-15T08:42:36.000Z">
+<meta property="og:image" content="https://img.babibobi.com/SparkRDD1.png">
+<meta property="og:image" content="https://img.babibobi.com/SparkRDD2.jpg">
+<meta property="og:updated_time" content="2019-02-16T04:38:34.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spark RDD学习笔记">
 <meta name="twitter:description" content="RDD：Resilient Distributed Dataset（弹性分布式数据集），是分布式内存的一个抽象概念，提供了一种高度受限的共享内存模型。 RDD分为Action（动作）和Transformation（转换）两种操作类型。 RDD的转换接口都非常简单，都是类似map、filter、groupBy、join等粗粒度的数据转换操作。">
-<meta name="twitter:image" content="https://img.wangcong.info/SparkRDD1.png">
+<meta name="twitter:image" content="https://img.babibobi.com/SparkRDD1.png">
 
 
 
@@ -458,9 +458,9 @@
 <li>SparkContext负责计算RDD之间的依赖关系，构建DAG；</li>
 <li>DAGScheduler负责把DAG图分解成多个Stage，每个Stage中包含了多个Task，每个Task会被TaskScheduler分发给各个WorkerNode上的Executor去执行。</li>
 </ol>
-<p><img src="https://img.wangcong.info/SparkRDD1.png" alt=""></p>
+<p><img src="https://img.babibobi.com/SparkRDD1.png" alt=""></p>
 <h3 id="参考示例"><a href="#参考示例" class="headerlink" title="参考示例"></a>参考示例</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">text_file = sc.textFile("hdfs://skn-0exybxsb-hadoop-master:9000/use/ubuntu/sample1")</span><br><span class="line">counts = text_file.flatMap(lambda line: line.split(" "))\</span><br><span class="line">                  .map(lambda word: (word, 1))\</span><br><span class="line">                  .reduceByKey(lambda a, b: a + b)</span><br><span class="line">counts.collect()</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.wangcong.info/SparkRDD2.jpg" alt=""></p>
+<p><img src="https://img.babibobi.com/SparkRDD2.jpg" alt=""></p>
 
       
     </div>

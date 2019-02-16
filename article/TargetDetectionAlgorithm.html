@@ -114,16 +114,16 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="目标检测方法分类第一，已知目标的先验知识。 在这种情况下检测目标有两类方法，第一类方法是用目标的先验知识训练一堆弱分类器，然后这些弱分类器一起投票来检测目标，如Boosting, Random forest 都是这个思路，大家熟知的Adaboost人脸检测也是如此。第二类方法是根据先验知识找到目标和非目标的最佳划分线，如SVM.这两类方法各成一家，各有所长，都有着不错的表现。 第二，未知目标的先验">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.info/TargetDetection1.jpg">
-<meta property="og:image" content="https://img.wangcong.info/TargetDetection2.jpg">
-<meta property="og:image" content="https://img.wangcong.info/TargetDetection3.jpg">
-<meta property="og:image" content="https://img.wangcong.info/TargetDetection4.jpg">
-<meta property="og:image" content="https://img.wangcong.info/TargetDetection5.jpg">
-<meta property="og:updated_time" content="2018-07-15T10:54:02.000Z">
+<meta property="og:image" content="https://img.babibobi.com/TargetDetection1.jpg">
+<meta property="og:image" content="https://img.babibobi.com/TargetDetection2.jpg">
+<meta property="og:image" content="https://img.babibobi.com/TargetDetection3.jpg">
+<meta property="og:image" content="https://img.babibobi.com/TargetDetection4.jpg">
+<meta property="og:image" content="https://img.babibobi.com/TargetDetection5.jpg">
+<meta property="og:updated_time" content="2019-02-16T04:38:34.538Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="目标检测方法汇总">
 <meta name="twitter:description" content="目标检测方法分类第一，已知目标的先验知识。 在这种情况下检测目标有两类方法，第一类方法是用目标的先验知识训练一堆弱分类器，然后这些弱分类器一起投票来检测目标，如Boosting, Random forest 都是这个思路，大家熟知的Adaboost人脸检测也是如此。第二类方法是根据先验知识找到目标和非目标的最佳划分线，如SVM.这两类方法各成一家，各有所长，都有着不错的表现。 第二，未知目标的先验">
-<meta name="twitter:image" content="https://img.wangcong.info/TargetDetection1.jpg">
+<meta name="twitter:image" content="https://img.babibobi.com/TargetDetection1.jpg">
 
 
 
@@ -468,11 +468,11 @@
 <ul>
 <li>首先，在一帧图像内随机均匀选取k个点，并滤除那些邻域纹理太光滑的点，因为这些点不利于计算光流。 </li>
 </ul>
-<p><img src="https://img.wangcong.info/TargetDetection1.jpg" alt=""></p>
+<p><img src="https://img.babibobi.com/TargetDetection1.jpg" alt=""></p>
 <ul>
 <li>然后，计算这些点与上一帧图像的光流矢量，如上右图，此时已经可以看出背景运动的大概方向了。</li>
 </ul>
-<p><img src="https://img.wangcong.info/TargetDetection2.jpg" alt=""></p>
+<p><img src="https://img.babibobi.com/TargetDetection2.jpg" alt=""></p>
 <ul>
 <li>接下来的这一步方法因人而异了。</li>
 </ul>
@@ -480,15 +480,15 @@
 <h3 id="新目标检测方法"><a href="#新目标检测方法" class="headerlink" title="新目标检测方法"></a>新目标检测方法</h3><p>其实写到这里想了想到底能不能叫目标检测，博主认为图像的前背景分离也是目标检测的一种（博主才疏学浅，求赐教）。</p>
 <p><strong>1、像素点操作</strong> </p>
 <p>对每个像素点进行操作，判别为前景或者背景两类。如下面的图片所示： </p>
-<p><img src="https://img.wangcong.info/TargetDetection3.jpg" alt=""></p>
+<p><img src="https://img.babibobi.com/TargetDetection3.jpg" alt=""></p>
 <p><strong>2、低秩矩阵应用</strong> </p>
 <p>背景建模是从拍摄的视频中分离出背景和前景。下面的例子就是将背景与前景分离开。使用的方法是RPCA的方法。</p>
 <p>其网址以及效果如下： <a href="http://perception.csl.illinois.edu/matrix-rank/introduction.html" target="_blank" rel="noopener">http://perception.csl.illinois.edu/matrix-rank/introduction.html</a></p>
-<p><img src="https://img.wangcong.info/TargetDetection4.jpg" alt=""></p>
+<p><img src="https://img.babibobi.com/TargetDetection4.jpg" alt=""></p>
 <p><strong>3、深度学习</strong> </p>
 <p>FCN + DenseCRF精确分割+语义标签。图像中的前景目标检测分割做的很好，下面还能做出语义检测，判断出图中的东西属于什么。ICCV 2015 paper ：Conditional Random Fields as Recurrent Neural Networks</p>
 <p>测试网址以及测试图像如下： <a href="http://www.robots.ox.ac.uk/~szheng/crfasrnndemo" target="_blank" rel="noopener">http://www.robots.ox.ac.uk/~szheng/crfasrnndemo</a></p>
-<p><img src="https://img.wangcong.info/TargetDetection5.jpg" alt=""></p>
+<p><img src="https://img.babibobi.com/TargetDetection5.jpg" alt=""></p>
 
       
     </div>

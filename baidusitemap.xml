@@ -4,6 +4,811 @@
 
     
   <url>
+    <loc>https://wangcong.info/article/SparkArchitecturalSchemes.html</loc>
+    <lastmod>2019-02-16T04:38:34.628Z</lastmod>
+    <data>
+        <display>
+        <title>Spark部署架构方式</title>
+        <pubTime>2018-01-15T03:31:37.000Z</pubTime>
+        
+        <tag>Big Data</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Spark</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/UnderWIN10InstallUbuntuSDDAndHDD.html</loc>
+    <lastmod>2019-02-16T04:38:34.624Z</lastmod>
+    <data>
+        <display>
+        <title>WIN10下安装Ubuntu 16.04（双硬盘：SDD+HDD）</title>
+        <pubTime>2017-07-10T07:08:38.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>双系统</tag>
+         
+        <tag>双硬盘</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="https://wangcong.info/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/FasterRCNNBulidAndTest.html</loc>
+    <lastmod>2019-02-16T04:38:34.619Z</lastmod>
+    <data>
+        <display>
+        <title>Faster-RCNN的搭建和测试</title>
+        <pubTime>2017-08-02T07:36:36.000Z</pubTime>
+        
+        <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/DeepLearningMaterials.html</loc>
+    <lastmod>2019-02-16T04:38:34.617Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习&深度学习资料推荐</title>
+        <pubTime>2017-08-06T12:11:08.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/UAVCoordinateSystemSolving.html</loc>
+    <lastmod>2019-02-16T04:38:34.612Z</lastmod>
+    <data>
+        <display>
+        <title>无人机相关坐标系的解算</title>
+        <pubTime>2018-04-06T12:57:23.000Z</pubTime>
+        
+        <tag>UAV</tag>
+         
+        <tag>坐标系结算</tag>
+         
+         
+           
+             
+              <breadCrumb title="UAV" url="https://wangcong.info/categories/UAV/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/SearchEngines.html</loc>
+    <lastmod>2019-02-16T04:38:34.608Z</lastmod>
+    <data>
+        <display>
+        <title>那些年我用过的搜索引擎</title>
+        <pubTime>2018-04-23T10:39:03.000Z</pubTime>
+        
+        <tag>Search Engines</tag>
+         
+         
+           
+             
+              <breadCrumb title="Notes" url="https://wangcong.info/categories/Notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/NeoDownloader.html</loc>
+    <lastmod>2019-02-16T04:38:34.606Z</lastmod>
+    <data>
+        <display>
+        <title>批量网页图片下载器 NeoDownloader</title>
+        <pubTime>2017-10-30T07:30:28.000Z</pubTime>
+        
+        <tag>爬图</tag>
+         
+        <tag>NeoDownloader</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="https://wangcong.info/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/CompanionComputer2Pixhawk.html</loc>
+    <lastmod>2019-02-16T04:38:34.605Z</lastmod>
+    <data>
+        <display>
+        <title>Companion computer 对UAV的外部控制</title>
+        <pubTime>2018-02-06T03:30:52.000Z</pubTime>
+        
+        <tag>ROS</tag>
+         
+        <tag>MAVROS</tag>
+         
+        <tag>Offboard</tag>
+         
+        <tag>Pixhawk</tag>
+         
+        <tag>UAV</tag>
+         
+         
+           
+             
+              <breadCrumb title="UAV" url="https://wangcong.info/categories/UAV/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
+    <lastmod>2019-02-16T04:38:34.600Z</lastmod>
+    <data>
+        <display>
+        <title>TensorFlow Object detection API教程之三：测试自己的模型</title>
+        <pubTime>2018-09-03T12:22:23.000Z</pubTime>
+        
+        <tag>Tensorflow</tag>
+         
+        <tag>Object detection</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/ROSPlotTools.html</loc>
+    <lastmod>2019-02-16T04:38:34.598Z</lastmod>
+    <data>
+        <display>
+        <title>ROS相关画图工具</title>
+        <pubTime>2018-04-16T11:35:03.000Z</pubTime>
+        
+        <tag>ROS</tag>
+         
+         
+           
+             
+              <breadCrumb title="ROS" url="https://wangcong.info/categories/ROS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/SparkRDD.html</loc>
+    <lastmod>2019-02-16T04:38:34.596Z</lastmod>
+    <data>
+        <display>
+        <title>Spark RDD学习笔记</title>
+        <pubTime>2018-01-09T03:28:36.000Z</pubTime>
+        
+        <tag>Big Data</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Spark</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/ROSGazeboPixhawk.html</loc>
+    <lastmod>2019-02-16T04:38:34.593Z</lastmod>
+    <data>
+        <display>
+        <title>基于ROS与Gazebo的Pixhawk仿真</title>
+        <pubTime>2017-12-15T07:23:03.000Z</pubTime>
+        
+        <tag>ROS</tag>
+         
+        <tag>Pixhawk</tag>
+         
+        <tag>Gazebo</tag>
+         
+         
+           
+             
+              <breadCrumb title="UAV" url="https://wangcong.info/categories/UAV/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/UbuntuVIMAndTerminalHarmonizeColors.html</loc>
+    <lastmod>2019-02-16T04:38:34.589Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu VIM+Terminal 配色方案</title>
+        <pubTime>2017-07-15T03:41:58.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>配色</tag>
+         
+        <tag>VIM</tag>
+         
+        <tag>Terminal</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="https://wangcong.info/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/SparkCluster.html</loc>
+    <lastmod>2019-02-16T04:38:34.586Z</lastmod>
+    <data>
+        <display>
+        <title>Spark集群管理架构</title>
+        <pubTime>2018-01-07T07:28:26.000Z</pubTime>
+        
+        <tag>Big Data</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Spark</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/UsingROSAndMAVROSOffboardControlPixhawk.html</loc>
+    <lastmod>2019-02-16T04:38:34.585Z</lastmod>
+    <data>
+        <display>
+        <title>基于ROS和 MAVROS对Pixhawk进行外部控制</title>
+        <pubTime>2017-12-06T01:21:55.000Z</pubTime>
+        
+        <tag>ROS</tag>
+         
+        <tag>MAVROS</tag>
+         
+        <tag>Offboard</tag>
+         
+         
+           
+             
+              <breadCrumb title="ROS" url="https://wangcong.info/categories/ROS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/MarkdownGrammar.html</loc>
+    <lastmod>2019-02-16T04:38:34.582Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown语法</title>
+        <pubTime>2016-09-03T01:05:27.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="Markdown" url="https://wangcong.info/categories/Markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/SecureCRTSetting.html</loc>
+    <lastmod>2019-02-16T04:38:34.580Z</lastmod>
+    <data>
+        <display>
+        <title>SecureCRT 个人配色方案</title>
+        <pubTime>2018-12-16T08:30:27.000Z</pubTime>
+        
+        <tag>SecureCRT</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="https://wangcong.info/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/labelImgUsing.html</loc>
+    <lastmod>2019-02-16T04:38:34.576Z</lastmod>
+    <data>
+        <display>
+        <title>LabelImg使用教程</title>
+        <pubTime>2017-09-25T08:25:11.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>LabelImg</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/WhatsSpark.html</loc>
+    <lastmod>2019-02-16T04:38:34.574Z</lastmod>
+    <data>
+        <display>
+        <title>什么是Spark？</title>
+        <pubTime>2018-01-07T01:08:56.000Z</pubTime>
+        
+        <tag>Big Data</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Spark</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/UnderUbuntuInstallL2TP.html</loc>
+    <lastmod>2019-02-16T04:38:34.573Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu16.04安装L2TP Client</title>
+        <pubTime>2017-10-02T02:36:27.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>VPN</tag>
+         
+        <tag>L2TP</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="https://wangcong.info/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/FastRCNNBulidAndTest.html</loc>
+    <lastmod>2019-02-16T04:38:34.570Z</lastmod>
+    <data>
+        <display>
+        <title>Fast-RCNN的搭建和测试</title>
+        <pubTime>2017-07-30T01:35:27.000Z</pubTime>
+        
+        <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/LabelImgInstall.html</loc>
+    <lastmod>2019-02-16T04:38:34.566Z</lastmod>
+    <data>
+        <display>
+        <title>LabelImg介绍与安装教程</title>
+        <pubTime>2017-09-23T02:05:18.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>LabelImg</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/ICAIBDJourney.html</loc>
+    <lastmod>2019-02-16T04:38:34.562Z</lastmod>
+    <data>
+        <display>
+        <title>成都参会之记</title>
+        <pubTime>2018-06-01T13:19:55.000Z</pubTime>
+        
+        <tag>成都</tag>
+         
+         
+           
+             
+              <breadCrumb title="Notes" url="https://wangcong.info/categories/Notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/ComputerVisionStudyNotes.html</loc>
+    <lastmod>2019-02-16T04:38:34.560Z</lastmod>
+    <data>
+        <display>
+        <title>计算机视觉学习笔记</title>
+        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
+        
+        <tag>计算机视觉</tag>
+         
+        <tag>Computer Vision</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.info/categories/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/SparkSQLStreamingandMLlib.html</loc>
+    <lastmod>2019-02-16T04:38:34.559Z</lastmod>
+    <data>
+        <display>
+        <title>Spark SQL、Streaming and MLlib</title>
+        <pubTime>2018-01-12T08:21:53.000Z</pubTime>
+        
+        <tag>Big Data</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Spark</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/WhatsBigData.html</loc>
+    <lastmod>2019-02-16T04:38:34.557Z</lastmod>
+    <data>
+        <display>
+        <title>什么是大数据？</title>
+        <pubTime>2018-01-03T06:28:33.000Z</pubTime>
+        
+        <tag>Big Data</tag>
+         
+        <tag>大数据</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/CNNArchitecture.html</loc>
+    <lastmod>2019-02-16T04:38:34.556Z</lastmod>
+    <data>
+        <display>
+        <title>经典CNN网络结构汇总</title>
+        <pubTime>2018-07-01T12:01:55.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/JetsonTKoTXWithCaffe.html</loc>
+    <lastmod>2019-02-16T04:38:34.552Z</lastmod>
+    <data>
+        <display>
+        <title>Jetson TK1 or TX1 刷系统以及配置Caffe教程</title>
+        <pubTime>2017-11-21T01:53:26.000Z</pubTime>
+        
+        <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>Jetson TK1</tag>
+         
+        <tag>Jetson TX1</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/SublimeTextSetting.html</loc>
+    <lastmod>2019-02-16T04:38:34.550Z</lastmod>
+    <data>
+        <display>
+        <title>Sublime Text Personalization</title>
+        <pubTime>2017-06-01T12:30:27.000Z</pubTime>
+        
+        <tag>Sublime Text</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="https://wangcong.info/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/UAVDevelopMaterials.html</loc>
+    <lastmod>2019-02-16T04:38:34.546Z</lastmod>
+    <data>
+        <display>
+        <title>无人机开发资料汇总</title>
+        <pubTime>2017-04-09T02:45:01.000Z</pubTime>
+        
+        <tag>UAV</tag>
+         
+        <tag>无人机</tag>
+         
+         
+           
+             
+              <breadCrumb title="UAV" url="https://wangcong.info/categories/UAV/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/MachineLearningNote.html</loc>
+    <lastmod>2019-02-16T04:38:34.545Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习常用算法总结</title>
+        <pubTime>2018-06-05T08:32:55.000Z</pubTime>
+        
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="Machine Learning" url="https://wangcong.info/categories/Machine-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/MatlabPlotFunction.html</loc>
+    <lastmod>2019-02-16T04:38:34.544Z</lastmod>
+    <data>
+        <display>
+        <title>Matlab画图函数</title>
+        <pubTime>2016-10-03T01:35:55.000Z</pubTime>
+        
+        <tag>Matlab</tag>
+         
+        <tag>画图</tag>
+         
+         
+           
+             
+              <breadCrumb title="Matlab" url="https://wangcong.info/categories/Matlab/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/TargetTrackingAlgorithm.html</loc>
+    <lastmod>2019-02-16T04:38:34.540Z</lastmod>
+    <data>
+        <display>
+        <title>目标跟踪算法汇总</title>
+        <pubTime>2018-04-02T08:55:31.000Z</pubTime>
+        
+        <tag>Computer Vision</tag>
+         
+        <tag>Object</tag>
+         
+        <tag>Tracking</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.info/categories/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/TargetDetectionAlgorithm.html</loc>
+    <lastmod>2019-02-16T04:38:34.538Z</lastmod>
+    <data>
+        <display>
+        <title>目标检测方法汇总</title>
+        <pubTime>2017-10-27T12:23:36.000Z</pubTime>
+        
+        <tag>Computer Vision</tag>
+         
+        <tag>Object</tag>
+         
+        <tag>Detection</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.info/categories/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/MapReduceWihtYARN.html</loc>
+    <lastmod>2019-02-16T04:38:34.536Z</lastmod>
+    <data>
+        <display>
+        <title>MapReduce On Yarn工作原理</title>
+        <pubTime>2018-01-04T09:32:35.000Z</pubTime>
+        
+        <tag>Big Data</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Hadoop</tag>
+         
+        <tag>MapReduce</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>https://wangcong.info/article/PythonDataTypeConvert.html</loc>
     <lastmod>2019-01-17T06:51:00.301Z</lastmod>
     <data>
@@ -65,26 +870,6 @@
     
     
   <url>
-    <loc>https://wangcong.info/article/SecureCRTSetting.html</loc>
-    <lastmod>2019-01-16T08:57:36.555Z</lastmod>
-    <data>
-        <display>
-        <title>SecureCRT 个人配色方案</title>
-        <pubTime>2018-12-16T08:30:27.000Z</pubTime>
-        
-        <tag>SecureCRT</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tools" url="https://wangcong.info/categories/Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.info/article/DataStructureAlgorithm.html</loc>
     <lastmod>2019-01-16T08:56:26.916Z</lastmod>
     <data>
@@ -128,7 +913,6 @@
     </url>
 
     
-    
   <url>
     <loc>https://wangcong.info/article/LinuxCloudServerGUI.html</loc>
     <lastmod>2019-01-02T06:49:31.977Z</lastmod>
@@ -145,70 +929,6 @@
            
              
               <breadCrumb title="Linux" url="https://wangcong.info/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/DeepLearningMaterials.html</loc>
-    <lastmod>2018-12-20T09:35:54.024Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习&深度学习资料推荐</title>
-        <pubTime>2017-08-06T12:11:08.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>深度学习</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/SublimeTextSetting.html</loc>
-    <lastmod>2018-12-19T00:52:51.797Z</lastmod>
-    <data>
-        <display>
-        <title>Sublime Text Personalization</title>
-        <pubTime>2017-06-01T12:30:27.000Z</pubTime>
-        
-        <tag>Sublime Text</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tools" url="https://wangcong.info/categories/Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/UAVCoordinateSystemSolving.html</loc>
-    <lastmod>2018-11-01T07:52:13.050Z</lastmod>
-    <data>
-        <display>
-        <title>无人机相关坐标系的解算</title>
-        <pubTime>2018-04-06T12:57:23.000Z</pubTime>
-        
-        <tag>UAV</tag>
-         
-        <tag>坐标系结算</tag>
-         
-         
-           
-             
-              <breadCrumb title="UAV" url="https://wangcong.info/categories/UAV/"/>
           
         </display>
     </data>
@@ -398,28 +1118,6 @@
 
     
   <url>
-    <loc>https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
-    <lastmod>2018-09-04T09:33:26.703Z</lastmod>
-    <data>
-        <display>
-        <title>TensorFlow Object detection API教程之三：测试自己的模型</title>
-        <pubTime>2018-09-03T12:22:23.000Z</pubTime>
-        
-        <tag>Tensorflow</tag>
-         
-        <tag>Object detection</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial1.html</loc>
     <lastmod>2018-09-04T09:33:11.667Z</lastmod>
     <data>
@@ -430,54 +1128,6 @@
         <tag>Tensorflow</tag>
          
         <tag>Object detection</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/labelImgUsing.html</loc>
-    <lastmod>2018-09-04T09:31:09.672Z</lastmod>
-    <data>
-        <display>
-        <title>LabelImg使用教程</title>
-        <pubTime>2017-09-25T08:25:11.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>深度学习</tag>
-         
-        <tag>LabelImg</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/LabelImgInstall.html</loc>
-    <lastmod>2018-09-04T09:31:03.098Z</lastmod>
-    <data>
-        <display>
-        <title>LabelImg介绍与安装教程</title>
-        <pubTime>2017-09-23T02:05:18.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>深度学习</tag>
-         
-        <tag>LabelImg</tag>
          
          
            
@@ -618,30 +1268,6 @@
 
     
   <url>
-    <loc>https://wangcong.info/article/ROSGazeboPixhawk.html</loc>
-    <lastmod>2018-09-01T03:43:01.682Z</lastmod>
-    <data>
-        <display>
-        <title>基于ROS与Gazebo的Pixhawk仿真</title>
-        <pubTime>2017-12-15T07:23:03.000Z</pubTime>
-        
-        <tag>ROS</tag>
-         
-        <tag>Pixhawk</tag>
-         
-        <tag>Gazebo</tag>
-         
-         
-           
-             
-              <breadCrumb title="UAV" url="https://wangcong.info/categories/UAV/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.info/article/PythonNotes06.html</loc>
     <lastmod>2018-08-30T05:59:55.609Z</lastmod>
     <data>
@@ -655,562 +1281,6 @@
            
              
               <breadCrumb title="Python" url="https://wangcong.info/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/MachineLearningNote.html</loc>
-    <lastmod>2018-07-20T02:42:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习常用算法总结</title>
-        <pubTime>2018-06-05T08:32:55.000Z</pubTime>
-        
-        <tag>Machine Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="Machine Learning" url="https://wangcong.info/categories/Machine-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/TargetDetectionAlgorithm.html</loc>
-    <lastmod>2018-07-15T10:54:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>目标检测方法汇总</title>
-        <pubTime>2017-10-27T12:23:36.000Z</pubTime>
-        
-        <tag>Computer Vision</tag>
-         
-        <tag>Object</tag>
-         
-        <tag>Detection</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.info/categories/Computer-Vision/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/CNNArchitecture.html</loc>
-    <lastmod>2018-07-15T09:24:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>经典CNN网络结构汇总</title>
-        <pubTime>2018-07-01T12:01:55.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/UnderWIN10InstallUbuntuSDDAndHDD.html</loc>
-    <lastmod>2018-07-15T08:57:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>WIN10下安装Ubuntu 16.04（双硬盘：SDD+HDD）</title>
-        <pubTime>2017-07-10T07:08:38.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>双系统</tag>
-         
-        <tag>双硬盘</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="https://wangcong.info/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/FasterRCNNBulidAndTest.html</loc>
-    <lastmod>2018-07-15T08:53:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>Faster-RCNN的搭建和测试</title>
-        <pubTime>2017-08-02T07:36:36.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>Caffe</tag>
-         
-        <tag>深度学习</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/FastRCNNBulidAndTest.html</loc>
-    <lastmod>2018-07-15T08:52:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>Fast-RCNN的搭建和测试</title>
-        <pubTime>2017-07-30T01:35:27.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>Caffe</tag>
-         
-        <tag>深度学习</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/ComputerVisionStudyNotes.html</loc>
-    <lastmod>2018-07-15T08:51:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>计算机视觉学习笔记</title>
-        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
-        
-        <tag>计算机视觉</tag>
-         
-        <tag>Computer Vision</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.info/categories/Computer-Vision/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/WhatsSpark.html</loc>
-    <lastmod>2018-07-15T08:48:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>什么是Spark？</title>
-        <pubTime>2018-01-07T01:08:56.000Z</pubTime>
-        
-        <tag>Big Data</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>Spark</tag>
-         
-         
-           
-             
-              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/WhatsBigData.html</loc>
-    <lastmod>2018-07-15T08:47:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>什么是大数据？</title>
-        <pubTime>2018-01-03T06:28:33.000Z</pubTime>
-        
-        <tag>Big Data</tag>
-         
-        <tag>大数据</tag>
-         
-         
-           
-             
-              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/UsingROSAndMAVROSOffboardControlPixhawk.html</loc>
-    <lastmod>2018-07-15T08:47:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>基于ROS和 MAVROS对Pixhawk进行外部控制</title>
-        <pubTime>2017-12-06T01:21:55.000Z</pubTime>
-        
-        <tag>ROS</tag>
-         
-        <tag>MAVROS</tag>
-         
-        <tag>Offboard</tag>
-         
-         
-           
-             
-              <breadCrumb title="ROS" url="https://wangcong.info/categories/ROS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/UnderUbuntuInstallL2TP.html</loc>
-    <lastmod>2018-07-15T08:46:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu16.04安装L2TP Client</title>
-        <pubTime>2017-10-02T02:36:27.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>VPN</tag>
-         
-        <tag>L2TP</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="https://wangcong.info/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/UbuntuVIMAndTerminalHarmonizeColors.html</loc>
-    <lastmod>2018-07-15T08:45:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu VIM+Terminal 配色方案</title>
-        <pubTime>2017-07-15T03:41:58.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>配色</tag>
-         
-        <tag>VIM</tag>
-         
-        <tag>Terminal</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="https://wangcong.info/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/UAVDevelopMaterials.html</loc>
-    <lastmod>2018-07-15T08:45:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>无人机开发资料汇总</title>
-        <pubTime>2017-04-09T02:45:01.000Z</pubTime>
-        
-        <tag>UAV</tag>
-         
-        <tag>无人机</tag>
-         
-         
-           
-             
-              <breadCrumb title="UAV" url="https://wangcong.info/categories/UAV/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/TargetTrackingAlgorithm.html</loc>
-    <lastmod>2018-07-15T08:44:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>目标跟踪算法汇总</title>
-        <pubTime>2018-04-02T08:55:31.000Z</pubTime>
-        
-        <tag>Computer Vision</tag>
-         
-        <tag>Object</tag>
-         
-        <tag>Tracking</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.info/categories/Computer-Vision/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/SparkRDD.html</loc>
-    <lastmod>2018-07-15T08:42:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spark RDD学习笔记</title>
-        <pubTime>2018-01-09T03:28:36.000Z</pubTime>
-        
-        <tag>Big Data</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>Spark</tag>
-         
-         
-           
-             
-              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/SparkSQLStreamingandMLlib.html</loc>
-    <lastmod>2018-07-15T08:40:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spark SQL、Streaming and MLlib</title>
-        <pubTime>2018-01-12T08:21:53.000Z</pubTime>
-        
-        <tag>Big Data</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>Spark</tag>
-         
-         
-           
-             
-              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/SparkCluster.html</loc>
-    <lastmod>2018-07-15T08:40:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spark集群管理架构</title>
-        <pubTime>2018-01-07T07:28:26.000Z</pubTime>
-        
-        <tag>Big Data</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>Spark</tag>
-         
-         
-           
-             
-              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/SparkArchitecturalSchemes.html</loc>
-    <lastmod>2018-07-15T08:38:14.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spark部署架构方式</title>
-        <pubTime>2018-01-15T03:31:37.000Z</pubTime>
-        
-        <tag>Big Data</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>Spark</tag>
-         
-         
-           
-             
-              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/SearchEngines.html</loc>
-    <lastmod>2018-07-15T08:35:30.000Z</lastmod>
-    <data>
-        <display>
-        <title>那些年我用过的搜索引擎</title>
-        <pubTime>2018-04-23T10:39:03.000Z</pubTime>
-        
-        <tag>Search Engines</tag>
-         
-         
-           
-             
-              <breadCrumb title="Notes" url="https://wangcong.info/categories/Notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/ROSPlotTools.html</loc>
-    <lastmod>2018-07-15T08:35:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>ROS相关画图工具</title>
-        <pubTime>2018-04-16T11:35:03.000Z</pubTime>
-        
-        <tag>ROS</tag>
-         
-         
-           
-             
-              <breadCrumb title="ROS" url="https://wangcong.info/categories/ROS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/NeoDownloader.html</loc>
-    <lastmod>2018-07-15T08:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>批量网页图片下载器 NeoDownloader</title>
-        <pubTime>2017-10-30T07:30:28.000Z</pubTime>
-        
-        <tag>爬图</tag>
-         
-        <tag>NeoDownloader</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tools" url="https://wangcong.info/categories/Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/MarkdownGrammar.html</loc>
-    <lastmod>2018-07-15T08:33:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>Markdown语法</title>
-        <pubTime>2016-09-03T01:05:27.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="Markdown" url="https://wangcong.info/categories/Markdown/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/MapReduceWihtYARN.html</loc>
-    <lastmod>2018-07-15T08:32:30.000Z</lastmod>
-    <data>
-        <display>
-        <title>MapReduce On Yarn工作原理</title>
-        <pubTime>2018-01-04T09:32:35.000Z</pubTime>
-        
-        <tag>Big Data</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>Hadoop</tag>
-         
-        <tag>MapReduce</tag>
-         
-         
-           
-             
-              <breadCrumb title="Big Data" url="https://wangcong.info/categories/Big-Data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/JetsonTKoTXWithCaffe.html</loc>
-    <lastmod>2018-07-15T08:26:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>Jetson TK1 or TX1 刷系统以及配置Caffe教程</title>
-        <pubTime>2017-11-21T01:53:26.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>Caffe</tag>
-         
-        <tag>深度学习</tag>
-         
-        <tag>Jetson TK1</tag>
-         
-        <tag>Jetson TX1</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.info/categories/Deep-Learning/"/>
           
         </display>
     </data>
@@ -1239,26 +1309,6 @@
            
              
               <breadCrumb title="UAV" url="https://wangcong.info/categories/UAV/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/ICAIBDJourney.html</loc>
-    <lastmod>2018-07-15T08:25:14.000Z</lastmod>
-    <data>
-        <display>
-        <title>成都参会之记</title>
-        <pubTime>2018-06-01T13:19:55.000Z</pubTime>
-        
-        <tag>成都</tag>
-         
-         
-           
-             
-              <breadCrumb title="Notes" url="https://wangcong.info/categories/Notes/"/>
           
         </display>
     </data>
@@ -1329,34 +1379,6 @@
            
              
               <breadCrumb title="Child Education" url="https://wangcong.info/categories/Child-Education/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/CompanionComputer2Pixhawk.html</loc>
-    <lastmod>2018-07-15T08:21:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>Companion computer 对UAV的外部控制</title>
-        <pubTime>2018-02-06T03:30:52.000Z</pubTime>
-        
-        <tag>ROS</tag>
-         
-        <tag>MAVROS</tag>
-         
-        <tag>Offboard</tag>
-         
-        <tag>Pixhawk</tag>
-         
-        <tag>UAV</tag>
-         
-         
-           
-             
-              <breadCrumb title="UAV" url="https://wangcong.info/categories/UAV/"/>
           
         </display>
     </data>
@@ -1453,9 +1475,9 @@
         <title>测试Caffe</title>
         <pubTime>2017-07-23T03:30:22.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -1479,9 +1501,9 @@
         <title>安装Caffe</title>
         <pubTime>2017-07-23T02:14:26.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -1581,28 +1603,6 @@
            
              
               <breadCrumb title="Computer Vision" url="https://wangcong.info/categories/Computer-Vision/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/MatlabPlotFunction.html</loc>
-    <lastmod>2018-01-09T01:52:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>Matlab画图函数</title>
-        <pubTime>2016-10-03T01:35:55.000Z</pubTime>
-        
-        <tag>Matlab</tag>
-         
-        <tag>画图</tag>
-         
-         
-           
-             
-              <breadCrumb title="Matlab" url="https://wangcong.info/categories/Matlab/"/>
           
         </display>
     </data>
