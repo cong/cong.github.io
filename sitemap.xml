@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.info/about/index.html</loc>
+    
+    <lastmod>2019-02-16T05:59:44.018Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.info/article/ImageHostingChange.html</loc>
     
     <lastmod>2019-02-16T05:56:08.346Z</lastmod>
@@ -285,13 +292,6 @@
     <loc>https://wangcong.info/article/KerasWithCNNNetworks.html</loc>
     
     <lastmod>2019-01-16T09:54:55.545Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.info/about/index.html</loc>
-    
-    <lastmod>2019-01-16T09:20:20.235Z</lastmod>
     
   </url>
   
