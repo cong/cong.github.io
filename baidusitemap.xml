@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>https://wangcong.info/article/ImageHostingChange.html</loc>
+    <lastmod>2019-02-16T05:56:08.346Z</lastmod>
+    <data>
+        <display>
+        <title>Python脚本--批量更改Markdown文件中的七牛云图床链接</title>
+        <pubTime>2019-02-16T04:22:03.000Z</pubTime>
+        
+        <tag>七牛云</tag>
+         
+        <tag>图床</tag>
+         
+         
+           
+             
+              <breadCrumb title="Notes" url="https://wangcong.info/categories/Notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.info/article/Notes01.html</loc>
+    <lastmod>2019-02-16T05:20:03.848Z</lastmod>
+    <data>
+        <display>
+        <title>关于机器学习和深度学习的一些思考</title>
+        <pubTime>2018-05-06T09:22:03.000Z</pubTime>
+        
+        <tag>AI</tag>
+         
+         
+           
+             
+              <breadCrumb title="Notes" url="https://wangcong.info/categories/Notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.info/article/SparkArchitecturalSchemes.html</loc>
     <lastmod>2019-02-16T04:38:34.628Z</lastmod>
     <data>
@@ -1091,26 +1133,6 @@
            
              
               <breadCrumb title="Python" url="https://wangcong.info/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.info/article/Notes01.html</loc>
-    <lastmod>2018-09-04T09:34:08.607Z</lastmod>
-    <data>
-        <display>
-        <title>关于机器学习和深度学习的一些思考</title>
-        <pubTime>2018-05-06T09:22:03.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-         
-           
-             
-              <breadCrumb title="Notes" url="https://wangcong.info/categories/Notes/"/>
           
         </display>
     </data>
