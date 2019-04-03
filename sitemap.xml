@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.info/specialization/index.html</loc>
+    
+    <lastmod>2019-04-03T04:28:39.909Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.info/article/BlogUpdate.html</loc>
+    
+    <lastmod>2019-04-03T04:25:40.038Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.info/article/UbuntuUpdatePython.html</loc>
+    
+    <lastmod>2019-04-03T04:22:49.092Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.info/article/WebpyNginxFastCGI.html</loc>
+    
+    <lastmod>2019-04-03T04:22:32.769Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.info/article/JavaTomcatMysql.html</loc>
     
     <lastmod>2019-03-21T13:53:06.423Z</lastmod>
@@ -271,13 +299,6 @@
     <loc>https://wangcong.info/article/MapReduceWihtYARN.html</loc>
     
     <lastmod>2019-02-16T04:38:34.536Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.info/specialization/index.html</loc>
-    
-    <lastmod>2019-01-17T07:00:47.812Z</lastmod>
     
   </url>
   
