@@ -1902,7 +1902,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/article/DeepLearningMaterials.html" itemprop="url">
-                  机器学习&深度学习资料推荐
+                  机器学习与深度学习资料推荐
                 </a>
               
             
@@ -1960,7 +1960,7 @@
 
           
           
-             <span id="/article/DeepLearningMaterials.html" class="leancloud_visitors" data-flag-title="机器学习&深度学习资料推荐">
+             <span id="/article/DeepLearningMaterials.html" class="leancloud_visitors" data-flag-title="机器学习与深度学习资料推荐">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -2423,6 +2423,28 @@
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  <script>
+  $(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);
+    var countOffset = 10000;
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset);
+            clearInterval(int);
+        }  
+    }
+        
+  });
+  </script> 
 
   
     <span class="site-uv" title="总访客量">

@@ -3,6 +3,28 @@
 
 
     
+  <url>
+    <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
+    <lastmod>2019-04-25T15:27:42.402Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习与深度学习资料推荐</title>
+        <pubTime>2017-08-06T12:11:08.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://wangcong.net/article/WebpyNginxFastCGI.html</loc>
@@ -262,28 +284,6 @@
         <tag>Deep Learning</tag>
          
         <tag>Caffe</tag>
-         
-        <tag>深度学习</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
-    <lastmod>2019-02-16T04:38:34.617Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习&深度学习资料推荐</title>
-        <pubTime>2017-08-06T12:11:08.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
