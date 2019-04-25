@@ -10,5 +10,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://wangcong.info/sitemap.xml
-Sitemap: http://wangcong.info/baidusitemap.xml
+Sitemap: http://wangcong.net/sitemap.xml
+Sitemap: http://wangcong.net/baidusitemap.xml

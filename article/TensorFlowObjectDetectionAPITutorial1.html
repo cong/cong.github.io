@@ -110,11 +110,11 @@
 <meta name="keywords" content="Tensorflow,Object detection">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TensorFlow Object detection API教程之一：TensorFlow及其Object detection API安装">
-<meta property="og:url" content="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial1.html">
+<meta property="og:url" content="https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial1.html">
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="之前一直在Caffe平台做object detection，后面查阅相关资料时，经常看到TensorFlow下的object detection API，怀着好奇心了解了下，发现效果很不错，总体而言比Caffe下要简单些。 Google niubility !">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-04T09:33:11.667Z">
+<meta property="og:updated_time" content="2019-04-25T04:21:55.323Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TensorFlow Object detection API教程之一：TensorFlow及其Object detection API安装">
 <meta name="twitter:description" content="之前一直在Caffe平台做object detection，后面查阅相关资料时，经常看到TensorFlow下的object detection API，怀着好奇心了解了下，发现效果很不错，总体而言比Caffe下要简单些。 Google niubility !">
@@ -124,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial1.html"/>
+  <link rel="canonical" href="https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial1.html"/>
 
 
 
@@ -338,7 +338,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial1.html">
+    <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="旋律信">
@@ -449,9 +449,9 @@
 <a id="more"></a>
 <p>TensorFlow Object detection API 教程系列：</p>
 <ul>
-<li><a href="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial1.html">TensorFlow Object detection API 教程之一：Object detection API安装</a></li>
-<li><a href="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial2.html">TensorFlow Object detection API 教程之二：训练自己的模型</a></li>
-<li><a href="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial3.html">TensorFlow Object detection API 教程之三：测试自己的模型</a></li>
+<li><a href="/article/TensorFlowObjectDetectionAPITutorial1.html">TensorFlow Object detection API 教程之一：Object detection API安装</a></li>
+<li><a href="/article/TensorFlowObjectDetectionAPITutorial2.html">TensorFlow Object detection API 教程之二：训练自己的模型</a></li>
+<li><a href="/article/TensorFlowObjectDetectionAPITutorial3.html">TensorFlow Object detection API 教程之三：测试自己的模型</a></li>
 </ul>
 <h3 id="安装TensorFlow"><a href="#安装TensorFlow" class="headerlink" title="安装TensorFlow"></a>安装TensorFlow</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装TensorFlow</span></span><br><span class="line">pip install tensorflow  <span class="comment"># For CPU</span></span><br><span class="line">pip install tensorflow-gpu  <span class="comment"># For GPU</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 若安装不同版本的TensorFlow</span></span><br><span class="line"><span class="comment"># pip install tensorflow==1.4.0</span></span><br><span class="line"><span class="comment"># pip install tensorflow-gpu==1.4.0</span></span><br><span class="line"><span class="comment"># 卸载TensorFlow</span></span><br><span class="line"><span class="comment"># pip uninstall tensorflow</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证TensorFlow是否安装成功</span></span><br><span class="line"><span class="comment"># 输出Hello, TensorFlow! 则代表安装成功。</span></span><br><span class="line">&gt;&gt;&gt; import tensorflow as tf</span><br><span class="line">&gt;&gt;&gt; hello = tf.constant(<span class="string">'Hello, TensorFlow!'</span>)</span><br><span class="line">&gt;&gt;&gt; sess = tf.Session()</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(sess.run(hello))</span><br></pre></td></tr></table></figure>
 <h3 id="安装TensorFlow-Object-Detection-API"><a href="#安装TensorFlow-Object-Detection-API" class="headerlink" title="安装TensorFlow Object Detection API"></a>安装TensorFlow Object Detection API</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装依赖项</span></span><br><span class="line">sudo apt-get install protobuf-compiler python-pil python-lxml</span><br><span class="line">sudo pip install jupyter</span><br><span class="line">sudo pip install matplotlib</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载TensorFlow Object Detection API</span></span><br><span class="line">mkdir ~/tensorflow</span><br><span class="line"><span class="built_in">cd</span> ~/tensorflow</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/tensorflow/models.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 编译protobuf</span></span><br><span class="line"><span class="comment"># 进入object_detection所在目录</span></span><br><span class="line"><span class="comment"># 譬如：cd ~/tensorflow/models/research/</span></span><br><span class="line"><span class="comment"># 编译成功时,界面无任何显示</span></span><br><span class="line">protoc object_detection/protos/*.proto --python_out=.</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加环境变量</span></span><br><span class="line"><span class="comment"># 1.进入object_detection所在目录</span></span><br><span class="line"><span class="comment"># 譬如：cd ~/tensorflow/models/research/</span></span><br><span class="line"><span class="built_in">export</span> PYTHONPATH=<span class="variable">$PYTHONPATH</span>:`<span class="built_in">pwd</span>`:`<span class="built_in">pwd</span>`/slim</span><br><span class="line"><span class="comment"># 这条命令在新打开的终端中需要重新执行一次才会在新终端中生效</span></span><br><span class="line"><span class="comment"># 2.添加到~/.bashrc</span></span><br><span class="line">gedit ~/.bashrc</span><br><span class="line"><span class="comment"># 将下面命令添加到最后，注意'pwd'更换为object_detection的路径</span></span><br><span class="line"><span class="comment"># export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim</span></span><br><span class="line"><span class="comment"># 进入object_detection所在目录，在终端输入pwd查询</span></span><br><span class="line"><span class="comment"># 例如我的</span></span><br><span class="line"><span class="built_in">export</span> PYTHONPATH=<span class="variable">$PYTHONPATH</span>:/root/tensorflow/models/research:/root/tensorflow/models/research/slim</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Test</span></span><br><span class="line">python object_detection/builders/model_builder_test.py</span><br><span class="line"><span class="comment"># 成功则显示如下：</span></span><br><span class="line">.......</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line">Ran 7 tests <span class="keyword">in</span> 0.026s</span><br><span class="line"></span><br><span class="line">OK</span><br></pre></td></tr></table></figure>
@@ -478,7 +478,7 @@
     <strong>本文作者： </strong>旋律信</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial1.html" title="TensorFlow Object detection API教程之一：TensorFlow及其Object detection API安装">https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial1.html</a>
+    <a href="https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial1.html" title="TensorFlow Object detection API教程之一：TensorFlow及其Object detection API安装">https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial1.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>

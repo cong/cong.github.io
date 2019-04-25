@@ -110,11 +110,11 @@
 <meta name="keywords" content="Tensorflow,Object detection">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TensorFlow Object detection API教程之二：训练自己的模型">
-<meta property="og:url" content="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial2.html">
+<meta property="og:url" content="https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial2.html">
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="TensorFlow Object detection API 教程系列：  TensorFlow Object detection API 教程之一：Object detection API安装 TensorFlow Object detection API 教程之二：训练自己的模型 TensorFlow Object detection API 教程之三：测试自己的模型  这一节，我们将对Te">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-05T07:39:01.452Z">
+<meta property="og:updated_time" content="2019-04-25T04:22:14.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TensorFlow Object detection API教程之二：训练自己的模型">
 <meta name="twitter:description" content="TensorFlow Object detection API 教程系列：  TensorFlow Object detection API 教程之一：Object detection API安装 TensorFlow Object detection API 教程之二：训练自己的模型 TensorFlow Object detection API 教程之三：测试自己的模型  这一节，我们将对Te">
@@ -124,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial2.html"/>
+  <link rel="canonical" href="https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial2.html"/>
 
 
 
@@ -338,7 +338,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial2.html">
+    <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="旋律信">
@@ -446,9 +446,9 @@
       
         <p>TensorFlow Object detection API 教程系列：</p>
 <ul>
-<li><a href="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial1.html">TensorFlow Object detection API 教程之一：Object detection API安装</a></li>
-<li><a href="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial2.html">TensorFlow Object detection API 教程之二：训练自己的模型</a></li>
-<li><a href="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial3.html">TensorFlow Object detection API 教程之三：测试自己的模型</a></li>
+<li><a href="/article/TensorFlowObjectDetectionAPITutorial1.html">TensorFlow Object detection API 教程之一：Object detection API安装</a></li>
+<li><a href="/article/TensorFlowObjectDetectionAPITutorial2.html">TensorFlow Object detection API 教程之二：训练自己的模型</a></li>
+<li><a href="/article/TensorFlowObjectDetectionAPITutorial3.html">TensorFlow Object detection API 教程之三：测试自己的模型</a></li>
 </ul>
 <p>这一节，我们将对TensorFlow中的训练过程做一个介绍，训练模型的步骤可大体划分为以下几步：</p>
 <a id="more"></a>
@@ -456,7 +456,7 @@
 <p>将数据安装9：1的比例划分为<strong>训练集</strong>和<strong>测试集</strong>，并根据要训练的数据集，创建.pbtxt文件。</p>
 <h3 id="打标签"><a href="#打标签" class="headerlink" title="打标签"></a>打标签</h3><p>使用LabelImg对数据集打标签，可以生成Pascal VOC格式的xml文件。</p>
 <p>关于LabelImg的相关教程请参考下方两个链接：</p>
-<p><a href="https://wangcong.info/article/LabelImgInstall.html">1.LabelImg介绍与安装教程</a>              <a href="https://wangcong.info/article/labelImgUsing.html">2.LabelImg使用教程</a></p>
+<p><a href="https://wangcong.info/article/LabelImgInstall.html" target="_blank" rel="noopener">1.LabelImg介绍与安装教程</a>              <a href="https://wangcong.info/article/labelImgUsing.html" target="_blank" rel="noopener">2.LabelImg使用教程</a></p>
 <h3 id="将数据转换为TF-Records格式"><a href="#将数据转换为TF-Records格式" class="headerlink" title="将数据转换为TF Records格式"></a>将数据转换为TF Records格式</h3><ol>
 <li><p>借助<a href="https://github.com/datitran/raccoon_dataset" target="_blank" rel="noopener">Raccon_dataset</a>中的<a href="https://github.com/datitran/raccoon_dataset/blob/master/xml_to_csv.py" target="_blank" rel="noopener"><strong>xml_to_csv.py</strong></a>将数据由<code>XML</code>格式转为<code>CSV</code>格式。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 其中</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    image_path = os.path.join(os.getcwd(), <span class="string">'annotations'</span>)</span><br><span class="line">    xml_df = xml_to_csv(image_path)</span><br><span class="line">    xml_df.to_csv(<span class="string">'raccoon_labels.csv'</span>, index=<span class="keyword">None</span>)</span><br><span class="line">    print(<span class="string">'Successfully converted xml to csv.'</span>)</span><br><span class="line"><span class="comment"># 修改为：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">for</span> directory <span class="keyword">in</span> [<span class="string">'train'</span>,<span class="string">'test'</span>]:</span><br><span class="line">        image_path = os.path.join(os.getcwd(), <span class="string">'images/&#123;&#125;'</span>.format(directory))</span><br><span class="line">        xml_df = xml_to_csv(image_path)</span><br><span class="line">        xml_df.to_csv(<span class="string">'data/&#123;&#125;_labels.csv'</span>.format(directory), index=<span class="keyword">None</span>)</span><br><span class="line">        print(<span class="string">'Successfully converted xml to csv.'</span>)</span><br></pre></td></tr></table></figure>
@@ -504,7 +504,7 @@
     <strong>本文作者： </strong>旋律信</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial2.html" title="TensorFlow Object detection API教程之二：训练自己的模型">https://wangcong.info/article/TensorFlowObjectDetectionAPITutorial2.html</a>
+    <a href="https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial2.html" title="TensorFlow Object detection API教程之二：训练自己的模型">https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial2.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
