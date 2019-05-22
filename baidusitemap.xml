@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/WebpyNginxFastCGI.html</loc>
+    <lastmod>2019-05-22T00:57:37.463Z</lastmod>
+    <data>
+        <display>
+        <title>云服务器部署Python Web环境(Nginx+Spawn-fcgi+web.py)</title>
+        <pubTime>2019-04-02T12:00:00.000Z</pubTime>
+        
+        <tag>Nginx</tag>
+         
+        <tag>Spawn-fcgi</tag>
+         
+        <tag>web.py</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://wangcong.net/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
     <lastmod>2019-04-25T15:27:42.402Z</lastmod>
     <data>
@@ -25,30 +49,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>https://wangcong.net/article/WebpyNginxFastCGI.html</loc>
-    <lastmod>2019-04-25T04:24:29.279Z</lastmod>
-    <data>
-        <display>
-        <title>云服务器部署Python Web环境(Nginx+Spawn-fcgi+web.py)</title>
-        <pubTime>2019-04-02T12:00:00.000Z</pubTime>
-        
-        <tag>Nginx</tag>
-         
-        <tag>Spawn-fcgi</tag>
-         
-        <tag>web.py</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://wangcong.net/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
@@ -281,9 +281,9 @@
         <title>Faster-RCNN的搭建和测试</title>
         <pubTime>2017-08-02T07:36:36.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -651,9 +651,9 @@
         <title>Fast-RCNN的搭建和测试</title>
         <pubTime>2017-07-30T01:35:27.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -807,9 +807,9 @@
         <title>Jetson TK1 or TX1 刷系统以及配置Caffe教程</title>
         <pubTime>2017-11-21T01:53:26.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -1587,9 +1587,9 @@
         <title>测试Caffe</title>
         <pubTime>2017-07-23T03:30:22.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -1613,9 +1613,9 @@
         <title>安装Caffe</title>
         <pubTime>2017-07-23T02:14:26.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          

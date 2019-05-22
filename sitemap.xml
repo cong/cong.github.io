@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/article/WebpyNginxFastCGI.html</loc>
+    
+    <lastmod>2019-05-22T00:57:37.463Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
     
     <lastmod>2019-04-25T15:27:42.402Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://wangcong.net/specialization/index.html</loc>
     
     <lastmod>2019-04-25T04:36:25.384Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/WebpyNginxFastCGI.html</loc>
-    
-    <lastmod>2019-04-25T04:24:29.279Z</lastmod>
     
   </url>
   
