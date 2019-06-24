@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
+    
+    <lastmod>2019-06-24T05:40:56.451Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/resume/index.html</loc>
+    
+    <lastmod>2019-06-24T04:12:15.602Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/MacWithPyTorch.html</loc>
     
     <lastmod>2019-06-13T00:55:36.686Z</lastmod>
@@ -9,23 +23,9 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/resume/index.html</loc>
-    
-    <lastmod>2019-05-28T02:15:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangcong.net/article/WebpyNginxFastCGI.html</loc>
     
     <lastmod>2019-05-22T00:57:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
-    
-    <lastmod>2019-04-25T15:27:42.000Z</lastmod>
     
   </url>
   
@@ -121,14 +121,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     
     <lastmod>2019-02-16T04:38:34.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/ICAIBDJourney.html</loc>
+    <loc>https://wangcong.net/article/MatlabPlotFunction.html</loc>
     
     <lastmod>2019-02-16T04:38:34.000Z</lastmod>
     
@@ -156,7 +156,28 @@
   </url>
   
   <url>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    
+    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/UbuntuVIMAndTerminalHarmonizeColors.html</loc>
+    
+    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
+    
+    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/MachineLearningNote.html</loc>
     
     <lastmod>2019-02-16T04:38:34.000Z</lastmod>
     
@@ -177,28 +198,7 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/MachineLearningNote.html</loc>
-    
-    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangcong.net/article/UAVCoordinateSystemSolving.html</loc>
-    
-    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
-    
-    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/FastRCNNBulidAndTest.html</loc>
     
     <lastmod>2019-02-16T04:38:34.000Z</lastmod>
     
@@ -212,28 +212,21 @@
   </url>
   
   <url>
+    <loc>https://wangcong.net/article/FastRCNNBulidAndTest.html</loc>
+    
+    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
+    
+    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/NeoDownloader.html</loc>
-    
-    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
-    
-    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/WhatsBigData.html</loc>
-    
-    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     
     <lastmod>2019-02-16T04:38:34.000Z</lastmod>
     
@@ -247,21 +240,21 @@
   </url>
   
   <url>
+    <loc>https://wangcong.net/article/WhatsBigData.html</loc>
+    
+    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/ICAIBDJourney.html</loc>
+    
+    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/TargetDetectionAlgorithm.html</loc>
-    
-    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/MatlabPlotFunction.html</loc>
-    
-    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/SublimeTextSetting.html</loc>
     
     <lastmod>2019-02-16T04:38:34.000Z</lastmod>
     
@@ -275,7 +268,7 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/SparkRDD.html</loc>
+    <loc>https://wangcong.net/article/SublimeTextSetting.html</loc>
     
     <lastmod>2019-02-16T04:38:34.000Z</lastmod>
     
@@ -289,14 +282,7 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/ROSGazeboPixhawk.html</loc>
-    
-    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/UnderUbuntuInstallL2TP.html</loc>
+    <loc>https://wangcong.net/article/SecureCRTSetting.html</loc>
     
     <lastmod>2019-02-16T04:38:34.000Z</lastmod>
     
@@ -310,7 +296,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
+    <loc>https://wangcong.net/article/UnderUbuntuInstallL2TP.html</loc>
+    
+    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/SparkRDD.html</loc>
     
     <lastmod>2019-02-16T04:38:34.000Z</lastmod>
     
@@ -324,7 +317,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/SecureCRTSetting.html</loc>
+    <loc>https://wangcong.net/article/ROSGazeboPixhawk.html</loc>
+    
+    <lastmod>2019-02-16T04:38:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
     
     <lastmod>2019-02-16T04:38:34.000Z</lastmod>
     
