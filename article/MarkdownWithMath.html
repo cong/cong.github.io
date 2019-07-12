@@ -106,18 +106,18 @@
 
 
 
-  <meta name="description" content="前言整理笔记的时候经常性的输入公式，考虑过在LyX以及LaTeX里面编写之后截图或者复制过来，但总感觉效果不好并且比较费时，特整理符合Markdown中的公式源码，以便后续方便做笔记。 在输入数学公式的时候，需要在数学公式的前后加入$$符号，将需要输入的公式加入到$$中间。 在Typora中，输入$$然后回车，直接将TeX代码输入进去。">
+  <meta name="description" content="前言整理笔记的时候经常性的输入公式，考虑过在LyX以及LaTeX里面编写之后截图或者复制过来，但总感觉效果不好并且比较费时，特整理符合Markdown中的公式源码，以便后续方便做笔记。 行间公式，在输入数学公式的时候，需要在数学公式的前后加入$$符号，将需要输入的公式加入到$$与$$中间。 行内公式，在输入数学公式的时候，需要在数学公式的前后加入$符号，将需要输入的公式加入到$与$中间。 在Typ">
 <meta name="keywords" content="Markdown,LaTeX">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown中LaTeX数学符号及公式">
 <meta property="og:url" content="https://wangcong.net/article/MarkdownWithMath.html">
 <meta property="og:site_name" content="旋律信">
-<meta property="og:description" content="前言整理笔记的时候经常性的输入公式，考虑过在LyX以及LaTeX里面编写之后截图或者复制过来，但总感觉效果不好并且比较费时，特整理符合Markdown中的公式源码，以便后续方便做笔记。 在输入数学公式的时候，需要在数学公式的前后加入$$符号，将需要输入的公式加入到$$中间。 在Typora中，输入$$然后回车，直接将TeX代码输入进去。">
+<meta property="og:description" content="前言整理笔记的时候经常性的输入公式，考虑过在LyX以及LaTeX里面编写之后截图或者复制过来，但总感觉效果不好并且比较费时，特整理符合Markdown中的公式源码，以便后续方便做笔记。 行间公式，在输入数学公式的时候，需要在数学公式的前后加入$$符号，将需要输入的公式加入到$$与$$中间。 行内公式，在输入数学公式的时候，需要在数学公式的前后加入$符号，将需要输入的公式加入到$与$中间。 在Typ">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-04T11:50:30.000Z">
+<meta property="og:updated_time" content="2019-07-10T06:57:40.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown中LaTeX数学符号及公式">
-<meta name="twitter:description" content="前言整理笔记的时候经常性的输入公式，考虑过在LyX以及LaTeX里面编写之后截图或者复制过来，但总感觉效果不好并且比较费时，特整理符合Markdown中的公式源码，以便后续方便做笔记。 在输入数学公式的时候，需要在数学公式的前后加入$$符号，将需要输入的公式加入到$$中间。 在Typora中，输入$$然后回车，直接将TeX代码输入进去。">
+<meta name="twitter:description" content="前言整理笔记的时候经常性的输入公式，考虑过在LyX以及LaTeX里面编写之后截图或者复制过来，但总感觉效果不好并且比较费时，特整理符合Markdown中的公式源码，以便后续方便做笔记。 行间公式，在输入数学公式的时候，需要在数学公式的前后加入$$符号，将需要输入的公式加入到$$与$$中间。 行内公式，在输入数学公式的时候，需要在数学公式的前后加入$符号，将需要输入的公式加入到$与$中间。 在Typ">
 
 
 
@@ -412,6 +412,18 @@
 
           
           
+             <span id="/article/MarkdownWithMath.html" class="leancloud_visitors" data-flag-title="Markdown中LaTeX数学符号及公式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
 
           
 
@@ -433,7 +445,8 @@
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>整理笔记的时候经常性的输入公式，考虑过在LyX以及LaTeX里面编写之后截图或者复制过来，但总感觉效果不好并且比较费时，特整理符合Markdown中的公式源码，以便后续方便做笔记。</p>
-<p>在输入数学公式的时候，需要在数学公式的前后加入<code>$$</code>符号，将需要输入的公式加入到<code>$$</code>中间。</p>
+<p>行间公式，在输入数学公式的时候，需要在数学公式的前后加入<code>$$</code>符号，将需要输入的公式加入到<code>$$</code>与<code>$$</code>中间。</p>
+<p>行内公式，在输入数学公式的时候，需要在数学公式的前后加入<code>$</code>符号，将需要输入的公式加入到<code>$</code>与<code>$</code>中间。</p>
 <p><strong>在Typora中，输入$$然后回车，直接将TeX代码输入进去。</strong></p>
 <a id="more"></a>
 <h3 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h3><div class="table-container">
@@ -507,6 +520,11 @@
 <td>带范围求和</td>
 <td>$\sum_{n=1}^N{3x^n}$</td>
 <td>\sum_{n=1}^N{3x^n}</td>
+</tr>
+<tr>
+<td>带求和上下标</td>
+<td><script type="math/tex">\sum\limits_{n=1}^N{3x^n}</script></td>
+<td>\sum\limits_{n=1}^N{3x^n}</td>
 </tr>
 </tbody>
 </table>
@@ -1103,12 +1121,12 @@
 <tr>
 <td>行内公式</td>
 <td>段内公式：$x+y=z$</td>
-<td> $x+y=z$</td>
+<td>\$x+y=z\$</td>
 </tr>
 <tr>
 <td>行间公式</td>
 <td><script type="math/tex">x+y=z</script></td>
-<td>\<script type="math/tex">x+y=z</script></td>
+<td>\$\$x+y=z\$\$</td>
 </tr>
 </tbody>
 </table>
@@ -2111,6 +2129,118 @@ f(x) =& \frac{1}{\int_x\eta(x)\mathrm{d}x}g(x)\tag{2}
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz", "DfQofItPxzAfDtSv0TeyYJ0A");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

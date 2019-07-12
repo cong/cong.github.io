@@ -114,12 +114,13 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="因为最近一段时间准备找工作的事情，所以对之前机器学习的内容做了一个梳理。 结合麦子学院里面大牛的教程，这里对机器学习中常用的算法进行归纳和总结。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.tensorinfinity.com/upload/image/20190319/1552980326331544.png">
 <meta property="og:image" content="http://scikit-learn.org/stable/_static/ml_map.png">
-<meta property="og:updated_time" content="2019-02-16T04:38:34.000Z">
+<meta property="og:updated_time" content="2019-07-12T02:23:43.167Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习常用算法总结">
 <meta name="twitter:description" content="因为最近一段时间准备找工作的事情，所以对之前机器学习的内容做了一个梳理。 结合麦子学院里面大牛的教程，这里对机器学习中常用的算法进行归纳和总结。">
-<meta name="twitter:image" content="http://scikit-learn.org/stable/_static/ml_map.png">
+<meta name="twitter:image" content="http://www.tensorinfinity.com/upload/image/20190319/1552980326331544.png">
 
 
 
@@ -414,6 +415,18 @@
 
           
           
+             <span id="/article/MachineLearningNote.html" class="leancloud_visitors" data-flag-title="机器学习常用算法总结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
 
           
 
@@ -480,6 +493,7 @@
 <li><strong>PCA</strong></li>
 <li><strong>流形学习</strong></li>
 </ul>
+<h3 id="SIGAI算法地图"><a href="#SIGAI算法地图" class="headerlink" title="SIGAI算法地图"></a>SIGAI算法地图</h3><p><img src="http://www.tensorinfinity.com/upload/image/20190319/1552980326331544.png" alt=""></p>
 <h3 id="SK-Learn-Examples"><a href="#SK-Learn-Examples" class="headerlink" title="SK-Learn Examples"></a>SK-Learn Examples</h3><p><a href="http://scikit-learn.org/stable/" target="_blank" rel="noopener">http://scikit-learn.org/stable/</a></p>
 <h3 id="SK-learn-Choosing-the-right-estimator"><a href="#SK-learn-Choosing-the-right-estimator" class="headerlink" title="SK-learn: Choosing the right estimator"></a>SK-learn: Choosing the right estimator</h3><p><img src="http://scikit-learn.org/stable/_static/ml_map.png" alt=""></p>
 
@@ -925,7 +939,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#监督学习（Supervised-Learning）"><span class="nav-number">1.</span> <span class="nav-text">监督学习（Supervised Learning）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非监督学习（Unsupervised-Learning）"><span class="nav-number">2.</span> <span class="nav-text">非监督学习（Unsupervised Learning）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SK-Learn-Examples"><span class="nav-number">3.</span> <span class="nav-text">SK-Learn Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SK-learn-Choosing-the-right-estimator"><span class="nav-number">4.</span> <span class="nav-text">SK-learn: Choosing the right estimator</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#监督学习（Supervised-Learning）"><span class="nav-number">1.</span> <span class="nav-text">监督学习（Supervised Learning）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非监督学习（Unsupervised-Learning）"><span class="nav-number">2.</span> <span class="nav-text">非监督学习（Unsupervised Learning）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SIGAI算法地图"><span class="nav-number">3.</span> <span class="nav-text">SIGAI算法地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SK-Learn-Examples"><span class="nav-number">4.</span> <span class="nav-text">SK-Learn Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SK-learn-Choosing-the-right-estimator"><span class="nav-number">5.</span> <span class="nav-text">SK-learn: Choosing the right estimator</span></a></li></ol></div>
             
 
           </div>
@@ -1452,6 +1466,118 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz", "DfQofItPxzAfDtSv0TeyYJ0A");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
