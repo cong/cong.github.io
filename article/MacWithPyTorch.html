@@ -114,12 +114,12 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="近期一直在研究PyTorch这个网络，发现真的是很好用啊！ 首先，网络比较轻量；此外，网络框架的灵活性也比较高。相比于TensorFlow真的是很好入手，而且逻辑结构十分清晰！为Facebook点个赞！ 在macOS Majave 10.14.4版本下进行PyTorch的安装，过程中遇到一些问题，在此对安装的过程及解决问题的方法进行一个记录。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.babibobi.com/PyTorchForMac.png">
-<meta property="og:updated_time" content="2019-06-13T00:55:36.686Z">
+<meta property="og:image" content="https://img.wangcong.net/PyTorchForMac.png">
+<meta property="og:updated_time" content="2019-08-01T06:13:48.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在Mac中搭建PyTorch网络框架">
 <meta name="twitter:description" content="近期一直在研究PyTorch这个网络，发现真的是很好用啊！ 首先，网络比较轻量；此外，网络框架的灵活性也比较高。相比于TensorFlow真的是很好入手，而且逻辑结构十分清晰！为Facebook点个赞！ 在macOS Majave 10.14.4版本下进行PyTorch的安装，过程中遇到一些问题，在此对安装的过程及解决问题的方法进行一个记录。">
-<meta name="twitter:image" content="https://img.babibobi.com/PyTorchForMac.png">
+<meta name="twitter:image" content="https://img.wangcong.net/PyTorchForMac.png">
 
 
 
@@ -451,7 +451,7 @@
 <p>在macOS Majave 10.14.4版本下进行PyTorch的安装，过程中遇到一些问题，在此对安装的过程及解决问题的方法进行一个记录。</p>
 <a id="more"></a>
 <h3 id="Pip安装PyTorch"><a href="#Pip安装PyTorch" class="headerlink" title="Pip安装PyTorch"></a>Pip安装PyTorch</h3><p>根据<a href="https://pytorch.org/get-started/locally/" target="_blank" rel="noopener">PyTorch官网</a>上的说明</p>
-<p><img src="https://img.babibobi.com/PyTorchForMac.png" alt=""></p>
+<p><img src="https://img.wangcong.net/PyTorchForMac.png" alt=""></p>
 <p>指令为：<code>pip3 install torch torchvision</code></p>
 <p>安装完毕后对PyTorch进行测试，报错如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> torch</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">  File <span class="string">"/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/torch/__init__.py"</span>, line <span class="number">79</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    <span class="keyword">from</span> torch._C <span class="keyword">import</span> *</span><br><span class="line">ImportError: dlopen(/Library/Frameworks/Python.framework/Versions/<span class="number">3.6</span>/lib/python3<span class="number">.6</span>/site-packages/torch/_C.cpython<span class="number">-36</span>m-darwin.so, <span class="number">9</span>): Library <span class="keyword">not</span> loaded: /usr/local/opt/libomp/lib/libomp.dylib</span><br><span class="line">  Referenced <span class="keyword">from</span>: /Library/Frameworks/Python.framework/Versions/<span class="number">3.6</span>/lib/python3<span class="number">.6</span>/site-packages/torch/lib/libshm.dylib</span><br><span class="line">  Reason: image <span class="keyword">not</span> found</span><br></pre></td></tr></table></figure>

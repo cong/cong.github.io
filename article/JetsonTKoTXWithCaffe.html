@@ -114,17 +114,17 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="JetPack 3.1 remains the current production release, supporting Jetson TX2, Jetson TX1, and Jetson TK1 Developer Kits.  配置 JetPack 2.3JetPack 2.3 是NVIDIA最新发布的用于在Jetson系列嵌入式平台上部署开发环境的开发包，它包含 64bit 的 Ub">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.babibobi.com/Jetson_Caffe_01.jpg">
-<meta property="og:image" content="https://img.babibobi.com/Jetson_Caffe_02.jpg">
-<meta property="og:image" content="https://img.babibobi.com/Jetson_Caffe_03.jpg">
-<meta property="og:image" content="https://img.babibobi.com/Jetson_Caffe_04.jpg">
-<meta property="og:image" content="https://img.babibobi.com/Jetson_Caffe_05.jpg">
-<meta property="og:image" content="https://img.babibobi.com/Jetson_Caffe_06.jpg">
-<meta property="og:updated_time" content="2019-02-16T04:38:34.000Z">
+<meta property="og:image" content="https://img.wangcong.net/Jetson_Caffe_01.jpg">
+<meta property="og:image" content="https://img.wangcong.net/Jetson_Caffe_02.jpg">
+<meta property="og:image" content="https://img.wangcong.net/Jetson_Caffe_03.jpg">
+<meta property="og:image" content="https://img.wangcong.net/Jetson_Caffe_04.jpg">
+<meta property="og:image" content="https://img.wangcong.net/Jetson_Caffe_05.jpg">
+<meta property="og:image" content="https://img.wangcong.net/Jetson_Caffe_06.jpg">
+<meta property="og:updated_time" content="2019-08-01T06:13:48.639Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jetson TK1 or TX1 刷系统以及配置Caffe教程">
 <meta name="twitter:description" content="JetPack 3.1 remains the current production release, supporting Jetson TX2, Jetson TX1, and Jetson TK1 Developer Kits.  配置 JetPack 2.3JetPack 2.3 是NVIDIA最新发布的用于在Jetson系列嵌入式平台上部署开发环境的开发包，它包含 64bit 的 Ub">
-<meta name="twitter:image" content="https://img.babibobi.com/Jetson_Caffe_01.jpg">
+<meta name="twitter:image" content="https://img.wangcong.net/Jetson_Caffe_01.jpg">
 
 
 
@@ -466,18 +466,18 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">mkdir JetPack</span><br><span class="line">cp ~/Downloads/JetPack-L4T-2.3-linux-x64.run ~/JetPack</span><br></pre></td></tr></table></figure>
 <h3 id="安装-JetPack-2-3"><a href="#安装-JetPack-2-3" class="headerlink" title="安装 JetPack 2.3"></a><strong>安装 JetPack 2.3</strong></h3><h4 id="为-JetPack-L4T-2-3-linux-x64-run-增加执行权限"><a href="#为-JetPack-L4T-2-3-linux-x64-run-增加执行权限" class="headerlink" title="为 JetPack-L4T-2.3-linux-x64.run 增加执行权限"></a>为 <code>JetPack-L4T-2.3-linux-x64.run</code> 增加执行权限</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/JetPack</span><br><span class="line">chmod +x JetPack-L4T-2.3-linux-x64.run</span><br></pre></td></tr></table></figure>
 <h4 id="执行-JetPack-L4T-2-3-linux-x64-run-，点击-Next"><a href="#执行-JetPack-L4T-2-3-linux-x64-run-，点击-Next" class="headerlink" title="执行 JetPack-L4T-2.3-linux-x64.run ，点击 Next"></a>执行 <code>JetPack-L4T-2.3-linux-x64.run</code> ，点击 <code>Next</code></h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./JetPack-L4T-2.3-linux-x64.run</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.babibobi.com/Jetson_Caffe_01.jpg" alt="这里写图片描述"></p>
+<p><img src="https://img.wangcong.net/Jetson_Caffe_01.jpg" alt="这里写图片描述"></p>
 <h4 id="指明安装路径后选择部署的开发平台"><a href="#指明安装路径后选择部署的开发平台" class="headerlink" title="指明安装路径后选择部署的开发平台"></a>指明安装路径后选择部署的开发平台</h4><p>此处我们选择 Jetson TX1，同样也支持 TK 1的部署</p>
-<p><img src="https://img.babibobi.com/Jetson_Caffe_02.jpg" alt="这里写图片描述"></p>
+<p><img src="https://img.wangcong.net/Jetson_Caffe_02.jpg" alt="这里写图片描述"></p>
 <h4 id="弹出-JetPack-L4T-Component-Manager-对话框"><a href="#弹出-JetPack-L4T-Component-Manager-对话框" class="headerlink" title="弹出 JetPack L4T Component Manager 对话框"></a>弹出 JetPack L4T Component Manager 对话框</h4><p>由于我已经安装好了所有的包，所以这边的<code>Action</code>一栏是<code>no action</code>，如果没有安装过的话，会显示<code>install xxx</code>。<br>这里点击<code>Next</code>后，接受所有的申明，就开始了漫长的下载与安装…（我等了10多个小时）</p>
-<p><img src="https://img.babibobi.com/Jetson_Caffe_03.jpg" alt="这里写图片描述"></p>
+<p><img src="https://img.wangcong.net/Jetson_Caffe_03.jpg" alt="这里写图片描述"></p>
 <p>这里大家可以选择不安装OpenCV for Tegra，因为这个版本是2.4.13，对于USB摄像头的读取支持不是很好，另外对于CUDA静态库的读取也有些问题，所以不推荐安装，稍后会提示大家安装 OpenCV 3.1</p>
 <h4 id="网络配置和端口选择"><a href="#网络配置和端口选择" class="headerlink" title="网络配置和端口选择"></a>网络配置和端口选择</h4><p>安装完成后进入网络配置选项，选择通过路由器连接互联网，同时将TX1连接到与主机同一个路由器上</p>
-<p><img src="https://img.babibobi.com/Jetson_Caffe_04.jpg" alt="这里写图片描述"></p>
+<p><img src="https://img.wangcong.net/Jetson_Caffe_04.jpg" alt="这里写图片描述"></p>
 <p>选择<code>eth0</code>端口，点击<code>Next</code></p>
-<p><img src="https://img.babibobi.com/Jetson_Caffe_05.jpg" alt="这里写图片描述"></p>
+<p><img src="https://img.wangcong.net/Jetson_Caffe_05.jpg" alt="这里写图片描述"></p>
 <h4 id="设置-TX-1-为-Force-USB-Recovery-Mode-强制USB恢复模式"><a href="#设置-TX-1-为-Force-USB-Recovery-Mode-强制USB恢复模式" class="headerlink" title="设置 TX 1 为 Force USB Recovery Mode (强制USB恢复模式)"></a>设置 TX 1 为 Force USB Recovery Mode (强制USB恢复模式)</h4><p>弹出如图所示终端窗口：</p>
-<p><img src="https://img.babibobi.com/Jetson_Caffe_06.jpg" alt="这里写图片描述"></p>
+<p><img src="https://img.wangcong.net/Jetson_Caffe_06.jpg" alt="这里写图片描述"></p>
 <p>按照提示，将TX1设置为强制USB恢复模式</p>
 <ul>
 <li>关闭设备，移除电源适配器</li>

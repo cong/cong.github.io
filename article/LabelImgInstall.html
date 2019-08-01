@@ -114,15 +114,15 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="介绍对图片标注进而创建自己的数据集，以便在Deep neural networks中进行训练。 本文推荐一款十分好用的图片标注工具LabelImg，重点介绍其安装以及使用的过程。 在此感谢原作者在Github所做的贡献，博主发现软件一直在更新，各位小伙伴可以关注其最新版本。这款工具是全图形界面，用Python和Qt写的，最厉害的是其标注信息可以直接转化成为XML文件，与PASCAL VOC以及Im">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.babibobi.com/LabelImg1.png">
-<meta property="og:image" content="https://img.babibobi.com/LabelImg2.png">
-<meta property="og:image" content="https://img.babibobi.com/LabelImg3.png">
-<meta property="og:image" content="https://img.babibobi.com/LabelImg4.png">
-<meta property="og:updated_time" content="2019-02-16T04:38:34.000Z">
+<meta property="og:image" content="https://img.wangcong.net/LabelImg1.png">
+<meta property="og:image" content="https://img.wangcong.net/LabelImg2.png">
+<meta property="og:image" content="https://img.wangcong.net/LabelImg3.png">
+<meta property="og:image" content="https://img.wangcong.net/LabelImg4.png">
+<meta property="og:updated_time" content="2019-08-01T06:13:48.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LabelImg介绍与安装教程">
 <meta name="twitter:description" content="介绍对图片标注进而创建自己的数据集，以便在Deep neural networks中进行训练。 本文推荐一款十分好用的图片标注工具LabelImg，重点介绍其安装以及使用的过程。 在此感谢原作者在Github所做的贡献，博主发现软件一直在更新，各位小伙伴可以关注其最新版本。这款工具是全图形界面，用Python和Qt写的，最厉害的是其标注信息可以直接转化成为XML文件，与PASCAL VOC以及Im">
-<meta name="twitter:image" content="https://img.babibobi.com/LabelImg1.png">
+<meta name="twitter:image" content="https://img.wangcong.net/LabelImg1.png">
 
 
 
@@ -462,17 +462,17 @@
 <li><p>安装Anaconda</p>
 <p>Anaconda是一款十分好用的python集成安装环境，主要是方便扩展包管理。</p>
 <p>具体介绍可参考这篇<a href="http://blog.csdn.net/dq_dm/article/details/47065323" target="_blank" rel="noopener">博客</a> 。首先从<a href="https://www.continuum.io/downloads" target="_blank" rel="noopener">官网</a>下载最新的版本，这里我下载的是64位的python2.7版本。然后双击安装，一般点选“for all person”，然后安装到系统默认位置即可。安装成功后建议在环境变量path里面增加一条“C:\Program Files\Anaconda2” </p>
-<p><img src="https://img.babibobi.com/LabelImg1.png" alt=""></p>
-<p><img src="https://img.babibobi.com/LabelImg2.png" alt=""></p>
+<p><img src="https://img.wangcong.net/LabelImg1.png" alt=""></p>
+<p><img src="https://img.wangcong.net/LabelImg2.png" alt=""></p>
 </li>
 <li><p>安装PyQt</p>
 <p>打开命令行窗口，输入<code>conda list</code> ，会列出所有预装的python扩展包，可以看到里面已经有了lxml，但是缺少PyQt。命令行输入<code>conda install pyqt=4</code> ,等待一会即可完成PyQt4的安装。 </p>
-<p><img src="https://img.babibobi.com/LabelImg3.png" alt=""></p>
+<p><img src="https://img.wangcong.net/LabelImg3.png" alt=""></p>
 </li>
 <li><p>下载源码并运行</p>
 <p>在原作者的<a href="https://github.com/tzutalin/labelImg" target="_blank" rel="noopener">github</a>下载源码压缩包，解压可得到名为labelImg-master的文件夹，进入该文件夹，在空白处使用“Shift+鼠标右键”，进入当前目录的命令行窗口，依次输入下面语句即可打开软件。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pyrcc4 -o resources.py resources.qrc</span><br><span class="line">python labelImg.py</span><br><span class="line">python labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.babibobi.com/LabelImg4.png" alt=""></p>
+<p><img src="https://img.wangcong.net/LabelImg4.png" alt=""></p>
 </li>
 </ol>
 
