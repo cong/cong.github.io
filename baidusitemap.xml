@@ -3,6 +3,89 @@
 
 
     
+  <url>
+    <loc>https://wangcong.net/article/LinuxNvidiaCUDATensorFlowVersion.html</loc>
+    <lastmod>2019-08-20T03:34:32.816Z</lastmod>
+    <data>
+        <display>
+        <title>Linux内核、Nvidia Driver、CUDA与TensorFlow间的版本对应关系</title>
+        <pubTime>2019-08-16T08:21:26.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>CUDA</tag>
+         
+        <tag>TensorFlow</tag>
+         
+        <tag>Nvidia Driver</tag>
+         
+        <tag>cuDNN</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://wangcong.net/article/DeepLearningServerBuilding.html</loc>
+    <lastmod>2019-08-20T03:06:59.336Z</lastmod>
+    <data>
+        <display>
+        <title>云服务器深度学习服务器环境搭建</title>
+        <pubTime>2019-08-20T02:21:26.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>CUDA</tag>
+         
+        <tag>TensorFlow</tag>
+         
+        <tag>Nvidia Driver</tag>
+         
+        <tag>cuDNN</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
+    <lastmod>2019-08-20T02:30:36.929Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习与深度学习资料推荐</title>
+        <pubTime>2017-08-06T12:11:08.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://wangcong.net/article/SparkArchitecturalSchemes.html</loc>
@@ -60,31 +143,9 @@
         <title>Faster-RCNN的搭建和测试</title>
         <pubTime>2017-08-02T07:36:36.000Z</pubTime>
         
+        <tag>Deep Learning</tag>
+         
         <tag>Caffe</tag>
-         
-        <tag>Deep Learning</tag>
-         
-        <tag>深度学习</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
-    <lastmod>2019-08-01T06:13:48.668Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习与深度学习资料推荐</title>
-        <pubTime>2017-08-06T12:11:08.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -141,6 +202,34 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
+    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
+    <data>
+        <display>
+        <title>Companion computer 对UAV的外部控制</title>
+        <pubTime>2018-02-06T03:30:52.000Z</pubTime>
+        
+        <tag>ROS</tag>
+         
+        <tag>UAV</tag>
+         
+        <tag>MAVROS</tag>
+         
+        <tag>Offboard</tag>
+         
+        <tag>Pixhawk</tag>
+         
+         
+           
+             
+              <breadCrumb title="UAV" url="https://wangcong.net/categories/UAV/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/NeoDownloader.html</loc>
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     <data>
@@ -156,34 +245,6 @@
            
              
               <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
-    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
-    <data>
-        <display>
-        <title>Companion computer 对UAV的外部控制</title>
-        <pubTime>2018-02-06T03:30:52.000Z</pubTime>
-        
-        <tag>ROS</tag>
-         
-        <tag>MAVROS</tag>
-         
-        <tag>Offboard</tag>
-         
-        <tag>Pixhawk</tag>
-         
-        <tag>UAV</tag>
-         
-         
-           
-             
-              <breadCrumb title="UAV" url="https://wangcong.net/categories/UAV/"/>
           
         </display>
     </data>
@@ -421,30 +482,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
-    <lastmod>2019-08-01T06:13:48.653Z</lastmod>
-    <data>
-        <display>
-        <title>LabelImg使用教程</title>
-        <pubTime>2017-09-25T08:25:11.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>深度学习</tag>
-         
-        <tag>LabelImg</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/WhatsSpark.html</loc>
     <lastmod>2019-08-01T06:13:48.653Z</lastmod>
     <data>
@@ -462,6 +499,30 @@
            
              
               <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
+    <lastmod>2019-08-01T06:13:48.653Z</lastmod>
+    <data>
+        <display>
+        <title>LabelImg使用教程</title>
+        <pubTime>2017-09-25T08:25:11.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>LabelImg</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
           
         </display>
     </data>
@@ -524,9 +585,9 @@
         <title>Fast-RCNN的搭建和测试</title>
         <pubTime>2017-07-30T01:35:27.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -700,9 +761,9 @@
         <title>Jetson TK1 or TX1 刷系统以及配置Caffe教程</title>
         <pubTime>2017-11-21T01:53:26.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -942,7 +1003,6 @@
     </url>
 
     
-    
   <url>
     <loc>https://wangcong.net/article/MarkdownWithMath.html</loc>
     <lastmod>2019-07-10T06:57:40.412Z</lastmod>
@@ -1164,9 +1224,9 @@
         <title>Keras快速教程</title>
         <pubTime>2019-01-11T07:28:36.000Z</pubTime>
         
-        <tag>Keras</tag>
-         
         <tag>TensorFlow</tag>
+         
+        <tag>Keras</tag>
          
          
            
@@ -1654,9 +1714,9 @@
         <title>测试Caffe</title>
         <pubTime>2017-07-23T03:30:22.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -1680,9 +1740,9 @@
         <title>安装Caffe</title>
         <pubTime>2017-07-23T02:14:26.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
