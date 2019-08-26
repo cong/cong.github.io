@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/about/index.html</loc>
+    
+    <lastmod>2019-08-23T01:29:27.417Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/DeepLearningServerBuilding.html</loc>
+    
+    <lastmod>2019-08-20T04:57:11.777Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/LinuxNvidiaCUDATensorFlowVersion.html</loc>
     
     <lastmod>2019-08-20T03:34:32.816Z</lastmod>
@@ -16,23 +30,9 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/DeepLearningServerBuilding.html</loc>
-    
-    <lastmod>2019-08-20T03:06:59.336Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
     
     <lastmod>2019-08-20T02:30:36.929Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/about/index.html</loc>
-    
-    <lastmod>2019-08-01T06:22:04.154Z</lastmod>
     
   </url>
   
@@ -72,14 +72,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
+    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
+    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     
@@ -156,14 +156,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
+    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
     
     <lastmod>2019-08-01T06:13:48.653Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
+    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
     
     <lastmod>2019-08-01T06:13:48.653Z</lastmod>
     
