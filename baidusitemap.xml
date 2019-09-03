@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/FPandBP.html</loc>
+    <lastmod>2019-09-03T10:03:13.896Z</lastmod>
+    <data>
+        <display>
+        <title>前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结</title>
+        <pubTime>2019-09-03T12:01:55.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/FCNtoCNN.html</loc>
     <lastmod>2019-08-30T10:52:39.781Z</lastmod>
     <data>
@@ -314,28 +334,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
-    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
-    <data>
-        <display>
-        <title>批量网页图片下载器 NeoDownloader</title>
-        <pubTime>2017-10-30T07:30:28.000Z</pubTime>
-        
-        <tag>爬图</tag>
-         
-        <tag>NeoDownloader</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     <data>
@@ -364,19 +362,21 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
-    <lastmod>2019-08-01T06:13:48.663Z</lastmod>
+    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
+    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     <data>
         <display>
-        <title>ROS相关画图工具</title>
-        <pubTime>2018-04-16T11:35:03.000Z</pubTime>
+        <title>批量网页图片下载器 NeoDownloader</title>
+        <pubTime>2017-10-30T07:30:28.000Z</pubTime>
         
-        <tag>ROS</tag>
+        <tag>爬图</tag>
+         
+        <tag>NeoDownloader</tag>
          
          
            
              
-              <breadCrumb title="ROS" url="https://wangcong.net/categories/ROS/"/>
+              <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
           
         </display>
     </data>
@@ -399,6 +399,26 @@
            
              
               <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
+    <lastmod>2019-08-01T06:13:48.663Z</lastmod>
+    <data>
+        <display>
+        <title>ROS相关画图工具</title>
+        <pubTime>2018-04-16T11:35:03.000Z</pubTime>
+        
+        <tag>ROS</tag>
+         
+         
+           
+             
+              <breadCrumb title="ROS" url="https://wangcong.net/categories/ROS/"/>
           
         </display>
     </data>
@@ -778,6 +798,28 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
+    <data>
+        <display>
+        <title>计算机视觉学习笔记</title>
+        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
+        
+        <tag>计算机视觉</tag>
+         
+        <tag>Computer Vision</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     <data>
@@ -795,28 +837,6 @@
            
              
               <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
-    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
-    <data>
-        <display>
-        <title>计算机视觉学习笔记</title>
-        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
-        
-        <tag>计算机视觉</tag>
-         
-        <tag>Computer Vision</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
           
         </display>
     </data>

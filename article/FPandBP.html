@@ -106,27 +106,30 @@
 
 
 
-  <meta name="description" content="老早就想写一篇杂文来记录18年7月29-30日来济南参加「实习面试」的过程，种种原因拖到今日。也因昨日从家返回济南，相似的场景使我犹记起当初来济的情形，望通过此文来缅怀那时的经历及感受，特此记录。">
-<meta name="keywords" content="济南">
+  <meta name="description" content="深度学习中的的前向传播（Forward propagation）与反向传播（Back Propagation）的目的就是，寻找一组最优的参数，使得损失函数（Lost Function）或称为成本函数（Cost Function）获取到最小值。">
+<meta name="keywords" content="Deep Learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="济南实习面试之记">
-<meta property="og:url" content="https://wangcong.net/article/JinanInterview.html">
+<meta property="og:title" content="前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结">
+<meta property="og:url" content="https://wangcong.net/article/FPandBP.html">
 <meta property="og:site_name" content="旋律信">
-<meta property="og:description" content="老早就想写一篇杂文来记录18年7月29-30日来济南参加「实习面试」的过程，种种原因拖到今日。也因昨日从家返回济南，相似的场景使我犹记起当初来济的情形，望通过此文来缅怀那时的经历及感受，特此记录。">
+<meta property="og:description" content="深度学习中的的前向传播（Forward propagation）与反向传播（Back Propagation）的目的就是，寻找一组最优的参数，使得损失函数（Lost Function）或称为成本函数（Cost Function）获取到最小值。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/JinanInterview.jpeg">
-<meta property="og:updated_time" content="2019-08-01T06:13:48.649Z">
+<meta property="og:image" content="https://wangcong.net/Users/cong/Downloads/NeuralNetworks.png">
+<meta property="og:image" content="https://pic2.zhimg.com/80/ee59254c9432b47cfcc3b11eab3e5984_hd.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/986aacfebb87f4e9573fa2fe87f439d1_hd.jpg">
+<meta property="og:image" content="https://wangcong.net/Users/cong/Downloads/CNNSimple.png">
+<meta property="og:updated_time" content="2019-09-03T10:03:13.896Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="济南实习面试之记">
-<meta name="twitter:description" content="老早就想写一篇杂文来记录18年7月29-30日来济南参加「实习面试」的过程，种种原因拖到今日。也因昨日从家返回济南，相似的场景使我犹记起当初来济的情形，望通过此文来缅怀那时的经历及感受，特此记录。">
-<meta name="twitter:image" content="https://img.wangcong.net/JinanInterview.jpeg">
+<meta name="twitter:title" content="前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结">
+<meta name="twitter:description" content="深度学习中的的前向传播（Forward propagation）与反向传播（Back Propagation）的目的就是，寻找一组最优的参数，使得损失函数（Lost Function）或称为成本函数（Cost Function）获取到最小值。">
+<meta name="twitter:image" content="https://wangcong.net/Users/cong/Downloads/NeuralNetworks.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://wangcong.net/article/JinanInterview.html"/>
+  <link rel="canonical" href="https://wangcong.net/article/FPandBP.html"/>
 
 
 
@@ -136,7 +139,7 @@
   };
 </script>
 
-  <title>济南实习面试之记 | 旋律信</title>
+  <title>前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结 | 旋律信</title>
   
 
 
@@ -340,7 +343,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/JinanInterview.html">
+    <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/FPandBP.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="旋律信">
@@ -357,7 +360,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">济南实习面试之记
+          <h1 class="post-title" itemprop="name headline">前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结
               
             
           </h1>
@@ -382,7 +385,7 @@
                 
               
 
-              <time title="创建时间：2019-07-21 16:30:55" itemprop="dateCreated datePublished" datetime="2019-07-21T16:30:55+08:00">2019-07-21</time>
+              <time title="创建时间：2019-09-03 20:01:55" itemprop="dateCreated datePublished" datetime="2019-09-03T20:01:55+08:00">2019-09-03</time>
             
 
             
@@ -400,7 +403,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Deep-Learning/" itemprop="url" rel="index"><span itemprop="name">Deep Learning</span></a></span>
 
                 
                 
@@ -414,7 +417,7 @@
 
           
           
-             <span id="/article/JinanInterview.html" class="leancloud_visitors" data-flag-title="济南实习面试之记">
+             <span id="/article/FPandBP.html" class="leancloud_visitors" data-flag-title="前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -446,35 +449,381 @@
       
 
       
-        <p>老早就想写一篇杂文来记录18年7月29-30日来济南参加<strong>「实习面试」</strong>的过程，种种原因拖到今日。也因昨日从家返回济南，相似的场景使我犹记起当初来济的情形，望通过此文来缅怀那时的经历及感受，特此记录。</p>
+        <p>深度学习中的的前向传播（Forward propagation）与反向传播（Back Propagation）的目的就是，寻找一组最优的参数，使得损失函数（Lost Function）或称为成本函数（Cost Function）获取到最小值。</p>
 <a id="more"></a>
-<h4 id="7月29日"><a href="#7月29日" class="headerlink" title="7月29日"></a><strong>7月29日</strong></h4><blockquote>
-<p>济宁，记不清什么天气</p>
-</blockquote>
-<p>于29日傍晚从济宁出发，坐上了火车去<del>拉萨</del>济南，去看那神奇的<del>布达拉</del>千佛山。济宁火车站这个破站我还是要吐槽一下，估计除了里面的座椅，其他估计二三十年没变过，而且停靠的基本都是绿皮车。</p>
-<blockquote>
-<p>济南，天黑黑</p>
-</blockquote>
-<p>约晚上九点半抵达济南，新鲜感十足。眼望着来来往往的人群及周围建筑上明亮的灯光，感觉当时双眼是放光的，一是对这座城市的陌生感的兴奋，另外就是对自己未来的憧憬。<del>虽然小时候来过一次，但和没来没什么区别。</del></p>
-<p>从济南站走了一小会，便找到早早于携程上预订的宾馆，犹记老板还吐槽说我是入住最晚的住客。为了让自己明天保持好的状态，便匆匆洗漱完就入睡了。</p>
-<h4 id="7月30日"><a href="#7月30日" class="headerlink" title="7月30日"></a><strong>7月30日</strong></h4><blockquote>
-<p>济南，早上清爽</p>
-</blockquote>
-<p>一大清早就起床洗漱及收拾行李，在地图上搜了下附近的文印店便去打印简历。路过保亭买了最喜欢喝的红枣酸奶当做早餐，相对于厦门的最低8.9元/瓶，济南这边的6.4元/瓶，我还是挺震惊的。</p>
-<p>于高德地图上规划了去往山东省人民检察院的路线，便在经四纬三站等K101路公交车。清晨，骑着电动车的年轻人，出门散早步的大爷大妈，飞驰的汽车慢慢多了起来。路边葱葱郁郁的桦树，枝头叽叽咋咋歌唱的鸟儿，干净的柏油路，这一切都使的我心情愉悦。</p>
-<p>坐着公交车K101从经四纬三站到甸柳庄站，步行一小会便到了省检察院大门口。</p>
-<p>和领导拨通了电话，便进了检察院3大楼会议室进行了面试。面试还是主要以问我简历上的项目为主，回答的还算顺利。半个小时后结束了面试，便与领导握手告辞。</p>
-<p>从检察院出来后才十点半，心想着去大明湖看一看，便坐K50路公交车从二环东路和平路站到天地坛街站。当时芙蓉街还在装修，便穿街走巷抵达百花洲，水里的锦鲤可是真大，一看见人就立马游过来坐等投喂。此时正值暑假，来这游玩的游客络绎不绝，一个个小朋友争抢的给锦鲤喂食，不亦乐乎。</p>
-<p>趴在百花洲的石栏杆上挺久，一直在看小孩子投喂锦鲤，看的我也不亦乐乎🤦‍♂️，哈哈哈！</p>
-<p>而后穿过马路，便就到了大明湖。一开始还以为要门票，进去之后发现只有湖心小岛收来回船票。从南门进去了，便从右侧围着大明湖边走边看，也是因为假期，里面的人儿甚是热闹。途中，走累了便在一大石头上坐下休息，静静的观望着着大明湖，尽情的让微风吹拂自己的脸颊，沉醉其中，不能自拔。</p>
-<p>步行至大明湖东门时，手机仅剩不到10%的电量，怕手机没电无法刷二维码乘坐公交车，遂紧忙规划了路线前往火车站，后来发现自己竟坐反了方向🤦‍♂️。不过济南的公交有这么一个特点，就算你坐反了，一样能到达目的站点，因为每条线都基本上不停歇绕个圈开始返程，只是时间长一些。</p>
-<p>到达火车站后，便去旁边的肯德基里面进行充电，顺便买了点吃的当做晚饭。令我惊喜的是，不一会就接到了领导的电话，告知我被录用，并说明了相关情况。经过自己的思考及和同学的聊天，我便把该事答应了下来。而后在火车站前面的广场上走了走，便进了候车室进行等候。</p>
-<blockquote>
-<p>济宁，天黑黑</p>
-</blockquote>
-<p>到达济宁站月晚上八点多，整个人无比轻松。</p>
-<p>此次行程终结。</p>
-<h4 id="附图"><a href="#附图" class="headerlink" title="附图"></a>附图</h4><p><img src="https://img.wangcong.net/JinanInterview.jpeg" alt=""></p>
+<p>下图为一个三层神经网络，本文则对此图例进行前向传播和反向传播的解析。</p>
+<p><img src="/Users/cong/Downloads/NeuralNetworks.png" alt="NeuralNetworks"></p>
+<h3 id="前向传播（Forward-propagation）"><a href="#前向传播（Forward-propagation）" class="headerlink" title="前向传播（Forward propagation）"></a>前向传播（Forward propagation）</h3><p>对于前向传播（Forward propagation），其对应的表达式如下：</p>
+<script type="math/tex; mode=display">
+a_1^2=\sigma(z_1^2) = \sigma(w_{11}^2x_1 + w_{12}^2x_2 + w_{13}^2x_3 + b_1^{2})</script><script type="math/tex; mode=display">
+a_2^2=\sigma(z_2^2) = \sigma(w_{21}^2x_1 + w_{22}^2x_2 + w_{23}^2x_3 + b_2^{2})</script><script type="math/tex; mode=display">
+a_3^2=\sigma(z_3^2) = \sigma(w_{31}^2x_1 + w_{32}^2x_2 + w_{33}^2x_3 + b_3^{2})</script><script type="math/tex; mode=display">
+h_{W,b}(x)=a_1^3=\sigma(z_1^3) = \sigma(w_{11}^3a_1^2 + w_{12}^3a_2^2 + w_{13}^3a_3^2 + b_1^{3})</script><p>上面式中的Wij就是相邻两层神经元之间的权值，它们就是深度学习需要学习的参数，也就相当于直线拟合 $y=k \times x + b$ 中的待求参数k和b。</p>
+<h3 id="反向传播-Back-Propagation"><a href="#反向传播-Back-Propagation" class="headerlink" title="反向传播(Back Propagation)"></a>反向传播(Back Propagation)</h3><p>此处我们为表示方便，令<script type="math/tex">a^L=h_{W,b}(x)</script></p>
+<script type="math/tex; mode=display">
+J(W,b,x,y) = \frac{1}{2}||a^L-y||_2^2</script><p>等等</p>
+<script type="math/tex; mode=display">
+a^L = \sigma(z^L) = \sigma(W^La^{L-1} + b^L)</script><p>代入后得：</p>
+<script type="math/tex; mode=display">
+J(W,b,x,y) = \frac{1}{2}||a^L-y||_2^2 =  \frac{1}{2}|| \sigma(W^La^{L-1} + b^L)-y||_2^2</script><p>这样求解的梯度就简单了：</p>
+<script type="math/tex; mode=display">
+\frac{\partial J(W,b,x,y)}{\partial W^L} = [(a^L-y) \odot \sigma^{'}(z^L)](a^{L-1})^T</script><script type="math/tex; mode=display">
+\frac{\partial J(W,b,x,y)}{\partial b^L} =(a^L-y)\odot \sigma^{'}(z^L)</script><h3 id="反向传播-Back-Propagation-与链式法则"><a href="#反向传播-Back-Propagation-与链式法则" class="headerlink" title="反向传播(Back Propagation)与链式法则"></a>反向传播(Back Propagation)与链式法则</h3><p>反向传播(BP, Back Propagation)算法是多层神经网络的训练中举足轻重的算法，其基于复合函数的链式法则，但在实际运算中的意义比链式法则要大的多。</p>
+<p>以求$e=(a+b)\times(b+1)$的偏导为例。<br>为方便，在图中，引入了中间变量$c$，$d$。 其复合关系图如下所示：<br><img src="https://pic2.zhimg.com/80/ee59254c9432b47cfcc3b11eab3e5984_hd.jpg" alt="这里写图片描述"></p>
+<p>接着，分别求$\frac{\partial e}{\partial a}$，$\frac{\partial e}{\partial b}$的值。<br><img src="https://pic4.zhimg.com/80/986aacfebb87f4e9573fa2fe87f439d1_hd.jpg" alt="这里写图片描述"></p>
+<p>利用<strong>链式法则</strong>可得： </p>
+<script type="math/tex; mode=display">
+\frac{\partial e}{\partial a}=\frac{\partial e}{\partial c}\cdot \frac{\partial c}{\partial a}=2\times1=2</script><script type="math/tex; mode=display">
+\frac{\partial e}{\partial b}=\frac{\partial e}{\partial c}\cdot \frac{\partial c}{\partial b}+\frac{\partial e}{\partial d}\cdot \frac{\partial d}{\partial b}=2\times1+3\times1=5</script><p>不难发现，$\frac{\partial e}{\partial a}$的值等于从 <strong>e -&gt; a</strong> 的路径上的偏导值的乘积，而$\frac{\partial e}{\partial b}$的值等于从  <strong>e -&gt; b</strong>  路径 <strong>e -&gt; c -&gt; b</strong>  上的偏导值的乘积加上路径 <strong>e -&gt; d -&gt; b</strong>  上的偏导值的乘积。可以注意到，这样做是十分耗时，因为很多路径被重复访问了。比如上图中， <strong>e -&gt;c -&gt; a</strong>和<strong>e -&gt; c -&gt; b</strong>  就都走了路径<strong>e -&gt; c</strong>  。对于权值动则数万的深度模型中的神经网络，这样的冗余所导致的计算量是相当大的。</p>
+<p>同样是利用链式法则，反向传播(BP, Back Propagation)算法则机智地避开了这种冗余，它对于每一个路径只访问一次就能求顶点对所有下层节点的偏导值。 梯度下降法需要给定一个初始点，并求出该点的梯度向量，然后以负梯度方向为搜索方向，以一定的步长进行搜索，从而确定下一个迭代点，再计算该新的梯度方向，如此重复直到损失函数收敛。</p>
+<ol>
+<li><p>从最上层的节点 <strong>e</strong>开始，<strong>初始值为1</strong>，以层为单位进行处理。</p>
+</li>
+<li><p>对于e的下一层的所有子节点，将1乘以<strong>e</strong>到某个节点路径上的偏导值，并将结果“堆放”在该子节点中。</p>
+<p>如，对于子节点<strong>c</strong>，<script type="math/tex">1\cdot\frac{\partial e}{\partial c}=1\times2=2</script></p>
+<p>如，对于子节点<strong>d</strong>，<script type="math/tex">1\cdot\frac{\partial e}{\partial d}=1\times3=3</script></p>
+</li>
+<li><p>然后将第二层的节点各自作为起始顶点，<strong>初始值设为第2步分别得到的偏导值</strong>，以”层”为单位重复上述传播过程，即可求出顶点e对每一层某个节点的偏导值。</p>
+<p>如，对于子节点<strong>a</strong>，<script type="math/tex">2\cdot\frac{\partial c}{\partial a}=2\times1=2</script></p>
+<p>如，对于子节点<strong>b</strong>，<script type="math/tex">1\cdot\frac{\partial c}{\partial b}+3\times\frac{\partial d}{\partial b}=2\times1+3\times1=5</script></p>
+</li>
+</ol>
+<p>由上述过程可以发现，BP算法很好的解决了重复计算的问题。</p>
+<h3 id="前向传播及反向传播具体计算过程示例"><a href="#前向传播及反向传播具体计算过程示例" class="headerlink" title="前向传播及反向传播具体计算过程示例"></a>前向传播及反向传播具体计算过程示例</h3><p>下图为一个三层神经网络结构，分别输入层（第0层），隐藏层（第1层），输出层（第2层）：</p>
+<p><img src="/Users/cong/Downloads/CNNSimple.png" alt="CNNSimple"></p>
+<p>整个输入、各层参数矩阵、输出，表示如下：</p>
+<script type="math/tex; mode=display">
+输入：X=
+\left[
+\begin{matrix}
+x_1\\
+x_2\\
+\end{matrix}
+\right]
+=\left[
+\begin{matrix}
+0.8\\
+0.3\\
+\end{matrix}
+\right]</script><script type="math/tex; mode=display">
+隐藏层权值参数：
+W_{1,0}=
+\left[
+\begin{matrix}
+w_{31}&w_{32}\\
+w_{41}&w_{42}\\
+\end{matrix}
+\right]
+=\left[
+\begin{matrix}
+0.3 & 0.5\\
+0.6 & 0.4\\
+\end{matrix}
+\right]</script><script type="math/tex; mode=display">
+隐藏层的偏差项：
+B_1=
+\left[
+\begin{matrix}
+b_3\\
+b_4\\
+\end{matrix}
+\right]
+=\left[
+\begin{matrix}
+0.02\\
+0.03\\
+\end{matrix}
+\right]</script><script type="math/tex; mode=display">
+输出层权值参数：
+W_{2,1}=
+\left[
+\begin{matrix}
+w_{53}&w_{54}\\
+\end{matrix}
+\right]
+=\left[
+\begin{matrix}
+0.2 & 0.7\\
+\end{matrix}
+\right]</script><script type="math/tex; mode=display">
+输出层的偏差项：
+B_2=
+\left[
+\begin{matrix}
+b_5\\
+\end{matrix}
+\right]
+=\left[
+\begin{matrix}
+0.03\\
+\end{matrix}
+\right]</script><script type="math/tex; mode=display">
+目标值：
+y_{out}=0.5</script><h4 id="对于前向传播"><a href="#对于前向传播" class="headerlink" title="对于前向传播"></a>对于前向传播</h4><p>第1层的输出为：</p>
+<script type="math/tex; mode=display">
+\begin {aligned}
+Z_{layer1}
+&=\left[
+\begin{matrix}
+z_3\\
+z_4\\
+\end{matrix}
+\right]
+=W_{1,0}\cdot X + B_1
+=\left[
+\begin{matrix}
+w_{31}&w_{32}\\
+w_{41}&w_{42}\\
+\end{matrix}
+\right]
+\cdot
+\left[
+\begin{matrix}
+x_1\\
+x_2\\
+\end{matrix}
+\right]
++\left[
+\begin{matrix}
+b_3\\
+b_4\\
+\end{matrix}
+\right]\\
+&=
+\left[
+\begin{matrix}
+w_{31}\times x_1 + w_{32}\times x_2 + b_3\\
+w_{41}\times x_1 + w_{42}\times x_2 + b_4\\
+\end{matrix}
+\right]
+=\left[
+\begin{matrix}
+0.3\times 0.8 + 0.5\times0.3 + 0.02\\
+0.6\times 0.8 + 0.4\times0.3 + 0.03\\
+\end{matrix}
+\right]\\
+&=\left[
+\begin{matrix}
+0.41\\
+0.63\\
+\end{matrix}
+\right]
+\end {aligned}</script><p>经激活函数处理后的输出为：</p>
+<script type="math/tex; mode=display">
+\begin {aligned}
+Y_{layer1}
+&=\left[
+\begin{matrix}
+y_3\\
+y_4\\
+\end{matrix}
+\right]
+=f(Z_{layer1})
+=f(\left[
+\begin{matrix}
+z_3\\
+z_4\\
+\end{matrix}
+\right])\\
+&=f(\left[
+\begin{matrix}
+0.41\\
+0.63\\
+\end{matrix}
+\right])\\
+&=
+\left[
+\begin{matrix}
+0.601\\
+0.652\\
+\end{matrix}
+\right]
+\end {aligned}</script><p>同理，对与第2层的输出、经过经激活函数后的输出分别为：</p>
+<script type="math/tex; mode=display">
+\begin {aligned}
+Z_{layer2}
+&=W_{2,1}\cdot Y_{layer1}+B_2
+=\left[
+\begin{matrix}
+w_{53} & w_{54}\\
+\end{matrix}
+\right]
+\cdot
+\left[
+\begin{matrix}
+y_3\\
+y_4\\
+\end{matrix}
+\right]+b_5\\
+&=\left[
+\begin{matrix}
+w_{53}\times y_3 + w_{54}\times y_4 + b_5\\
+\end{matrix}
+\right]
+=0.601\times0.2+0.652\times0.7 + 0.03
+\\
+&=0.6066
+\end {aligned}</script><script type="math/tex; mode=display">
+\begin {aligned}
+Y_{layer2}
+&=f(Z_{layer2})
+=f(W_{2,1}\cdot Y_{layer1})
+=f(\left[
+\begin{matrix}
+w_{53} & w_{54}\\
+\end{matrix}
+\right]
+\cdot
+\left[
+\begin{matrix}
+y_3\\
+y_4\\
+\end{matrix}
+\right])\\
+&=f(0.6066)\\
+&=0.647
+\end {aligned}</script><p>可得最终的损失函数的值为：</p>
+<script type="math/tex; mode=display">
+\begin {aligned}
+F_{loss}&=\frac{1}{2}(Y_{layer2}-y_{out})^2\\
+&=\frac{1}{2}(0.647-0.5)^2\\
+&=0.0108
+\end {aligned}</script><p>优化的目标则是通过训练，调节参数，来使得损失函数的值越小越好。反向传播（BP，Back Propagation）算法，便是利用梯度下降法来求得使损失函数达到最小值得一种方法。</p>
+<h4 id="对于反向传播"><a href="#对于反向传播" class="headerlink" title="对于反向传播"></a>对于反向传播</h4><p>首先对于<strong>第2层</strong>而言：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+F_{loss}=\frac{1}{2}(Y_{layer2}-y_{out})^2\\
+Y_{layer2}=f(Z_{layer2})\\
+Z_{layer2}=W_{2,1}\cdot Y_{layer1}=w_{53}\times y_3 + w_{54}\times y_4 + b_5\\
+\end{cases}</script><p>求解$\frac{\partial F_{loss}}{\partial w_{53}}$，则根据反向传播(BP, Back Propagation)算法可得:</p>
+<script type="math/tex; mode=display">
+\begin {aligned}
+\frac{\partial F_{loss}}{\partial w_{53}}
+&=\frac{\partial F_{loss}}{\partial Y_{layer2}}
+\cdot \frac{\partial Y_{layer2}}{\partial Z_{layer2}}
+\cdot \frac{\partial Z_{layer2}}{\partial w_{53}}\\
+&=(Y_{layer2}-y_{out})\times f(Z_{layer2})\times(1-f(Z_{layer2}))\times y_3\\
+&=(0.647-0.5)\times(0.647)\times(1-0.647)\times0.601\\
+&=0.0202
+\end {aligned}</script><p>其中Sigmod函数导数为：</p>
+<script type="math/tex; mode=display">
+\begin {align}
+f(x)=&\frac{1}{1+e ^{-x}}\\
+\frac{df}{dx}=&-(\frac{1}{1+e ^{-x}})^2\times(-e^{-x})\\
+=&f(x)\times(1-f(x))\\
+因此，\frac{\partial F_{loss}}{\partial Y_{layer2}}=&f(Z{_layer2})\times(1-f(Z{_layer2}))
+\end {align}</script><p><strong>（注：不同激活函数求导后的结果是不同的，在BP过程中所谓的梯度消失，梯度爆炸与激活函数的不恰当有很大关系！）</strong></p>
+<p>求解$\frac{\partial F_{loss}}{\partial w_{54}}$，根据则根据反向传播(BP, Back Propagation)算法可得：</p>
+<script type="math/tex; mode=display">
+\begin {aligned}
+\frac{\partial F_{loss}}{\partial w_{54}}
+&=\frac{\partial F_{loss}}{\partial Y_{layer2}}
+\cdot \frac{\partial Y_{layer2}}{\partial Z_{layer2}}
+\cdot \frac{\partial Z_{layer2}}{\partial w_{53}}\\
+&=(Y_{layer2}-y_{out})\times f(Z{_layer2})\times(1-f(Z{_layer2}))\times y_4\\
+&=(0.647-0.5)\times(0.647)\times(1-0.647)\times0.652\\
+&=0.0219
+\end {aligned}</script><p>求解$\frac{\partial F_{loss}}{\partial b_5}$，根据则根据反向传播(BP, Back Propagation)算法可得：</p>
+<script type="math/tex; mode=display">
+\begin {aligned}
+\frac{\partial F_{loss}}{\partial w_{54}}
+&=\frac{\partial F_{loss}}{\partial Y_{layer2}}
+\cdot \frac{\partial Y_{layer2}}{\partial Z_{layer2}}
+\cdot \frac{\partial Z_{layer2}}{\partial b_5}\\
+&=(Y_{layer2}-y_{out})\times f(Z{_layer2})\times(1-f(Z{_layer2}))\times 1\\
+&=(0.647-0.5)\times(0.647)\times(1-0.647)\times1\\
+&=0.0336
+\end {aligned}</script><p>进一步的，我们计算<strong>第1层</strong>的参数：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+F_{loss}=\frac{1}{2}(Y_{layer2}-y_{out})^2\\
+Y_{layer2}=f(Z_{layer2})\\
+Z_{layer2}=W_{2,1}\cdot Y_{layer1}=w_{53}\times y_3 + w_{54}\times y_4 + b_5\\
+Y_{layer1}
+=\left[
+\begin{matrix}
+y_3\\
+y_4\\
+\end{matrix}
+\right]
+=f(Z_{layer1})
+=f(\left[
+\begin{matrix}
+z_3\\
+z_4\\
+\end{matrix}
+\right])\\\\
+Z_{layer1}
+=\left[
+\begin{matrix}
+z_3\\
+z_4\\
+\end{matrix}
+\right]
+=W_{1,0}\cdot X + B_1
+=\left[
+\begin{matrix}
+w_{31}\times x_1 + w_{32}\times x_2 + b_3\\
+w_{41}\times x_1 + w_{42}\times x_2 + b_4\\
+\end{matrix}
+\right]
+\end{cases}</script><p>求解$\frac{\partial F_{loss}}{\partial w_{31}}$，则根据反向传播(BP, Back Propagation)算法可得:</p>
+<script type="math/tex; mode=display">
+\begin {aligned}
+\frac{\partial F_{loss}}{\partial w_{31}}
+&=\frac{\partial F_{loss}}{\partial Y_{layer2}}
+\cdot \frac{\partial Y_{layer2}}{\partial Z_{layer2}}
+\cdot \frac{\partial Z_{layer2}}{\partial y_3}
+\cdot \frac{\partial y_3}{\partial z_3}
+\cdot \frac{\partial z_3}{\partial w_{31}}
+\\
+&=(Y_{layer2}-y_{out})\times f(Z_{layer2})\times(1-f(Z_{layer2}))\times w_{53}\times f(Z_{layer1})\times(1-f(Z_{layer1}))\times x_1 \\
+&=(0.647-0.5)\times(0.647)\times(1-0.647)\times0.2\times(0.601)\times(1-0.601)\times(0.8)\\
+&=0.001288
+\end {aligned}</script><p>同理可得到其它几个参数权值：$\frac{\partial F_{loss}}{\partial w_{32}}$，$\frac{\partial F_{loss}}{\partial w_{41}}$，$\frac{\partial F_{loss}}{\partial w_{42}}$。</p>
+<p>求解$\frac{\partial F_{loss}}{\partial b_3}$，则根据反向传播(BP, Back Propagation)算法可得:</p>
+<script type="math/tex; mode=display">
+\begin {aligned}
+\frac{\partial F_{loss}}{\partial b_3}
+&=\frac{\partial F_{loss}}{\partial Y_{layer2}}
+\cdot \frac{\partial Y_{layer2}}{\partial Z_{layer2}}
+\cdot \frac{\partial Z_{layer2}}{\partial y_3}
+\cdot \frac{\partial y_3}{\partial z_3}
+\cdot \frac{\partial z_3}{\partial b_3}
+\\
+&=(Y_{layer2}-y_{out})\times f(Z_{layer2})\times(1-f(Z_{layer2}))\times w_{53}\times f(Z_{layer1})\times(1-f(Z_{layer1}))\times 1 \\
+&=(0.647-0.5)\times(0.647)\times(1-0.647)\times0.2\times(0.601)\times(1-0.601)\times1\\
+&=0.00161
+\end {aligned}</script><p>则第1层的各权值更新为：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+w_{31}=w_{31}-\frac{\partial F_{loss}}{\partial w_{31}}=0.298\\
+w_{32}=w_{32}-\frac{\partial F_{loss}}{\partial w_{32}}=0.494\\
+w_{41}=w_{41}-\frac{\partial F_{loss}}{\partial w_{41}}=0.598\\
+w_{42}=w_{42}-\frac{\partial F_{loss}}{\partial w_{42}}=0.394\\
+\end{cases}</script><p>按照更新后的权重参数再进行一次正向传播得出来的损失函数的值为：$F_{loss}=0.0099$</p>
+<p>而这个值比第一次迭代时的<code>0.0108</code>更小，如果继续迭代，则会不断修正各层的权值参数，使得损失函数越来越小，预测值不断逼近 <code>0.5</code>。</p>
+<p>经过迭代了100次后，$F_{loss}=7.09786073e-07$（<strong>已经很小很小很小了，说明预测值与真实值非常接近</strong>），最后的权值为：</p>
+<script type="math/tex; mode=display">
+W_{1,0}=
+\left[
+\begin{matrix}
+0.30508134 & 0.40828582\\
+0.60508134 & 0.30828582\\
+\end{matrix}
+\right]</script><script type="math/tex; mode=display">
+W_{2,1}
+=\left[
+\begin{matrix}
+-0.2601328 & 0.20000184\\
+\end{matrix}
+\right]</script><p>到此，整个前向传播（Forward propagation）与反向传播（Back Propagation）的过程可能差不多就是这样了。</p>
+<p>上面实现的python代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nonlin</span><span class="params">(x, deriv=False)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> (deriv == <span class="keyword">True</span>):</span><br><span class="line">        <span class="keyword">return</span> x * (<span class="number">1</span> - x) <span class="comment">#如果deriv为true，求导数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span> / (<span class="number">1</span> + np.exp(-x))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入层</span></span><br><span class="line">X = np.array([[<span class="number">0.8</span>],[<span class="number">0.3</span>]])</span><br><span class="line"><span class="comment"># 输出值</span></span><br><span class="line">y = np.array([[<span class="number">0.5</span>]])</span><br><span class="line"></span><br><span class="line">np.random.seed(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">W0 = np.array([[<span class="number">0.3</span>,<span class="number">0.5</span>],[<span class="number">0.6</span>,<span class="number">0.4</span>]])</span><br><span class="line">W1 = np.array([[<span class="number">0.2</span>,<span class="number">0.7</span>]])</span><br><span class="line">B1 = np.array([[<span class="number">0.02</span>,<span class="number">0.03</span>]])</span><br><span class="line">B2 = np.array([[<span class="number">0.03</span>]])</span><br><span class="line"><span class="comment"># print('original: ', '\n', W0, '\n',W1)</span></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">100</span>):</span><br><span class="line">    <span class="comment"># 输入层（第0层）</span></span><br><span class="line">    l0 = X</span><br><span class="line">    <span class="comment"># 隐藏层（第1层）</span></span><br><span class="line">    l1 = nonlin(np.dot(W0,l0) + B1.T)</span><br><span class="line">    print(<span class="string">"l1:"</span>,<span class="string">'\n'</span>, l1)</span><br><span class="line">    <span class="comment"># 输出层（第2层）</span></span><br><span class="line">    l2 = nonlin(np.dot(W1,l1) + B2.T)</span><br><span class="line">    print(<span class="string">"l2:"</span>,<span class="string">'\n'</span>, l2)</span><br><span class="line">    <span class="comment"># 损失函数</span></span><br><span class="line">    l2_error = y - l2</span><br><span class="line">    Error = <span class="number">1</span>/<span class="number">2.0</span>*(y-l2)**<span class="number">2</span></span><br><span class="line">    print(<span class="string">"Error:"</span>,<span class="string">'\n'</span>, Error)</span><br><span class="line">    <span class="comment"># 反向传播</span></span><br><span class="line">    l2_delta = l2_error * nonlin(l2, deriv=<span class="keyword">True</span>)</span><br><span class="line">    l1_error = l2_delta*W1</span><br><span class="line">    l1_delta = l1_error * nonlin(l1, deriv=<span class="keyword">True</span>)</span><br><span class="line">    <span class="comment"># 更新权值</span></span><br><span class="line">    W1 += l2_delta*l1.T; </span><br><span class="line">    W0 += l0.T.dot(l1_delta)</span><br><span class="line">    print(<span class="string">'W0:'</span>, <span class="string">'\n'</span>, W0, <span class="string">'\n'</span>,<span class="string">'W1:'</span>, <span class="string">'\n'</span>,W1)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>本文参考了以下文献：</p>
+<p>[1]. <a href="https://www.zhihu.com/question/27239198/answer/89853077" target="_blank" rel="noopener">如何直观地解释 backpropagation 算法</a></p>
+<p>[2]. <a href="https://zhuanlan.zhihu.com/p/24801814" target="_blank" rel="noopener">通俗理解神经网络BP传播算法</a></p>
 
       
     </div>
@@ -496,7 +845,7 @@
     <strong>本文作者： </strong>旋律信</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://wangcong.net/article/JinanInterview.html" title="济南实习面试之记">https://wangcong.net/article/JinanInterview.html</a>
+    <a href="https://wangcong.net/article/FPandBP.html" title="前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结">https://wangcong.net/article/FPandBP.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -509,7 +858,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/济南/" rel="tag"># 济南</a>
+            <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
           
         </div>
       
@@ -522,8 +871,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/article/MacWithPyTorch.html" rel="next" title="在Mac中搭建PyTorch网络框架">
-                <i class="fa fa-chevron-left"></i> 在Mac中搭建PyTorch网络框架
+              <a href="/article/ConvolutionalLayer.html" rel="next" title="图解卷积神经网络中二维与三维图像卷积操作">
+                <i class="fa fa-chevron-left"></i> 图解卷积神经网络中二维与三维图像卷积操作
               </a>
             
           </div>
@@ -531,10 +880,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/article/CentOSMySQL.html" rel="prev" title="CentOS安装MySQL并实现远程链接">
-                CentOS安装MySQL并实现远程链接 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -934,7 +1279,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#7月29日"><span class="nav-number">1.</span> <span class="nav-text">7月29日</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7月30日"><span class="nav-number">2.</span> <span class="nav-text">7月30日</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附图"><span class="nav-number">3.</span> <span class="nav-text">附图</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前向传播（Forward-propagation）"><span class="nav-number">1.</span> <span class="nav-text">前向传播（Forward propagation）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反向传播-Back-Propagation"><span class="nav-number">2.</span> <span class="nav-text">反向传播(Back Propagation)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反向传播-Back-Propagation-与链式法则"><span class="nav-number">3.</span> <span class="nav-text">反向传播(Back Propagation)与链式法则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前向传播及反向传播具体计算过程示例"><span class="nav-number">4.</span> <span class="nav-text">前向传播及反向传播具体计算过程示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对于前向传播"><span class="nav-number">4.1.</span> <span class="nav-text">对于前向传播</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对于反向传播"><span class="nav-number">4.2.</span> <span class="nav-text">对于反向传播</span></a></li></ol></li></ol></div>
             
 
           </div>

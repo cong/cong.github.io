@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/article/FPandBP.html</loc>
+    
+    <lastmod>2019-09-03T10:03:13.896Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/FCNtoCNN.html</loc>
     
     <lastmod>2019-08-30T10:52:39.781Z</lastmod>
@@ -107,13 +114,6 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
@@ -121,14 +121,21 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
+    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
+    
+    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
     
     <lastmod>2019-08-01T06:13:48.663Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
+    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
     
     <lastmod>2019-08-01T06:13:48.663Z</lastmod>
     
@@ -247,14 +254,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
     
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     
