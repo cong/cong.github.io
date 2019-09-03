@@ -3,6 +3,7 @@
 
 
     
+    
   <url>
     <loc>https://wangcong.net/article/FPandBP.html</loc>
     <lastmod>2019-09-03T10:46:28.600Z</lastmod>
@@ -200,7 +201,6 @@
     </url>
 
     
-    
   <url>
     <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
     <lastmod>2019-08-20T02:30:36.929Z</lastmod>
@@ -338,34 +338,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
-    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
-    <data>
-        <display>
-        <title>Companion computer 对UAV的外部控制</title>
-        <pubTime>2018-02-06T03:30:52.000Z</pubTime>
-        
-        <tag>UAV</tag>
-         
-        <tag>ROS</tag>
-         
-        <tag>MAVROS</tag>
-         
-        <tag>Offboard</tag>
-         
-        <tag>Pixhawk</tag>
-         
-         
-           
-             
-              <breadCrumb title="UAV" url="https://wangcong.net/categories/UAV/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/NeoDownloader.html</loc>
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     <data>
@@ -381,6 +353,34 @@
            
              
               <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
+    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
+    <data>
+        <display>
+        <title>Companion computer 对UAV的外部控制</title>
+        <pubTime>2018-02-06T03:30:52.000Z</pubTime>
+        
+        <tag>ROS</tag>
+         
+        <tag>MAVROS</tag>
+         
+        <tag>Offboard</tag>
+         
+        <tag>Pixhawk</tag>
+         
+        <tag>UAV</tag>
+         
+         
+           
+             
+              <breadCrumb title="UAV" url="https://wangcong.net/categories/UAV/"/>
           
         </display>
     </data>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/specialization/index.html</loc>
+    
+    <lastmod>2019-09-03T10:56:52.110Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/FPandBP.html</loc>
     
     <lastmod>2019-09-03T10:46:28.600Z</lastmod>
@@ -65,13 +72,6 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/specialization/index.html</loc>
-    
-    <lastmod>2019-08-20T03:22:55.072Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
     
     <lastmod>2019-08-20T02:30:36.929Z</lastmod>
@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
+    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
+    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     
