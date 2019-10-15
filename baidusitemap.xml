@@ -3,6 +3,30 @@
 
 
     
+  <url>
+    <loc>https://wangcong.net/article/MacInstallOpenCV.html</loc>
+    <lastmod>2019-10-15T06:23:34.742Z</lastmod>
+    <data>
+        <display>
+        <title>Mac中安装OpenCV</title>
+        <pubTime>2019-06-22T01:53:23.000Z</pubTime>
+        
+        <tag>Mac</tag>
+         
+        <tag>OpenCV</tag>
+         
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
   <url>
@@ -371,9 +395,9 @@
         <title>Faster-RCNN的搭建和测试</title>
         <pubTime>2017-08-02T07:36:36.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -688,30 +712,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
-    <lastmod>2019-08-01T06:13:48.653Z</lastmod>
-    <data>
-        <display>
-        <title>什么是Spark？</title>
-        <pubTime>2018-01-07T01:08:56.000Z</pubTime>
-        
-        <tag>Big Data</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>Spark</tag>
-         
-         
-           
-             
-              <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/labelImgUsing.html</loc>
     <lastmod>2019-08-01T06:13:48.653Z</lastmod>
     <data>
@@ -729,6 +729,30 @@
            
              
               <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
+    <lastmod>2019-08-01T06:13:48.653Z</lastmod>
+    <data>
+        <display>
+        <title>什么是Spark？</title>
+        <pubTime>2018-01-07T01:08:56.000Z</pubTime>
+        
+        <tag>Big Data</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Spark</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
           
         </display>
     </data>
@@ -791,9 +815,9 @@
         <title>Fast-RCNN的搭建和测试</title>
         <pubTime>2017-07-30T01:35:27.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -872,6 +896,28 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
+    <data>
+        <display>
+        <title>计算机视觉学习笔记</title>
+        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
+        
+        <tag>计算机视觉</tag>
+         
+        <tag>Computer Vision</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     <data>
@@ -889,28 +935,6 @@
            
              
               <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
-    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
-    <data>
-        <display>
-        <title>计算机视觉学习笔记</title>
-        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
-        
-        <tag>计算机视觉</tag>
-         
-        <tag>Computer Vision</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
           
         </display>
     </data>
@@ -967,9 +991,9 @@
         <title>Jetson TK1 or TX1 刷系统以及配置Caffe教程</title>
         <pubTime>2017-11-21T01:53:26.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -1848,9 +1872,9 @@
         <title>测试Caffe</title>
         <pubTime>2017-07-23T03:30:22.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -1874,9 +1898,9 @@
         <title>安装Caffe</title>
         <pubTime>2017-07-23T02:14:26.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          

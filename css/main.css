@@ -1856,7 +1856,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9a663e;
+  background: #fbf;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3133,7 +3133,7 @@ ul.breadcrumb li+li:last-child {
     margin: 8px 0 0;
   }
 }
-.content-wrap {
+.content {
   background: url("/images/national-day-2019-banner.jpg");
   padding: 146px 0px 0px 0px;
   background-repeat: no-repeat;
