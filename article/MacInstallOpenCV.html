@@ -106,18 +106,18 @@
 
 
 
-  <meta name="description" content="继前面在Mac上安装了Pytorch后，为方便在本地环境上对部分图像处理的算法进行测试，打算在Mac上安装OpenCV。 看了不少教程，发现有些教程中的命令早已老旧无法运行，有些教程中安装过程太过繁杂，怕步骤太多，安装中出了错会影响之前安装的环境，所以综合之后整理了本篇教程，并分给出了不同情况下的处理办法。">
+  <meta name="description" content="继前面在Mac上安装了Pytorch后（在Mac中搭建PyTorch网络框架），为方便在本地环境上对部分图像处理的算法进行测试，打算在Mac上安装OpenCV。 看了不少教程，发现有些教程中的命令早已老旧无法运行，有些教程中安装过程太过繁杂，怕步骤太多，安装中出了错会影响之前安装的环境，所以综合之后整理了本篇教程，并分给出了不同情况下的处理办法。">
 <meta name="keywords" content="Mac,OpenCV,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac中安装OpenCV">
 <meta property="og:url" content="https://wangcong.net/article/MacInstallOpenCV.html">
 <meta property="og:site_name" content="旋律信">
-<meta property="og:description" content="继前面在Mac上安装了Pytorch后，为方便在本地环境上对部分图像处理的算法进行测试，打算在Mac上安装OpenCV。 看了不少教程，发现有些教程中的命令早已老旧无法运行，有些教程中安装过程太过繁杂，怕步骤太多，安装中出了错会影响之前安装的环境，所以综合之后整理了本篇教程，并分给出了不同情况下的处理办法。">
+<meta property="og:description" content="继前面在Mac上安装了Pytorch后（在Mac中搭建PyTorch网络框架），为方便在本地环境上对部分图像处理的算法进行测试，打算在Mac上安装OpenCV。 看了不少教程，发现有些教程中的命令早已老旧无法运行，有些教程中安装过程太过繁杂，怕步骤太多，安装中出了错会影响之前安装的环境，所以综合之后整理了本篇教程，并分给出了不同情况下的处理办法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-15T06:23:34.742Z">
+<meta property="og:updated_time" content="2019-10-15T06:30:38.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac中安装OpenCV">
-<meta name="twitter:description" content="继前面在Mac上安装了Pytorch后，为方便在本地环境上对部分图像处理的算法进行测试，打算在Mac上安装OpenCV。 看了不少教程，发现有些教程中的命令早已老旧无法运行，有些教程中安装过程太过繁杂，怕步骤太多，安装中出了错会影响之前安装的环境，所以综合之后整理了本篇教程，并分给出了不同情况下的处理办法。">
+<meta name="twitter:description" content="继前面在Mac上安装了Pytorch后（在Mac中搭建PyTorch网络框架），为方便在本地环境上对部分图像处理的算法进行测试，打算在Mac上安装OpenCV。 看了不少教程，发现有些教程中的命令早已老旧无法运行，有些教程中安装过程太过繁杂，怕步骤太多，安装中出了错会影响之前安装的环境，所以综合之后整理了本篇教程，并分给出了不同情况下的处理办法。">
 
 
 
@@ -444,12 +444,12 @@
       
 
       
-        <p>继前面在Mac上安装了Pytorch后，为方便在本地环境上对部分图像处理的算法进行测试，打算在Mac上安装OpenCV。</p>
+        <p>继前面在Mac上安装了Pytorch后（<a href="/article/MacWithPyTorch.html">在Mac中搭建PyTorch网络框架</a>），为方便在本地环境上对部分图像处理的算法进行测试，打算在Mac上安装OpenCV。</p>
 <p>看了不少教程，发现有些教程中的命令早已老旧无法运行，有些教程中安装过程太过繁杂，怕步骤太多，安装中出了错会影响之前安装的环境，所以综合之后整理了本篇教程，并分给出了不同情况下的处理办法。</p>
 <a id="more"></a>
 <h3 id="情况一："><a href="#情况一：" class="headerlink" title="情况一："></a>情况一：</h3><p>如果在没有安装Python3的情况下安装OpenCV，会自动安装最新的Python版本，并将该版本设置为系统默认Python。</p>
 <p>直接运行下面的命令安装OpenCV：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install opencv</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 没有安装Homebrew可以查看：《在Mac中搭建PyTorch网络框架》</span></span><br><span class="line">brew install opencv</span><br></pre></td></tr></table></figure>
 <p>测试：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Python 3.7.4 (default, Oct 12 2019, 18:55:28) </span><br><span class="line">[Clang 11.0.0 (clang-1100.0.33.8)] on darwin</span><br><span class="line">Type "help", "copyright", "credits" or "license" for more information.</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; import cv2</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;</span></span><br></pre></td></tr></table></figure>
 <p>如果没有报错，说明安装成功了，恭喜！</p>

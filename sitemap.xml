@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
+    
+    <lastmod>2019-10-21T02:59:49.913Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/MacInstallOpenCV.html</loc>
     
-    <lastmod>2019-10-15T06:23:34.742Z</lastmod>
+    <lastmod>2019-10-15T06:30:38.745Z</lastmod>
     
   </url>
   
@@ -107,13 +114,6 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
-    
-    <lastmod>2019-08-20T02:30:36.929Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangcong.net/article/SparkArchitecturalSchemes.html</loc>
     
     <lastmod>2019-08-01T06:13:48.672Z</lastmod>
@@ -142,14 +142,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
+    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
+    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     
