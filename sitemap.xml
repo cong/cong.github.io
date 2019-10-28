@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/article/KerasTutorial.html</loc>
+    
+    <lastmod>2019-10-25T09:14:53.623Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
     
     <lastmod>2019-10-21T02:59:49.913Z</lastmod>
@@ -142,14 +149,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
+    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
+    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     
@@ -226,14 +233,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
+    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
     
     <lastmod>2019-08-01T06:13:48.653Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
+    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
     
     <lastmod>2019-08-01T06:13:48.653Z</lastmod>
     
@@ -453,13 +460,6 @@
     <loc>https://wangcong.net/article/DataStructureAlgorithm.html</loc>
     
     <lastmod>2019-01-16T08:56:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/KerasTutorial.html</loc>
-    
-    <lastmod>2019-01-11T09:03:53.000Z</lastmod>
     
   </url>
   

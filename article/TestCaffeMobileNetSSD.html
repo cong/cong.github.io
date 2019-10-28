@@ -107,7 +107,7 @@
 
 
   <meta name="description" content="在测试的过程中和群友们仔细的探讨了下，很快的解决了测试中遇见的一些细节问题，学东西还是尽量和周围的人一起学，毕竟老话说过“人多力量大！”。 自己一个人也不是不可以，但是往往要比很多人一起探讨花费两倍或者五六倍的时间，所以强烈建议要有那么几个共同学习的小圈子。">
-<meta name="keywords" content="Caffe,SSD,ROS,MobileNet">
+<meta name="keywords" content="ROS,Caffe,SSD,MobileNet">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于ROS测试Caffe MobileNet-SSD【通用】">
 <meta property="og:url" content="https://wangcong.net/article/TestCaffeMobileNetSSD.html">
@@ -408,6 +408,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/article/TestCaffeMobileNetSSD.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/article/TestCaffeMobileNetSSD.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -490,11 +500,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/ROS/" rel="tag"># ROS</a>
+          
             <a href="/tags/Caffe/" rel="tag"># Caffe</a>
           
             <a href="/tags/SSD/" rel="tag"># SSD</a>
-          
-            <a href="/tags/ROS/" rel="tag"># ROS</a>
           
             <a href="/tags/MobileNet/" rel="tag"># MobileNet</a>
           
@@ -547,6 +557,9 @@
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -1126,6 +1139,30 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//img.wangcong.info/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz',
+        appKey: 'DfQofItPxzAfDtSv0TeyYJ0A',
+        placeholder: 'ヾﾉ≧∀≦)o 欢迎交流!   请输入您的昵称和邮箱，以便您收到回复时能及时得到通知...',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

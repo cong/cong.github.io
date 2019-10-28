@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/KerasTutorial.html</loc>
+    <lastmod>2019-10-25T09:14:53.623Z</lastmod>
+    <data>
+        <display>
+        <title>Keras快速教程</title>
+        <pubTime>2019-01-11T07:28:36.000Z</pubTime>
+        
+        <tag>TensorFlow</tag>
+         
+        <tag>Keras</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
     <lastmod>2019-10-21T02:59:49.913Z</lastmod>
     <data>
@@ -59,11 +81,11 @@
         <title>基于ROS安装Caffe和SSD【通用】</title>
         <pubTime>2017-12-24T13:55:23.000Z</pubTime>
         
+        <tag>ROS</tag>
+         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
-         
-        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -432,34 +454,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
-    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
-    <data>
-        <display>
-        <title>Companion computer 对UAV的外部控制</title>
-        <pubTime>2018-02-06T03:30:52.000Z</pubTime>
-        
-        <tag>ROS</tag>
-         
-        <tag>MAVROS</tag>
-         
-        <tag>Offboard</tag>
-         
-        <tag>Pixhawk</tag>
-         
-        <tag>UAV</tag>
-         
-         
-           
-             
-              <breadCrumb title="UAV" url="https://wangcong.net/categories/UAV/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/NeoDownloader.html</loc>
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     <data>
@@ -475,6 +469,34 @@
            
              
               <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
+    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
+    <data>
+        <display>
+        <title>Companion computer 对UAV的外部控制</title>
+        <pubTime>2018-02-06T03:30:52.000Z</pubTime>
+        
+        <tag>ROS</tag>
+         
+        <tag>UAV</tag>
+         
+        <tag>MAVROS</tag>
+         
+        <tag>Offboard</tag>
+         
+        <tag>Pixhawk</tag>
+         
+         
+           
+             
+              <breadCrumb title="UAV" url="https://wangcong.net/categories/UAV/"/>
           
         </display>
     </data>
@@ -712,30 +734,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
-    <lastmod>2019-08-01T06:13:48.653Z</lastmod>
-    <data>
-        <display>
-        <title>LabelImg使用教程</title>
-        <pubTime>2017-09-25T08:25:11.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>深度学习</tag>
-         
-        <tag>LabelImg</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/WhatsSpark.html</loc>
     <lastmod>2019-08-01T06:13:48.653Z</lastmod>
     <data>
@@ -753,6 +751,30 @@
            
              
               <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
+    <lastmod>2019-08-01T06:13:48.653Z</lastmod>
+    <data>
+        <display>
+        <title>LabelImg使用教程</title>
+        <pubTime>2017-09-25T08:25:11.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>LabelImg</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
           
         </display>
     </data>
@@ -1425,28 +1447,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/KerasTutorial.html</loc>
-    <lastmod>2019-01-11T09:03:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>Keras快速教程</title>
-        <pubTime>2019-01-11T07:28:36.000Z</pubTime>
-        
-        <tag>TensorFlow</tag>
-         
-        <tag>Keras</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/LinuxCloudServerGUI.html</loc>
     <lastmod>2019-01-02T06:49:31.000Z</lastmod>
     <data>
@@ -1520,11 +1520,11 @@
         <title>基于ROS测试Caffe MobileNet-SSD【通用】</title>
         <pubTime>2017-12-25T01:15:31.000Z</pubTime>
         
+        <tag>ROS</tag>
+         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
-         
-        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
