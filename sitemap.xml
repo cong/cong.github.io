@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/article/PyTorchTutorial.html</loc>
+    
+    <lastmod>2019-10-31T08:26:30.452Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/specialization/index.html</loc>
+    
+    <lastmod>2019-10-31T08:23:32.846Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/GraduateLife.html</loc>
     
     <lastmod>2019-10-31T07:19:44.779Z</lastmod>
@@ -16,16 +30,16 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/about/photos/index.html</loc>
+    <loc>https://wangcong.net/about/photos/photoslist.json</loc>
     
-    <lastmod>2019-10-31T02:19:49.546Z</lastmod>
+    <lastmod>2019-10-31T06:59:40.601Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/about/photos/photoslist.json</loc>
+    <loc>https://wangcong.net/about/photos/index.html</loc>
     
-    <lastmod>2019-10-31T01:58:14.298Z</lastmod>
+    <lastmod>2019-10-31T02:19:49.546Z</lastmod>
     
   </url>
   
@@ -68,13 +82,6 @@
     <loc>https://wangcong.net/article/MacInstallOpenCV.html</loc>
     
     <lastmod>2019-10-15T06:30:38.745Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/specialization/index.html</loc>
-    
-    <lastmod>2019-09-25T06:37:40.297Z</lastmod>
     
   </url>
   
@@ -184,14 +191,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
+    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
+    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     
@@ -268,14 +275,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
+    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
     
     <lastmod>2019-08-01T06:13:48.653Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
+    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
     
     <lastmod>2019-08-01T06:13:48.653Z</lastmod>
     
