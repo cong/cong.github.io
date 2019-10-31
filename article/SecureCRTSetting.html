@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,21 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="在Mac上一直没有找到合适的SSH远程登录工具，后多次去知乎等相关平台查看类似问题，并经过实际尝试，暂时选定SecureCRT作为自己的临时SSH远程登录工具。 PS：也使用过其他的如自带的Terminal、FinalShell及Zoc等工具，总体而言FinalShell比较符合国人审美及操作，但是感觉不太安全，毕竟第三方个人开发，且云服务器莫名跑上了挖矿相关代码，不知道是否和该工具之间有关联。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/SecureCRT00.png">
-<meta property="og:image" content="https://img.wangcong.net/SecureCRT01.png">
-<meta property="og:image" content="https://img.wangcong.net/SecureCRT03.png">
-<meta property="og:image" content="https://img.wangcong.net/SecureCRT04.png">
-<meta property="og:image" content="https://img.wangcong.net/SecureCRT05.png">
-<meta property="og:image" content="https://img.wangcong.net/SecureCRT06.png">
-<meta property="og:image" content="https://img.wangcong.net/SecureCRT07.png">
-<meta property="og:image" content="https://img.wangcong.net/SecureCRT08.png">
-<meta property="og:image" content="https://img.wangcong.net/SecureCRT010.png">
-<meta property="og:image" content="https://img.wangcong.net/SecureCRT09.png">
 <meta property="og:updated_time" content="2019-08-01T06:13:48.655Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SecureCRT 个人配色方案">
 <meta name="twitter:description" content="在Mac上一直没有找到合适的SSH远程登录工具，后多次去知乎等相关平台查看类似问题，并经过实际尝试，暂时选定SecureCRT作为自己的临时SSH远程登录工具。 PS：也使用过其他的如自带的Terminal、FinalShell及Zoc等工具，总体而言FinalShell比较符合国人审美及操作，但是感觉不太安全，毕竟第三方个人开发，且云服务器莫名跑上了挖矿相关代码，不知道是否和该工具之间有关联。">
-<meta name="twitter:image" content="https://img.wangcong.net/SecureCRT00.png">
 
 <link rel="canonical" href="https://wangcong.net/article/SecureCRTSetting.html">
 
@@ -169,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -306,19 +301,19 @@
 <p>为安全起见，还是使用了老牌的SecureCRT。</p>
 <a id="more"></a>
 <h3 id="配置Linux终端颜色"><a href="#配置Linux终端颜色" class="headerlink" title="配置Linux终端颜色"></a>配置Linux终端颜色</h3><p>从<code>Options</code>中选择 <code>Global options</code>，然后点击<code>Edit Defualt Setting</code></p>
-<p><img src="https://img.wangcong.net/SecureCRT00.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/SecureCRT00.png"></p>
 <p>在<code>Terminal</code>下拉列表下选择<code>Linux</code>，勾选<code>ANSI Color</code></p>
-<p><img src="https://img.wangcong.net/SecureCRT01.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/SecureCRT01.png"></p>
 <h3 id="配置ANSI-Color"><a href="#配置ANSI-Color" class="headerlink" title="配置ANSI Color"></a>配置ANSI Color</h3><p>ANSI Color 设置如下：</p>
-<p><img src="https://img.wangcong.net/SecureCRT03.png" alt=""></p>
-<p><img src="https://img.wangcong.net/SecureCRT04.png" alt=""></p>
-<p><img src="https://img.wangcong.net/SecureCRT05.png" alt=""></p>
-<p><img src="https://img.wangcong.net/SecureCRT06.png" alt=""></p>
-<p><img src="https://img.wangcong.net/SecureCRT07.png" alt=""></p>
-<p><img src="https://img.wangcong.net/SecureCRT08.png" alt=""></p>
-<h3 id="配置显示字体"><a href="#配置显示字体" class="headerlink" title="配置显示字体"></a>配置显示字体</h3><p><img src="https://img.wangcong.net/SecureCRT010.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/SecureCRT03.png"></p>
+<p><img alt="" data-src="https://img.wangcong.net/SecureCRT04.png"></p>
+<p><img alt="" data-src="https://img.wangcong.net/SecureCRT05.png"></p>
+<p><img alt="" data-src="https://img.wangcong.net/SecureCRT06.png"></p>
+<p><img alt="" data-src="https://img.wangcong.net/SecureCRT07.png"></p>
+<p><img alt="" data-src="https://img.wangcong.net/SecureCRT08.png"></p>
+<h3 id="配置显示字体"><a href="#配置显示字体" class="headerlink" title="配置显示字体"></a>配置显示字体</h3><p><img alt="" data-src="https://img.wangcong.net/SecureCRT010.png"></p>
 <h3 id="配置光标样式"><a href="#配置光标样式" class="headerlink" title="配置光标样式"></a>配置光标样式</h3><p>设置闪烁 光标及相应颜色：</p>
-<p><img src="https://img.wangcong.net/SecureCRT09.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/SecureCRT09.png"></p>
 
     </div>
 
@@ -344,6 +339,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/SecureCRTSetting.html" title="SecureCRT 个人配色方案">https://wangcong.net/article/SecureCRTSetting.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -627,6 +639,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -638,6 +658,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -682,7 +705,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -705,7 +728,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,17 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="关于Https单线部署在Github Pages时，用的是cloudflare提供的SSL证书。  双线部署（GitHub Pages + Coding Pages）时，Cloudflare就不能用了，但Coding Pages提供了通过Let’s Encrypt申请SSL证书进而可以开启全站Https的方法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/BlogUpdate1.jpg">
-<meta property="og:image" content="https://img.wangcong.net/BlogUpdate2.jpg">
-<meta property="og:image" content="https://img.wangcong.net/BlogUpdate3.jpg">
-<meta property="og:image" content="https://img.wangcong.net/BlogUpdate4.jpg">
-<meta property="og:image" content="https://img.wangcong.net/BlogUpdate5.jpg">
-<meta property="og:image" content="https://img.wangcong.net/BlogUpdate6.png">
 <meta property="og:updated_time" content="2019-08-01T06:13:48.634Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人主页升级之双线部署 + 全站Https">
 <meta name="twitter:description" content="关于Https单线部署在Github Pages时，用的是cloudflare提供的SSL证书。  双线部署（GitHub Pages + Coding Pages）时，Cloudflare就不能用了，但Coding Pages提供了通过Let’s Encrypt申请SSL证书进而可以开启全站Https的方法。">
-<meta name="twitter:image" content="https://img.wangcong.net/BlogUpdate1.jpg">
 
 <link rel="canonical" href="https://wangcong.net/article/BlogUpdate.html">
 
@@ -165,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -300,14 +299,14 @@
         <h2 id="关于Https"><a href="#关于Https" class="headerlink" title="关于Https"></a>关于Https</h2><p>单线部署在Github Pages时，用的是cloudflare提供的SSL证书。 </p>
 <p>双线部署（GitHub Pages + Coding Pages）时，Cloudflare就不能用了，但Coding Pages提供了通过Let’s Encrypt申请SSL证书进而可以开启全站Https的方法。</p>
 <a id="more"></a> 
-<h2 id="Coding-net配置篇"><a href="#Coding-net配置篇" class="headerlink" title="Coding.net配置篇"></a>Coding.net配置篇</h2><h4 id="注册Coding"><a href="#注册Coding" class="headerlink" title="注册Coding"></a>注册Coding</h4><p><img src="https://img.wangcong.net/BlogUpdate1.jpg" alt="BlogUpdate1"></p>
-<h4 id="升级银牌会员"><a href="#升级银牌会员" class="headerlink" title="升级银牌会员"></a>升级银牌会员</h4><p><img src="https://img.wangcong.net/BlogUpdate2.jpg" alt="BlogUpdate2"></p>
-<h4 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h4><p><img src="https://img.wangcong.net/BlogUpdate3.jpg" alt="BlogUpdate3"></p>
-<h4 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h4><p><img src="https://img.wangcong.net/BlogUpdate4.jpg" alt="BlogUpdate4"></p>
-<h4 id="配置Pages"><a href="#配置Pages" class="headerlink" title="配置Pages"></a>配置Pages</h4><p><img src="https://img.wangcong.net/BlogUpdate5.jpg" alt="BlogUpdate5"></p>
+<h2 id="Coding-net配置篇"><a href="#Coding-net配置篇" class="headerlink" title="Coding.net配置篇"></a>Coding.net配置篇</h2><h4 id="注册Coding"><a href="#注册Coding" class="headerlink" title="注册Coding"></a>注册Coding</h4><p><img alt="BlogUpdate1" data-src="https://img.wangcong.net/BlogUpdate1.jpg"></p>
+<h4 id="升级银牌会员"><a href="#升级银牌会员" class="headerlink" title="升级银牌会员"></a>升级银牌会员</h4><p><img alt="BlogUpdate2" data-src="https://img.wangcong.net/BlogUpdate2.jpg"></p>
+<h4 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h4><p><img alt="BlogUpdate3" data-src="https://img.wangcong.net/BlogUpdate3.jpg"></p>
+<h4 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h4><p><img alt="BlogUpdate4" data-src="https://img.wangcong.net/BlogUpdate4.jpg"></p>
+<h4 id="配置Pages"><a href="#配置Pages" class="headerlink" title="配置Pages"></a>配置Pages</h4><p><img alt="BlogUpdate5" data-src="https://img.wangcong.net/BlogUpdate5.jpg"></p>
 <ol>
 <li><p>添加CNAME记录为<code>pages.coding.me</code>，注意将Github的<strong>线路类型</strong>设置为<strong>国外</strong>。</p>
-<p><img src="https://img.wangcong.net/BlogUpdate6.png" alt="BlogUpdate6"></p>
+<p><img alt="BlogUpdate6" data-src="https://img.wangcong.net/BlogUpdate6.png"></p>
 </li>
 <li><p>申请SSL证书  </p>
 <p>注意：如果是Github+Coding双线部署，申请SSL证书前需要先将解析到github.io的CNAME记录暂停！！！不然Let’s Encrypt主机在验证域名所有权时会定位到Github Pages的主机上导致SSL证书申请失败</p>
@@ -341,6 +340,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/BlogUpdate.html" title="个人主页升级之双线部署 + 全站Https">https://wangcong.net/article/BlogUpdate.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -624,6 +640,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -635,6 +659,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -679,7 +706,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -702,7 +729,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

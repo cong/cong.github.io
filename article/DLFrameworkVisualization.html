@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,14 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="通过可视化训练过程，我们可以对神经网络训练更为方便的理解、调试与优化。本文将分别介绍三种主流的神经网络框架 (TensorFlow、PyTorch及Keras) 中的可视化方法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/DLFrameworkVisualization01.png">
-<meta property="og:image" content="https://img.wangcong.net/DLFrameworkVisualization02.png">
-<meta property="og:image" content="https://img.wangcong.net/DLFrameworkVisualization03.png">
 <meta property="og:updated_time" content="2019-09-16T09:06:26.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于TensorFlow、Keras及PyTorch的训练过程可视化方法">
 <meta name="twitter:description" content="通过可视化训练过程，我们可以对神经网络训练更为方便的理解、调试与优化。本文将分别介绍三种主流的神经网络框架 (TensorFlow、PyTorch及Keras) 中的可视化方法。">
-<meta name="twitter:image" content="https://img.wangcong.net/DLFrameworkVisualization01.png">
 
 <link rel="canonical" href="https://wangcong.net/article/DLFrameworkVisualization.html">
 
@@ -162,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -296,11 +298,11 @@
 <ol>
 <li><p>查看损失</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看损失</span></span><br><span class="line">tf.summary.scalar(<span class="string">'scalar_loss'</span>, loss)</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.wangcong.net/DLFrameworkVisualization01.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/DLFrameworkVisualization01.png"></p>
 </li>
 <li><p>查看参数的变化</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tf.summary.histogram(<span class="string">'weights'</span>,w)</span><br><span class="line">tf.summary.histogram(<span class="string">'bias'</span>,b)</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.wangcong.net/DLFrameworkVisualization02.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/DLFrameworkVisualization02.png"></p>
 </li>
 <li><p>保存</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">merged_summary = tf.summary.merge_all()</span><br><span class="line"><span class="comment"># 得到输出到文件的对象</span></span><br><span class="line">writer = tf.summary.FileWriter(<span class="string">'./result'</span>, sess.graph)</span><br><span class="line"><span class="keyword">for</span>...</span><br><span class="line">	summary=sess.run(merged_summary)</span><br><span class="line">	writer.add_summary(summary, step)</span><br></pre></td></tr></table></figure>
@@ -321,7 +323,7 @@
 <p>PyTorch亦可使用Tensorboard进行可以可视化，GitHub上已有大神进行了实现：<a href="https://github.com/lanpa/tensorboardX" target="_blank" rel="noopener">https://github.com/lanpa/tensorboardX</a></p>
 <h3 id="Kreas训练过程可视化"><a href="#Kreas训练过程可视化" class="headerlink" title="Kreas训练过程可视化"></a>Kreas训练过程可视化</h3><p>在训练文件<code>train.py</code>中最后加入一下代码。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Where H = model.fit_generator(...)</span></span><br><span class="line">N = NUM_EPOCHS <span class="comment"># Number of epochs</span></span><br><span class="line">plt.style.use(<span class="string">"ggplot"</span>)</span><br><span class="line"></span><br><span class="line">plt.figure()</span><br><span class="line">plt.plot(np.arange(<span class="number">0</span>, N), H.history[<span class="string">"loss"</span>], label=<span class="string">"train_loss"</span>)</span><br><span class="line">plt.plot(np.arange(<span class="number">0</span>, N), H.history[<span class="string">"val_loss"</span>], label=<span class="string">"val_loss"</span>)</span><br><span class="line">plt.plot(np.arange(<span class="number">0</span>, N), H.history[<span class="string">"acc"</span>], label=<span class="string">"train_acc"</span>)</span><br><span class="line">plt.plot(np.arange(<span class="number">0</span>, N), H.history[<span class="string">"val_acc"</span>], label=<span class="string">"val_acc"</span>)</span><br><span class="line"></span><br><span class="line">plt.title(<span class="string">"Training Loss and Accuracy on Dataset"</span>)</span><br><span class="line">plt.xlabel(<span class="string">"Epoch #"</span>)</span><br><span class="line">plt.ylabel(<span class="string">"Loss/Accuracy"</span>)</span><br><span class="line">plt.legend(loc=<span class="string">"lower left"</span>)</span><br><span class="line">plt.savefig(<span class="string">"plot.png"</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.wangcong.net/DLFrameworkVisualization03.png" alt="keras_plot"></p>
+<p><img alt="keras_plot" data-src="https://img.wangcong.net/DLFrameworkVisualization03.png"></p>
 
     </div>
 
@@ -347,6 +349,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/DLFrameworkVisualization.html" title="关于TensorFlow、Keras及PyTorch的训练过程可视化方法">https://wangcong.net/article/DLFrameworkVisualization.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -628,6 +647,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -639,6 +666,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -683,7 +713,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -706,7 +736,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

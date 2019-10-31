@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,22 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="前些日子帮师妹的服务器配置Java Web环境，自己无形中也学到了写新知识，擅自总结记录下来，方便以后自己及师弟师妹查阅参考。  Java Web环境 = JavaJDK + Tomcat + MySQL">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/JavaTomcat01.png">
-<meta property="og:image" content="https://img.wangcong.net/JavaTomcat03.png">
-<meta property="og:image" content="https://img.wangcong.net/JavaTomcat02.png">
-<meta property="og:image" content="https://img.wangcong.net/JavaTomcat04.png">
-<meta property="og:image" content="https://img.wangcong.net/JavaTomcat05.png">
-<meta property="og:image" content="https://img.wangcong.net/JavaTomcat06.png">
-<meta property="og:image" content="https://img.wangcong.net/JavaTomcat07.jpg">
-<meta property="og:image" content="https://img.wangcong.net/JavaTomcat08.png">
-<meta property="og:image" content="https://img.wangcong.net/JavaTomcatMysql01.png">
-<meta property="og:image" content="https://img.wangcong.net/JavaTomcatMysql02.png">
-<meta property="og:image" content="https://img.wangcong.net/JavaTomcatMysql03.png">
 <meta property="og:updated_time" content="2019-08-01T06:13:48.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu16.04配置Java Web环境">
 <meta name="twitter:description" content="前些日子帮师妹的服务器配置Java Web环境，自己无形中也学到了写新知识，擅自总结记录下来，方便以后自己及师弟师妹查阅参考。  Java Web环境 = JavaJDK + Tomcat + MySQL">
-<meta name="twitter:image" content="https://img.wangcong.net/JavaTomcat01.png">
 
 <link rel="canonical" href="https://wangcong.net/article/JavaTomcatMysql.html">
 
@@ -170,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -327,7 +321,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 解压 Tomcat</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 需要将tar -zxvf 后的 ‘jdk-8u201-linux-x64.tar.gz’  修改为你下载的压缩包的名称</span></span><br><span class="line">tar -xzvf jdk-8u201-linux-x64.tar.gz</span><br><span class="line"><span class="meta">#</span><span class="bash"> 为方便后续操作 将解压后的 ‘jdk-8u201-linux-x64’修改为‘jdk’</span></span><br><span class="line">mv jdk-8u201-linux-x64 jdk</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p><img src="https://img.wangcong.net/JavaTomcat01.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/JavaTomcat01.png"></p>
 <h3 id="修改JavaJDK配置文件"><a href="#修改JavaJDK配置文件" class="headerlink" title="修改JavaJDK配置文件"></a>修改JavaJDK配置文件</h3><ol>
 <li><p>配置 JavaJDK</p>
 <p>用vi打开配置文件</p>
@@ -339,11 +333,11 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
 <p>测试配置是否生效：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.wangcong.net/JavaTomcat03.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/JavaTomcat03.png"></p>
 </li>
 <li><p>测试Java是否安装成功:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.wangcong.net/JavaTomcat02.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/JavaTomcat02.png"></p>
 <p>可以看到Java的版本，说明 Java 安装成功了。</p>
 </li>
 </ol>
@@ -363,7 +357,7 @@
 <li><p>启动Tomcat</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入到 /opt/tomcat/bin 目录</span></span><br><span class="line">sudo ./startup.sh</span><br></pre></td></tr></table></figure>
 <p>显示如下：</p>
-<p><img src="https://img.wangcong.net/JavaTomcat04.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/JavaTomcat04.png"></p>
 </li>
 <li><p>将<code>8080</code>端口添加至防火墙</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw allow 8080</span><br></pre></td></tr></table></figure>
@@ -371,27 +365,27 @@
 <li><p>测试是否成功</p>
 <p>查看端口号/进程：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -naptl</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.wangcong.net/JavaTomcat05.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/JavaTomcat05.png"></p>
 <p>查看进程：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef |grep 8080/tcp</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.wangcong.net/JavaTomcat06.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/JavaTomcat06.png"></p>
 <p>在浏览器访问<code>8080</code>端口：</p>
-<p><img src="https://img.wangcong.net/JavaTomcat07.jpg" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/JavaTomcat07.jpg"></p>
 </li>
 <li><p>关闭Tomcat</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入到 /opt/tomcat/bin 目录</span></span><br><span class="line">sudo ./shutdown.sh</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.wangcong.net/JavaTomcat08.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/JavaTomcat08.png"></p>
 </li>
 </ol>
 <h3 id="安装-MySQL"><a href="#安装-MySQL" class="headerlink" title="安装 MySQL"></a>安装 MySQL</h3><ol>
 <li><p>安装MySQL服务器及客户端</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server</span><br><span class="line">sudo apt-get install mysql-client</span><br><span class="line">sudo apt-get install libmysqlclient-dev</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.wangcong.net/JavaTomcatMysql01.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/JavaTomcatMysql01.png"></p>
 <p>注意：安装过程中需要设置密码 </p>
 </li>
 <li><p>检查是否安装成功</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -tap | grep mysql</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.wangcong.net/JavaTomcatMysql02.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/JavaTomcatMysql02.png"></p>
 <p>如果看到有MySQL的socket处于<code>listen</code>状态则表示安装成功。 </p>
 </li>
 <li><p>创建远程用户 </p>
@@ -408,7 +402,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p><img src="https://img.wangcong.net/JavaTomcatMysql03.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/JavaTomcatMysql03.png"></p>
 
     </div>
 
@@ -434,6 +428,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/JavaTomcatMysql.html" title="Ubuntu16.04配置Java Web环境">https://wangcong.net/article/JavaTomcatMysql.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -720,6 +731,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -731,6 +750,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -775,7 +797,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -798,7 +820,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

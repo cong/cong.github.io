@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,14 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="背景介绍这两天阿里云将我的域名（wangcong.info）的备案取消接入并向工信部提交了注销申请。于是乎，我先后收到了几个短信和邮件通知，贴出一条如下：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/ImageHostingChange01.png">
-<meta property="og:image" content="https://img.wangcong.net/ImageHostingChange02.png">
-<meta property="og:image" content="https://img.wangcong.net/ImageHostingChange03.png">
 <meta property="og:updated_time" content="2019-08-01T06:13:48.635Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python--批量更改Markdown文件中的七牛云图床链接">
 <meta name="twitter:description" content="背景介绍这两天阿里云将我的域名（wangcong.info）的备案取消接入并向工信部提交了注销申请。于是乎，我先后收到了几个短信和邮件通知，贴出一条如下：">
-<meta name="twitter:image" content="https://img.wangcong.net/ImageHostingChange01.png">
 
 <link rel="canonical" href="https://wangcong.net/article/ImageHostingChange.html">
 
@@ -162,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -295,13 +297,13 @@
 
       
         <h3 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h3><p>这两天阿里云将我的域名（wangcong.info）的备案取消接入并向工信部提交了注销申请。于是乎，我先后收到了几个短信和邮件通知，贴出一条如下：</p>
-<p><img src="https://img.wangcong.net/ImageHostingChange01.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/ImageHostingChange01.png"></p>
 <a id="more"></a>
 <p>今早，本站点中图片便已经无法正常显示，我赶紧用早已备案的另外一域名（babibobi.com）在七牛云上予以了替换，暂时解决图片不能访问的问题。</p>
 <p>因为Markdown文件中有很多图片链接，一一更换的话，工作量略大，通过查资料，写了一个Python脚本，进而可以实现一键批量更改Markdown文件中的七牛云图床链接的功能。具体如下：</p>
-<p><img src="https://img.wangcong.net/ImageHostingChange02.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/ImageHostingChange02.png"></p>
 <p>更改后的md文档：</p>
-<p><img src="https://img.wangcong.net/ImageHostingChange03.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/ImageHostingChange03.png"></p>
 <h3 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> re, os, time, argparse</span><br><span class="line"><span class="keyword">import</span> sys, io</span><br><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> chain</span><br><span class="line"></span><br><span class="line"><span class="comment"># Markdown中图片语法 ![](url) 或者 &lt;img src='' /&gt;</span></span><br><span class="line"><span class="keyword">global</span> img_patten</span><br><span class="line">img_patten = <span class="string">r'!\[.*?\]\((.*?)\)|&lt;img.*?src=[\'\"](.*?)[\'\"].*?&gt;'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">replace_md_url</span><span class="params">(md_file)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    批量更改Markdown文件中的七牛云图床链接</span></span><br><span class="line"><span class="string">    :param md_file: Markdown文件</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">if</span> os.path.splitext(md_file)[<span class="number">1</span>] != <span class="string">'.md'</span>:</span><br><span class="line">        print(<span class="string">'&#123;&#125; 不是Markdown文件，不做处理。'</span>.format(md_file))</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    num_replace = <span class="number">0</span></span><br><span class="line">    <span class="comment"># 本次操作时间戳</span></span><br><span class="line">    dir_ts = time.strftime(<span class="string">'%Y-%m-%d-%H-%M-%S'</span>, time.localtime())</span><br><span class="line"></span><br><span class="line">    <span class="keyword">with</span> io.open(md_file, <span class="string">'r'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f: <span class="comment">#使用utf-8 编码打开</span></span><br><span class="line">        post = f.read()</span><br><span class="line">        matches = re.compile(img_patten).findall(post)</span><br><span class="line">        <span class="keyword">if</span> matches <span class="keyword">and</span> len(matches)&gt;<span class="number">0</span> :</span><br><span class="line">            <span class="comment"># 多个group整合成一个列表</span></span><br><span class="line">            <span class="keyword">for</span> match <span class="keyword">in</span> list(chain(*matches)) :</span><br><span class="line">                <span class="keyword">if</span> match <span class="keyword">and</span> len(match)&gt;<span class="number">0</span> :</span><br><span class="line">                    print(<span class="string">"match pic : "</span>, match)</span><br><span class="line">                    new_url = match.replace(<span class="string">'wangcong.info'</span>,<span class="string">'babibobi.com'</span>)</span><br><span class="line"></span><br><span class="line">                    <span class="comment"># 更新MarkDown文件中的URL</span></span><br><span class="line">                    <span class="keyword">if</span> new_url :</span><br><span class="line">                        post = post.replace(match, new_url)</span><br><span class="line">                        num_replace = num_replace + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 如果有内容的话，就直接覆盖写入当前的MarkDown文件</span></span><br><span class="line">        <span class="keyword">if</span> post <span class="keyword">and</span> num_replace &gt; <span class="number">0</span>:</span><br><span class="line">            io.open(md_file, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>).write(post)</span><br><span class="line">            print(<span class="string">'&#123;0&#125; 中有&#123;1&#125;个URL被替换/&#123;2&#125;'</span>.format(os.path.basename(md_file), num_replace, dir_ts))</span><br><span class="line">        <span class="keyword">elif</span> num_replace == <span class="number">0</span>:</span><br><span class="line">            print(<span class="string">'&#123;&#125; 中没有需要替换的URL'</span>.format(os.path.basename(md_file)))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    </span><br><span class="line">    fileset = os.listdir(sys.argv[<span class="number">1</span>])</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> fileset:</span><br><span class="line">        <span class="keyword">print</span> filename</span><br><span class="line">        absfile = os.path.join(sys.argv[<span class="number">1</span>], filename)</span><br><span class="line">        replace_md_url(absfile)</span><br></pre></td></tr></table></figure>
 
     </div>
@@ -328,6 +330,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/ImageHostingChange.html" title="Python--批量更改Markdown文件中的七牛云图床链接">https://wangcong.net/article/ImageHostingChange.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -612,6 +631,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -623,6 +650,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -667,7 +697,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -690,7 +720,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

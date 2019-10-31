@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,13 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="因为最近一段时间准备找工作的事情，所以对之前机器学习的内容做了一个梳理。 结合麦子学院里面大牛的教程，这里对机器学习中常用的算法进行归纳和总结。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.tensorinfinity.com/upload/image/20190319/1552980326331544.png">
-<meta property="og:image" content="http://scikit-learn.org/stable/_static/ml_map.png">
 <meta property="og:updated_time" content="2019-08-01T06:13:48.636Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习常用算法总结">
 <meta name="twitter:description" content="因为最近一段时间准备找工作的事情，所以对之前机器学习的内容做了一个梳理。 结合麦子学院里面大牛的教程，这里对机器学习中常用的算法进行归纳和总结。">
-<meta name="twitter:image" content="http://www.tensorinfinity.com/upload/image/20190319/1552980326331544.png">
 
 <link rel="canonical" href="https://wangcong.net/article/MachineLearningNote.html">
 
@@ -161,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -339,9 +342,9 @@
 <li><strong>PCA</strong></li>
 <li><strong>流形学习</strong></li>
 </ul>
-<h3 id="SIGAI算法地图"><a href="#SIGAI算法地图" class="headerlink" title="SIGAI算法地图"></a>SIGAI算法地图</h3><p><img src="http://www.tensorinfinity.com/upload/image/20190319/1552980326331544.png" alt=""></p>
+<h3 id="SIGAI算法地图"><a href="#SIGAI算法地图" class="headerlink" title="SIGAI算法地图"></a>SIGAI算法地图</h3><p><img alt="" data-src="http://www.tensorinfinity.com/upload/image/20190319/1552980326331544.png"></p>
 <h3 id="SK-Learn-Examples"><a href="#SK-Learn-Examples" class="headerlink" title="SK-Learn Examples"></a>SK-Learn Examples</h3><p><a href="http://scikit-learn.org/stable/" target="_blank" rel="noopener">http://scikit-learn.org/stable/</a></p>
-<h3 id="SK-learn-Choosing-the-right-estimator"><a href="#SK-learn-Choosing-the-right-estimator" class="headerlink" title="SK-learn: Choosing the right estimator"></a>SK-learn: Choosing the right estimator</h3><p><img src="http://scikit-learn.org/stable/_static/ml_map.png" alt=""></p>
+<h3 id="SK-learn-Choosing-the-right-estimator"><a href="#SK-learn-Choosing-the-right-estimator" class="headerlink" title="SK-learn: Choosing the right estimator"></a>SK-learn: Choosing the right estimator</h3><p><img alt="" data-src="http://scikit-learn.org/stable/_static/ml_map.png"></p>
 
     </div>
 
@@ -367,6 +370,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/MachineLearningNote.html" title="机器学习常用算法总结">https://wangcong.net/article/MachineLearningNote.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -650,6 +670,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -661,6 +689,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -705,7 +736,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -728,7 +759,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

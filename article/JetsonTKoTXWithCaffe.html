@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,17 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="JetPack 3.1 remains the current production release, supporting Jetson TX2, Jetson TX1, and Jetson TK1 Developer Kits.  配置 JetPack 2.3JetPack 2.3 是NVIDIA最新发布的用于在Jetson系列嵌入式平台上部署开发环境的开发包，它包含 64bit 的 Ub">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/Jetson_Caffe_01.jpg">
-<meta property="og:image" content="https://img.wangcong.net/Jetson_Caffe_02.jpg">
-<meta property="og:image" content="https://img.wangcong.net/Jetson_Caffe_03.jpg">
-<meta property="og:image" content="https://img.wangcong.net/Jetson_Caffe_04.jpg">
-<meta property="og:image" content="https://img.wangcong.net/Jetson_Caffe_05.jpg">
-<meta property="og:image" content="https://img.wangcong.net/Jetson_Caffe_06.jpg">
 <meta property="og:updated_time" content="2019-08-01T06:13:48.639Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jetson TK1 or TX1 刷系统以及配置Caffe教程">
 <meta name="twitter:description" content="JetPack 3.1 remains the current production release, supporting Jetson TX2, Jetson TX1, and Jetson TK1 Developer Kits.  配置 JetPack 2.3JetPack 2.3 是NVIDIA最新发布的用于在Jetson系列嵌入式平台上部署开发环境的开发包，它包含 64bit 的 Ub">
-<meta name="twitter:image" content="https://img.wangcong.net/Jetson_Caffe_01.jpg">
 
 <link rel="canonical" href="https://wangcong.net/article/JetsonTKoTXWithCaffe.html">
 
@@ -165,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -312,18 +311,18 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">mkdir JetPack</span><br><span class="line">cp ~/Downloads/JetPack-L4T-2.3-linux-x64.run ~/JetPack</span><br></pre></td></tr></table></figure>
 <h3 id="安装-JetPack-2-3"><a href="#安装-JetPack-2-3" class="headerlink" title="安装 JetPack 2.3"></a><strong>安装 JetPack 2.3</strong></h3><h4 id="为-JetPack-L4T-2-3-linux-x64-run-增加执行权限"><a href="#为-JetPack-L4T-2-3-linux-x64-run-增加执行权限" class="headerlink" title="为 JetPack-L4T-2.3-linux-x64.run 增加执行权限"></a>为 <code>JetPack-L4T-2.3-linux-x64.run</code> 增加执行权限</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/JetPack</span><br><span class="line">chmod +x JetPack-L4T-2.3-linux-x64.run</span><br></pre></td></tr></table></figure>
 <h4 id="执行-JetPack-L4T-2-3-linux-x64-run-，点击-Next"><a href="#执行-JetPack-L4T-2-3-linux-x64-run-，点击-Next" class="headerlink" title="执行 JetPack-L4T-2.3-linux-x64.run ，点击 Next"></a>执行 <code>JetPack-L4T-2.3-linux-x64.run</code> ，点击 <code>Next</code></h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./JetPack-L4T-2.3-linux-x64.run</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.wangcong.net/Jetson_Caffe_01.jpg" alt="这里写图片描述"></p>
+<p><img alt="这里写图片描述" data-src="https://img.wangcong.net/Jetson_Caffe_01.jpg"></p>
 <h4 id="指明安装路径后选择部署的开发平台"><a href="#指明安装路径后选择部署的开发平台" class="headerlink" title="指明安装路径后选择部署的开发平台"></a>指明安装路径后选择部署的开发平台</h4><p>此处我们选择 Jetson TX1，同样也支持 TK 1的部署</p>
-<p><img src="https://img.wangcong.net/Jetson_Caffe_02.jpg" alt="这里写图片描述"></p>
+<p><img alt="这里写图片描述" data-src="https://img.wangcong.net/Jetson_Caffe_02.jpg"></p>
 <h4 id="弹出-JetPack-L4T-Component-Manager-对话框"><a href="#弹出-JetPack-L4T-Component-Manager-对话框" class="headerlink" title="弹出 JetPack L4T Component Manager 对话框"></a>弹出 JetPack L4T Component Manager 对话框</h4><p>由于我已经安装好了所有的包，所以这边的<code>Action</code>一栏是<code>no action</code>，如果没有安装过的话，会显示<code>install xxx</code>。<br>这里点击<code>Next</code>后，接受所有的申明，就开始了漫长的下载与安装…（我等了10多个小时）</p>
-<p><img src="https://img.wangcong.net/Jetson_Caffe_03.jpg" alt="这里写图片描述"></p>
+<p><img alt="这里写图片描述" data-src="https://img.wangcong.net/Jetson_Caffe_03.jpg"></p>
 <p>这里大家可以选择不安装OpenCV for Tegra，因为这个版本是2.4.13，对于USB摄像头的读取支持不是很好，另外对于CUDA静态库的读取也有些问题，所以不推荐安装，稍后会提示大家安装 OpenCV 3.1</p>
 <h4 id="网络配置和端口选择"><a href="#网络配置和端口选择" class="headerlink" title="网络配置和端口选择"></a>网络配置和端口选择</h4><p>安装完成后进入网络配置选项，选择通过路由器连接互联网，同时将TX1连接到与主机同一个路由器上</p>
-<p><img src="https://img.wangcong.net/Jetson_Caffe_04.jpg" alt="这里写图片描述"></p>
+<p><img alt="这里写图片描述" data-src="https://img.wangcong.net/Jetson_Caffe_04.jpg"></p>
 <p>选择<code>eth0</code>端口，点击<code>Next</code></p>
-<p><img src="https://img.wangcong.net/Jetson_Caffe_05.jpg" alt="这里写图片描述"></p>
+<p><img alt="这里写图片描述" data-src="https://img.wangcong.net/Jetson_Caffe_05.jpg"></p>
 <h4 id="设置-TX-1-为-Force-USB-Recovery-Mode-强制USB恢复模式"><a href="#设置-TX-1-为-Force-USB-Recovery-Mode-强制USB恢复模式" class="headerlink" title="设置 TX 1 为 Force USB Recovery Mode (强制USB恢复模式)"></a>设置 TX 1 为 Force USB Recovery Mode (强制USB恢复模式)</h4><p>弹出如图所示终端窗口：</p>
-<p><img src="https://img.wangcong.net/Jetson_Caffe_06.jpg" alt="这里写图片描述"></p>
+<p><img alt="这里写图片描述" data-src="https://img.wangcong.net/Jetson_Caffe_06.jpg"></p>
 <p>按照提示，将TX1设置为强制USB恢复模式</p>
 <ul>
 <li>关闭设备，移除电源适配器</li>
@@ -391,6 +390,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/JetsonTKoTXWithCaffe.html" title="Jetson TK1 or TX1 刷系统以及配置Caffe教程">https://wangcong.net/article/JetsonTKoTXWithCaffe.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -678,6 +694,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -689,6 +713,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -733,7 +760,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -756,7 +783,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

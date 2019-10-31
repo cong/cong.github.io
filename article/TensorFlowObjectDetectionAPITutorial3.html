@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,12 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="TensorFlow Object detection API 教程系列：  TensorFlow Object detection API 教程之一：Object detection API安装 TensorFlow Object detection API 教程之二：训练自己的模型 TensorFlow Object detection API 教程之三：测试自己的模型  在这一节，我们将要测">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://pythonprogramming.net/static/images/machine-learning/object-detection-1.png">
 <meta property="og:updated_time" content="2019-08-01T06:13:48.663Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TensorFlow Object detection API教程之三：测试自己的模型">
 <meta name="twitter:description" content="TensorFlow Object detection API 教程系列：  TensorFlow Object detection API 教程之一：Object detection API安装 TensorFlow Object detection API 教程之二：训练自己的模型 TensorFlow Object detection API 教程之三：测试自己的模型  在这一节，我们将要测">
-<meta name="twitter:image" content="https://pythonprogramming.net/static/images/machine-learning/object-detection-1.png">
 
 <link rel="canonical" href="https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html">
 
@@ -160,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -325,7 +329,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># For the sake of simplicity we will use only 2 images:</span></span><br><span class="line"><span class="comment"># image1.jpg</span></span><br><span class="line"><span class="comment"># image2.jpg</span></span><br><span class="line"><span class="comment"># If you want to test the code with your images, just add path to the images to the TEST_IMAGE_PATHS.</span></span><br><span class="line">PATH_TO_TEST_IMAGES_DIR = <span class="string">'test_images'</span></span><br><span class="line">TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, <span class="string">'image&#123;&#125;.jpg'</span>.format(i)) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">3</span>) ]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Size, in inches, of the output images.</span></span><br><span class="line">IMAGE_SIZE = (<span class="number">12</span>, <span class="number">8</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h3 id="检测示例"><a href="#检测示例" class="headerlink" title="检测示例"></a>检测示例</h3><p><img src="https://pythonprogramming.net/static/images/machine-learning/object-detection-1.png" alt=""></p>
+<h3 id="检测示例"><a href="#检测示例" class="headerlink" title="检测示例"></a>检测示例</h3><p><img alt="" data-src="https://pythonprogramming.net/static/images/machine-learning/object-detection-1.png"></p>
 <h3 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h3><p><a href="https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb" target="_blank" rel="noopener">点击查看官方代码</a></p>
 <hr>
 <p>参考：<br>[1]<a href="https://pythonprogramming.net/testing-custom-object-detector-tensorflow-object-detection-api-tutorial/?completed=/training-custom-objects-tensorflow-object-detection-api-tutorial/" target="_blank" rel="noopener">https://pythonprogramming.net/testing-custom-object-detector-tensorflow-object-detection-api-tutorial/?completed=/training-custom-objects-tensorflow-object-detection-api-tutorial/</a><br>[2]<a href="https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb" target="_blank" rel="noopener">https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb</a></p>
@@ -354,6 +358,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html" title="TensorFlow Object detection API教程之三：测试自己的模型">https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -638,6 +659,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -649,6 +678,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -693,7 +725,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -716,7 +748,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

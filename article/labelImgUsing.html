@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,14 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="Steps 首先新建一个存放标定结果xml的目标文件夹（命名不要有中文）。   点击 file，选择 Change default saved annotation folder，选择存放xml文件的目标文件夹。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/LabelImgUse1.jpg">
-<meta property="og:image" content="https://img.wangcong.net/LabelImgUse2.jpg">
-<meta property="og:image" content="https://img.wangcong.net/LabelImgUse3.jpg">
 <meta property="og:updated_time" content="2019-08-01T06:13:48.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LabelImg使用教程">
 <meta name="twitter:description" content="Steps 首先新建一个存放标定结果xml的目标文件夹（命名不要有中文）。   点击 file，选择 Change default saved annotation folder，选择存放xml文件的目标文件夹。">
-<meta name="twitter:image" content="https://img.wangcong.net/LabelImgUse1.jpg">
 
 <link rel="canonical" href="https://wangcong.net/article/labelImgUsing.html">
 
@@ -162,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -299,14 +301,14 @@
 </ol>
 <ol>
 <li><p>点击 <strong>file</strong>，选择 <strong>Change default saved annotation folder</strong>，选择存放xml文件的目标文件夹。</p>
-<p><img src="https://img.wangcong.net/LabelImgUse1.jpg" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/LabelImgUse1.jpg"></p>
 <a id="more"></a>
 </li>
 <li><p>点击 <strong>Open Dir</strong>，打开图像数据目录<strong>（不要有中文）</strong></p>
-<p><img src="https://img.wangcong.net/LabelImgUse2.jpg" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/LabelImgUse2.jpg"></p>
 </li>
 <li><p>点击 <strong>Create RectBox</strong>，光标置于目标左上角，按住左键向右下角拖动。方框绘制完成后，双击选择弹窗中相应的类别名称。</p>
-<p><img src="https://img.wangcong.net/LabelImgUse3.jpg" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/LabelImgUse3.jpg"></p>
 </li>
 <li><p>标注完成后，光标放至方框内，该方框可移动位置以及右键删除.</p>
 </li>
@@ -394,6 +396,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/labelImgUsing.html" title="LabelImg使用教程">https://wangcong.net/article/labelImgUsing.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -679,6 +698,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -690,6 +717,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -734,7 +764,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -757,7 +787,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

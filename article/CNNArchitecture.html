@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,19 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="鉴于平时接触的知识、概念等太多，一些知识点时间长了也容易忘记，因此这里对之前所了解的各种卷积神经网络做一个归纳。  大名鼎鼎的LeNet5 诞生于1994年，是最早的深层卷积神经网络之一，并且推动了深度学习的发展。从1988年开始，在多次成功的迭代后，这项由Yann LeCun完成的开拓性成果被命名为LeNet5。LeCun认为，可训练参数的卷积层是一种用少量参数在图像的多个位置上提取相似特征的有">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/CNNLeNet.png">
-<meta property="og:image" content="https://img.wangcong.net/CNNAlexNet0.png">
-<meta property="og:image" content="https://img.wangcong.net/CNNAlexNet1.jpg">
-<meta property="og:image" content="https://img.wangcong.net/CNNZFNet.jpg">
-<meta property="og:image" content="https://img.wangcong.net/CNNGoogleNet.png">
-<meta property="og:image" content="https://img.wangcong.net/VGG.png">
-<meta property="og:image" content="https://img.wangcong.net/CNNResNet.png">
-<meta property="og:image" content="https://img.wangcong.net/CNNResNet2.png">
 <meta property="og:updated_time" content="2019-08-01T06:13:48.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="经典CNN网络结构汇总">
 <meta name="twitter:description" content="鉴于平时接触的知识、概念等太多，一些知识点时间长了也容易忘记，因此这里对之前所了解的各种卷积神经网络做一个归纳。  大名鼎鼎的LeNet5 诞生于1994年，是最早的深层卷积神经网络之一，并且推动了深度学习的发展。从1988年开始，在多次成功的迭代后，这项由Yann LeCun完成的开拓性成果被命名为LeNet5。LeCun认为，可训练参数的卷积层是一种用少量参数在图像的多个位置上提取相似特征的有">
-<meta name="twitter:image" content="https://img.wangcong.net/CNNLeNet.png">
 
 <link rel="canonical" href="https://wangcong.net/article/CNNArchitecture.html">
 
@@ -167,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -304,15 +301,15 @@
 <p>大名鼎鼎的LeNet5 诞生于1994年，是最早的深层卷积神经网络之一，并且推动了深度学习的发展。从1988年开始，在多次成功的迭代后，这项由Yann LeCun完成的开拓性成果被命名为LeNet5。LeCun认为，可训练参数的卷积层是一种用少量参数在图像的多个位置上提取相似特征的有效方式，这和直接把每个像素作为多层神经网络的输入不同。像素不应该被使用在输入层，因为图像具有很强的空间相关性，而使用图像中独立的像素直接作为输入则利用不到这些相关性。 </p>
 </blockquote>
 <a id="more"></a>
-<h3 id="LeNet-1998"><a href="#LeNet-1998" class="headerlink" title="LeNet - 1998"></a>LeNet - 1998</h3><p><img src="https://img.wangcong.net/CNNLeNet.png" alt=""></p>
-<h3 id="AlexNet-2012"><a href="#AlexNet-2012" class="headerlink" title="AlexNet - 2012"></a>AlexNet - 2012</h3><p><img src="https://img.wangcong.net/CNNAlexNet0.png" alt=""></p>
-<p><img src="https://img.wangcong.net/CNNAlexNet1.jpg" alt=""></p>
-<h3 id="ZF-Net-2013"><a href="#ZF-Net-2013" class="headerlink" title="ZF-Net - 2013"></a>ZF-Net - 2013</h3><p><img src="https://img.wangcong.net/CNNZFNet.jpg" alt=""></p>
-<h3 id="GoogLeNet-2014"><a href="#GoogLeNet-2014" class="headerlink" title="GoogLeNet - 2014"></a>GoogLeNet - 2014</h3><p><img src="https://img.wangcong.net/CNNGoogleNet.png" alt=""></p>
-<h3 id="VGG-2014"><a href="#VGG-2014" class="headerlink" title="VGG - 2014"></a>VGG - 2014</h3><p><img src="https://img.wangcong.net/VGG.png" alt=""></p>
-<h3 id="ResNet-2015"><a href="#ResNet-2015" class="headerlink" title="ResNet - 2015"></a>ResNet - 2015</h3><p><img src="https://img.wangcong.net/CNNResNet.png" alt=""></p>
+<h3 id="LeNet-1998"><a href="#LeNet-1998" class="headerlink" title="LeNet - 1998"></a>LeNet - 1998</h3><p><img alt="" data-src="https://img.wangcong.net/CNNLeNet.png"></p>
+<h3 id="AlexNet-2012"><a href="#AlexNet-2012" class="headerlink" title="AlexNet - 2012"></a>AlexNet - 2012</h3><p><img alt="" data-src="https://img.wangcong.net/CNNAlexNet0.png"></p>
+<p><img alt="" data-src="https://img.wangcong.net/CNNAlexNet1.jpg"></p>
+<h3 id="ZF-Net-2013"><a href="#ZF-Net-2013" class="headerlink" title="ZF-Net - 2013"></a>ZF-Net - 2013</h3><p><img alt="" data-src="https://img.wangcong.net/CNNZFNet.jpg"></p>
+<h3 id="GoogLeNet-2014"><a href="#GoogLeNet-2014" class="headerlink" title="GoogLeNet - 2014"></a>GoogLeNet - 2014</h3><p><img alt="" data-src="https://img.wangcong.net/CNNGoogleNet.png"></p>
+<h3 id="VGG-2014"><a href="#VGG-2014" class="headerlink" title="VGG - 2014"></a>VGG - 2014</h3><p><img alt="" data-src="https://img.wangcong.net/VGG.png"></p>
+<h3 id="ResNet-2015"><a href="#ResNet-2015" class="headerlink" title="ResNet - 2015"></a>ResNet - 2015</h3><p><img alt="" data-src="https://img.wangcong.net/CNNResNet.png"></p>
 <p>残差结构：</p>
-<p><img src="https://img.wangcong.net/CNNResNet2.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/CNNResNet2.png"></p>
 
     </div>
 
@@ -338,6 +335,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/CNNArchitecture.html" title="经典CNN网络结构汇总">https://wangcong.net/article/CNNArchitecture.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -621,6 +635,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -632,6 +654,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -676,7 +701,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -699,7 +724,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

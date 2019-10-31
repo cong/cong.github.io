@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,12 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="Markdown 是一种轻量级标记语言，它用简洁的语法代替排版，使我们专心于码字。它的目标是实现易读易写，成为一种适用于网络的书写语言。同时，Markdown支持嵌入html标签。 个人使用的编辑器为：Typora，轻量、跨平台、方便！">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/youkou_Video.png">
 <meta property="og:updated_time" content="2019-08-01T06:13:48.656Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown语法">
 <meta name="twitter:description" content="Markdown 是一种轻量级标记语言，它用简洁的语法代替排版，使我们专心于码字。它的目标是实现易读易写，成为一种适用于网络的书写语言。同时，Markdown支持嵌入html标签。 个人使用的编辑器为：Typora，轻量、跨平台、方便！">
-<meta name="twitter:image" content="https://img.wangcong.net/youkou_Video.png">
 
 <link rel="canonical" href="https://wangcong.net/article/MarkdownGrammar.html">
 
@@ -160,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -358,7 +362,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">图片：![]()    ![图片文本(可忽略)](图片地址)</span><br><span class="line"></span><br><span class="line">链接：[]()     [链接文本](链接地址)</span><br></pre></td></tr></table></figure>
 <h3 id="插入视频"><a href="#插入视频" class="headerlink" title="插入视频"></a>插入视频</h3><p>注：Markdown 语法是不支持直接插入视频的<br>普遍的做法是 插入HTML的 iframe 框架，通过网站自带的分享功能获取，如果没有可以尝试第二种方法<br>第二是伪造播放界面，实质是插入视频图片，然后通过点击跳转到相关页面.</p>
 <p><strong>代码1</strong><br>注：多数第三方平台不支持插入<code>&lt;iframe&gt;</code>视频</p>
-<p><img src="https://img.wangcong.net/youkou_Video.png" alt="img"></p>
+<p><img alt="img" data-src="https://img.wangcong.net/youkou_Video.png"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe height=498 width=510 src=&apos;http://player.youku.com/embed/XMzUxNDI3MTI3Mg==&apos; frameborder=0 &apos;allowfullscreen&apos;&gt;&lt;/iframe&gt;</span><br><span class="line">&lt;iframe src=&quot;http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=fdf51f4dd55ed6ccf7b01e2cc8ecb40b&amp;tvId=849094800&amp;accessToken=2.f22860a2479ad60d8da7697274de9346&amp;appKey=3955c3425820435e86d0f4cdfe56f5e7&amp;appId=1368&amp;height=100%&amp;width=100%&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 <p><strong>演示</strong></p>
 <iframe height="498" width="510" src="http://player.youku.com/embed/XMzUxNDI3MTI3Mg==" frameborder="0" 'allowfullscreen'=""></iframe>
@@ -471,6 +475,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/MarkdownGrammar.html" title="Markdown语法">https://wangcong.net/article/MarkdownGrammar.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -754,6 +775,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -765,6 +794,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -809,7 +841,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -832,7 +864,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

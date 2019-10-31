@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,12 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="通过小孔成像模型，来结算几个坐标系之间的关系。 分别为机身及摄像机坐标系，图像坐标系和世界坐标系。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/UAVCoordinateSystemSolving.png">
 <meta property="og:updated_time" content="2019-09-16T02:16:21.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="无人机相关坐标系的解算">
 <meta name="twitter:description" content="通过小孔成像模型，来结算几个坐标系之间的关系。 分别为机身及摄像机坐标系，图像坐标系和世界坐标系。">
-<meta name="twitter:image" content="https://img.wangcong.net/UAVCoordinateSystemSolving.png">
 
 <link rel="canonical" href="https://wangcong.net/article/UAVCoordinateSystemSolving.html">
 
@@ -160,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -294,7 +298,7 @@
       
         <p>通过小孔成像模型，来结算几个坐标系之间的关系。</p>
 <p>分别为<strong>机身及摄像机坐标系</strong>，<strong>图像坐标系</strong>和<strong>世界坐标系</strong>。</p>
-<p><img src="https://img.wangcong.net/UAVCoordinateSystemSolving.png" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/UAVCoordinateSystemSolving.png"></p>
 <a id="more"></a>
 <h3 id="摄像机坐标系与机身坐标系"><a href="#摄像机坐标系与机身坐标系" class="headerlink" title="摄像机坐标系与机身坐标系"></a>摄像机坐标系与机身坐标系</h3><p><strong>摄像机坐标系（光心坐标系）</strong> $C=[x_C, y_C, z_C]^T$以摄像机光心$O_C$为原点，其$z_C$轴与光轴重合，水平方向为$x_C$轴，$y_C$轴垂直于$X_C, O_c, Z_C$平面，焦距$f$为光心到像平面的距离。</p>
 <p><strong>机身坐标系</strong>$B=[x_B, y_B, z_B]^T$，即无人机最中心的坐标。</p>
@@ -447,6 +451,23 @@ z_C=\frac{fh\cos\varphi\cos\theta}{x_I\cos\phi}
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/UAVCoordinateSystemSolving.html" title="无人机相关坐标系的解算">https://wangcong.net/article/UAVCoordinateSystemSolving.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -731,6 +752,14 @@ z_C=\frac{fh\cos\varphi\cos\theta}{x_I\cos\phi}
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -742,6 +771,9 @@ z_C=\frac{fh\cos\varphi\cos\theta}{x_I\cos\phi}
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -834,7 +866,7 @@ z_C=\frac{fh\cos\varphi\cos\theta}{x_I\cos\phi}
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -857,7 +889,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

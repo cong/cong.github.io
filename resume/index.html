@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -54,12 +55,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="body {    font-family: “微软雅黑”, Helvetica, “微软雅黑”, Arial, sans-serif;    font-size: 13px;    line-height: 18px;    margin: 10px 13px 10px 13px;}          &amp;lt;/i&amp;gt; 王聪 /  Cong Wang&amp;lt;/font&amp;gt; 深度学习算">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://wangcong.net/resume/me.jpg">
 <meta property="og:updated_time" content="2019-06-24T04:12:15.602Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人简历">
 <meta name="twitter:description" content="body {    font-family: “微软雅黑”, Helvetica, “微软雅黑”, Arial, sans-serif;    font-size: 13px;    line-height: 18px;    margin: 10px 13px 10px 13px;}          &amp;lt;/i&amp;gt; 王聪 /  Cong Wang&amp;lt;/font&amp;gt; 深度学习算">
-<meta name="twitter:image" content="https://wangcong.net/resume/me.jpg">
 
 <link rel="canonical" href="https://wangcong.net/resume/">
 
@@ -160,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -208,6 +212,9 @@
         <div class="content-wrap">
           
   
+
+      
+      
   
 
           <div class="content">
@@ -239,7 +246,7 @@
 <p><style><br>body {<br>    font-family: “微软雅黑”, Helvetica, “微软雅黑”, Arial, sans-serif;<br>    font-size: 13px;<br>    line-height: 18px;<br>    margin: 10px 13px 10px 13px;<br>}
 </style></p>
 <div style="float:right">
-    <a href="https://github.com/cong" target="_blank" rel="noopener"><img src="me.jpg" width="100"></a>
+    <a href="https://github.com/cong" target="_blank" rel="noopener"><img width="100" data-src="me.jpg"></a>
 </div>
 
 <h2 id="lt-i-gt-王聪-Cong-Wang-lt-font-gt"><a href="#lt-i-gt-王聪-Cong-Wang-lt-font-gt" class="headerlink" title="&lt;/i&gt; 王聪 /  Cong Wang&lt;/font&gt;"></a><i class="fa fa-address-book">&lt;/i&gt; 王聪 <font size="3">/ <i class="fa fa-mars"></i> Cong Wang&lt;/font&gt;</font></i></h2><h3 id="深度学习算法工程师-Deep-Learning-Algorithm-Engineer"><a href="#深度学习算法工程师-Deep-Learning-Algorithm-Engineer" class="headerlink" title=" 深度学习算法工程师 / Deep Learning Algorithm Engineer "></a><i class="fa fa-star"></i> 深度学习算法工程师 <font size="2">/ Deep Learning Algorithm Engineer</font> <!-- *<font size="2" color="#BDB76B">/ 期望薪资15K+</font>* --></h3><ul>
@@ -534,6 +541,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -545,6 +560,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -589,7 +607,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -612,7 +630,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

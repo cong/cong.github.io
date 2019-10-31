@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,13 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="Fonts：Source Code Pro">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/SublimeTextSetting01.jpg">
-<meta property="og:image" content="https://img.wangcong.net/SublimeTextSetting02.png">
 <meta property="og:updated_time" content="2019-08-01T06:13:48.638Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sublime Text Personalization">
 <meta name="twitter:description" content="Fonts：Source Code Pro">
-<meta name="twitter:image" content="https://img.wangcong.net/SublimeTextSetting01.jpg">
 
 <link rel="canonical" href="https://wangcong.net/article/SublimeTextSetting.html">
 
@@ -161,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -293,7 +296,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="Fonts：Source-Code-Pro"><a href="#Fonts：Source-Code-Pro" class="headerlink" title="Fonts：Source Code Pro"></a>Fonts：Source Code Pro</h3><p><img src="https://img.wangcong.net/SublimeTextSetting01.jpg" alt=""></p>
+        <h3 id="Fonts：Source-Code-Pro"><a href="#Fonts：Source-Code-Pro" class="headerlink" title="Fonts：Source Code Pro"></a>Fonts：Source Code Pro</h3><p><img alt="" data-src="https://img.wangcong.net/SublimeTextSetting01.jpg"></p>
 <a id="more"></a>
 <p>Source Code Pro: A perfect programming font</p>
 <p><a href="https://github.com/adobe/source-code-pro" target="_blank" rel="noopener">https://github.com/adobe/source-code-pro</a></p>
@@ -309,7 +312,7 @@
 <blockquote>
 <p>copy the fonts to <code>C:\Windows\Fonts</code> and Double-click the font</p>
 </blockquote>
-<h3 id="Color-scheme：Solarized"><a href="#Color-scheme：Solarized" class="headerlink" title="Color scheme：Solarized"></a>Color scheme：Solarized</h3><p><img src="https://img.wangcong.net/SublimeTextSetting02.png" alt=""></p>
+<h3 id="Color-scheme：Solarized"><a href="#Color-scheme：Solarized" class="headerlink" title="Color scheme：Solarized"></a>Color scheme：Solarized</h3><p><img alt="" data-src="https://img.wangcong.net/SublimeTextSetting02.png"></p>
 <p><a href="https://github.com/braver/Solarized" target="_blank" rel="noopener">https://github.com/braver/Solarized</a></p>
 <p>The easiest way to install is using <a href="https://sublime.wbond.net/" target="_blank" rel="noopener">Sublime Package Control</a>, where Solarized is listed as <code>Solarized Color Scheme</code>.</p>
 <ol>
@@ -345,6 +348,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/SublimeTextSetting.html" title="Sublime Text Personalization">https://wangcong.net/article/SublimeTextSetting.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -628,6 +648,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -639,6 +667,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -683,7 +714,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -706,7 +737,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

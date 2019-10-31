@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,12 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="目标视觉跟踪(Visual Object Tracking)，大家比较公认分为两大类：生成(generative)模型方法和判别(discriminative)模型方法，目前比较流行的是判别类方法，也叫检测跟踪tracking-by-detection，以下简单介绍。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/Object_Tracking.jpg">
 <meta property="og:updated_time" content="2019-08-01T06:13:48.632Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="目标跟踪算法汇总">
 <meta name="twitter:description" content="目标视觉跟踪(Visual Object Tracking)，大家比较公认分为两大类：生成(generative)模型方法和判别(discriminative)模型方法，目前比较流行的是判别类方法，也叫检测跟踪tracking-by-detection，以下简单介绍。">
-<meta name="twitter:image" content="https://img.wangcong.net/Object_Tracking.jpg">
 
 <link rel="canonical" href="https://wangcong.net/article/TargetTrackingAlgorithm.html">
 
@@ -160,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -295,7 +299,7 @@
         <p><strong>目标视觉跟踪(Visual Object Tracking)</strong>，大家比较公认分为两大类：<strong>生成(generative)</strong>模型方法和<strong>判别(discriminative)</strong>模型方法，目前比较流行的是判别类方法，也叫检测跟踪tracking-by-detection，以下简单介绍。</p>
 <a id="more"></a>
 <h3 id="生成类方法"><a href="#生成类方法" class="headerlink" title="生成类方法"></a>生成类方法</h3><p>在当前帧对目标区域建模，下一帧寻找与模型最相似的区域就是预测位置，比较著名的有<strong>卡尔曼滤波，粒子滤波，mean-shift</strong>等。举个例子，从当前帧知道了目标区域80%是红色，20%是绿色，然后在下一帧，搜索算法就像无头苍蝇，到处去找最符合这个颜色比例的区域。</p>
-<p><img src="https://img.wangcong.net/Object_Tracking.jpg" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/Object_Tracking.jpg"></p>
 <ol>
 <li><p><strong>Camshift 算法</strong>全称为 Continuiusly Adaptive Mean-SHIFT，主要通过视频图像中运动目标的颜色特征达到跟踪目的。首先，利用鼠标响应函数手动选择出目标物体，然后提取目标物体的颜色直方图特征，再通过反向投影将目标颜色直方图转换为颜色概率分布图，初始化一个搜索窗大小和位置，并根据上一帧得到的结果自适应调整搜索窗口，进而求解目标在视频图像中的位置。</p>
 </li>
@@ -339,6 +343,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/TargetTrackingAlgorithm.html" title="目标跟踪算法汇总">https://wangcong.net/article/TargetTrackingAlgorithm.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -624,6 +645,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -635,6 +664,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -679,7 +711,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -702,7 +734,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

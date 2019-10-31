@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,16 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="前几天在腾讯云服务器上搭建深度学习的环境，查阅了腾讯云的官方文档及相关博客，一是发现介绍的不太全，二是大都是本地工作站上的部署教程。经过多种尝试和血泪的踩坑，暂总结出一份文档，方便将来重新部署时的查阅及参考。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/DeepLearningServerBuilding01.png">
-<meta property="og:image" content="https://img.wangcong.net/DeepLearningServerBuilding02.png">
-<meta property="og:image" content="https://img.wangcong.net/DeepLearningServerBuilding03.png">
-<meta property="og:image" content="https://img.wangcong.net/DeepLearningServerBuilding04.png">
-<meta property="og:image" content="https://img.wangcong.net/DeepLearningServerBuilding05.png">
 <meta property="og:updated_time" content="2019-08-20T04:57:11.777Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="云服务器深度学习服务器环境搭建">
 <meta name="twitter:description" content="前几天在腾讯云服务器上搭建深度学习的环境，查阅了腾讯云的官方文档及相关博客，一是发现介绍的不太全，二是大都是本地工作站上的部署教程。经过多种尝试和血泪的踩坑，暂总结出一份文档，方便将来重新部署时的查阅及参考。">
-<meta name="twitter:image" content="https://img.wangcong.net/DeepLearningServerBuilding01.png">
 
 <link rel="canonical" href="https://wangcong.net/article/DeepLearningServerBuilding.html">
 
@@ -164,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -294,7 +294,7 @@
 <a id="more"></a>
 <h3 id="配置GPU相关应用"><a href="#配置GPU相关应用" class="headerlink" title="配置GPU相关应用"></a>配置GPU相关应用</h3><h4 id="安装Nvidia驱动"><a href="#安装Nvidia驱动" class="headerlink" title="安装Nvidia驱动"></a>安装Nvidia驱动</h4><p>安装Nvidia驱动总体来讲有两种主流方式，一是通过源来进行安装，另一种是在官网下载<code>.run</code>安然文件进行安装。</p>
 <h5 id="1）通过源安装驱动"><a href="#1）通过源安装驱动" class="headerlink" title="1）通过源安装驱动"></a>1）通过源安装驱动</h5><p>首先查看符合自己机器的Nvidia驱动，在官网 <a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener">http://www.nvidia.com/Download/index.aspx</a> 进行查询，如我的显卡是Tesla V100，则对应的配置：</p>
-<p><img src="https://img.wangcong.net/DeepLearningServerBuilding01.png" alt="nvidia-driver"></p>
+<p><img alt="nvidia-driver" data-src="https://img.wangcong.net/DeepLearningServerBuilding01.png"></p>
 <p>点击 Search，可以看到查询结果如下所示：</p>
 <blockquote>
 <div class="table-container">
@@ -379,10 +379,10 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ii  nvidia-418                            418.56-0ubuntu0~gpu16.04.1                         amd64        NVIDIA binary driver - version 418.56</span><br><span class="line">ii  nvidia-opencl-icd-418                 418.56-0ubuntu0~gpu16.04.1                         amd64        NVIDIA OpenCL ICD</span><br><span class="line">ii  nvidia-settings                       418.56-0ubuntu0~gpu16.04.1                         amd64        Tool for configuring the NVIDIA graphics driver</span><br></pre></td></tr></table></figure>
 <p>安装完毕后，查看显卡状态信息：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nvidia-smi</span><br><span class="line"><span class="comment"># 若上面的命令不可以，则尝试重启查看结果</span></span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.wangcong.net/DeepLearningServerBuilding02.png" alt="nvidia-smi"></p>
+<p><img alt="nvidia-smi" data-src="https://img.wangcong.net/DeepLearningServerBuilding02.png"></p>
 <h4 id="安装CUDA9-0"><a href="#安装CUDA9-0" class="headerlink" title="安装CUDA9.0"></a>安装CUDA9.0</h4><ol>
 <li><p>进入 <a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">CUDA Toolkit</a>官方链接，根据自己的机器配置，选择相应安装包</p>
-<p><img src="https://img.wangcong.net/DeepLearningServerBuilding03.png" alt="cuda-toolkit"></p>
+<p><img alt="cuda-toolkit" data-src="https://img.wangcong.net/DeepLearningServerBuilding03.png"></p>
 </li>
 <li><p>根据上图中的提示，输入命令安装即可：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 不同CUDA版本命令不同，请注意！</span></span><br><span class="line">sudo sh cuda_10.1.243_418.87.00_linux.run</span><br></pre></td></tr></table></figure>
@@ -402,14 +402,14 @@
 <li><p>使用 <code>nvcc -V</code>命令查看是否配置成功，成功后会显示如下信息：</p>
 </li>
 </ol>
-<p><img src="https://img.wangcong.net/DeepLearningServerBuilding04.png" alt="cuda-v"></p>
+<p><img alt="cuda-v" data-src="https://img.wangcong.net/DeepLearningServerBuilding04.png"></p>
 <h4 id="安装cuDNN"><a href="#安装cuDNN" class="headerlink" title="安装cuDNN"></a>安装cuDNN</h4><p>cuDNN 的全称是 The NVIDIA CUDA® Deep Neural Network library，是专门用来对深度学习加速的库，能够对TensorFlow、PyTorch及Theano等深度学习框架进行加速优化。</p>
 <p>下载地址为：<a href="https://developer.nvidia.com/rdp/cudnn-download，需要注册之后才能下载。" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/cudnn-download，需要注册之后才能下载。</a></p>
 <p>cuDNN有两种方式进行安装，本文暂介绍压缩包的形式进行安装。</p>
 <ol>
 <li>首先选择<a href="https://developer.nvidia.com/rdp/cudnn-download#a-collapse762-10" target="_blank" rel="noopener">Download cuDNN v7.6.2 (July 22, 2019), for CUDA 10.0</a>，然后选择<a href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.6.2.24/prod/10.0_20190719/cudnn-10.0-linux-x64-v7.6.2.24.tgz" target="_blank" rel="noopener">cuDNN Library for Linux</a>，如图所示：</li>
 </ol>
-<p><img src="https://img.wangcong.net/DeepLearningServerBuilding05.png" alt="cudnnForCuda"></p>
+<p><img alt="cudnnForCuda" data-src="https://img.wangcong.net/DeepLearningServerBuilding05.png"></p>
 <ol>
 <li><p>解压进行安装：</p>
  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf cudnn-9.0-linux-x64-v7.1.tgz</span><br><span class="line">sudo cp cuda/include/cudnn.h /usr/local/cuda/include/</span><br><span class="line">sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/ -d</span><br><span class="line">sudo chmod a+r /usr/local/cuda/include/cudnn.h</span><br><span class="line">sudo chmod a+r /usr/local/cuda/lib64/libcudnn*</span><br></pre></td></tr></table></figure>
@@ -456,6 +456,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/DeepLearningServerBuilding.html" title="云服务器深度学习服务器环境搭建">https://wangcong.net/article/DeepLearningServerBuilding.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -744,6 +761,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -755,6 +780,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -799,7 +827,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -822,7 +850,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

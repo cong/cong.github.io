@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -21,12 +22,12 @@
     version: '7.4.2',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -55,13 +56,10 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="早先在Mac上一直用Safari和Chrome，后来转Win开始用UC和Firefox。 作为一个追求艺术和高效的汉子，使用浏览器则一直在路上。 最近使用UC，发现其貌似在Win10下启用了Edge内核，而之前其一直是使用Chrome内核，这种更换严重影响了我的网页体验，致使GitHub无故打不开。 迫不得己，又转回了Chrome，特此对Chrome的部分快捷键做个归纳。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.wangcong.net/chrome.jpg">
-<meta property="og:image" content="https://img.wangcong.net/UC.jpg">
 <meta property="og:updated_time" content="2019-08-01T06:13:48.666Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="那些年我用过的搜索引擎">
 <meta name="twitter:description" content="早先在Mac上一直用Safari和Chrome，后来转Win开始用UC和Firefox。 作为一个追求艺术和高效的汉子，使用浏览器则一直在路上。 最近使用UC，发现其貌似在Win10下启用了Edge内核，而之前其一直是使用Chrome内核，这种更换严重影响了我的网页体验，致使GitHub无故打不开。 迫不得己，又转回了Chrome，特此对Chrome的部分快捷键做个归纳。">
-<meta name="twitter:image" content="https://img.wangcong.net/chrome.jpg">
 
 <link rel="canonical" href="https://wangcong.net/article/SearchEngines.html">
 
@@ -161,11 +159,16 @@
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        
+            
+  <li class="menu-item menu-item-about">
 
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+
+
+      
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -298,10 +301,10 @@
 <p>最近使用UC，发现其貌似在Win10下启用了Edge内核，而之前其一直是使用Chrome内核，这种更换严重影响了我的网页体验，致使GitHub无故打不开。</p>
 <p>迫不得己，又转回了Chrome，特此对Chrome的部分快捷键做个归纳。</p>
 <a id="more"></a>
-<p><img src="https://img.wangcong.net/chrome.jpg" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/chrome.jpg"></p>
 <p>PS: UC遇到的问题，熟悉的味道，熟悉的IE界面。</p>
 <p>后来去UC官方论坛看了看，果真…</p>
-<p><img src="https://img.wangcong.net/UC.jpg" alt=""></p>
+<p><img alt="" data-src="https://img.wangcong.net/UC.jpg"></p>
 <p>写着写着就跑远了，赶紧回头把快捷键贴上。</p>
 <p><a href="http://wangcong.info/article/ChromeHotKey.html" target="_blank" rel="noopener">快捷键—跳转链接</a></p>
 
@@ -329,6 +332,23 @@
       </div>
 
   </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/SearchEngines.html" title="那些年我用过的搜索引擎">https://wangcong.net/article/SearchEngines.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
 
@@ -611,6 +631,14 @@
   </script>
 
 
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -622,6 +650,9 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
@@ -666,7 +697,7 @@
 
 
 <script>
-NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = 'nick,mail';
   guest = guest.split(',').filter(item => {
@@ -689,7 +720,10 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>
