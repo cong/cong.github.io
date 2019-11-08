@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/article/PrecisionRecallFscore.html</loc>
+    
+    <lastmod>2019-11-08T02:36:38.490Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/MarkdownWithMath.html</loc>
+    
+    <lastmod>2019-11-08T02:25:07.937Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/JinanInterview.html</loc>
+    
+    <lastmod>2019-11-04T06:30:23.806Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/PyTorchTutorial.html</loc>
     
     <lastmod>2019-10-31T08:26:30.452Z</lastmod>
@@ -310,13 +331,6 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/JinanInterview.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.649Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangcong.net/article/LabelImgInstall.html</loc>
     
     <lastmod>2019-08-01T06:13:48.647Z</lastmod>
@@ -331,14 +345,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
     
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     
@@ -432,13 +446,6 @@
     <loc>https://wangcong.net/404.html</loc>
     
     <lastmod>2019-07-22T09:59:15.661Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/MarkdownWithMath.html</loc>
-    
-    <lastmod>2019-07-10T06:57:40.412Z</lastmod>
     
   </url>
   

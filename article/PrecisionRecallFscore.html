@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpeg">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.2',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="机器学习领域三个最基本指标是召回率(Recall Rate)、准确率(Precision Rate)及综合评价指标(F-Score)。(召回率也称为查全率，准确率也称为查准率) 准确率(Precision)  \begin{align} 准确率 =&amp; \frac{预测到的真正例}{所有的例子(真实情况的正例+反例)} \tag{1}\\ \end{align} \begin{align} Prec">
+<meta name="keywords" content="Precision,Recall,F-Score">
+<meta property="og:type" content="article">
+<meta property="og:title" content="准确率(Precision)与召回率(Recall)与综合评价指标(F-Score)的解释">
+<meta property="og:url" content="https://wangcong.net/article/PrecisionRecallFscore.html">
+<meta property="og:site_name" content="旋律信">
+<meta property="og:description" content="机器学习领域三个最基本指标是召回率(Recall Rate)、准确率(Precision Rate)及综合评价指标(F-Score)。(召回率也称为查全率，准确率也称为查准率) 准确率(Precision)  \begin{align} 准确率 =&amp; \frac{预测到的真正例}{所有的例子(真实情况的正例+反例)} \tag{1}\\ \end{align} \begin{align} Prec">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-08T02:36:38.490Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="准确率(Precision)与召回率(Recall)与综合评价指标(F-Score)的解释">
+<meta name="twitter:description" content="机器学习领域三个最基本指标是召回率(Recall Rate)、准确率(Precision Rate)及综合评价指标(F-Score)。(召回率也称为查全率，准确率也称为查准率) 准确率(Precision)  \begin{align} 准确率 =&amp; \frac{预测到的真正例}{所有的例子(真实情况的正例+反例)} \tag{1}\\ \end{align} \begin{align} Prec">
+
+<link rel="canonical" href="https://wangcong.net/article/PrecisionRecallFscore.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>准确率(Precision)与召回率(Recall)与综合评价指标(F-Score)的解释 | 旋律信</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">旋律信</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">The value of knowledge lies not in possession, but in share.</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>时间轴</a>
+
+  </li>
+        <li class="menu-item menu-item-specialization">
+
+    <a href="/specialization/" rel="section"><i class="fa fa-fw fa-university"></i>专题</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        
+            
+  <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+
+
+      
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/PrecisionRecallFscore.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="旋律信">
+      <meta itemprop="description" content="旋律信">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="旋律信">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          准确率(Precision)与召回率(Recall)与综合评价指标(F-Score)的解释
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-10-23 09:05:27" itemprop="dateCreated datePublished" datetime="2018-10-23T09:05:27+08:00">2018-10-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-08 10:36:38" itemprop="dateModified" datetime="2019-11-08T10:36:38+08:00">2019-11-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Machine-Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Machine Learning</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/article/PrecisionRecallFscore.html" class="post-meta-item leancloud_visitors" data-flag-title="准确率(Precision)与召回率(Recall)与综合评价指标(F-Score)的解释" title="热度">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">热度：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/article/PrecisionRecallFscore.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/article/PrecisionRecallFscore.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>机器学习领域三个最基本指标是<strong>召回率(Recall Rate)</strong>、<strong>准确率(Precision Rate)</strong>及<strong>综合评价指标(F-Score)</strong>。(召回率也称为查全率，准确率也称为查准率)</p>
+<h3 id="准确率-Precision"><a href="#准确率-Precision" class="headerlink" title="准确率(Precision)"></a>准确率(Precision)</h3><p><img alt="" data-src="https://img.wangcong.net/PrecisionRecallFscore.md01.png"></p>
+<script type="math/tex; mode=display">
+\begin{align}
+准确率 =& \frac{预测到的真正例}{所有的例子(真实情况的正例+反例)} \tag{1}\\
+\end{align}</script><script type="math/tex; mode=display">
+\begin{align}
+Precision =& \frac{TP}{TP+FP} \tag{1}\\
+\end{align}</script><p>即：在所有预测为正例中有多少是真实的正例。</p>
+<h3 id="召回率-Recall"><a href="#召回率-Recall" class="headerlink" title="召回率(Recall)"></a>召回率(Recall)</h3><p><img alt="" data-src="https://img.wangcong.net/PrecisionRecallFscore.md02.png"></p>
+<script type="math/tex; mode=display">
+\begin{align}
+召回率 =& \frac{预测到的真正例}{所有的正例 (真实情况的正例)} \tag{1}\\
+\end{align}</script><script type="math/tex; mode=display">
+\begin{align}
+Recall =& \frac{TP}{TP+FN} \tag{2}\\
+\end{align}</script><p>即：在所有真实的正例中有多少被正确预测到。</p>
+<p>单一的准确率或者召回率在一些情况下不一定会有意义，譬如当结果都预测为正例，$FN=0$，$Recall=1$，无意义。</p>
+<h3 id="综合评价指标-F-Score"><a href="#综合评价指标-F-Score" class="headerlink" title="综合评价指标(F-Score)"></a>综合评价指标(F-Score)</h3><p>准确率或者召回率指标有时候会出现的矛盾的情况，这样就需要综合考虑他们，最常见的方法就是F-Score（又称为F-Measure）。<br>F-Score是Precision和Recall加权调和平均：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+F\verb|-|Score =& \frac{(\alpha^2+1)\times Precision\times Recall}{\alpha^2(Precision+Recall)} \tag{3}\\
+\end{align}</script><p>当参数$\alpha=1$时，就是最常见的$F_1$，也即</p>
+<script type="math/tex; mode=display">
+\begin{align}
+F_1 =& \frac{2\times Precision\times Recall}{Precision+Recall} \tag{4}\\
+\end{align}</script><h3 id="P-R-Precision-Recall-曲线"><a href="#P-R-Precision-Recall-曲线" class="headerlink" title="P-R(Precision-Recall)曲线"></a>P-R(Precision-Recall)曲线</h3><p>P-R曲线以<strong>召回率(Recall Rate)</strong>为横坐标，以<strong>准确率(Precision Rate)</strong>为纵坐标。</p>
+
+    </div>
+
+    
+    
+    
+      
+        <div class="reward-container">
+  <div><p style="color:#34495e; margin:0 0 5px 0;">🍭支持一根棒棒糖吧！</p></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    <i class="fa fa-qrcode fa-2x" style="line-height:35px;"></i>
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="https://img.wangcong.net/wechat_reward.png" alt="旋律信 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="https://img.wangcong.net/alipay_reward.png" alt="旋律信 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/PrecisionRecallFscore.html" title="准确率(Precision)与召回率(Recall)与综合评价指标(F-Score)的解释">https://wangcong.net/article/PrecisionRecallFscore.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Precision/" rel="tag"><i class="fa fa-tag"></i> Precision</a>
+              <a href="/tags/Recall/" rel="tag"><i class="fa fa-tag"></i> Recall</a>
+              <a href="/tags/F-Score/" rel="tag"><i class="fa fa-tag"></i> F-Score</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/article/DataStructureAlgorithm.html" rel="next" title="数据结构与算法框架图">
+                  <i class="fa fa-chevron-left"></i> 数据结构与算法框架图
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/article/PythonDataTypeConvert.html" rel="prev" title="Python--字符串、列表、元组、字典之间的相互转换">
+                  Python--字符串、列表、元组、字典之间的相互转换 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#准确率-Precision"><span class="nav-number">1.</span> <span class="nav-text">准确率(Precision)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#召回率-Recall"><span class="nav-number">2.</span> <span class="nav-text">召回率(Recall)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#综合评价指标-F-Score"><span class="nav-number">3.</span> <span class="nav-text">综合评价指标(F-Score)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P-R-Precision-Recall-曲线"><span class="nav-number">4.</span> <span class="nav-text">P-R(Precision-Recall)曲线</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="旋律信"
+    src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">旋律信</p>
+  <div class="site-description" itemprop="description">旋律信</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">91</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">96</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/cong" title="GitHub &rarr; https://github.com/cong" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/xuanlvxin" title="Twitter &rarr; https://twitter.com/xuanlvxin" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/" title="知乎 &rarr; https://www.zhihu.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/lovedigit" title="微博 &rarr; https://weibo.com/lovedigit" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>微博</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://nacl.ai" title="https://nacl.ai" rel="noopener" target="_blank">NaCl.AI</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.lovedigit.com" title="http://www.lovedigit.com" rel="noopener" target="_blank">LoveDigit</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.zhihu.com/people/wu-qi-18-39" title="https://www.zhihu.com/people/wu-qi-18-39" rel="noopener" target="_blank">吴二狗</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">旋律信</span>
+</div>
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">闽ICP备 15006828号-2 </a>
+  </div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+  <script>
+  function leancloudSelector(url) {
+    return document.getElementById(url).querySelector('.leancloud-visitors-count');
+  }
+  if (CONFIG.page.isPost) {
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = visitors.getAttribute('id').trim();
+      var title = visitors.getAttribute('data-flag-title').trim();
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .then(response => response.json())
+              .then(() => {
+                leancloudSelector(url).innerText = counter.time + 1;
+              })
+              .catch(error => {
+                console.log('Failed to save visitor count', error);
+              })
+          } else {
+              Counter('post', '/classes/Counter', { title: title, url: url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.log('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  } else {
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return element.getAttribute('id').trim();
+      });
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length === 0) {
+            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
+              element.innerText = 0;
+            });
+            return;
+          }
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            leancloudSelector(url).innerText = time;
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = leancloudSelector(url);
+            if (element.innerText == '') {
+              element.innerText = 0;
+            }
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  }
+
+  fetch('https://app-router.leancloud.cn/2/route?appId=QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz')
+    .then(response => response.json())
+    .then(({ api_server }) => {
+      var Counter = (method, url, data) => {
+        return fetch(`https://${api_server}/1.1${url}`, {
+          method: method,
+          headers: {
+            'X-LC-Id': 'QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz',
+            'X-LC-Key': 'DfQofItPxzAfDtSv0TeyYJ0A',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+        if (localhost.test(document.URL)) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz',
+    appKey: 'DfQofItPxzAfDtSv0TeyYJ0A',
+    placeholder: "ヾﾉ≧∀≦)o 欢迎交流!   请输入您的昵称和邮箱，以便您收到回复时能及时得到通知...",
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: true,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

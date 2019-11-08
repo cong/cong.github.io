@@ -218,6 +218,129 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/PrecisionRecallFscore.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="旋律信">
+      <meta itemprop="description" content="旋律信">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="旋律信">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/article/PrecisionRecallFscore.html" class="post-title-link" itemprop="url">准确率(Precision)与召回率(Recall)与综合评价指标(F-Score)的解释</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-10-23 09:05:27" itemprop="dateCreated datePublished" datetime="2018-10-23T09:05:27+08:00">2018-10-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-08 10:36:38" itemprop="dateModified" datetime="2019-11-08T10:36:38+08:00">2019-11-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Machine-Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Machine Learning</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/article/PrecisionRecallFscore.html" class="post-meta-item leancloud_visitors" data-flag-title="准确率(Precision)与召回率(Recall)与综合评价指标(F-Score)的解释" title="热度">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">热度：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/article/PrecisionRecallFscore.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/article/PrecisionRecallFscore.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>机器学习领域三个最基本指标是<strong>召回率(Recall Rate)</strong>、<strong>准确率(Precision Rate)</strong>及<strong>综合评价指标(F-Score)</strong>。(召回率也称为查全率，准确率也称为查准率)</p>
+<h3 id="准确率-Precision"><a href="#准确率-Precision" class="headerlink" title="准确率(Precision)"></a>准确率(Precision)</h3><p><img alt="" data-src="https://img.wangcong.net/PrecisionRecallFscore.md01.png"></p>
+<script type="math/tex; mode=display">
+\begin{align}
+准确率 =& \frac{预测到的真正例}{所有的例子(真实情况的正例+反例)} \tag{1}\\
+\end{align}</script><script type="math/tex; mode=display">
+\begin{align}
+Precision =& \frac{TP}{TP+FP} \tag{1}\\
+\end{align}</script><p>即：在所有预测为正例中有多少是真实的正例。</p>
+<h3 id="召回率-Recall"><a href="#召回率-Recall" class="headerlink" title="召回率(Recall)"></a>召回率(Recall)</h3><p><img alt="" data-src="https://img.wangcong.net/PrecisionRecallFscore.md02.png"></p>
+<script type="math/tex; mode=display">
+\begin{align}
+召回率 =& \frac{预测到的真正例}{所有的正例 (真实情况的正例)} \tag{1}\\
+\end{align}</script><script type="math/tex; mode=display">
+\begin{align}
+Recall =& \frac{TP}{TP+FN} \tag{2}\\
+\end{align}</script><p>即：在所有真实的正例中有多少被正确预测到。</p>
+<p>单一的准确率或者召回率在一些情况下不一定会有意义，譬如当结果都预测为正例，$FN=0$，$Recall=1$，无意义。</p>
+<h3 id="综合评价指标-F-Score"><a href="#综合评价指标-F-Score" class="headerlink" title="综合评价指标(F-Score)"></a>综合评价指标(F-Score)</h3><p>准确率或者召回率指标有时候会出现的矛盾的情况，这样就需要综合考虑他们，最常见的方法就是F-Score（又称为F-Measure）。<br>F-Score是Precision和Recall加权调和平均：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+F\verb|-|Score =& \frac{(\alpha^2+1)\times Precision\times Recall}{\alpha^2(Precision+Recall)} \tag{3}\\
+\end{align}</script><p>当参数$\alpha=1$时，就是最常见的$F_1$，也即</p>
+<script type="math/tex; mode=display">
+\begin{align}
+F_1 =& \frac{2\times Precision\times Recall}{Precision+Recall} \tag{4}\\
+\end{align}</script><h3 id="P-R-Precision-Recall-曲线"><a href="#P-R-Precision-Recall-曲线" class="headerlink" title="P-R(Precision-Recall)曲线"></a>P-R(Precision-Recall)曲线</h3><p>P-R曲线以<strong>召回率(Recall Rate)</strong>为横坐标，以<strong>准确率(Precision Rate)</strong>为纵坐标。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/DataStructureAlgorithm.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1168,118 +1291,11 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/SurveyOnDL.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="旋律信">
-      <meta itemprop="description" content="旋律信">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="旋律信">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/article/SurveyOnDL.html" class="post-title-link" itemprop="url">A Comprehensive Survey on Deep Learning Approaches</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-06-23 21:53:55" itemprop="dateCreated datePublished" datetime="2018-06-23T21:53:55+08:00">2018-06-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2018-06-24 15:57:52" itemprop="dateModified" datetime="2018-06-24T15:57:52+08:00">2018-06-24</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Deep-Learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Deep Learning</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/article/SurveyOnDL.html" class="post-meta-item leancloud_visitors" data-flag-title="A Comprehensive Survey on Deep Learning Approaches" title="热度">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">热度：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/article/SurveyOnDL.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/article/SurveyOnDL.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>前段时间，一位天大的师兄分享了这篇文章，干货满满！ 感觉十分不错，自己也挂出来分享下。</p>
-<p><strong>The History Began from AlexNet: A Comprehensive Survey on Deep Learning Approaches</strong></p>
-<p>M. Z. Alom, T. M. Taha, C. Yakopcic, S. Westberg, M. Hasan, B. C. Van Esesn, A. A. S. Awwal, and V. K. Asari, “The history began from alexnet: A comprehensive survey on deep learning approaches,” <em>arXiv preprint arXiv:1803.01164</em>, 2018. </p>
-<p><strong>论文地址：<a href="https://arxiv.org/abs/1803.01164" target="_blank" rel="noopener">https://arxiv.org/abs/1803.01164</a></strong> </p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/article/SurveyOnDL.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1325,7 +1341,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">90</span>
+          <span class="site-state-item-count">91</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1337,7 +1353,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">93</span>
+        <span class="site-state-item-count">96</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
