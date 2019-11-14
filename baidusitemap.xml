@@ -4,8 +4,59 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/PythonSelenium.html</loc>
+    <lastmod>2019-11-14T08:56:09.190Z</lastmod>
+    <data>
+        <display>
+        <title>Python+Selenium实现网页自动化评论</title>
+        <pubTime>2018-08-13T08:23:36.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Selenium</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://wangcong.net/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/JetsonPlatformWithAI.html</loc>
+    <lastmod>2019-11-14T08:54:44.747Z</lastmod>
+    <data>
+        <display>
+        <title>Jetson开发板刷机及部署教程</title>
+        <pubTime>2017-11-21T01:53:26.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>Jetson TK1</tag>
+         
+        <tag>Jetson TX1</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>https://wangcong.net/article/PrecisionRecallFscore.html</loc>
-    <lastmod>2019-11-08T02:36:38.490Z</lastmod>
+    <lastmod>2019-11-08T07:22:49.964Z</lastmod>
     <data>
         <display>
         <title>准确率(Precision)与召回率(Recall)与综合评价指标(F-Score)的解释</title>
@@ -121,7 +172,6 @@
     
     
     
-    
   <url>
     <loc>https://wangcong.net/article/KerasTutorial.html</loc>
     <lastmod>2019-10-25T09:14:53.623Z</lastmod>
@@ -198,11 +248,11 @@
         <title>基于ROS安装Caffe和SSD【通用】</title>
         <pubTime>2017-12-24T13:55:23.000Z</pubTime>
         
+        <tag>ROS</tag>
+         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
-         
-        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -406,6 +456,8 @@
         
         <tag>Deep Learning</tag>
          
+        <tag>深度学习</tag>
+         
         <tag>CUDA</tag>
          
         <tag>TensorFlow</tag>
@@ -413,8 +465,6 @@
         <tag>Nvidia Driver</tag>
          
         <tag>cuDNN</tag>
-         
-        <tag>深度学习</tag>
          
          
            
@@ -436,6 +486,8 @@
         
         <tag>Deep Learning</tag>
          
+        <tag>深度学习</tag>
+         
         <tag>CUDA</tag>
          
         <tag>TensorFlow</tag>
@@ -443,8 +495,6 @@
         <tag>Nvidia Driver</tag>
          
         <tag>cuDNN</tag>
-         
-        <tag>深度学习</tag>
          
          
            
@@ -549,6 +599,28 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
+    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
+    <data>
+        <display>
+        <title>批量网页图片下载器 NeoDownloader</title>
+        <pubTime>2017-10-30T07:30:28.000Z</pubTime>
+        
+        <tag>爬图</tag>
+         
+        <tag>NeoDownloader</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     <data>
@@ -577,21 +649,19 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
-    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
+    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
+    <lastmod>2019-08-01T06:13:48.663Z</lastmod>
     <data>
         <display>
-        <title>批量网页图片下载器 NeoDownloader</title>
-        <pubTime>2017-10-30T07:30:28.000Z</pubTime>
+        <title>ROS相关画图工具</title>
+        <pubTime>2018-04-16T11:35:03.000Z</pubTime>
         
-        <tag>爬图</tag>
-         
-        <tag>NeoDownloader</tag>
+        <tag>ROS</tag>
          
          
            
              
-              <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
+              <breadCrumb title="ROS" url="https://wangcong.net/categories/ROS/"/>
           
         </display>
     </data>
@@ -614,26 +684,6 @@
            
              
               <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
-    <lastmod>2019-08-01T06:13:48.663Z</lastmod>
-    <data>
-        <display>
-        <title>ROS相关画图工具</title>
-        <pubTime>2018-04-16T11:35:03.000Z</pubTime>
-        
-        <tag>ROS</tag>
-         
-         
-           
-             
-              <breadCrumb title="ROS" url="https://wangcong.net/categories/ROS/"/>
           
         </display>
     </data>
@@ -993,28 +1043,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
-    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
-    <data>
-        <display>
-        <title>计算机视觉学习笔记</title>
-        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
-        
-        <tag>计算机视觉</tag>
-         
-        <tag>Computer Vision</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     <data>
@@ -1032,6 +1060,28 @@
            
              
               <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
+    <data>
+        <display>
+        <title>计算机视觉学习笔记</title>
+        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
+        
+        <tag>计算机视觉</tag>
+         
+        <tag>Computer Vision</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
           
         </display>
     </data>
@@ -1069,34 +1119,6 @@
         <pubTime>2018-07-01T12:01:55.000Z</pubTime>
         
         <tag>Deep Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/JetsonTKoTXWithCaffe.html</loc>
-    <lastmod>2019-08-01T06:13:48.639Z</lastmod>
-    <data>
-        <display>
-        <title>Jetson TK1 or TX1 刷系统以及配置Caffe教程</title>
-        <pubTime>2017-11-21T01:53:26.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>Caffe</tag>
-         
-        <tag>深度学习</tag>
-         
-        <tag>Jetson TK1</tag>
-         
-        <tag>Jetson TX1</tag>
          
          
            
@@ -1575,11 +1597,11 @@
         <title>基于ROS测试Caffe MobileNet-SSD【通用】</title>
         <pubTime>2017-12-25T01:15:31.000Z</pubTime>
         
+        <tag>ROS</tag>
+         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
-         
-        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          

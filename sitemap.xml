@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/article/PythonSelenium.html</loc>
+    
+    <lastmod>2019-11-14T08:56:09.190Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/JetsonPlatformWithAI.html</loc>
+    
+    <lastmod>2019-11-14T08:54:44.747Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/about/share/index.html</loc>
+    
+    <lastmod>2019-11-13T09:15:26.552Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/PrecisionRecallFscore.html</loc>
     
-    <lastmod>2019-11-08T02:36:38.490Z</lastmod>
+    <lastmod>2019-11-08T07:22:49.964Z</lastmod>
     
   </url>
   
@@ -40,13 +61,6 @@
     <loc>https://wangcong.net/article/GraduateLife.html</loc>
     
     <lastmod>2019-10-31T07:19:44.779Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/about/share/index.html</loc>
-    
-    <lastmod>2019-10-31T07:03:22.739Z</lastmod>
     
   </url>
   
@@ -212,14 +226,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
+    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
+    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     
@@ -345,14 +359,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
     
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     
@@ -369,13 +383,6 @@
     <loc>https://wangcong.net/article/CNNArchitecture.html</loc>
     
     <lastmod>2019-08-01T06:13:48.641Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/JetsonTKoTXWithCaffe.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.639Z</lastmod>
     
   </url>
   
