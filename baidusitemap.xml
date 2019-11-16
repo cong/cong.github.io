@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://wangcong.net/article/PythonSelenium.html</loc>
-    <lastmod>2019-11-14T08:56:09.190Z</lastmod>
+    <lastmod>2019-11-16T06:57:00.915Z</lastmod>
     <data>
         <display>
         <title>Python+Selenium实现网页自动化评论</title>
@@ -24,6 +24,8 @@
     </data>
     </url>
 
+    
+    
     
   <url>
     <loc>https://wangcong.net/article/JetsonPlatformWithAI.html</loc>
@@ -143,7 +145,6 @@
 
     
     
-    
   <url>
     <loc>https://wangcong.net/article/GraduateLife.html</loc>
     <lastmod>2019-10-31T07:19:44.779Z</lastmod>
@@ -248,11 +249,11 @@
         <title>基于ROS安装Caffe和SSD【通用】</title>
         <pubTime>2017-12-24T13:55:23.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
+         
+        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -456,8 +457,6 @@
         
         <tag>Deep Learning</tag>
          
-        <tag>深度学习</tag>
-         
         <tag>CUDA</tag>
          
         <tag>TensorFlow</tag>
@@ -465,6 +464,8 @@
         <tag>Nvidia Driver</tag>
          
         <tag>cuDNN</tag>
+         
+        <tag>深度学习</tag>
          
          
            
@@ -486,8 +487,6 @@
         
         <tag>Deep Learning</tag>
          
-        <tag>深度学习</tag>
-         
         <tag>CUDA</tag>
          
         <tag>TensorFlow</tag>
@@ -495,6 +494,8 @@
         <tag>Nvidia Driver</tag>
          
         <tag>cuDNN</tag>
+         
+        <tag>深度学习</tag>
          
          
            
@@ -1331,7 +1332,6 @@
 
     
     
-    
   <url>
     <loc>https://wangcong.net/article/WebpyNginxFastCGI.html</loc>
     <lastmod>2019-05-22T00:57:37.000Z</lastmod>
@@ -1597,11 +1597,11 @@
         <title>基于ROS测试Caffe MobileNet-SSD【通用】</title>
         <pubTime>2017-12-25T01:15:31.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
+         
+        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
