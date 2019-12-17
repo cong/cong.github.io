@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpeg">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.2',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="一直没有使用Pycharm来写代码的习惯，以往都是习惯了用Sublime Text来写代码，然后通过Transmit (FTP工具)上传到服务器上，在使用SecureCRT运行脚本。 为方便通过断点来参看数据并调试代码，遂考虑使用Pycharm来远程调用云服务器GPU来调试本地代码，一是因为本地Mac本显卡实在无力运行此高计算量的程序，二是怕自己的本本爆掉。 Pycharm有以下几个便利之处：(也">
+<meta name="keywords" content="Deep Learning,Pycharm,GPU">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Pycharm来远程调用GPU服务器资源">
+<meta property="og:url" content="https://wangcong.net/article/PycharmWithSeverGPU.html">
+<meta property="og:site_name" content="旋律信">
+<meta property="og:description" content="一直没有使用Pycharm来写代码的习惯，以往都是习惯了用Sublime Text来写代码，然后通过Transmit (FTP工具)上传到服务器上，在使用SecureCRT运行脚本。 为方便通过断点来参看数据并调试代码，遂考虑使用Pycharm来远程调用云服务器GPU来调试本地代码，一是因为本地Mac本显卡实在无力运行此高计算量的程序，二是怕自己的本本爆掉。 Pycharm有以下几个便利之处：(也">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-17T09:21:57.218Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用Pycharm来远程调用GPU服务器资源">
+<meta name="twitter:description" content="一直没有使用Pycharm来写代码的习惯，以往都是习惯了用Sublime Text来写代码，然后通过Transmit (FTP工具)上传到服务器上，在使用SecureCRT运行脚本。 为方便通过断点来参看数据并调试代码，遂考虑使用Pycharm来远程调用云服务器GPU来调试本地代码，一是因为本地Mac本显卡实在无力运行此高计算量的程序，二是怕自己的本本爆掉。 Pycharm有以下几个便利之处：(也">
+
+<link rel="canonical" href="https://wangcong.net/article/PycharmWithSeverGPU.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>使用Pycharm来远程调用GPU服务器资源 | 旋律信</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">旋律信</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">The value of knowledge lies not in possession, but in share.</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>时间轴</a>
+
+  </li>
+        <li class="menu-item menu-item-specialization">
+
+    <a href="/specialization/" rel="section"><i class="fa fa-fw fa-university"></i>专题</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        
+            
+  <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+
+
+      
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/PycharmWithSeverGPU.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="旋律信">
+      <meta itemprop="description" content="旋律信">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="旋律信">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用Pycharm来远程调用GPU服务器资源
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-12-17 20:01:55 / 修改时间：17:21:57" itemprop="dateCreated datePublished" datetime="2019-12-17T20:01:55+08:00">2019-12-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/article/PycharmWithSeverGPU.html" class="post-meta-item leancloud_visitors" data-flag-title="使用Pycharm来远程调用GPU服务器资源" title="热度">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">热度：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/article/PycharmWithSeverGPU.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/article/PycharmWithSeverGPU.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>一直没有使用Pycharm来写代码的习惯，以往都是习惯了用Sublime Text来写代码，然后通过<strong>Transmit</strong> (FTP工具)上传到服务器上，在使用<strong>SecureCRT</strong>运行脚本。</p>
+<p>为方便通过断点来参看数据并调试代码，遂考虑使用Pycharm来远程调用云服务器GPU来调试本地代码，一是因为本地Mac本显卡实在无力运行此高计算量的程序，二是怕自己的本本爆掉。</p>
+<p>Pycharm有以下几个便利之处：(也是在不断折腾中发现的，🤦‍♂️)</p>
+<ul>
+<li>一款专注于Python开发的IDE</li>
+<li>远程链接服务器并调用GPU等资源</li>
+<li>可以SSH链接到服务器终端</li>
+<li>十分方便对服务器上的程序绘图进行显示</li>
+</ul>
+<a id="more"></a>
+<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p><img alt="PycharmWithSever00" data-src="https://img.wangcong.net/PycharmWithSever00.png"></p>
+<h3 id="通过SFTP链接服务器"><a href="#通过SFTP链接服务器" class="headerlink" title="通过SFTP链接服务器"></a>通过SFTP链接服务器</h3><ol>
+<li><p>点击<code>Configuration</code>进入<code>Deployment</code>，并新建SFTP</p>
+<p><img alt="PycharmWithSever01" data-src="https://img.wangcong.net/PycharmWithSever01.png"></p>
+<p><img alt="PycharmWithSever02" data-src="/Users/cong/Downloads/PycharmWithSever02.png"></p>
+<p><img alt="PycharmWithSever03" data-src="https://img.wangcong.net/PycharmWithSever03.png"></p>
+</li>
+<li><p>点击Mapping，填写期望同步的本地路径与服务器路径</p>
+<p><strong>尤其要注意服务器映射的目录路径!</strong>：实际路径 = Root path + Deployment path</p>
+<p><img alt="PycharmWithSever04" data-src="https://img.wangcong.net/PycharmWithSever04.png"></p>
+</li>
+<li><p>在上方菜单栏进入<code>Tools</code> —&gt; <code>Browse Remote Host</code>来打开相应的<code>RemoteHost</code>面板。</p>
+<p>这个面板显示的就是服务器上的文件，显示的范围就是步骤2中<code>Deployment path</code>路径下的文件及文件夹。</p>
+<p><img alt="PycharmWithSever05" data-src="https://img.wangcong.net/PycharmWithSever05.png"></p>
+</li>
+<li><p>可以直接在<code>RemoteHost</code>面板里双击某个文件并且直接进行编辑。</p>
+<p>双击某个文件后你可以看到编辑区域的顶部有一个横条，并且横条的右边有三各按钮，分别是<strong>比较、撤销和上传</strong>操作。在这里面编辑文件之后，可以直接点击上传按钮，就会提交到服务器了。</p>
+<p><img alt="PycharmWithSever06" data-src="https://img.wangcong.net/PycharmWithSever06.png"></p>
+</li>
+</ol>
+<h3 id="更改Python解释器为云服务器上的Python解释器"><a href="#更改Python解释器为云服务器上的Python解释器" class="headerlink" title="更改Python解释器为云服务器上的Python解释器"></a>更改Python解释器为云服务器上的Python解释器</h3><ol>
+<li><p>进入<code>Preference</code>，点击<code>Project Interpreter</code>，选择<code>Add</code></p>
+<p><img alt="PycharmWithSever07" data-src="https://img.wangcong.net/PycharmWithSever07.png"></p>
+</li>
+<li><p>进入<code>SSH Interpreter</code>进行设置</p>
+<p><img alt="PycharmWithSever08" data-src="https://img.wangcong.net/PycharmWithSever08.png"></p>
+</li>
+<li><p>Python解释器路径，一般设置默认</p>
+<p><img alt="PycharmWithSever09" data-src="https://img.wangcong.net/PycharmWithSever09.png"></p>
+</li>
+</ol>
+<h3 id="设置服务器GPU环境变量"><a href="#设置服务器GPU环境变量" class="headerlink" title="设置服务器GPU环境变量"></a>设置服务器GPU环境变量</h3><p><strong>一次设置，永久有效！</strong></p>
+<p>在终端上执行<code>cat .bashrc</code>命令，查询服务器中设置的CUDA环境变量。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#export  PATH=/usr/local/cuda-10.0/bin:$PATH</span></span><br><span class="line"><span class="comment">#export  LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64$LD_LIBRARY_PATH</span></span><br><span class="line"><span class="comment">#export CUDA_HOME=/usr/local/cuda-10.0</span></span><br><span class="line"></span><br><span class="line">上面是.bashrc文件中的配置，下方是Pycharm中的环境变量配置</span><br><span class="line"></span><br><span class="line">LD_LIBRARY_PATH=/usr/<span class="built_in">local</span>/cuda-10.0/lib64</span><br><span class="line">CUDA_HOME=/usr/<span class="built_in">local</span>/cuda-10.0</span><br></pre></td></tr></table></figure>
+<p>我仅仅设置了这两条，设置<code>PATH</code>会报错。</p>
+<ol>
+<li><p>点击<code>Edit Configurations</code></p>
+<p><img alt="PycharmWithSever11" data-src="https://img.wangcong.net/PycharmWithSever10.png"></p>
+</li>
+<li><p>点击 <code>Templates</code>，设置Python脚本模板的<code>Environment Variables</code></p>
+<p><img alt="PycharmWithSever12" data-src="https://img.wangcong.net/PycharmWithSever11.png"></p>
+</li>
+<li><p>若已有运行过的文件，在完成上面两步后，记得清空Python下所有已经运行的文件，重新运行程序</p>
+<p><img alt="PycharmWithSever12" data-src="https://img.wangcong.net/PycharmWithSever12.png"></p>
+</li>
+</ol>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><ol>
+<li><p>新建脚本文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># @Time    : 2019-12-16 17:49</span></span><br><span class="line"><span class="comment"># @Author  : WangCong</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">"CUDA_VISIBLE_DEVICES"</span>] = <span class="string">'0'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Creates a graph.</span></span><br><span class="line">a = tf.constant([<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>, <span class="number">4.0</span>, <span class="number">5.0</span>, <span class="number">6.0</span>], shape=[<span class="number">2</span>, <span class="number">3</span>], name=<span class="string">'a'</span>)</span><br><span class="line">b = tf.constant([<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>, <span class="number">4.0</span>, <span class="number">5.0</span>, <span class="number">6.0</span>], shape=[<span class="number">3</span>, <span class="number">2</span>], name=<span class="string">'b'</span>)</span><br><span class="line">c = tf.matmul(a, b)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Creates a session with log_device_placement set to True.</span></span><br><span class="line">sess = tf.Session(config=tf.ConfigProto(log_device_placement=<span class="keyword">True</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Runs the op.</span></span><br><span class="line">print(sess.run(c))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行脚本测试</p>
+<p><img alt="PycharmWithSever14" data-src="https://img.wangcong.net/PycharmWithSever13.png"></p>
+</li>
+</ol>
+<h3 id="通过Pycharm绘图"><a href="#通过Pycharm绘图" class="headerlink" title="通过Pycharm绘图"></a>通过Pycharm绘图</h3><p>启用 SSH X11 转发以便使得Pycharm能够进行绘图（Plot），打开配置文件<code>/etc/ssh/sshd_config</code></p>
+<figure class="highlight plain"><figcaption><span>shell</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># X11Forwarding yes</span><br></pre></td></tr></table></figure>
+<p>找到上面的代码，并取消注释。</p>
+<p><img alt="" data-src="https://img.wangcong.net/PycharmWithSever14.png"></p>
+<h3 id="SSH远程链接"><a href="#SSH远程链接" class="headerlink" title="SSH远程链接"></a>SSH远程链接</h3><p>通过Pycharm可以建立服务器SSH远程链接，在上方菜单栏点击<code>Tools</code> —&gt; <code>Start SSH seesion</code>即可远程连接到服务器。</p>
+<p>若远程Terminal出现乱码：进入<code>Perferrnces</code>点击<code>Tools</code> —&gt; <code>SSH Terminal</code>，在<code>Default encoding</code>选项中选择utf-8即可解决。</p>
+<h3 id="需要注意的问题"><a href="#需要注意的问题" class="headerlink" title="需要注意的问题"></a>需要注意的问题</h3><ol>
+<li><p>报错<code>ImportError: libcublas.so.: cannot open shared object file: No such file or directory</code></p>
+<p>在<strong>脚本文件</strong>的<code>Environment Variables</code>中，配置CUDA参数</p>
+</li>
+<li><p>上文中的<strong>新建项目路径</strong>与<strong>Mapping中的本地路径</strong>等路径要一一对应，服务器中的路径**也要一一对应。</p>
+</li>
+</ol>
+<hr>
+<p>参考文献：</p>
+<p><a href="https://stackoverflow.com/questions/37933890/tensorflow-gpu-setup-error-with-cuda-on-pycharm" target="_blank" rel="noopener">https://stackoverflow.com/questions/37933890/tensorflow-gpu-setup-error-with-cuda-on-pycharm</a></p>
+
+    </div>
+
+    
+    
+    
+      
+        <div class="reward-container">
+  <div><p style="color:#34495e; margin:0 0 5px 0;">🍭支持一根棒棒糖吧！</p></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    <i class="fa fa-qrcode fa-2x" style="line-height:35px;"></i>
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="https://img.wangcong.net/wechat_reward.png" alt="旋律信 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="https://img.wangcong.net/alipay_reward.png" alt="旋律信 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/PycharmWithSeverGPU.html" title="使用Pycharm来远程调用GPU服务器资源">https://wangcong.net/article/PycharmWithSeverGPU.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Deep-Learning/" rel="tag"><i class="fa fa-tag"></i> Deep Learning</a>
+              <a href="/tags/Pycharm/" rel="tag"><i class="fa fa-tag"></i> Pycharm</a>
+              <a href="/tags/GPU/" rel="tag"><i class="fa fa-tag"></i> GPU</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/article/PyTorchTutorial.html" rel="next" title="PyTorch 快速教程">
+                  <i class="fa fa-chevron-left"></i> PyTorch 快速教程
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建项目"><span class="nav-number">1.</span> <span class="nav-text">新建项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过SFTP链接服务器"><span class="nav-number">2.</span> <span class="nav-text">通过SFTP链接服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改Python解释器为云服务器上的Python解释器"><span class="nav-number">3.</span> <span class="nav-text">更改Python解释器为云服务器上的Python解释器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置服务器GPU环境变量"><span class="nav-number">4.</span> <span class="nav-text">设置服务器GPU环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试"><span class="nav-number">5.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过Pycharm绘图"><span class="nav-number">6.</span> <span class="nav-text">通过Pycharm绘图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH远程链接"><span class="nav-number">7.</span> <span class="nav-text">SSH远程链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需要注意的问题"><span class="nav-number">8.</span> <span class="nav-text">需要注意的问题</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="旋律信"
+    src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">旋律信</p>
+  <div class="site-description" itemprop="description">旋律信</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">93</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">99</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/cong" title="GitHub &rarr; https://github.com/cong" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/xuanlvxin" title="Twitter &rarr; https://twitter.com/xuanlvxin" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/" title="知乎 &rarr; https://www.zhihu.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/lovedigit" title="微博 &rarr; https://weibo.com/lovedigit" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>微博</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://nacl.ai" title="https://nacl.ai" rel="noopener" target="_blank">NaCl.AI</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.lovedigit.com" title="http://www.lovedigit.com" rel="noopener" target="_blank">LoveDigit</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.zhihu.com/people/wu-qi-18-39" title="https://www.zhihu.com/people/wu-qi-18-39" rel="noopener" target="_blank">吴二狗</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">旋律信</span>
+</div>
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">闽ICP备 15006828号-2 </a>
+  </div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+  <script>
+  function leancloudSelector(url) {
+    return document.getElementById(url).querySelector('.leancloud-visitors-count');
+  }
+  if (CONFIG.page.isPost) {
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = visitors.getAttribute('id').trim();
+      var title = visitors.getAttribute('data-flag-title').trim();
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .then(response => response.json())
+              .then(() => {
+                leancloudSelector(url).innerText = counter.time + 1;
+              })
+              .catch(error => {
+                console.log('Failed to save visitor count', error);
+              })
+          } else {
+              Counter('post', '/classes/Counter', { title: title, url: url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.log('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  } else {
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return element.getAttribute('id').trim();
+      });
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length === 0) {
+            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
+              element.innerText = 0;
+            });
+            return;
+          }
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            leancloudSelector(url).innerText = time;
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = leancloudSelector(url);
+            if (element.innerText == '') {
+              element.innerText = 0;
+            }
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  }
+
+  fetch('https://app-router.leancloud.cn/2/route?appId=QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz')
+    .then(response => response.json())
+    .then(({ api_server }) => {
+      var Counter = (method, url, data) => {
+        return fetch(`https://${api_server}/1.1${url}`, {
+          method: method,
+          headers: {
+            'X-LC-Id': 'QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz',
+            'X-LC-Key': 'DfQofItPxzAfDtSv0TeyYJ0A',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+        if (localhost.test(document.URL)) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz',
+    appKey: 'DfQofItPxzAfDtSv0TeyYJ0A',
+    placeholder: "ヾﾉ≧∀≦)o 欢迎交流!   请输入您的昵称和邮箱，以便您收到回复时能及时得到通知...",
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: true,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>
