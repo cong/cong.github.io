@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://wangcong.net/article/PycharmWithSeverGPU.html</loc>
-    <lastmod>2019-12-17T09:21:57.218Z</lastmod>
+    <lastmod>2020-01-08T05:30:08.088Z</lastmod>
     <data>
         <display>
         <title>使用Pycharm来远程调用GPU服务器资源</title>
@@ -16,6 +16,30 @@
         <tag>Pycharm</tag>
          
         <tag>GPU</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/iTem2Setting.html</loc>
+    <lastmod>2020-01-08T05:28:11.402Z</lastmod>
+    <data>
+        <display>
+        <title>Mac下终端升级（iTem2 + oh-my-zsh + powerlevel9k）</title>
+        <pubTime>2020-01-08T13:30:27.000Z</pubTime>
+        
+        <tag>iTem2</tag>
+         
+        <tag>oh-my-zsh</tag>
+         
+        <tag>powerlevel9k</tag>
          
          
            
@@ -624,6 +648,28 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
+    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
+    <data>
+        <display>
+        <title>批量网页图片下载器 NeoDownloader</title>
+        <pubTime>2017-10-30T07:30:28.000Z</pubTime>
+        
+        <tag>爬图</tag>
+         
+        <tag>NeoDownloader</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     <data>
@@ -645,28 +691,6 @@
            
              
               <breadCrumb title="UAV" url="https://wangcong.net/categories/UAV/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
-    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
-    <data>
-        <display>
-        <title>批量网页图片下载器 NeoDownloader</title>
-        <pubTime>2017-10-30T07:30:28.000Z</pubTime>
-        
-        <tag>爬图</tag>
-         
-        <tag>NeoDownloader</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
           
         </display>
     </data>
@@ -1068,6 +1092,28 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
+    <data>
+        <display>
+        <title>计算机视觉学习笔记</title>
+        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
+        
+        <tag>计算机视觉</tag>
+         
+        <tag>Computer Vision</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     <data>
@@ -1085,28 +1131,6 @@
            
              
               <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
-    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
-    <data>
-        <display>
-        <title>计算机视觉学习笔记</title>
-        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
-        
-        <tag>计算机视觉</tag>
-         
-        <tag>Computer Vision</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
           
         </display>
     </data>

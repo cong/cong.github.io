@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpeg">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.2',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="作为一个一直在路上追求艺术和高效的汉子，为了在使用命令行的过程中让自己更加赏心悦目，我又来折腾我的终端了。 目标的效果如下：">
+<meta name="keywords" content="iTem2,oh-my-zsh,powerlevel9k">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac下终端升级（iTem2 + oh-my-zsh + powerlevel9k）">
+<meta property="og:url" content="https://wangcong.net/article/iTem2Setting.html">
+<meta property="og:site_name" content="旋律信">
+<meta property="og:description" content="作为一个一直在路上追求艺术和高效的汉子，为了在使用命令行的过程中让自己更加赏心悦目，我又来折腾我的终端了。 目标的效果如下：">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-01-08T05:28:11.402Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac下终端升级（iTem2 + oh-my-zsh + powerlevel9k）">
+<meta name="twitter:description" content="作为一个一直在路上追求艺术和高效的汉子，为了在使用命令行的过程中让自己更加赏心悦目，我又来折腾我的终端了。 目标的效果如下：">
+
+<link rel="canonical" href="https://wangcong.net/article/iTem2Setting.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Mac下终端升级（iTem2 + oh-my-zsh + powerlevel9k） | 旋律信</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">旋律信</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">The value of knowledge lies not in possession, but in share.</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>时间轴</a>
+
+  </li>
+        <li class="menu-item menu-item-specialization">
+
+    <a href="/specialization/" rel="section"><i class="fa fa-fw fa-university"></i>专题</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        
+            
+  <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+
+
+      
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/iTem2Setting.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="旋律信">
+      <meta itemprop="description" content="旋律信">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="旋律信">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Mac下终端升级（iTem2 + oh-my-zsh + powerlevel9k）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-08 21:30:27 / 修改时间：13:28:11" itemprop="dateCreated datePublished" datetime="2020-01-08T21:30:27+08:00">2020-01-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/article/iTem2Setting.html" class="post-meta-item leancloud_visitors" data-flag-title="Mac下终端升级（iTem2 + oh-my-zsh + powerlevel9k）" title="热度">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">热度：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/article/iTem2Setting.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/article/iTem2Setting.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>作为一个一直在路上追求艺术和高效的汉子，为了在使用命令行的过程中让自己更加赏心悦目，我又来折腾我的终端了。</p>
+<p>目标的效果如下：</p>
+<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting00.gif"></p>
+<a id="more"></a>
+<h3 id="安装iTem2"><a href="#安装iTem2" class="headerlink" title="安装iTem2"></a>安装iTem2</h3><ol>
+<li><p>首先在官网 <a href="http://iterm2.com/" target="_blank" rel="noopener">http://iterm2.com/</a> 下载 iTem2 。</p>
+</li>
+<li><p>将iTem2设置为默认终端：<code>iTerm2 -&gt; Make iTerm2 Default Term</code></p>
+<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting01.png"></p>
+</li>
+</ol>
+<h3 id="导入iTem2配色"><a href="#导入iTem2配色" class="headerlink" title="导入iTem2配色"></a>导入iTem2配色</h3><p>一般我所有的软件的配色都是设置为Solarized，iTem2已经内置了，但感觉差点。</p>
+<p>为实现文章开头中的效果，则需要导入<a href="https://github.com/MartinSeeler/iterm2-material-design" target="_blank" rel="noopener">Material Design</a>配色，下载后通过<code>Preferences &gt; Profiles &gt; Colors &gt; Color Presets &gt; Import</code>进行设定。</p>
+<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting02.png"></p>
+<p>在<a href="https://github.com/mbadolato/iTerm2-Color-Schemes" target="_blank" rel="noopener">iTerm2 Color Schemes</a>上面，有很多配色可以选择，可按照自己的喜欢进行下载。</p>
+<p><strong>注：重新打开iTem2窗口则会生效。</strong></p>
+<h3 id="安装oh-my-zsh"><a href="#安装oh-my-zsh" class="headerlink" title="安装oh-my-zsh"></a>安装oh-my-zsh</h3><p>安装命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"</span><br></pre></td></tr></table></figure>
+<p>但是在我这报错，我就直接将<code>install.sh</code>下载下来，然后<code>sudo sh install.sh</code>进行了安装。</p>
+<p>执行完以后如果没有出现什么报错，在<code>Home</code>文件夹下生成了 <code>~/.oh-my-zsh</code>文件夹就代表成功了。</p>
+<h3 id="安装oh-my-zsh的插件"><a href="#安装oh-my-zsh的插件" class="headerlink" title="安装oh-my-zsh的插件"></a>安装oh-my-zsh的插件</h3><ol>
+<li><p>安装<strong>语法高亮</strong>插件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装<strong>自动补全</strong>插件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>因为我们要用的主题会用到很多的特殊icon，所以iTerm2 选用的字体必需要支援这种特殊icon font。</p>
+<p>没有安装的话会现在如下这样，遇到icon会变框框问号：</p>
+<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting03.png"></p>
+<p>安装完字体后的效果：</p>
+<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting04.png"></p>
+<p>点击<a href="https://github.com/ryanoasis/nerd-fonts/blob/e9ec3ae4548e59eb9a6531f38370cb99ca591e16/patched-fonts/Meslo/L-DZ/complete/Meslo LG L DZ Regular Nerd Font Complete.otf" target="_blank" rel="noopener">Meslo LG L DZ Regular Nerd Font Complete</a> 下载字体，双击进行安装。</p>
+<p>然后通过<code>Preferences &gt; Profiles &gt; Text</code>进行设定。</p>
+<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting05.png"></p>
+<h3 id="安装zsh-powerlevel9k-主题"><a href="#安装zsh-powerlevel9k-主题" class="headerlink" title="安装zsh powerlevel9k 主题"></a>安装zsh <a href="https://github.com/bhilburn/powerlevel9k" target="_blank" rel="noopener">powerlevel9k</a> 主题</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k</span><br></pre></td></tr></table></figure>
+<h3 id="修改zsh配置"><a href="#修改zsh配置" class="headerlink" title="修改zsh配置"></a>修改zsh配置</h3><p>为了让powerlevel9k主题生效，需要修改<code>~/.zshrc</code> 文件，修改主题为powerlevel9k：</p>
+<figure class="highlight python"><figcaption><span>vim ~/.zshrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">export ZSH=<span class="string">"$HOME/.oh-my-zsh"</span></span><br><span class="line"></span><br><span class="line">ZSH_THEME=<span class="string">"powerlevel9k/powerlevel9k"</span></span><br><span class="line"><span class="comment"># Nerd 字体</span></span><br><span class="line">POWERLEVEL9K_MODE=<span class="string">"nerdfont-complete"</span></span><br><span class="line">POWERLEVEL9K_PROMPT_ON_NEWLINE=true</span><br><span class="line"><span class="comment"># command line左边想显示的内容：系统icon、用户、写权限、路径、版本控制系统等</span></span><br><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon user dir_writable dir vcs)</span><br><span class="line"><span class="comment"># command line右边想显示的内容：状态、命令执行时间、...、系统时间、已用空间、RAM占用</span></span><br><span class="line">POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs time disk_usage ram)</span><br><span class="line"><span class="comment">#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%(?:%&#123;$fg_bold[green]%&#125;➜ :%&#123;$fg_bold[red]%&#125;➜ )"</span></span><br><span class="line"><span class="comment">#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""</span></span><br><span class="line"><span class="comment">#POWERLEVEL9K_USER_ICON="\uF415" # </span></span><br><span class="line">POWERLEVEL9K_ROOT_ICON=<span class="string">"\uF09C"</span></span><br><span class="line"><span class="comment">#POWERLEVEL9K_SUDO_ICON=$'\uF09C' # </span></span><br><span class="line">POWERLEVEL9K_TIME_FORMAT=<span class="string">"%D&#123;%H:%M&#125;"</span></span><br><span class="line"><span class="comment">#POWERLEVEL9K_VCS_GIT_ICON='\uF408 '</span></span><br><span class="line"><span class="comment">#POWERLEVEL9K_VCS_GIT_GITHUB_ICON='\uF408 '</span></span><br><span class="line"></span><br><span class="line">ZSH_DISABLE_COMPFIX=true</span><br><span class="line"></span><br><span class="line">ENABLE_CORRECTION=<span class="string">"true"</span></span><br><span class="line">COMPLETION_WAITING_DOTS=<span class="string">"true"</span></span><br><span class="line"><span class="comment"># zsh插件</span></span><br><span class="line">plugins=(</span><br><span class="line">  git</span><br><span class="line">  iterm2</span><br><span class="line">  macports</span><br><span class="line">  man</span><br><span class="line">  osx</span><br><span class="line">  python</span><br><span class="line">  composer</span><br><span class="line">  zsh-syntax-highlighting</span><br><span class="line">  zsh-autosuggestions</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">source $ZSH/oh-my-zsh.sh</span><br><span class="line"></span><br><span class="line">alias suroot=<span class="string">'sudo -E -s'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># source ~/.bash_profile</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -f ~/.bash_profile ]; then</span><br><span class="line">    . ~/.bash_profile;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<p>最终就可以实现了这种显示效果：</p>
+<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting00.gif"></p>
+<p>另外，此处<a href="https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config" target="_blank" rel="noopener">Show Off Your Config</a>.有更多的参数配置，大家可以尽情欣赏。</p>
+
+    </div>
+
+    
+    
+    
+      
+        <div class="reward-container">
+  <div><p style="color:#34495e; margin:0 0 5px 0;">🍭支持一根棒棒糖吧！</p></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    <i class="fa fa-qrcode fa-2x" style="line-height:35px;"></i>
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="https://img.wangcong.net/wechat_reward.png" alt="旋律信 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="https://img.wangcong.net/alipay_reward.png" alt="旋律信 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/iTem2Setting.html" title="Mac下终端升级（iTem2 + oh-my-zsh + powerlevel9k）">https://wangcong.net/article/iTem2Setting.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/iTem2/" rel="tag"><i class="fa fa-tag"></i> iTem2</a>
+              <a href="/tags/oh-my-zsh/" rel="tag"><i class="fa fa-tag"></i> oh-my-zsh</a>
+              <a href="/tags/powerlevel9k/" rel="tag"><i class="fa fa-tag"></i> powerlevel9k</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/article/PycharmWithSeverGPU.html" rel="next" title="使用Pycharm来远程调用GPU服务器资源">
+                  <i class="fa fa-chevron-left"></i> 使用Pycharm来远程调用GPU服务器资源
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装iTem2"><span class="nav-number">1.</span> <span class="nav-text">安装iTem2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入iTem2配色"><span class="nav-number">2.</span> <span class="nav-text">导入iTem2配色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装oh-my-zsh"><span class="nav-number">3.</span> <span class="nav-text">安装oh-my-zsh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装oh-my-zsh的插件"><span class="nav-number">4.</span> <span class="nav-text">安装oh-my-zsh的插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装字体"><span class="nav-number">5.</span> <span class="nav-text">安装字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装zsh-powerlevel9k-主题"><span class="nav-number">6.</span> <span class="nav-text">安装zsh powerlevel9k 主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改zsh配置"><span class="nav-number">7.</span> <span class="nav-text">修改zsh配置</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="旋律信"
+    src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">旋律信</p>
+  <div class="site-description" itemprop="description">旋律信</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">94</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">102</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/cong" title="GitHub &rarr; https://github.com/cong" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/xuanlvxin" title="Twitter &rarr; https://twitter.com/xuanlvxin" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/" title="知乎 &rarr; https://www.zhihu.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/lovedigit" title="微博 &rarr; https://weibo.com/lovedigit" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>微博</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://nacl.ai" title="https://nacl.ai" rel="noopener" target="_blank">NaCl.AI</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.lovedigit.com" title="http://www.lovedigit.com" rel="noopener" target="_blank">LoveDigit</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.zhihu.com/people/wu-qi-18-39" title="https://www.zhihu.com/people/wu-qi-18-39" rel="noopener" target="_blank">吴二狗</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">旋律信</span>
+</div>
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">闽ICP备 15006828号-2 </a>
+  </div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+  <script>
+  function leancloudSelector(url) {
+    return document.getElementById(url).querySelector('.leancloud-visitors-count');
+  }
+  if (CONFIG.page.isPost) {
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = visitors.getAttribute('id').trim();
+      var title = visitors.getAttribute('data-flag-title').trim();
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .then(response => response.json())
+              .then(() => {
+                leancloudSelector(url).innerText = counter.time + 1;
+              })
+              .catch(error => {
+                console.log('Failed to save visitor count', error);
+              })
+          } else {
+              Counter('post', '/classes/Counter', { title: title, url: url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.log('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  } else {
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return element.getAttribute('id').trim();
+      });
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length === 0) {
+            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
+              element.innerText = 0;
+            });
+            return;
+          }
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            leancloudSelector(url).innerText = time;
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = leancloudSelector(url);
+            if (element.innerText == '') {
+              element.innerText = 0;
+            }
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  }
+
+  fetch('https://app-router.leancloud.cn/2/route?appId=QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz')
+    .then(response => response.json())
+    .then(({ api_server }) => {
+      var Counter = (method, url, data) => {
+        return fetch(`https://${api_server}/1.1${url}`, {
+          method: method,
+          headers: {
+            'X-LC-Id': 'QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz',
+            'X-LC-Key': 'DfQofItPxzAfDtSv0TeyYJ0A',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+        if (localhost.test(document.URL)) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz',
+    appKey: 'DfQofItPxzAfDtSv0TeyYJ0A',
+    placeholder: "ヾﾉ≧∀≦)o 欢迎交流!   请输入您的昵称和邮箱，以便您收到回复时能及时得到通知...",
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: true,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>
