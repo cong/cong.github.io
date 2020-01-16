@@ -4,18 +4,64 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/PycharmWithSeverGPU.html</loc>
-    <lastmod>2020-01-08T05:30:08.088Z</lastmod>
+    <loc>https://wangcong.net/article/FPandBP.html</loc>
+    <lastmod>2020-01-16T08:16:43.404Z</lastmod>
     <data>
         <display>
-        <title>使用Pycharm来远程调用GPU服务器资源</title>
-        <pubTime>2019-12-17T12:01:55.000Z</pubTime>
+        <title>前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结</title>
+        <pubTime>2019-09-03T12:01:55.000Z</pubTime>
         
         <tag>Deep Learning</tag>
          
-        <tag>Pycharm</tag>
+        <tag>反向传播</tag>
          
-        <tag>GPU</tag>
+        <tag>Back Propagation</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/LinuxStudyNote.html</loc>
+    <lastmod>2020-01-08T08:31:15.141Z</lastmod>
+    <data>
+        <display>
+        <title>Linux学习笔记</title>
+        <pubTime>2017-07-20T03:41:58.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>学习笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="https://wangcong.net/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/iTem2Setting.html</loc>
+    <lastmod>2020-01-08T07:48:30.741Z</lastmod>
+    <data>
+        <display>
+        <title>Mac下终端升级（iTem2 + oh-my-zsh + powerlevel9k）</title>
+        <pubTime>2020-01-08T13:30:27.000Z</pubTime>
+        
+        <tag>iTem2</tag>
+         
+        <tag>oh-my-zsh</tag>
+         
+        <tag>powerlevel9k</tag>
          
          
            
@@ -28,18 +74,18 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/iTem2Setting.html</loc>
-    <lastmod>2020-01-08T05:28:11.402Z</lastmod>
+    <loc>https://wangcong.net/article/PycharmWithSeverGPU.html</loc>
+    <lastmod>2020-01-08T05:30:08.088Z</lastmod>
     <data>
         <display>
-        <title>Mac下终端升级（iTem2 + oh-my-zsh + powerlevel9k）</title>
-        <pubTime>2020-01-08T13:30:27.000Z</pubTime>
+        <title>使用Pycharm来远程调用GPU服务器资源</title>
+        <pubTime>2019-12-17T12:01:55.000Z</pubTime>
         
-        <tag>iTem2</tag>
+        <tag>Deep Learning</tag>
          
-        <tag>oh-my-zsh</tag>
+        <tag>Pycharm</tag>
          
-        <tag>powerlevel9k</tag>
+        <tag>GPU</tag>
          
          
            
@@ -104,7 +150,6 @@
     </data>
     </url>
 
-    
     
     
   <url>
@@ -327,11 +372,11 @@
         <title>基于ROS安装Caffe和SSD【通用】</title>
         <pubTime>2017-12-24T13:55:23.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
+         
+        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -383,30 +428,6 @@
            
              
               <breadCrumb title="UAV" url="https://wangcong.net/categories/UAV/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/FPandBP.html</loc>
-    <lastmod>2019-09-03T10:46:28.600Z</lastmod>
-    <data>
-        <display>
-        <title>前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结</title>
-        <pubTime>2019-09-03T12:01:55.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>反向传播</tag>
-         
-        <tag>Back Propagation</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
           
         </display>
     </data>
@@ -1645,11 +1666,11 @@
         <title>基于ROS测试Caffe MobileNet-SSD【通用】</title>
         <pubTime>2017-12-25T01:15:31.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
+         
+        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -2125,28 +2146,6 @@
            
              
               <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/LinuxStudyNote.html</loc>
-    <lastmod>2017-09-09T04:01:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux学习笔记</title>
-        <pubTime>2017-07-20T03:41:58.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>学习笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="https://wangcong.net/categories/Linux/"/>
           
         </display>
     </data>
