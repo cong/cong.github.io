@@ -48,18 +48,18 @@
   };
 </script>
 
-  <meta name="description" content="Enter password to read.">
+  <meta name="description" content="经查阅大量资料及手动公式推导，对卷积神经网络中二维与三维图像卷积操作进行图解及公式表示。">
 <meta name="keywords" content="Deep Learning,CNN,卷积">
 <meta property="og:type" content="article">
 <meta property="og:title" content="图解卷积神经网络中二维与三维图像卷积操作">
 <meta property="og:url" content="https://wangcong.net/article/ConvolutionalLayer.html">
 <meta property="og:site_name" content="旋律信">
-<meta property="og:description" content="Enter password to read.">
+<meta property="og:description" content="经查阅大量资料及手动公式推导，对卷积神经网络中二维与三维图像卷积操作进行图解及公式表示。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-30T10:13:16.298Z">
+<meta property="og:updated_time" content="2020-01-17T06:49:41.899Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图解卷积神经网络中二维与三维图像卷积操作">
-<meta name="twitter:description" content="Enter password to read.">
+<meta name="twitter:description" content="经查阅大量资料及手动公式推导，对卷积神经网络中二维与三维图像卷积操作进行图解及公式表示。">
 
 <link rel="canonical" href="https://wangcong.net/article/ConvolutionalLayer.html">
 
@@ -242,10 +242,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-08-30 16:00:23 / 修改时间：18:13:16" itemprop="dateCreated datePublished" datetime="2019-08-30T16:00:23+08:00">2019-08-30</time>
+              <time title="创建时间：2019-08-30 16:00:23" itemprop="dateCreated datePublished" datetime="2019-08-30T16:00:23+08:00">2019-08-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-17 14:49:41" itemprop="dateModified" datetime="2020-01-17T14:49:41+08:00">2020-01-17</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -290,20 +296,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-<div id="security">
-  <div class="input-container">
-  <input type="password" class="form-control" id="pass" placeholder="Enter password to read.">
-    <label for="pass">Enter password to read.</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-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
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+        <p>经查阅大量资料及手动公式推导，对卷积神经网络中二维与三维图像卷积操作进行图解及公式表示。</p>
+<a id="more"></a>
+<p>注：在数学中，两个矩阵进行卷积操作，卷积核是要翻卷的，如下面动图所示。</p>
+<p><img alt="" data-src="https://img.wangcong.net/ConvolutionalLayer.svg"></p>
+<p>在深度学习中，卷积核不需要翻卷。</p>
+<h3 id="二维图像卷积操作"><a href="#二维图像卷积操作" class="headerlink" title="二维图像卷积操作"></a>二维图像卷积操作</h3><p>对于大小为$ h \times w$图像$I$和 大小为$(k_1 \times k_2)$ 卷积核 $K$，定义其Cross-correlation：</p>
+<script type="math/tex; mode=display">
+{(I \otimes K)_{i，j}} = \sum\limits_{m = 0}^{k_1-1}\sum\limits_{n = 0}^{k_2-1}{I(i + m,j + n)}K(m,n)</script><p>其中</p>
+<p>$0 \leqslant i \leqslant h - {k_1}$，$ 0\leqslant j \leqslant h - {k_2}$<br>注意：这里的使用的符号和ii的范围，不考虑Padding及Stride = 1 的情况。</p>
+<p><img alt="Cross-correlation" data-src="https://img.wangcong.net/Cross-correlation.gif"></p>
+<p>用上图举例：</p>
+<p>图中图像大小为：$h \times w = 5 \times 5$，卷积核尺寸为：$k_1 \times k_2 = 3 \times 3$<br>则 $i, j$ 的定义域为<br>$0 \leqslant i \leqslant h - {k_1}$  —&gt;   $0 \leqslant i \leqslant 2$，$0 \leqslant j \leqslant h - {k_2}$  —&gt;   $0 \leqslant i \leqslant 2$</p>
+<p>则图像中$(0,0)$处卷积后的结果为：</p>
+<script type="math/tex; mode=display">
+\begin {aligned}
+{(I \otimes K)_{0,0}} &= \sum\limits_{m = 0}^{k_1-1}{\sum\limits_{n = 0}^{k_2-1}{I(i + m,j + n)} }K(m,n)\\
+&= \sum\limits_{m = 0}^{2}\sum\limits_{n = 0}^{2}{I(0 + m,0 + n)}K(m,n)\\
+&=1\times1+1\times1+1\times1+1\times1\\
+&=4
+\end {aligned}</script><h3 id="三维图像卷积操作"><a href="#三维图像卷积操作" class="headerlink" title="三维图像卷积操作"></a>三维图像卷积操作</h3><p>对于大小为 $h \times w \times d$ 图像 $I$ 和大小为 $(k_1 \times k_2 \times d)$ 卷积核 $K$，定义其Cross-correlation：</p>
+<script type="math/tex; mode=display">
+{(I \otimes K)_{i,j}} =\sum\limits_{l = 1}^{d}\sum\limits_{m = 0}^{k_1-1}\sum\limits_{n = 0}^{k_2-1}{I_l(i + m,j + n)}K_l(m,n)+b</script><p>其中</p>
+<p>$0 \leqslant i \leqslant h - {k_1} + 2p$<br>$0 \leqslant j \leqslant h - {k_2} + 2p$</p>
+<p><iframe src="https://img.wangcong.net/Convolution_demo.html" width="100%" height="700px;" style="border:none;"></iframe><br>用上图举例：</p>
+<p>图中图像大小为：$h \times w \times d = 5 \times 5 \times 3$，Padding后的图像大小为：$h \times w \times d = 7 \times 7 \times 3$<br>卷积核尺寸为：$k_1 \times k_2 \times d= 3 \times 3\times 3$，偏差 $b=1$<br>则 $i, j$ 的定义域为<br>$1 \leqslant i \leqslant h - {k_1} + 2p$  —&gt;   $1 \leqslant i \leqslant 4$，$1 \leqslant j \leqslant h - {k_2} + 2p$  —&gt;   $1 \leqslant i \leqslant 4$</p>
+<p>则图像中$(0,0)$处卷积后的结果为：</p>
+<script type="math/tex; mode=display">
+\begin {aligned}
+{(I \otimes K)_{0,0}} &=\sum\limits_{l = 1}^{d}\sum\limits_{m = 0}^{k_1-1}\sum\limits_{n = 0}^{k_2-1}{I_l(i + m,j + n)}K_l(m,n)+b\\
+&= \sum\limits_{l = 1}^{3}\sum\limits_{m = 0}^{2}\sum\limits_{n = 0}^{2}{I_l(0 + m,0 + n)}K_l(m,n)+1\\
+&=2\times1+2\times(-1)+2\times(-1)+2\times(-1)+1\\
+&=3
+\end {aligned}</script>
     </div>
 
     
@@ -410,6 +435,7 @@ U2FsdGVkX1/HUSaLrB0hjJsBDn4w6+zjIzvLJJmrGwfkrRMrXjHz1DcsH8YWzuIP2wafRJ3ni8hklh9Y
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#二维图像卷积操作"><span class="nav-number">1.</span> <span class="nav-text">二维图像卷积操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三维图像卷积操作"><span class="nav-number">2.</span> <span class="nav-text">三维图像卷积操作</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/ConvolutionalLayer.html</loc>
+    <lastmod>2020-01-17T06:49:41.899Z</lastmod>
+    <data>
+        <display>
+        <title>图解卷积神经网络中二维与三维图像卷积操作</title>
+        <pubTime>2019-08-30T08:00:23.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>CNN</tag>
+         
+        <tag>卷积</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/FPandBP.html</loc>
-    <lastmod>2020-01-16T08:16:43.404Z</lastmod>
+    <lastmod>2020-01-17T06:48:58.603Z</lastmod>
     <data>
         <display>
         <title>前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结</title>
@@ -26,6 +50,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>https://wangcong.net/article/LinuxStudyNote.html</loc>
@@ -128,7 +153,6 @@
 
     
     
-    
   <url>
     <loc>https://wangcong.net/article/PythonSelenium.html</loc>
     <lastmod>2019-11-16T06:57:00.915Z</lastmod>
@@ -160,9 +184,9 @@
         <title>Jetson开发板刷机及部署教程</title>
         <pubTime>2017-11-21T01:53:26.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -457,30 +481,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/ConvolutionalLayer.html</loc>
-    <lastmod>2019-08-30T10:13:16.298Z</lastmod>
-    <data>
-        <display>
-        <title>图解卷积神经网络中二维与三维图像卷积操作</title>
-        <pubTime>2019-08-30T08:00:23.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>CNN</tag>
-         
-        <tag>卷积</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/CaffeSSDDemo.html</loc>
     <lastmod>2019-08-30T09:29:51.399Z</lastmod>
     <data>
@@ -632,9 +632,9 @@
         <title>Faster-RCNN的搭建和测试</title>
         <pubTime>2017-08-02T07:36:36.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -669,6 +669,34 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
+    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
+    <data>
+        <display>
+        <title>Companion computer 对UAV的外部控制</title>
+        <pubTime>2018-02-06T03:30:52.000Z</pubTime>
+        
+        <tag>UAV</tag>
+         
+        <tag>ROS</tag>
+         
+        <tag>MAVROS</tag>
+         
+        <tag>Offboard</tag>
+         
+        <tag>Pixhawk</tag>
+         
+         
+           
+             
+              <breadCrumb title="UAV" url="https://wangcong.net/categories/UAV/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/NeoDownloader.html</loc>
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     <data>
@@ -684,34 +712,6 @@
            
              
               <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
-    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
-    <data>
-        <display>
-        <title>Companion computer 对UAV的外部控制</title>
-        <pubTime>2018-02-06T03:30:52.000Z</pubTime>
-        
-        <tag>ROS</tag>
-         
-        <tag>MAVROS</tag>
-         
-        <tag>Offboard</tag>
-         
-        <tag>Pixhawk</tag>
-         
-        <tag>UAV</tag>
-         
-         
-           
-             
-              <breadCrumb title="UAV" url="https://wangcong.net/categories/UAV/"/>
           
         </display>
     </data>
@@ -1052,9 +1052,9 @@
         <title>Fast-RCNN的搭建和测试</title>
         <pubTime>2017-07-30T01:35:27.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -1113,28 +1113,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
-    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
-    <data>
-        <display>
-        <title>计算机视觉学习笔记</title>
-        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
-        
-        <tag>计算机视觉</tag>
-         
-        <tag>Computer Vision</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     <data>
@@ -1152,6 +1130,28 @@
            
              
               <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
+    <data>
+        <display>
+        <title>计算机视觉学习笔记</title>
+        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
+        
+        <tag>计算机视觉</tag>
+         
+        <tag>Computer Vision</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
           
         </display>
     </data>
@@ -2018,9 +2018,9 @@
         <title>测试Caffe</title>
         <pubTime>2017-07-23T03:30:22.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -2044,9 +2044,9 @@
         <title>安装Caffe</title>
         <pubTime>2017-07-23T02:14:26.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
