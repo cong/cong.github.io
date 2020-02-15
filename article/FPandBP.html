@@ -56,7 +56,7 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="深度学习中的的前向传播（Forward Propagation）与反向传播（Back Propagation）的目的就是，寻找一组最优的参数，使得损失函数（Lost Function）或称为成本函数（Cost Function）获取到最小值。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-01-17T06:48:58.603Z">
+<meta property="og:updated_time" content="2020-02-15T03:29:50.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结">
 <meta name="twitter:description" content="深度学习中的的前向传播（Forward Propagation）与反向传播（Back Propagation）的目的就是，寻找一组最优的参数，使得损失函数（Lost Function）或称为成本函数（Cost Function）获取到最小值。">
@@ -250,7 +250,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-17 14:48:58" itemprop="dateModified" datetime="2020-01-17T14:48:58+08:00">2020-01-17</time>
+                <time title="修改时间：2020-02-15 11:29:50" itemprop="dateModified" datetime="2020-02-15T11:29:50+08:00">2020-02-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -298,31 +298,39 @@
       
         <p>深度学习中的的前向传播（Forward Propagation）与反向传播（Back Propagation）的目的就是，寻找一组最优的参数，使得损失函数（Lost Function）或称为成本函数（Cost Function）获取到最小值。</p>
 <a id="more"></a>
-<p>下图为一个三层神经网络，本文则对此图例进行前向传播和反向传播的解析。</p>
+<p>下图为一个多层的神经网络，本文则对此图例进行前向传播和反向传播的解析。</p>
 <p><img alt="NeuralNetworks" data-src="https://img.wangcong.net/FPandBP01.png"></p>
-<h3 id="前向传播（Forward-propagation）"><a href="#前向传播（Forward-propagation）" class="headerlink" title="前向传播（Forward propagation）"></a>前向传播（Forward propagation）</h3><p>对于前向传播（Forward propagation），其对应的表达式如下：</p>
+<h3 id="前向传播（Forward-propagation）"><a href="#前向传播（Forward-propagation）" class="headerlink" title="前向传播（Forward propagation）"></a>前向传播（Forward propagation）</h3><p>单个数据前向传播的计算过程：</p>
+<p>（此处损失函数以平方差损失函数为例）</p>
 <script type="math/tex; mode=display">
-a_1^2=\sigma(z_1^2) = \sigma(w_{11}^2x_1 + w_{12}^2x_2 + w_{13}^2x_3 + b_1^{2})</script><script type="math/tex; mode=display">
-a_2^2=\sigma(z_2^2) = \sigma(w_{21}^2x_1 + w_{22}^2x_2 + w_{23}^2x_3 + b_2^{2})</script><script type="math/tex; mode=display">
-a_3^2=\sigma(z_3^2) = \sigma(w_{31}^2x_1 + w_{32}^2x_2 + w_{33}^2x_3 + b_3^{2})</script><script type="math/tex; mode=display">
-h_{W,b}(x)=a_1^3=\sigma(z_1^3) = \sigma(w_{11}^3a_1^2 + w_{12}^3a_2^2 + w_{13}^3a_3^2 + b_1^{3})</script><p>上面式中的Wij就是相邻两层神经元之间的权值，它们就是深度学习需要学习的参数，也就相当于直线拟合 $y=k \times x + b$ 中的待求参数k和b。</p>
-<h3 id="反向传播-Back-Propagation"><a href="#反向传播-Back-Propagation" class="headerlink" title="反向传播(Back Propagation)"></a>反向传播(Back Propagation)</h3><p>此处我们为表示方便，令<script type="math/tex">a^L=h_{W,b}(x)</script></p>
+z^{[L]} = w^L a^{[L-1]} + b^{[L]}</script><script type="math/tex; mode=display">
+a^{[L]}=\sigma(z^{[L]})</script><script type="math/tex; mode=display">
+L(\hat{y},y) = \frac{1}{2}(\hat{y}-y)^2</script><p>多数据前向传播的计算过程：</p>
 <script type="math/tex; mode=display">
-J(W,b,x,y) = \frac{1}{2}||a^L-y||_2^2</script><p>等等</p>
+Z^{[L]} = W^L A^{[L-1]} + b^{[L]}</script><script type="math/tex; mode=display">
+A^{[L]}=\sigma(A^{[L]})</script><script type="math/tex; mode=display">
+L(\hat{y}^{(i)},y^{(i)}) = \frac{1}{2}(\hat{y}^{(i)}-y^{(i)})^2</script><script type="math/tex; mode=display">
+J(W, b)=\frac{1}{m}    \sum\limits_{i=1}^m{L(\hat{y}^{(i)},y^{(i)})}</script><h3 id="反向传播-Back-Propagation"><a href="#反向传播-Back-Propagation" class="headerlink" title="反向传播(Back Propagation)"></a>反向传播(Back Propagation)</h3><p>单个数据反向传播的计算过程：</p>
 <script type="math/tex; mode=display">
-a^L = \sigma(z^L) = \sigma(W^La^{L-1} + b^L)</script><p>代入后得：</p>
+\mathrm{d}z^{[L]} = \mathrm{d}a^{[L]} \cdot g'(z^{[L]})</script><script type="math/tex; mode=display">
+\mathrm{d}w^{[L]} = \mathrm{d}z^{[L]} a^{[L-1]}</script><script type="math/tex; mode=display">
+\mathrm{d}b^{[L]} = \mathrm{d}z^{[L]}</script><script type="math/tex; mode=display">
+\mathrm{d}a^{[L-1]} = w^{[L-1]T}\mathrm{d}z^{L}</script><p>多数据反向传播的计算过程：</p>
 <script type="math/tex; mode=display">
-J(W,b,x,y) = \frac{1}{2}||a^L-y||_2^2 =  \frac{1}{2}|| \sigma(W^La^{L-1} + b^L)-y||_2^2</script><p>这样求解的梯度就简单了：</p>
+\mathrm{d}Z^{[L]} = \mathrm{d}A^{[L]} \cdot g'(Z^{[L]})</script><script type="math/tex; mode=display">
+\mathrm{d}W^{[L]} = \frac{1}{m}\mathrm{d}Z^{[L]} A^{[L-1]}</script><script type="math/tex; mode=display">
+\mathrm{d}b^{[L]} = \frac{1}{m}np.sum(\mathrm{d}Z^{[L]}, axis=1, keepdim=True)</script><script type="math/tex; mode=display">
+\mathrm{d}A^{[L-1]} = W^{[L-1]T}\mathrm{d}Z^{L}</script><p>权值更新：</p>
 <script type="math/tex; mode=display">
-\frac{\partial J(W,b,x,y)}{\partial W^L} = [(a^L-y) \odot \sigma^{'}(z^L)](a^{L-1})^T</script><script type="math/tex; mode=display">
-\frac{\partial J(W,b,x,y)}{\partial b^L} =(a^L-y)\odot \sigma^{'}(z^L)</script><h3 id="反向传播-Back-Propagation-与链式法则"><a href="#反向传播-Back-Propagation-与链式法则" class="headerlink" title="反向传播(Back Propagation)与链式法则"></a>反向传播(Back Propagation)与链式法则</h3><p>反向传播(BP, Back Propagation)算法是多层神经网络的训练中举足轻重的算法，其基于复合函数的链式法则，但在实际运算中的意义比链式法则要大的多。</p>
+W^{[L]}  := W - \alpha \mathrm{d}W^{[L]}</script><script type="math/tex; mode=display">
+b^{[L]}  := b - \alpha \mathrm{d}b^{[L]}</script><h3 id="反向传播-Back-Propagation-与链式法则"><a href="#反向传播-Back-Propagation-与链式法则" class="headerlink" title="反向传播(Back Propagation)与链式法则"></a>反向传播(Back Propagation)与链式法则</h3><p>反向传播(BP, Back Propagation)算法是多层神经网络的训练中举足轻重的算法，其基于复合函数的链式法则，但在实际运算中的意义比链式法则要大的多。</p>
 <p>以求$e=(a+b)\times(b+1)$的偏导为例。<br>为方便，在图中，引入了中间变量$c$，$d$。 其复合关系图如下所示：<br><img alt="这里写图片描述" data-src="https://img.wangcong.net/FPandBP02.jpg"></p>
 <p>接着，分别求$\frac{\partial e}{\partial a}$，$\frac{\partial e}{\partial b}$的值。<br><img alt="这里写图片描述" data-src="https://img.wangcong.net/FPandBP03.jpg"></p>
 <p>利用<strong>链式法则</strong>可得： </p>
 <script type="math/tex; mode=display">
 \frac{\partial e}{\partial a}=\frac{\partial e}{\partial c}\cdot \frac{\partial c}{\partial a}=2\times1=2</script><script type="math/tex; mode=display">
 \frac{\partial e}{\partial b}=\frac{\partial e}{\partial c}\cdot \frac{\partial c}{\partial b}+\frac{\partial e}{\partial d}\cdot \frac{\partial d}{\partial b}=2\times1+3\times1=5</script><p>不难发现，$\frac{\partial e}{\partial a}$的值等于从 <strong>e -&gt; a</strong> 的路径上的偏导值的乘积，而$\frac{\partial e}{\partial b}$的值等于从  <strong>e -&gt; b</strong>  路径 <strong>e -&gt; c -&gt; b</strong>  上的偏导值的乘积加上路径 <strong>e -&gt; d -&gt; b</strong>  上的偏导值的乘积。可以注意到，这样做是十分耗时，因为很多路径被重复访问了。比如上图中， <strong>e -&gt;c -&gt; a</strong>和<strong>e -&gt; c -&gt; b</strong>  就都走了路径<strong>e -&gt; c</strong>  。对于权值动则数万的深度模型中的神经网络，这样的冗余所导致的计算量是相当大的。</p>
-<p>同样是利用链式法则，反向传播(BP, Back Propagation)算法则机智地避开了这种冗余，它对于每一个路径只访问一次就能求顶点对所有下层节点的偏导值。 梯度下降法需要给定一个初始点，并求出该点的梯度向量，然后以负梯度方向为搜索方向，以一定的步长进行搜索，从而确定下一个迭代点，再计算该新的梯度方向，如此重复直到损失函数收敛。</p>
+<p>同样是利用链式法则，<strong>反向传播</strong>(BP, Back Propagation)算法则机智地避开了这种冗余，它对于每一个路径只访问一次就能求顶点对所有下层节点的偏导值。 梯度下降法需要给定一个初始点，并求出该点的梯度向量，然后以负梯度方向为搜索方向，以一定的步长进行搜索，从而确定下一个迭代点，再计算该新的梯度方向，如此重复直到损失函数收敛。</p>
 <ol>
 <li><p>从最上层的节点 <strong>e</strong>开始，<strong>初始值为1</strong>，以层为单位进行处理。</p>
 </li>
@@ -530,6 +538,7 @@ y_4\\
 &=f(0.6066)\\
 &=0.647
 \end {aligned}</script><p>可得最终的损失函数的值为：</p>
+<p>（为下文方便表示，<script type="math/tex">F_{loss}=L(Y_{layer2},y_{out})</script>）</p>
 <script type="math/tex; mode=display">
 \begin {aligned}
 F_{loss}&=\frac{1}{2}(Y_{layer2}-y_{out})^2\\

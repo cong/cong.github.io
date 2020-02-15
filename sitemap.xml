@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wangcong.net/article/ConvolutionalLayer.html</loc>
+    <loc>https://wangcong.net/article/FPandBP.html</loc>
     
-    <lastmod>2020-01-17T06:49:41.899Z</lastmod>
+    <lastmod>2020-02-15T03:29:50.269Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/FPandBP.html</loc>
+    <loc>https://wangcong.net/article/LinuxNvidiaCUDATensorFlowVersion.html</loc>
     
-    <lastmod>2020-01-17T06:48:58.603Z</lastmod>
+    <lastmod>2020-02-10T03:11:48.910Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/ConvolutionalLayer.html</loc>
+    
+    <lastmod>2020-01-17T06:49:41.899Z</lastmod>
     
   </url>
   
@@ -212,13 +219,6 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/LinuxNvidiaCUDATensorFlowVersion.html</loc>
-    
-    <lastmod>2019-08-20T03:34:32.816Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangcong.net/article/SparkArchitecturalSchemes.html</loc>
     
     <lastmod>2019-08-01T06:13:48.672Z</lastmod>
@@ -247,13 +247,6 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
@@ -261,14 +254,21 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
+    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
+    
+    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
     
     <lastmod>2019-08-01T06:13:48.663Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
+    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
     
     <lastmod>2019-08-01T06:13:48.663Z</lastmod>
     
@@ -380,14 +380,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
     
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     

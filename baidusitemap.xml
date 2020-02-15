@@ -4,18 +4,18 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/ConvolutionalLayer.html</loc>
-    <lastmod>2020-01-17T06:49:41.899Z</lastmod>
+    <loc>https://wangcong.net/article/FPandBP.html</loc>
+    <lastmod>2020-02-15T03:29:50.269Z</lastmod>
     <data>
         <display>
-        <title>图解卷积神经网络中二维与三维图像卷积操作</title>
-        <pubTime>2019-08-30T08:00:23.000Z</pubTime>
+        <title>前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结</title>
+        <pubTime>2019-09-03T12:01:55.000Z</pubTime>
         
         <tag>Deep Learning</tag>
          
-        <tag>CNN</tag>
+        <tag>反向传播</tag>
          
-        <tag>卷积</tag>
+        <tag>Back Propagation</tag>
          
          
            
@@ -28,18 +28,48 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/FPandBP.html</loc>
-    <lastmod>2020-01-17T06:48:58.603Z</lastmod>
+    <loc>https://wangcong.net/article/LinuxNvidiaCUDATensorFlowVersion.html</loc>
+    <lastmod>2020-02-10T03:11:48.910Z</lastmod>
     <data>
         <display>
-        <title>前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结</title>
-        <pubTime>2019-09-03T12:01:55.000Z</pubTime>
+        <title>Linux内核、Nvidia Driver、CUDA与TensorFlow间的版本对应关系</title>
+        <pubTime>2019-08-16T08:21:26.000Z</pubTime>
         
         <tag>Deep Learning</tag>
          
-        <tag>反向传播</tag>
+        <tag>深度学习</tag>
          
-        <tag>Back Propagation</tag>
+        <tag>CUDA</tag>
+         
+        <tag>TensorFlow</tag>
+         
+        <tag>Nvidia Driver</tag>
+         
+        <tag>cuDNN</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/ConvolutionalLayer.html</loc>
+    <lastmod>2020-01-17T06:49:41.899Z</lastmod>
+    <data>
+        <display>
+        <title>图解卷积神经网络中二维与三维图像卷积操作</title>
+        <pubTime>2019-08-30T08:00:23.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>CNN</tag>
+         
+        <tag>卷积</tag>
          
          
            
@@ -396,11 +426,11 @@
         <title>基于ROS安装Caffe和SSD【通用】</title>
         <pubTime>2017-12-24T13:55:23.000Z</pubTime>
         
+        <tag>ROS</tag>
+         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
-         
-        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -547,36 +577,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/LinuxNvidiaCUDATensorFlowVersion.html</loc>
-    <lastmod>2019-08-20T03:34:32.816Z</lastmod>
-    <data>
-        <display>
-        <title>Linux内核、Nvidia Driver、CUDA与TensorFlow间的版本对应关系</title>
-        <pubTime>2019-08-16T08:21:26.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>深度学习</tag>
-         
-        <tag>CUDA</tag>
-         
-        <tag>TensorFlow</tag>
-         
-        <tag>Nvidia Driver</tag>
-         
-        <tag>cuDNN</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/SparkArchitecturalSchemes.html</loc>
     <lastmod>2019-08-01T06:13:48.672Z</lastmod>
     <data>
@@ -700,18 +700,38 @@
         
         <tag>ROS</tag>
          
-        <tag>UAV</tag>
-         
         <tag>MAVROS</tag>
          
         <tag>Offboard</tag>
          
         <tag>Pixhawk</tag>
          
+        <tag>UAV</tag>
+         
          
            
              
               <breadCrumb title="UAV" url="https://wangcong.net/categories/UAV/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
+    <lastmod>2019-08-01T06:13:48.663Z</lastmod>
+    <data>
+        <display>
+        <title>ROS相关画图工具</title>
+        <pubTime>2018-04-16T11:35:03.000Z</pubTime>
+        
+        <tag>ROS</tag>
+         
+         
+           
+             
+              <breadCrumb title="ROS" url="https://wangcong.net/categories/ROS/"/>
           
         </display>
     </data>
@@ -734,26 +754,6 @@
            
              
               <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
-    <lastmod>2019-08-01T06:13:48.663Z</lastmod>
-    <data>
-        <display>
-        <title>ROS相关画图工具</title>
-        <pubTime>2018-04-16T11:35:03.000Z</pubTime>
-        
-        <tag>ROS</tag>
-         
-         
-           
-             
-              <breadCrumb title="ROS" url="https://wangcong.net/categories/ROS/"/>
           
         </display>
     </data>
@@ -949,30 +949,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
-    <lastmod>2019-08-01T06:13:48.653Z</lastmod>
-    <data>
-        <display>
-        <title>什么是Spark？</title>
-        <pubTime>2018-01-07T01:08:56.000Z</pubTime>
-        
-        <tag>Big Data</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>Spark</tag>
-         
-         
-           
-             
-              <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/labelImgUsing.html</loc>
     <lastmod>2019-08-01T06:13:48.653Z</lastmod>
     <data>
@@ -990,6 +966,30 @@
            
              
               <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
+    <lastmod>2019-08-01T06:13:48.653Z</lastmod>
+    <data>
+        <display>
+        <title>什么是Spark？</title>
+        <pubTime>2018-01-07T01:08:56.000Z</pubTime>
+        
+        <tag>Big Data</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Spark</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
           
         </display>
     </data>
@@ -1113,28 +1113,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
-    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
-    <data>
-        <display>
-        <title>计算机视觉学习笔记</title>
-        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
-        
-        <tag>计算机视觉</tag>
-         
-        <tag>Computer Vision</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     <data>
@@ -1152,6 +1130,28 @@
            
              
               <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
+    <data>
+        <display>
+        <title>计算机视觉学习笔记</title>
+        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
+        
+        <tag>计算机视觉</tag>
+         
+        <tag>Computer Vision</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
           
         </display>
     </data>
@@ -1666,11 +1666,11 @@
         <title>基于ROS测试Caffe MobileNet-SSD【通用】</title>
         <pubTime>2017-12-25T01:15:31.000Z</pubTime>
         
+        <tag>ROS</tag>
+         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
-         
-        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
