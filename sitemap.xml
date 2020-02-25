@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/article/PycharmWithSeverGPU.html</loc>
+    
+    <lastmod>2020-02-25T10:27:36.535Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/FPandBP.html</loc>
     
-    <lastmod>2020-02-15T03:29:50.269Z</lastmod>
+    <lastmod>2020-02-15T04:00:44.225Z</lastmod>
     
   </url>
   
@@ -40,13 +47,6 @@
     <loc>https://wangcong.net/article/iTem2Setting.html</loc>
     
     <lastmod>2020-01-08T07:48:30.741Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/PycharmWithSeverGPU.html</loc>
-    
-    <lastmod>2020-01-08T05:30:08.088Z</lastmod>
     
   </url>
   
@@ -261,14 +261,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
+    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
     
     <lastmod>2019-08-01T06:13:48.663Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
+    <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
     
     <lastmod>2019-08-01T06:13:48.663Z</lastmod>
     
@@ -331,14 +331,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
+    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
     
     <lastmod>2019-08-01T06:13:48.653Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
+    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
     
     <lastmod>2019-08-01T06:13:48.653Z</lastmod>
     

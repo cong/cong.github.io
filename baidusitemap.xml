@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/PycharmWithSeverGPU.html</loc>
+    <lastmod>2020-02-25T10:27:36.535Z</lastmod>
+    <data>
+        <display>
+        <title>使用Pycharm来远程调用GPU服务器资源</title>
+        <pubTime>2019-12-17T12:01:55.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>Pycharm</tag>
+         
+        <tag>GPU</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/FPandBP.html</loc>
-    <lastmod>2020-02-15T03:29:50.269Z</lastmod>
+    <lastmod>2020-02-15T04:00:44.225Z</lastmod>
     <data>
         <display>
         <title>前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结</title>
@@ -117,30 +141,6 @@
         <tag>oh-my-zsh</tag>
          
         <tag>powerlevel9k</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/PycharmWithSeverGPU.html</loc>
-    <lastmod>2020-01-08T05:30:08.088Z</lastmod>
-    <data>
-        <display>
-        <title>使用Pycharm来远程调用GPU服务器资源</title>
-        <pubTime>2019-12-17T12:01:55.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>Pycharm</tag>
-         
-        <tag>GPU</tag>
          
          
            
@@ -426,11 +426,11 @@
         <title>基于ROS安装Caffe和SSD【通用】</title>
         <pubTime>2017-12-24T13:55:23.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
+         
+        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -1666,11 +1666,11 @@
         <title>基于ROS测试Caffe MobileNet-SSD【通用】</title>
         <pubTime>2017-12-25T01:15:31.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
+         
+        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          

@@ -56,7 +56,7 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="深度学习中的的前向传播（Forward Propagation）与反向传播（Back Propagation）的目的就是，寻找一组最优的参数，使得损失函数（Lost Function）或称为成本函数（Cost Function）获取到最小值。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-15T03:29:50.269Z">
+<meta property="og:updated_time" content="2020-02-15T04:00:44.225Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结">
 <meta name="twitter:description" content="深度学习中的的前向传播（Forward Propagation）与反向传播（Back Propagation）的目的就是，寻找一组最优的参数，使得损失函数（Lost Function）或称为成本函数（Cost Function）获取到最小值。">
@@ -250,7 +250,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-15 11:29:50" itemprop="dateModified" datetime="2020-02-15T11:29:50+08:00">2020-02-15</time>
+                <time title="修改时间：2020-02-15 12:00:44" itemprop="dateModified" datetime="2020-02-15T12:00:44+08:00">2020-02-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -300,8 +300,7 @@
 <a id="more"></a>
 <p>下图为一个多层的神经网络，本文则对此图例进行前向传播和反向传播的解析。</p>
 <p><img alt="NeuralNetworks" data-src="https://img.wangcong.net/FPandBP01.png"></p>
-<h3 id="前向传播（Forward-propagation）"><a href="#前向传播（Forward-propagation）" class="headerlink" title="前向传播（Forward propagation）"></a>前向传播（Forward propagation）</h3><p>单个数据前向传播的计算过程：</p>
-<p>（此处损失函数以平方差损失函数为例）</p>
+<h3 id="前向传播（Forward-propagation）"><a href="#前向传播（Forward-propagation）" class="headerlink" title="前向传播（Forward propagation）"></a>前向传播（Forward propagation）</h3><p>单个数据前向传播的计算过程：（此处损失函数以平方差损失函数为例）</p>
 <script type="math/tex; mode=display">
 z^{[L]} = w^L a^{[L-1]} + b^{[L]}</script><script type="math/tex; mode=display">
 a^{[L]}=\sigma(z^{[L]})</script><script type="math/tex; mode=display">
@@ -310,7 +309,8 @@ L(\hat{y},y) = \frac{1}{2}(\hat{y}-y)^2</script><p>多数据前向传播的计�
 Z^{[L]} = W^L A^{[L-1]} + b^{[L]}</script><script type="math/tex; mode=display">
 A^{[L]}=\sigma(A^{[L]})</script><script type="math/tex; mode=display">
 L(\hat{y}^{(i)},y^{(i)}) = \frac{1}{2}(\hat{y}^{(i)}-y^{(i)})^2</script><script type="math/tex; mode=display">
-J(W, b)=\frac{1}{m}    \sum\limits_{i=1}^m{L(\hat{y}^{(i)},y^{(i)})}</script><h3 id="反向传播-Back-Propagation"><a href="#反向传播-Back-Propagation" class="headerlink" title="反向传播(Back Propagation)"></a>反向传播(Back Propagation)</h3><p>单个数据反向传播的计算过程：</p>
+J(W, b)=\frac{1}{m}    \sum\limits_{i=1}^m{L(\hat{y}^{(i)},y^{(i)})}</script><p>其中：<script type="math/tex">\sigma(*)</script>为激活函数，<script type="math/tex">L(\hat{y}^{(i)},y^{(i)})</script>为Loss Function ，<script type="math/tex">J(W, b)</script>为Cost Function，<script type="math/tex">[L]</script>为神经网络的第L层，用大写字母表示相应参数的向量化表示。下同。</p>
+<h3 id="反向传播-Back-Propagation"><a href="#反向传播-Back-Propagation" class="headerlink" title="反向传播(Back Propagation)"></a>反向传播(Back Propagation)</h3><p>单个数据反向传播的计算过程：</p>
 <script type="math/tex; mode=display">
 \mathrm{d}z^{[L]} = \mathrm{d}a^{[L]} \cdot g'(z^{[L]})</script><script type="math/tex; mode=display">
 \mathrm{d}w^{[L]} = \mathrm{d}z^{[L]} a^{[L-1]}</script><script type="math/tex; mode=display">
@@ -537,8 +537,7 @@ y_4\\
 \right])\\
 &=f(0.6066)\\
 &=0.647
-\end {aligned}</script><p>可得最终的损失函数的值为：</p>
-<p>（为下文方便表示，<script type="math/tex">F_{loss}=L(Y_{layer2},y_{out})</script>）</p>
+\end {aligned}</script><p>可得最终的损失函数的值为：（为下文方便表示，<script type="math/tex">F_{loss}=L(Y_{layer2},y_{out})</script>）</p>
 <script type="math/tex; mode=display">
 \begin {aligned}
 F_{loss}&=\frac{1}{2}(Y_{layer2}-y_{out})^2\\
