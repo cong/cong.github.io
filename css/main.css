@@ -1192,7 +1192,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #87bd7e;
+  background: #616fff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2876,7 +2876,7 @@ ul.breadcrumb li + li:last-child {
 }
 */
 .content {
-  background: url("/images/chinese-new-year-banner.gif");
+  background: url("/images/jiayou.png");
   padding: 392px 0px 0px 0px;
   background-repeat: no-repeat;
   background-position: 40% 0%;
