@@ -48,18 +48,18 @@
   };
 </script>
 
-  <meta name="description" content="当搭建Python Web环境及开发深度学习相关应用时，Python2.7已经显得十分无力，并与很多最新的组件不相兼容，并且官方已发布公告表示2020年后便不再维护Python2系列版本，所以对Python3的需求迫在眉睫。 本文针对Ubuntu系统，新装Python3.6，并设置其为系统默认Python。">
+  <meta name="description" content="当搭建Python Web环境及开发深度学习相关应用时，Python2.7已经显得十分无力，并与很多最新的组件不相兼容，并且官方已发布公告表示2020年后便不再维护Python2系列版本，所以对Python3的需求迫在眉睫。">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python3.6的安装及相关设置">
 <meta property="og:url" content="https://wangcong.net/article/UbuntuUpdatePython.html">
 <meta property="og:site_name" content="旋律信">
-<meta property="og:description" content="当搭建Python Web环境及开发深度学习相关应用时，Python2.7已经显得十分无力，并与很多最新的组件不相兼容，并且官方已发布公告表示2020年后便不再维护Python2系列版本，所以对Python3的需求迫在眉睫。 本文针对Ubuntu系统，新装Python3.6，并设置其为系统默认Python。">
+<meta property="og:description" content="当搭建Python Web环境及开发深度学习相关应用时，Python2.7已经显得十分无力，并与很多最新的组件不相兼容，并且官方已发布公告表示2020年后便不再维护Python2系列版本，所以对Python3的需求迫在眉睫。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-03T04:22:49.000Z">
+<meta property="og:updated_time" content="2020-03-04T07:01:20.829Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python3.6的安装及相关设置">
-<meta name="twitter:description" content="当搭建Python Web环境及开发深度学习相关应用时，Python2.7已经显得十分无力，并与很多最新的组件不相兼容，并且官方已发布公告表示2020年后便不再维护Python2系列版本，所以对Python3的需求迫在眉睫。 本文针对Ubuntu系统，新装Python3.6，并设置其为系统默认Python。">
+<meta name="twitter:description" content="当搭建Python Web环境及开发深度学习相关应用时，Python2.7已经显得十分无力，并与很多最新的组件不相兼容，并且官方已发布公告表示2020年后便不再维护Python2系列版本，所以对Python3的需求迫在眉睫。">
 
 <link rel="canonical" href="https://wangcong.net/article/UbuntuUpdatePython.html">
 
@@ -250,7 +250,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-04-03 12:22:49" itemprop="dateModified" datetime="2019-04-03T12:22:49+08:00">2019-04-03</time>
+                <time title="修改时间：2020-03-04 15:01:20" itemprop="dateModified" datetime="2020-03-04T15:01:20+08:00">2020-03-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -297,11 +297,13 @@
 
       
         <p>当搭建Python Web环境及开发深度学习相关应用时，Python2.7已经显得十分无力，并与很多最新的组件不相兼容，并且官方已发布公告表示2020年后便不再维护Python2系列版本，所以对Python3的需求迫在眉睫。</p>
-<p>本文针对Ubuntu系统，新装Python3.6，并设置其为系统默认Python。</p>
 <a id="more"></a>
-<h4 id="安装-Python3-6"><a href="#安装-Python3-6" class="headerlink" title="安装 Python3.6"></a>安装 Python3.6</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 新增Python3.6 ppa源</span></span><br><span class="line">sudo apt-get install software-properties-common</span><br><span class="line">sudo add-apt-repository ppa:jonathonf/python-3.6 </span><br><span class="line">sudo apt-get update </span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装Python3.6</span></span><br><span class="line">sudo apt-get install python3.6</span><br></pre></td></tr></table></figure>
+<h3 id="对于Ubuntu"><a href="#对于Ubuntu" class="headerlink" title="对于Ubuntu"></a>对于Ubuntu</h3><h4 id="安装-Python3-6"><a href="#安装-Python3-6" class="headerlink" title="安装 Python3.6"></a>安装 Python3.6</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 新增Python3.6 ppa源</span></span><br><span class="line">sudo apt-get install software-properties-common</span><br><span class="line">sudo add-apt-repository ppa:jonathonf/python-3.6 </span><br><span class="line">sudo apt-get update </span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装Python3.6</span></span><br><span class="line">sudo apt-get install python3.6</span><br></pre></td></tr></table></figure>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 设置Python3.6为系统默认</span></span><br><span class="line">cd /usr/bin</span><br><span class="line">rm python </span><br><span class="line">ln -s python3.6m python </span><br><span class="line"><span class="meta">#</span><span class="bash"> 检查Python版本</span></span><br><span class="line">python -V</span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示为：Python 3.6.7 (default, Oct 25 2018, 09:16:13)</span></span><br></pre></td></tr></table></figure>
 <h4 id="安装、升级pip"><a href="#安装、升级pip" class="headerlink" title="安装、升级pip"></a>安装、升级pip</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装pip</span></span><br><span class="line">apt-get install python3-pip python3-dev build-essential</span><br><span class="line"><span class="meta">#</span><span class="bash"> 升级pip</span></span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line"><span class="meta">#</span><span class="bash"> 检查pip版本</span></span><br><span class="line">pip -V</span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示为：pip 19.0.3 from /usr/<span class="built_in">local</span>/lib/python3.6/dist-packages/pip (python 3.6)</span></span><br></pre></td></tr></table></figure>
+<h3 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS</h3><p>MacOS中大可也可以按照上文中介绍的来实现。</p>
+<p>如果使用iTerm2 + oh-my-zsh</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加这一行</span></span><br><span class="line">alias python="/usr/local/bin/python3"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 保存后，执行</span></span><br><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -407,7 +409,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Python3-6"><span class="nav-number">1.</span> <span class="nav-text">安装 Python3.6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装、升级pip"><span class="nav-number">2.</span> <span class="nav-text">安装、升级pip</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对于Ubuntu"><span class="nav-number">1.</span> <span class="nav-text">对于Ubuntu</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Python3-6"><span class="nav-number">1.1.</span> <span class="nav-text">安装 Python3.6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装、升级pip"><span class="nav-number">1.2.</span> <span class="nav-text">安装、升级pip</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MacOS"><span class="nav-number">2.</span> <span class="nav-text">MacOS</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

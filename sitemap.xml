@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/article/GraduateLife.html</loc>
+    
+    <lastmod>2020-03-16T10:12:12.972Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/PyTorchTutorial.html</loc>
+    
+    <lastmod>2020-03-16T09:30:55.841Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/UbuntuUpdatePython.html</loc>
+    
+    <lastmod>2020-03-04T07:01:20.829Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/about/share/index.html</loc>
     
     <lastmod>2020-03-03T01:58:52.830Z</lastmod>
@@ -103,20 +124,6 @@
     <loc>https://wangcong.net/article/JinanInterview.html</loc>
     
     <lastmod>2019-11-04T06:30:23.806Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/PyTorchTutorial.html</loc>
-    
-    <lastmod>2019-10-31T08:26:30.452Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/GraduateLife.html</loc>
-    
-    <lastmod>2019-10-31T07:19:44.779Z</lastmod>
     
   </url>
   
@@ -380,14 +387,14 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
     
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     
@@ -495,13 +502,6 @@
     <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial1.html</loc>
     
     <lastmod>2019-04-25T04:21:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/UbuntuUpdatePython.html</loc>
-    
-    <lastmod>2019-04-03T04:22:49.000Z</lastmod>
     
   </url>
   
