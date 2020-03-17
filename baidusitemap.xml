@@ -422,11 +422,11 @@
         <title>Mac中安装OpenCV</title>
         <pubTime>2019-06-22T01:53:23.000Z</pubTime>
         
+        <tag>Mac</tag>
+         
         <tag>OpenCV</tag>
          
         <tag>Python</tag>
-         
-        <tag>Mac</tag>
          
          
            
@@ -739,26 +739,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
-    <lastmod>2019-08-01T06:13:48.663Z</lastmod>
-    <data>
-        <display>
-        <title>ROS相关画图工具</title>
-        <pubTime>2018-04-16T11:35:03.000Z</pubTime>
-        
-        <tag>ROS</tag>
-         
-         
-           
-             
-              <breadCrumb title="ROS" url="https://wangcong.net/categories/ROS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
     <lastmod>2019-08-01T06:13:48.663Z</lastmod>
     <data>
@@ -774,6 +754,26 @@
            
              
               <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
+    <lastmod>2019-08-01T06:13:48.663Z</lastmod>
+    <data>
+        <display>
+        <title>ROS相关画图工具</title>
+        <pubTime>2018-04-16T11:35:03.000Z</pubTime>
+        
+        <tag>ROS</tag>
+         
+         
+           
+             
+              <breadCrumb title="ROS" url="https://wangcong.net/categories/ROS/"/>
           
         </display>
     </data>
@@ -969,30 +969,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
-    <lastmod>2019-08-01T06:13:48.653Z</lastmod>
-    <data>
-        <display>
-        <title>LabelImg使用教程</title>
-        <pubTime>2017-09-25T08:25:11.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>深度学习</tag>
-         
-        <tag>LabelImg</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/WhatsSpark.html</loc>
     <lastmod>2019-08-01T06:13:48.653Z</lastmod>
     <data>
@@ -1010,6 +986,30 @@
            
              
               <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
+    <lastmod>2019-08-01T06:13:48.653Z</lastmod>
+    <data>
+        <display>
+        <title>LabelImg使用教程</title>
+        <pubTime>2017-09-25T08:25:11.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>LabelImg</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
           
         </display>
     </data>
@@ -1133,28 +1133,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
-    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
-    <data>
-        <display>
-        <title>计算机视觉学习笔记</title>
-        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
-        
-        <tag>计算机视觉</tag>
-         
-        <tag>Computer Vision</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     <data>
@@ -1172,6 +1150,28 @@
            
              
               <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
+    <data>
+        <display>
+        <title>计算机视觉学习笔记</title>
+        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
+        
+        <tag>计算机视觉</tag>
+         
+        <tag>Computer Vision</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
           
         </display>
     </data>
@@ -1406,9 +1406,9 @@
         <title>在Mac中搭建PyTorch网络框架</title>
         <pubTime>2019-06-12T12:08:56.000Z</pubTime>
         
-        <tag>Mac</tag>
-         
         <tag>PyTorch</tag>
+         
+        <tag>Mac</tag>
          
          
            
