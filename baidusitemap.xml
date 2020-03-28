@@ -3,6 +3,7 @@
 
 
     
+    
   <url>
     <loc>https://wangcong.net/article/GraduateLife.html</loc>
     <lastmod>2020-03-16T10:12:12.972Z</lastmod>
@@ -66,7 +67,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://wangcong.net/article/PycharmWithSeverGPU.html</loc>
@@ -446,11 +446,11 @@
         <title>基于ROS安装Caffe和SSD【通用】</title>
         <pubTime>2017-12-24T13:55:23.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
+         
+        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -689,28 +689,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
-    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
-    <data>
-        <display>
-        <title>批量网页图片下载器 NeoDownloader</title>
-        <pubTime>2017-10-30T07:30:28.000Z</pubTime>
-        
-        <tag>爬图</tag>
-         
-        <tag>NeoDownloader</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
     <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     <data>
@@ -739,21 +717,21 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
-    <lastmod>2019-08-01T06:13:48.663Z</lastmod>
+    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
+    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
     <data>
         <display>
-        <title>TensorFlow Object detection API教程之三：测试自己的模型</title>
-        <pubTime>2018-09-03T12:22:23.000Z</pubTime>
+        <title>批量网页图片下载器 NeoDownloader</title>
+        <pubTime>2017-10-30T07:30:28.000Z</pubTime>
         
-        <tag>Tensorflow</tag>
+        <tag>爬图</tag>
          
-        <tag>Object detection</tag>
+        <tag>NeoDownloader</tag>
          
          
            
              
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+              <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
           
         </display>
     </data>
@@ -774,6 +752,28 @@
            
              
               <breadCrumb title="ROS" url="https://wangcong.net/categories/ROS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
+    <lastmod>2019-08-01T06:13:48.663Z</lastmod>
+    <data>
+        <display>
+        <title>TensorFlow Object detection API教程之三：测试自己的模型</title>
+        <pubTime>2018-09-03T12:22:23.000Z</pubTime>
+        
+        <tag>Tensorflow</tag>
+         
+        <tag>Object detection</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
           
         </display>
     </data>
@@ -1133,28 +1133,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
-    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
-    <data>
-        <display>
-        <title>计算机视觉学习笔记</title>
-        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
-        
-        <tag>计算机视觉</tag>
-         
-        <tag>Computer Vision</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     <data>
@@ -1172,6 +1150,28 @@
            
              
               <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
+    <data>
+        <display>
+        <title>计算机视觉学习笔记</title>
+        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
+        
+        <tag>计算机视觉</tag>
+         
+        <tag>Computer Vision</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
           
         </display>
     </data>
@@ -1666,11 +1666,11 @@
         <title>基于ROS测试Caffe MobileNet-SSD【通用】</title>
         <pubTime>2017-12-25T01:15:31.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
+         
+        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
