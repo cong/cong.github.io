@@ -4,7 +4,7 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
+<meta name="generator" content="Hexo 3.9.0">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpeg">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -292,7 +292,7 @@
       
         <p>作为一个一直在路上追求艺术和高效的汉子，为了在使用命令行的过程中让自己更加赏心悦目，我又来折腾我的终端了。</p>
 <p>目标的效果如下：</p>
-<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting00.gif"></p>
+<p><img alt data-src="https://img.wangcong.net/iTem2Setting00.gif"></p>
 <a id="more"></a>
 <h3 id="为什么选择ITem2"><a href="#为什么选择ITem2" class="headerlink" title="为什么选择ITem2"></a>为什么选择ITem2</h3><ol>
 <li>功能强大，譬如搜索功能强大，搜索出来的匹配字符高亮显示；</li>
@@ -303,12 +303,12 @@
 <li><p>首先在官网 <a href="http://iterm2.com/" target="_blank" rel="noopener">http://iterm2.com/</a> 下载 iTem2 。</p>
 </li>
 <li><p>将iTem2设置为默认终端：<code>iTerm2 -&gt; Make iTerm2 Default Term</code></p>
-<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting01.png"></p>
+<p><img alt data-src="https://img.wangcong.net/iTem2Setting01.png"></p>
 </li>
 </ol>
 <h3 id="导入iTem2配色"><a href="#导入iTem2配色" class="headerlink" title="导入iTem2配色"></a>导入iTem2配色</h3><p>一般我所有的软件的配色都是设置为Solarized，iTem2已经内置了，但感觉差点。</p>
 <p>为实现文章开头中的效果，则需要导入<a href="https://github.com/MartinSeeler/iterm2-material-design" target="_blank" rel="noopener">Material Design</a>配色，下载后通过<code>Preferences &gt; Profiles &gt; Colors &gt; Color Presets &gt; Import</code>进行设定。</p>
-<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting02.png"></p>
+<p><img alt data-src="https://img.wangcong.net/iTem2Setting02.png"></p>
 <p>在<a href="https://github.com/mbadolato/iTerm2-Color-Schemes" target="_blank" rel="noopener">iTerm2 Color Schemes</a>上面，有很多配色可以选择，可按照自己的喜欢进行下载。</p>
 <p><strong>注：重新打开iTem2窗口则会生效。</strong></p>
 <h3 id="安装oh-my-zsh"><a href="#安装oh-my-zsh" class="headerlink" title="安装oh-my-zsh"></a>安装oh-my-zsh</h3><p>安装命令：</p>
@@ -325,17 +325,17 @@
 </ol>
 <h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>因为我们要用的主题会用到很多的特殊icon，所以iTerm2 选用的字体必需要支援这种特殊icon font。</p>
 <p>没有安装的话会现在如下这样，遇到icon会变框框问号：</p>
-<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting03.png"></p>
+<p><img alt data-src="https://img.wangcong.net/iTem2Setting03.png"></p>
 <p>安装完字体后的效果：</p>
-<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting04.png"></p>
+<p><img alt data-src="https://img.wangcong.net/iTem2Setting04.png"></p>
 <p>点击<a href="https://github.com/ryanoasis/nerd-fonts/blob/e9ec3ae4548e59eb9a6531f38370cb99ca591e16/patched-fonts/Meslo/L-DZ/complete/Meslo LG L DZ Regular Nerd Font Complete.otf" target="_blank" rel="noopener">Meslo LG L DZ Regular Nerd Font Complete</a> 下载字体，双击进行安装。</p>
 <p>然后通过<code>Preferences &gt; Profiles &gt; Text</code>进行设定。</p>
-<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting05.png"></p>
+<p><img alt data-src="https://img.wangcong.net/iTem2Setting05.png"></p>
 <h3 id="安装zsh-powerlevel9k-主题"><a href="#安装zsh-powerlevel9k-主题" class="headerlink" title="安装zsh powerlevel9k 主题"></a>安装zsh <a href="https://github.com/bhilburn/powerlevel9k" target="_blank" rel="noopener">powerlevel9k</a> 主题</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k</span><br></pre></td></tr></table></figure>
 <h3 id="修改zsh配置"><a href="#修改zsh配置" class="headerlink" title="修改zsh配置"></a>修改zsh配置</h3><p>为了让powerlevel9k主题生效，需要修改<code>~/.zshrc</code> 文件，修改主题为powerlevel9k：</p>
 <figure class="highlight python"><figcaption><span>vim ~/.zshrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">export ZSH=<span class="string">"$HOME/.oh-my-zsh"</span></span><br><span class="line"></span><br><span class="line">ZSH_THEME=<span class="string">"powerlevel9k/powerlevel9k"</span></span><br><span class="line"><span class="comment"># Nerd 字体</span></span><br><span class="line">POWERLEVEL9K_MODE=<span class="string">"nerdfont-complete"</span></span><br><span class="line">POWERLEVEL9K_PROMPT_ON_NEWLINE=true</span><br><span class="line"><span class="comment"># command line左边想显示的内容：系统icon、用户、写权限、路径、版本控制系统等</span></span><br><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon user dir_writable dir vcs)</span><br><span class="line"><span class="comment"># command line右边想显示的内容：状态、命令执行时间、...、系统时间、已用空间、RAM占用</span></span><br><span class="line">POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs time disk_usage ram)</span><br><span class="line"><span class="comment">#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%(?:%&#123;$fg_bold[green]%&#125;➜ :%&#123;$fg_bold[red]%&#125;➜ )"</span></span><br><span class="line"><span class="comment">#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""</span></span><br><span class="line"><span class="comment">#POWERLEVEL9K_USER_ICON="\uF415" # </span></span><br><span class="line">POWERLEVEL9K_ROOT_ICON=<span class="string">"\uF09C"</span></span><br><span class="line"><span class="comment">#POWERLEVEL9K_SUDO_ICON=$'\uF09C' # </span></span><br><span class="line">POWERLEVEL9K_TIME_FORMAT=<span class="string">"%D&#123;%H:%M&#125;"</span></span><br><span class="line"><span class="comment">#POWERLEVEL9K_VCS_GIT_ICON='\uF408 '</span></span><br><span class="line"><span class="comment">#POWERLEVEL9K_VCS_GIT_GITHUB_ICON='\uF408 '</span></span><br><span class="line"></span><br><span class="line">ZSH_DISABLE_COMPFIX=true</span><br><span class="line"></span><br><span class="line">ENABLE_CORRECTION=<span class="string">"true"</span></span><br><span class="line">COMPLETION_WAITING_DOTS=<span class="string">"true"</span></span><br><span class="line"><span class="comment"># zsh插件</span></span><br><span class="line">plugins=(</span><br><span class="line">  git</span><br><span class="line">  iterm2</span><br><span class="line">  macports</span><br><span class="line">  man</span><br><span class="line">  osx</span><br><span class="line">  python</span><br><span class="line">  composer</span><br><span class="line">  zsh-syntax-highlighting</span><br><span class="line">  zsh-autosuggestions</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">source $ZSH/oh-my-zsh.sh</span><br><span class="line"></span><br><span class="line">alias suroot=<span class="string">'sudo -E -s'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># source ~/.bash_profile</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -f ~/.bash_profile ]; then</span><br><span class="line">    . ~/.bash_profile;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
 <p>最终就可以实现了这种显示效果：</p>
-<p><img alt="" data-src="https://img.wangcong.net/iTem2Setting00.gif"></p>
+<p><img alt data-src="https://img.wangcong.net/iTem2Setting00.gif"></p>
 <p>另外，此处<a href="https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config" target="_blank" rel="noopener">Show Off Your Config</a>.有更多的参数配置，大家可以尽情欣赏。</p>
 <h3 id="iTerm2-常用快捷键"><a href="#iTerm2-常用快捷键" class="headerlink" title="iTerm2 常用快捷键"></a>iTerm2 常用快捷键</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">⌘ + 数字 ： 各 tab 标签切换</span><br><span class="line">⌘ + f ： 查找 ，所查找的内容会被自动复制 ,输入查找的部分字符，找到匹配的值按tab，即可复制</span><br><span class="line">⌘ + d ： 横着分屏 </span><br><span class="line">⌘ + shift + d ： 竖着分屏</span><br><span class="line">⌘ + r = clear ： 换到新一屏，而不是 类似clear ，会创建一个空屏</span><br><span class="line">ctrl + u ：清空当前行，无论光标在什么位置</span><br><span class="line">() + ⌘ + ; ： [() 输入的命令开头字符],会自动列出输入过的命令</span><br><span class="line">⌘ + shift + h ： 会列出剪切板历史</span><br><span class="line">⌘← / ⌘→ : 到一行命令最左边/最右边 </span><br><span class="line">⌘ + enter : 全屏</span><br></pre></td></tr></table></figure>
 

@@ -4,7 +4,7 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
+<meta name="generator" content="Hexo 3.9.0">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpeg">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -333,7 +333,7 @@
 </li>
 <li><p>进入<code>SSH Interpreter</code>进行设置</p>
 <p><img alt="PycharmWithSever08" data-src="https://img.wangcong.net/PycharmWithSever08.png"><br><strong>注意，有时候会出现<code>Next</code>无法点击的情况。</strong></p>
-<p><img alt="" data-src="https://img.wangcong.net/PycharmWithSever08_1.png"></p>
+<p><img alt data-src="https://img.wangcong.net/PycharmWithSever08_1.png"></p>
 <p>点击<code>Create copy of this deployment server in IDE settings</code>后，即可选中<code>Next</code>按钮。</p>
 </li>
 <li><p>Python解释器路径，一般设置默认</p>
@@ -367,7 +367,7 @@
 <h3 id="通过Pycharm绘图"><a href="#通过Pycharm绘图" class="headerlink" title="通过Pycharm绘图"></a>通过Pycharm绘图</h3><p>启用 SSH X11 转发以便使得Pycharm能够进行绘图（Plot），打开配置文件<code>/etc/ssh/sshd_config</code></p>
 <figure class="highlight plain"><figcaption><span>shell</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># X11Forwarding yes</span><br></pre></td></tr></table></figure>
 <p>找到上面的代码，并取消注释。</p>
-<p><img alt="" data-src="https://img.wangcong.net/PycharmWithSever14.png"></p>
+<p><img alt data-src="https://img.wangcong.net/PycharmWithSever14.png"></p>
 <h3 id="SSH远程链接"><a href="#SSH远程链接" class="headerlink" title="SSH远程链接"></a>SSH远程链接</h3><p>通过Pycharm可以建立服务器SSH远程链接，在上方菜单栏点击<code>Tools</code> —&gt; <code>Start SSH seesion</code>即可远程连接到服务器。</p>
 <p>若远程Terminal出现乱码：进入<code>Perferrnces</code>点击<code>Tools</code> —&gt; <code>SSH Terminal</code>，在<code>Default encoding</code>选项中选择utf-8即可解决。</p>
 <h3 id="需要注意的问题"><a href="#需要注意的问题" class="headerlink" title="需要注意的问题"></a>需要注意的问题</h3><ol>

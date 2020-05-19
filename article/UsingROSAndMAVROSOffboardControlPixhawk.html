@@ -4,7 +4,7 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
+<meta name="generator" content="Hexo 3.9.0">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpeg">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -296,7 +296,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>PIxhawk（中文译为PX4）是一个软、硬件开源项目（遵守BSD协议），目的在于为学术、爱好和工业团体提供一款低成本高性能的高端的自驾仪。这个项目源于 <a href="http://cvg.ethz.ch" target="_blank" rel="noopener">ETH Zurich (苏黎世联邦理工大学)的计算机视觉与几何实验室</a>的<a href="http://pixhawk.ethz.ch" target="_blank" rel="noopener">PIXHAWK项目</a>、并得到了<a href="http://www.asl.ethz.ch" target="_blank" rel="noopener">自主系统实验室</a>和 <a href="http://control.ee.ethz.ch/" target="_blank" rel="noopener">自动控制实验室</a>的支持 ，以及一些出色的个人(<a href="http://www.pixhawk.com/credits" target="_blank" rel="noopener">Contact and Credits</a>)也参与其中，包括 <a href="http://store.diydrones.com/category_s/63.htm" target="_blank" rel="noopener">3D Robotics</a> 和 <a href="http://diydrones.com/profiles/blogs/list-of-all-diy-drones" target="_blank" rel="noopener">international 3DR distributors</a>的成员。<br><img alt="" data-src="https://img.wangcong.net/UAV2Robots.jpg"></p>
+        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>PIxhawk（中文译为PX4）是一个软、硬件开源项目（遵守BSD协议），目的在于为学术、爱好和工业团体提供一款低成本高性能的高端的自驾仪。这个项目源于 <a href="http://cvg.ethz.ch" target="_blank" rel="noopener">ETH Zurich (苏黎世联邦理工大学)的计算机视觉与几何实验室</a>的<a href="http://pixhawk.ethz.ch" target="_blank" rel="noopener">PIXHAWK项目</a>、并得到了<a href="http://www.asl.ethz.ch" target="_blank" rel="noopener">自主系统实验室</a>和 <a href="http://control.ee.ethz.ch/" target="_blank" rel="noopener">自动控制实验室</a>的支持 ，以及一些出色的个人(<a href="http://www.pixhawk.com/credits" target="_blank" rel="noopener">Contact and Credits</a>)也参与其中，包括 <a href="http://store.diydrones.com/category_s/63.htm" target="_blank" rel="noopener">3D Robotics</a> 和 <a href="http://diydrones.com/profiles/blogs/list-of-all-diy-drones" target="_blank" rel="noopener">international 3DR distributors</a>的成员。<br><img alt data-src="https://img.wangcong.net/UAV2Robots.jpg"></p>
 <a id="more"></a>
 <p>协作计算机（Companion computer）可以与Pixhawk飞控相连，读取飞控中的状态信息，同时对飞控发送指令。并且可以作为一个更高性能的计算平台，可以运行图像识别、机器学习、实时路径规划等程序，为开源无人机带来了无限可能。</p>
 <p>本文将介绍如何使用ROS控制无人机和协作计算机（Companion computer），以便轻松地连接电脑。<a href="http://dev.px4.io/ros-mavros-installation.html" target="_blank" rel="noopener">PX4网站</a>上有原始的教程，但是逻辑上有点混乱，以下是我查阅了很多资料做出的一个归档和总结，以及自己的一下思路。</p>
@@ -304,9 +304,9 @@
 <p>ROS 的主要目标是为机器人研究和开发提供代码复用的支持。它提供类似操作系统所提供的功能，包含硬件抽象描述、底层驱动程序管理、共用功能的执行、程序间的消息传递、程序发行包管理，它也提供一些工具程序和库用于获取、建立、编写和运行多机整合的程序。</p>
 <p>学习ROS相关链接：<a href="http://blog.csdn.net/column/details/ros-explore.html?&amp;page=2" target="_blank" rel="noopener">ROS探索总结</a></p>
 <h3 id="什么是-MAVROS？"><a href="#什么是-MAVROS？" class="headerlink" title="什么是 MAVROS？"></a>什么是 MAVROS？</h3><p><strong>MAVROS是ROS的一个软件包，允许在运行ROS的计算机、支持MAVLink的飞控板以及支持MAVLink的地面站之间通讯。</strong> MAVlink由17个字节组成，包括消息ID、目标ID和数据。其中消息ID显示是什么数据，可以在messageID命令集中看到消息ID。</p>
-<p><img alt="" data-src="https://img.wangcong.net/MAVROS_Message.png"></p>
+<p><img alt data-src="https://img.wangcong.net/MAVROS_Message.png"></p>
 <p>这使得MAVLink能够从同一个通道传输信息，从多个无人机获取信息。另外，消息也可以通过无线信号进行传输。</p>
-<p><img alt="" data-src="https://img.wangcong.net/mavros_raw.png"></p>
+<p><img alt data-src="https://img.wangcong.net/mavros_raw.png"></p>
 
     </div>
 

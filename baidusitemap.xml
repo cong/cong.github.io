@@ -5,6 +5,50 @@
     
     
   <url>
+    <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
+    <lastmod>2020-04-22T06:53:25.538Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习与深度学习资料推荐</title>
+        <pubTime>2017-08-06T12:11:08.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/PyTorchTutorial.html</loc>
+    <lastmod>2020-04-20T03:36:13.016Z</lastmod>
+    <data>
+        <display>
+        <title>PyTorch 快速教程</title>
+        <pubTime>2019-10-25T12:28:36.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>PyTorch</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/GraduateLife.html</loc>
     <lastmod>2020-03-16T10:12:12.972Z</lastmod>
     <data>
@@ -20,28 +64,6 @@
            
              
               <breadCrumb title="Notes" url="https://wangcong.net/categories/Notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/PyTorchTutorial.html</loc>
-    <lastmod>2020-03-16T09:30:55.841Z</lastmod>
-    <data>
-        <display>
-        <title>PyTorch 快速教程</title>
-        <pubTime>2019-10-25T12:28:36.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>PyTorch</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
           
         </display>
     </data>
@@ -381,28 +403,6 @@
         <tag>TensorFlow</tag>
          
         <tag>Keras</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
-    <lastmod>2019-10-21T02:59:49.913Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习与深度学习资料推荐</title>
-        <pubTime>2017-08-06T12:11:08.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>深度学习</tag>
          
          
            
@@ -1133,6 +1133,28 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
+    <data>
+        <display>
+        <title>计算机视觉学习笔记</title>
+        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
+        
+        <tag>计算机视觉</tag>
+         
+        <tag>Computer Vision</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
     <lastmod>2019-08-01T06:13:48.644Z</lastmod>
     <data>
@@ -1150,28 +1172,6 @@
            
              
               <breadCrumb title="Big Data" url="https://wangcong.net/categories/Big-Data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
-    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
-    <data>
-        <display>
-        <title>计算机视觉学习笔记</title>
-        <pubTime>2017-09-20T07:13:28.000Z</pubTime>
-        
-        <tag>计算机视觉</tag>
-         
-        <tag>Computer Vision</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
           
         </display>
     </data>

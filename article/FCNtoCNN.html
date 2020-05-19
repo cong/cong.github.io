@@ -4,7 +4,7 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
+<meta name="generator" content="Hexo 3.9.0">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpeg">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -300,7 +300,7 @@
 <a id="more"></a>
 <p>全连接层和卷积层之间唯一的不同就是卷积层中的神经元只与输入数据中的一个局部区域连接，并且在卷积列中的神经元共享参数。</p>
 <p>首先以ALexNet为例，其网络结构如下所示：</p>
-<p><img alt="" data-src="https://img.wangcong.net/CNNAlexNet0.png"></p>
+<p><img alt data-src="https://img.wangcong.net/CNNAlexNet0.png"></p>
 <ol>
 <li><p>特征图和全连接层相连。</p>
 <p>AlexNet经过五次卷积并池化后得到$6\times6\times256$ 的特征图，下一层为$1\times4096$ 的全连接层，这个过程可以看做将$ 6\times6\times256$ 的特征图与4096个$6\times6\times256$的卷积核进行卷积操作，最终得到$ 1\times1\times4096$的特征图，等价与为$1\times4096$ 的全连接层。</p>

@@ -4,7 +4,7 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
+<meta name="generator" content="Hexo 3.9.0">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpeg">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -298,11 +298,11 @@
 <ol>
 <li><p>查看损失</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看损失</span></span><br><span class="line">tf.summary.scalar(<span class="string">'scalar_loss'</span>, loss)</span><br></pre></td></tr></table></figure>
-<p><img alt="" data-src="https://img.wangcong.net/DLFrameworkVisualization01.png"></p>
+<p><img alt data-src="https://img.wangcong.net/DLFrameworkVisualization01.png"></p>
 </li>
 <li><p>查看参数的变化</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tf.summary.histogram(<span class="string">'weights'</span>,w)</span><br><span class="line">tf.summary.histogram(<span class="string">'bias'</span>,b)</span><br></pre></td></tr></table></figure>
-<p><img alt="" data-src="https://img.wangcong.net/DLFrameworkVisualization02.png"></p>
+<p><img alt data-src="https://img.wangcong.net/DLFrameworkVisualization02.png"></p>
 </li>
 <li><p>保存</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">merged_summary = tf.summary.merge_all()</span><br><span class="line"><span class="comment"># 得到输出到文件的对象</span></span><br><span class="line">writer = tf.summary.FileWriter(<span class="string">'./result'</span>, sess.graph)</span><br><span class="line"><span class="keyword">for</span>...</span><br><span class="line">	summary=sess.run(merged_summary)</span><br><span class="line">	writer.add_summary(summary, step)</span><br></pre></td></tr></table></figure>

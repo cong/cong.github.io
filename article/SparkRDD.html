@@ -4,7 +4,7 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
+<meta name="generator" content="Hexo 3.9.0">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpeg">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -307,9 +307,9 @@
 <li>SparkContext负责计算RDD之间的依赖关系，构建DAG；</li>
 <li>DAGScheduler负责把DAG图分解成多个Stage，每个Stage中包含了多个Task，每个Task会被TaskScheduler分发给各个WorkerNode上的Executor去执行。</li>
 </ol>
-<p><img alt="" data-src="https://img.wangcong.net/SparkRDD1.png"></p>
+<p><img alt data-src="https://img.wangcong.net/SparkRDD1.png"></p>
 <h3 id="参考示例"><a href="#参考示例" class="headerlink" title="参考示例"></a>参考示例</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">text_file = sc.textFile("hdfs://skn-0exybxsb-hadoop-master:9000/use/ubuntu/sample1")</span><br><span class="line">counts = text_file.flatMap(lambda line: line.split(" "))\</span><br><span class="line">                  .map(lambda word: (word, 1))\</span><br><span class="line">                  .reduceByKey(lambda a, b: a + b)</span><br><span class="line">counts.collect()</span><br></pre></td></tr></table></figure>
-<p><img alt="" data-src="https://img.wangcong.net/SparkRDD2.jpg"></p>
+<p><img alt data-src="https://img.wangcong.net/SparkRDD2.jpg"></p>
 
     </div>
 

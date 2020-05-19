@@ -4,7 +4,7 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
+<meta name="generator" content="Hexo 3.9.0">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpeg">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -299,7 +299,7 @@
         <p><strong>目标视觉跟踪(Visual Object Tracking)</strong>，大家比较公认分为两大类：<strong>生成(generative)</strong>模型方法和<strong>判别(discriminative)</strong>模型方法，目前比较流行的是判别类方法，也叫检测跟踪tracking-by-detection，以下简单介绍。</p>
 <a id="more"></a>
 <h3 id="生成类方法"><a href="#生成类方法" class="headerlink" title="生成类方法"></a>生成类方法</h3><p>在当前帧对目标区域建模，下一帧寻找与模型最相似的区域就是预测位置，比较著名的有<strong>卡尔曼滤波，粒子滤波，mean-shift</strong>等。举个例子，从当前帧知道了目标区域80%是红色，20%是绿色，然后在下一帧，搜索算法就像无头苍蝇，到处去找最符合这个颜色比例的区域。</p>
-<p><img alt="" data-src="https://img.wangcong.net/Object_Tracking.jpg"></p>
+<p><img alt data-src="https://img.wangcong.net/Object_Tracking.jpg"></p>
 <ol>
 <li><p><strong>Camshift 算法</strong>全称为 Continuiusly Adaptive Mean-SHIFT，主要通过视频图像中运动目标的颜色特征达到跟踪目的。首先，利用鼠标响应函数手动选择出目标物体，然后提取目标物体的颜色直方图特征，再通过反向投影将目标颜色直方图转换为颜色概率分布图，初始化一个搜索窗大小和位置，并根据上一帧得到的结果自适应调整搜索窗口，进而求解目标在视频图像中的位置。</p>
 </li>
