@@ -1192,7 +1192,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #2538f4;
+  background: #22e408;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2875,13 +2875,17 @@ ul.breadcrumb li + li:last-child {
     margin-top: $site-top-margin; 
 }
 */
-.content {
-  background: url("/images/jiayou.png");
-  padding: 392px 0px 0px 0px;
-  background-repeat: no-repeat;
-  background-position: 40% 0%;
-  margin-top: 12px;
+/*
+// 正文banner
+.content{
+    background: url(/images/jiayou.png);
+    padding: 392px 0px 0px 0px // 上缩进(图片宽度)、右缩进、下缩进、 左缩进
+    background-repeat: no-repeat; 
+    //background-attachment:fixed; // 固定在页面
+    background-position:40% 0%; // 条幅左右移动、条幅上下移动
+    margin-top: $site-top-margin; 
 }
+*/
 .reward-container button {
   height: 35px;
   width: 35px;
