@@ -4,6 +4,8 @@
 
     
     
+    
+    
   <url>
     <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
     <lastmod>2020-04-22T06:53:25.538Z</lastmod>
@@ -192,7 +194,6 @@
     </url>
 
     
-    
   <url>
     <loc>https://wangcong.net/article/LinuxStudyNote.html</loc>
     <lastmod>2020-01-08T08:31:15.141Z</lastmod>
@@ -300,9 +301,9 @@
         <title>Jetson开发板刷机及部署教程</title>
         <pubTime>2017-11-21T01:53:26.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -391,7 +392,6 @@
     
     
     
-    
   <url>
     <loc>https://wangcong.net/article/KerasTutorial.html</loc>
     <lastmod>2019-10-25T09:14:53.623Z</lastmod>
@@ -446,11 +446,11 @@
         <title>基于ROS安装Caffe和SSD【通用】</title>
         <pubTime>2017-12-24T13:55:23.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
+         
+        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -652,9 +652,9 @@
         <title>Faster-RCNN的搭建和测试</title>
         <pubTime>2017-08-02T07:36:36.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -696,9 +696,9 @@
         <title>Companion computer 对UAV的外部控制</title>
         <pubTime>2018-02-06T03:30:52.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>UAV</tag>
+         
+        <tag>ROS</tag>
          
         <tag>MAVROS</tag>
          
@@ -1072,9 +1072,9 @@
         <title>Fast-RCNN的搭建和测试</title>
         <pubTime>2017-07-30T01:35:27.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -1666,11 +1666,11 @@
         <title>基于ROS测试Caffe MobileNet-SSD【通用】</title>
         <pubTime>2017-12-25T01:15:31.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
+         
+        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -1712,9 +1712,9 @@
         <title>C++与ROS 回调函数解析</title>
         <pubTime>2018-03-19T13:39:55.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>C++</tag>
+         
+        <tag>ROS</tag>
          
          
            
@@ -2018,9 +2018,9 @@
         <title>测试Caffe</title>
         <pubTime>2017-07-23T03:30:22.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -2044,9 +2044,9 @@
         <title>安装Caffe</title>
         <pubTime>2017-07-23T02:14:26.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          

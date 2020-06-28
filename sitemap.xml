@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/about/index.html</loc>
+    
+    <lastmod>2020-06-28T05:43:35.095Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/about/photos/index.html</loc>
+    
+    <lastmod>2020-06-28T05:42:45.650Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/about/share/index.html</loc>
     
-    <lastmod>2020-05-16T05:24:29.972Z</lastmod>
+    <lastmod>2020-06-26T05:44:22.648Z</lastmod>
     
   </url>
   
@@ -61,13 +75,6 @@
     <loc>https://wangcong.net/article/ConvolutionalLayer.html</loc>
     
     <lastmod>2020-01-17T06:49:41.899Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/about/index.html</loc>
-    
-    <lastmod>2020-01-17T06:39:45.105Z</lastmod>
     
   </url>
   
@@ -138,13 +145,6 @@
     <loc>https://wangcong.net/about/photos/photoslist.json</loc>
     
     <lastmod>2019-10-31T06:59:40.601Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/about/photos/index.html</loc>
-    
-    <lastmod>2019-10-31T02:19:49.546Z</lastmod>
     
   </url>
   
