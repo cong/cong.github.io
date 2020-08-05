@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpeg">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.2',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Flask 是一个使用 Python 编写的轻量级Web 应用框架。Flask的目的是要建立一个非常稳定和可靠的Web应用的基础系统，我们可以使用Flack再加上各种插件，扩展和其他模块，能够构建功能强大的网站和应用。根据2019年的使用情况数据可看出，主流 Python Web 框架包括：django、Flask、Tornado、Web2Py 等，web.py由于其原作者的仙逝，近些年表现出颓疲">
+<meta name="keywords" content="Nginx,Gunicorn,Flask,Supervisor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="云服务器部署Python Web环境(Flask+Nginx+Gunicorn+Supervisor)">
+<meta property="og:url" content="https://wangcong.net/article/FlaskNginxGunicorn.html">
+<meta property="og:site_name" content="旋律信">
+<meta property="og:description" content="Flask 是一个使用 Python 编写的轻量级Web 应用框架。Flask的目的是要建立一个非常稳定和可靠的Web应用的基础系统，我们可以使用Flack再加上各种插件，扩展和其他模块，能够构建功能强大的网站和应用。根据2019年的使用情况数据可看出，主流 Python Web 框架包括：django、Flask、Tornado、Web2Py 等，web.py由于其原作者的仙逝，近些年表现出颓疲">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-08-05T08:41:44.492Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="云服务器部署Python Web环境(Flask+Nginx+Gunicorn+Supervisor)">
+<meta name="twitter:description" content="Flask 是一个使用 Python 编写的轻量级Web 应用框架。Flask的目的是要建立一个非常稳定和可靠的Web应用的基础系统，我们可以使用Flack再加上各种插件，扩展和其他模块，能够构建功能强大的网站和应用。根据2019年的使用情况数据可看出，主流 Python Web 框架包括：django、Flask、Tornado、Web2Py 等，web.py由于其原作者的仙逝，近些年表现出颓疲">
+
+<link rel="canonical" href="https://wangcong.net/article/FlaskNginxGunicorn.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>云服务器部署Python Web环境(Flask+Nginx+Gunicorn+Supervisor) | 旋律信</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">旋律信</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">The value of knowledge lies not in possession, but in share.</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>时间轴</a>
+
+  </li>
+        <li class="menu-item menu-item-specialization">
+
+    <a href="/specialization/" rel="section"><i class="fa fa-fw fa-university"></i>专题</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        
+            
+  <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+
+
+      
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/FlaskNginxGunicorn.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="旋律信">
+      <meta itemprop="description" content="旋律信">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="旋律信">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          云服务器部署Python Web环境(Flask+Nginx+Gunicorn+Supervisor)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-02 20:00:00" itemprop="dateCreated datePublished" datetime="2020-08-02T20:00:00+08:00">2020-08-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-05 16:41:44" itemprop="dateModified" datetime="2020-08-05T16:41:44+08:00">2020-08-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/article/FlaskNginxGunicorn.html" class="post-meta-item leancloud_visitors" data-flag-title="云服务器部署Python Web环境(Flask+Nginx+Gunicorn+Supervisor)" title="热度">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">热度：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/article/FlaskNginxGunicorn.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/article/FlaskNginxGunicorn.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Flask 是一个使用 Python 编写的轻量级Web 应用框架。Flask的目的是要建立一个非常稳定和可靠的Web应用的基础系统，我们可以使用Flack再加上各种插件，扩展和其他模块，能够构建功能强大的网站和应用。根据2019年的使用情况数据可看出，主流 Python Web 框架包括：django、Flask、Tornado、Web2Py 等，web.py由于其原作者的仙逝，近些年表现出颓疲的状态，令人惋惜不已。</p>
+<p>本教程在云服务器上安装了WSGI (Web Server Gateway Interface )接口 及 Http Sever (如 Apache、Nginx等)。</p>
+<blockquote>
+<p>Python Web环境 -&gt;  Flask+ Nginx + Gunicorn + Supervisor</p>
+</blockquote>
+<p>Flask是Web框架、Nginx 提供对外的服务、Gunicorn为WSGI服务器、Supervisor来守护进程。</p>
+<p>注：本教程在Python3.x版本运行，安装可参考：<a href="/article/UbuntuUpdatePython.html">Python3.x的安装及相关设置</a></p>
+<p>此前基于<a href="/article/WebpyNginxFastCGI.html">云服务器部署Python Web环境(Nginx+Spawn-fcgi+web.py)</a>的教程可以按需参阅。</p>
+<a id="more"></a>
+<h3 id="安装VirtualEnv"><a href="#安装VirtualEnv" class="headerlink" title="安装VirtualEnv"></a>安装VirtualEnv</h3><ol>
+<li><p>Ubuntu下安装VirtualEnv：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install virtualenv</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建venv文件夹，并安装虚拟环境：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建文件夹，或者进入自己的项目文件夹</span></span><br><span class="line">mkdir project</span><br><span class="line"><span class="meta">#</span><span class="bash"> 进入该文件夹</span></span><br><span class="line">cd project</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装虚拟环境</span></span><br><span class="line">virtualenv venv</span><br><span class="line"><span class="meta">#</span><span class="bash"> 会提示如下的信息</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt; created virtual environment CPython3.7.5.final.0-64 <span class="keyword">in</span> 546ms ...</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>激活虚拟环境：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 激活虚拟环境</span></span><br><span class="line">source venv/bin/activate</span><br><span class="line"><span class="meta">#</span><span class="bash"> 退出虚拟环境：deactivate</span></span><br></pre></td></tr></table></figure>
+<p>启用虚拟环境后，命令行状态进入虚拟环境的状态，如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(venv) ~/project#</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="安装Flask"><a href="#安装Flask" class="headerlink" title="安装Flask"></a>安装Flask</h3><p>通用安装方法：</p>
+<ol>
+<li><p>在激活的虚拟环境中安装Flask</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在激活的虚拟环境中安装Flask</span></span><br><span class="line">(venv) ~/project$ pip install Flask</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试<code>Flask</code>，新建<code>hello.py</code>内容如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line"> </span><br><span class="line">app = Flask(__name__)</span><br><span class="line"> </span><br><span class="line"><span class="meta">@app.route('/hello')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hello World!'</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>: </span><br><span class="line">    app.run() <span class="comment"># 启动应用</span></span><br></pre></td></tr></table></figure>
+<p>运行该代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python hello.py</span><br><span class="line"><span class="meta">#</span><span class="bash"> 提示：* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>   另开一个终端，输入<code>curl 127.0.0.1:5000</code>，其中端口号与上方一致，显示结果为：</p>
+<blockquote>
+<p>Hello, World!</p>
+</blockquote>
+<p>   修改Flask的默认端口：</p>
+   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">env FLASK_APP=hello.py flask run -p 5001</span><br></pre></td></tr></table></figure>
+<h3 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h3><ol>
+<li><p>Ubuntu下可使用下述命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nginx</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>安装好的文件位置：</p>
+<p>/usr/sbin/nginx：主程序</p>
+<p>/etc/nginx：存放配置文件</p>
+<p>/usr/share/nginx：存放静态文件</p>
+<p>/var/log/nginx：存放日志</p>
+<p>其实从上面的根目录文件夹可以知道，Linux系统的配置文件一般放在/etc，日志一般放在/var/log，运行的程序一般放在/usr/sbin或者/usr/bin。</p>
+<p>如果要更清楚Nginx的具体配置项，可以打开/etc/nginx/nginx.conf</p>
+</blockquote>
+<p>对于其他Linux系统可参照官网链接：<a href="https://www.nginx.com/resources/wiki/start/topics/tutorials/install/" target="_blank" rel="noopener">https://www.nginx.com/resources/wiki/start/topics/tutorials/install/</a></p>
+</li>
+<li><p>启动Nginx：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 启动Nginx</span></span><br><span class="line">sudo /etc/init.d/nginx start</span><br></pre></td></tr></table></figure>
+<p>其他相关命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 关闭Nginx</span></span><br><span class="line">sudo /etc/init.d/nginx stop</span><br><span class="line"><span class="meta">#</span><span class="bash"> 重启Nginx</span></span><br><span class="line">sudo /etc/init.d/nginx restart</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>访问<code>xx.xx.xx.xx</code>（其中<code>xx.xx.xx.xx</code>更换为云服务器的公网IP），显示结果为：</p>
+<blockquote>
+<p>Welcome to nginx!</p>
+<p>If you see this page, the nginx web server is successfully installed and working. Further configuration is required.</p>
+<p>For online documentation and support please refer to <a href="http://nginx.org/" target="_blank" rel="noopener">nginx.org</a>.<br>Commercial support is available at <a href="http://nginx.com/" target="_blank" rel="noopener">nginx.com</a>.</p>
+<p><em>Thank you for using nginx.</em></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="安装Gunicorn"><a href="#安装Gunicorn" class="headerlink" title="安装Gunicorn"></a>安装Gunicorn</h3><ol>
+<li><p>安装Gunicorn</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install gunicorn</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><span id="jump"> 配置 <strong>nginx.conf</strong> 支持 <strong>Gunicorn</strong></span> </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 编辑配置文件</span></span><br><span class="line">vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+<p>在<code>http</code>内如下之处：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">http</span><br><span class="line">&#123;</span><br><span class="line"> server&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>添加以下代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  xx.xx.xx.xx; <span class="comment"># 其中xx.xx.xx.xx更换为云服务器的公网IP</span></span><br><span class="line">    index index.html index.php;</span><br><span class="line"> </span><br><span class="line">    location /hello &#123;</span><br><span class="line">        proxy_pass http://<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">9001</span>; <span class="comment"># 把请求通过gunicorn传送给本机的9001端口</span></span><br><span class="line">        proxy_redirect off;</span><br><span class="line">        proxy_set_header Host $host:<span class="number">80</span>;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    location /static/ &#123;                    <span class="comment"># 配置静态文件的访问</span></span><br><span class="line">        <span class="keyword">if</span> (-f $request_filename) &#123;        <span class="comment"># 如果请求文件名是一个文件</span></span><br><span class="line">        rewrite ^/static/(.*)$  /static/$<span class="number">1</span> <span class="keyword">break</span>;   <span class="comment"># 直接跳转到对应的资源，中断fastcgi的传输</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>   <strong>特别注意：</strong>【此处尤为重要，一开始始终无法正常显示，我花费了一下午的时间才解决相关问题】</p>
+<ul>
+<li>在云服务器【安全组】的<code>入站规则</code>和<code>出站规则</code>分别添加<code>80、90、50</code>端口；</li>
+<li>重启Nginx：<code>sudo /etc/init.d/nginx restart</code>；</li>
+<li><code>nginx.conf</code>中<code>proxy_pass http://127.0.0.1:5000</code>端口号可以更改，但是<strong>需要保持与启动Gunicorn进程中的相同，同事注意修改端口号后要重启Nginx</strong>。</li>
+</ul>
+<h3 id="启动应用"><a href="#启动应用" class="headerlink" title="启动应用"></a>启动应用</h3><ol>
+<li><p>启动一个Gunicorn进程: </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 启动进程</span></span><br><span class="line">gunicorn -D -w 5 -b 127.0.0.1:9001 hello:app</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p><strong>-D</strong>: 后台运行<br><strong>-w</strong>: 代表启动5个进程(worker)，可以通过ps -ef | grep 9001 可以看到四个PID；</p>
+<p><strong>-b</strong>: 打标绑定的IP和端口号,0.0.0.1表示不仅仅能在本台机器上访问，外网也可以访问，绑定的为9001端口</p>
+<p>main:app**, wsgi代表文件名，app为对应到该文件中创建的Flask对象<br>此外还有其他参数:</p>
+<p><strong>-log-level LEVEL</strong>:表示日志级别，测试可以用DEBUG</p>
+<p><strong>-timeout</strong>: 超时时间，单位是秒</p>
+<p><strong>—access-logfile access.log</strong>：访问日志</p>
+<p><strong>—error-logfile error.log</strong>：错误日志</p>
+</blockquote>
+<p>   <strong>注：可以随意填写地址和端口信息，但是一定需要和Nginx配置文件相匹配。</strong></p>
+<ol>
+<li><p>启动Nginx</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 启动Nginx</span></span><br><span class="line">sudo /etc/init.d/nginx start</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看9001端口是否存在</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano |grep 9001</span><br></pre></td></tr></table></figure>
+<p>若存在则显示：</p>
+<blockquote>
+<p>tcp        0        0     127.0.0.1:9001      0.0.0.0:*        LISTEN   off (0.00/0/0)</p>
+</blockquote>
+</li>
+<li><p>访问<code>xx.xx.xx.xx/hello</code>（其中<code>xx.xx.xx.xx</code>云服务器的公网IP），显示结果为：</p>
+<blockquote>
+<p>Hello, world!</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="关闭-重启应用"><a href="#关闭-重启应用" class="headerlink" title="关闭/重启应用"></a>关闭/重启应用</h3><ol>
+<li><p>查看Gunicorn进程树：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pstree -ap|grep gunicorn</span><br></pre></td></tr></table></figure>
+<p>显示如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">|-gunicorn,24610 /root/cong/venv/bin/gunicorn -D -w 5 -b 127.0.0.1:9001 hello:app</span><br><span class="line">|   |-gunicorn,24613 /root/cong/venv/bin/gunicorn -D -w 5 -b 127.0.0.1:9001 hello:app</span><br><span class="line">|   |-gunicorn,24614 /root/cong/venv/bin/gunicorn -D -w 5 -b 127.0.0.1:9001 hello:app</span><br><span class="line">|   |-gunicorn,24615 /root/cong/venv/bin/gunicorn -D -w 5 -b 127.0.0.1:9001 hello:app</span><br><span class="line">|   |-gunicorn,24616 /root/cong/venv/bin/gunicorn -D -w 5 -b 127.0.0.1:9001 hello:app</span><br><span class="line">|   `-gunicorn,24622 /root/cong/venv/bin/gunicorn -D -w 5 -b 127.0.0.1:9001 hello:app</span><br><span class="line">|-gunicorn,25266 /root/cong/venv/bin/gunicorn -D -w 5 -b 127.0.0.1:5000 hello:app</span><br><span class="line">|   |-gunicorn,25269 /root/cong/venv/bin/gunicorn -D -w 5 -b 127.0.0.1:5000 hello:app</span><br><span class="line">|   |-gunicorn,25270 /root/cong/venv/bin/gunicorn -D -w 5 -b 127.0.0.1:5000 hello:app</span><br><span class="line">|   |-gunicorn,25271 /root/cong/venv/bin/gunicorn -D -w 5 -b 127.0.0.1:5000 hello:app</span><br><span class="line">|   |-gunicorn,25272 /root/cong/venv/bin/gunicorn -D -w 5 -b 127.0.0.1:5000 hello:app</span><br><span class="line">|   `-gunicorn,25273 /root/cong/venv/bin/gunicorn -D -w 5 -b 127.0.0.1:5000 hello:app</span><br><span class="line">|   |       |-grep,26544 --color=auto gunicorn</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>退出一个Gunicorn进程: </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 如退出上方的24610进程</span></span><br><span class="line">kill -9 24610</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启进程：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 如重启上方的25266进程</span></span><br><span class="line">kill -HUP 25266</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="安装-Supervisor"><a href="#安装-Supervisor" class="headerlink" title="安装 Supervisor"></a>安装 Supervisor</h3><p>Supervisor是一个使用Python开发的进程管理程序</p>
+<ol>
+<li><p>安装supervisor：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install supervisor</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成配置文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建 /etc/supervisor 文件夹</span></span><br><span class="line">mkdir /etc/supervisor</span><br><span class="line"><span class="meta">#</span><span class="bash"> 生成 supervisord.conf 文件</span></span><br><span class="line">echo_supervisord_conf &gt; /etc/supervisor/supervisord.conf</span><br><span class="line"><span class="meta">#</span><span class="bash"> 为supervisord.conf增加执行权限</span></span><br><span class="line">chmod +x /etc/supervisor/supervisord.conf</span><br></pre></td></tr></table></figure>
+<p>修改<code>supervisord.conf</code>最后的<code>[include]</code>部分配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[include]</span><br><span class="line">files = /etc/supervisor/conf.d/*.conf</span><br></pre></td></tr></table></figure>
+<p>这样就可以支持子配置文件，而不用改动主配置文件。</p>
+</li>
+<li><p>在<code>/etc/supervisor/conf.d/</code>新增子进程配置文件 <code>hello.conf</code>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建 /etc/supervisor/conf.d 文件夹</span></span><br><span class="line">cd /etc/supervisor</span><br><span class="line">mkdir conf.d</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建hello.conf 文件</span></span><br><span class="line">cd /etc/supervisor/conf.d</span><br><span class="line"><span class="meta">#</span><span class="bash"> 为hello.conf增加执行权限</span></span><br><span class="line">chomod +x hello.conf</span><br></pre></td></tr></table></figure>
+<p>创建 <code>hello.conf</code>配置文件如下：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[program:hello]</span><br><span class="line">command=<span class="regexp">/root/</span>cong/venv/bin/gunicorn -w <span class="number">5</span> -b <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">9001</span> hello:app</span><br><span class="line">directory=<span class="regexp">/root/</span>cong  <span class="comment">//项目目录</span></span><br><span class="line">user=root</span><br><span class="line">autorestart=<span class="literal">true</span> <span class="comment">//设置自动重启</span></span><br><span class="line">startretires=<span class="number">3</span>  <span class="comment">//重启失败3次</span></span><br><span class="line"></span><br><span class="line">[supervisord]</span><br></pre></td></tr></table></figure>
+<p>在上面的配置文件中，<code>[program:hello]</code>设置了进程名，这与之后操作进程的状态名称有关，为<code>hello</code>;</p>
+<p><code>command</code>为进程运行的命令，必须使用绝对路径，并且使用虚拟环境下的<code>gunicorn</code>命令；</p>
+<p><code>user</code>指定了运行进程的用户，这里设置为<code>root</code></p>
+<p><strong>注意hello.conf中不要有汉字</strong></p>
+</li>
+<li><p>启动这个<code>demo</code>进程：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">supervisord -c /etc/supervisor/conf.d/hello.conf</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>停止进程</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 找到supervisord进程编号</span></span><br><span class="line">ps -ef | grep supervisord</span><br><span class="line"><span class="meta">#</span><span class="bash"> kiil进程</span></span><br><span class="line">kiil -9 24918</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>因为在虚拟环境中安装了Supervisor，我的supervisorctl无法使用，在虚拟环境之外也另外安装了Supervisor，解决了部分问题。总之Supervisor对Python3.x支持效果不好。</p>
+</li>
+</ol>
+<h3 id="导出pip安装包记录"><a href="#导出pip安装包记录" class="headerlink" title="导出pip安装包记录"></a>导出pip安装包记录</h3><p>将虚拟环境中安装的包记录到requirements.txt中：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br><span class="line"><span class="meta">#</span><span class="bash"> 如下所示：</span></span><br><span class="line">click==7.1.2</span><br><span class="line">Flask==1.1.2</span><br><span class="line">gunicorn==20.0.4</span><br><span class="line">itsdangerous==1.1.0</span><br><span class="line">Jinja2==2.11.2</span><br><span class="line">MarkupSafe==1.1.1</span><br><span class="line">supervisor==4.2.0</span><br><span class="line">Werkzeug==1.0.1</span><br></pre></td></tr></table></figure>
+<p>当该项目被迁移到其他机器时，直接运行（或新建一个虚拟环境，再运行该命令）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装所需要的包</span></span><br><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+<h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><p>Bug 1: 出现</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The 'supervisor==3.3.1' distribution was not found and is required by the application</span><br></pre></td></tr></table></figure>
+<p>解决方法:</p>
+<p>通过<code>apt-get</code>安装的supervisor，实际上是按照Python2.x版本中。但由于我把ubuntu的python默认环境改成3.7，在Python3使用supervisor其实是借用Python2的环境，所以通过<code>apt-get</code>安装的supervisor显然不可行。</p>
+<p>直接用Python3.x版本通过pip安装，会提示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Supervisor requires Python 2.4 or later but does not work on any version of Python 3.  You are using version 3.7.5 (default, Nov  7 2019, 10:50:52)</span><br></pre></td></tr></table></figure>
+<p>安装上文中通过pip进行安装，应该不会出现此问题。</p>
+<p>Bug 2: 出现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Error: .ini file does not include supervisord section</span><br><span class="line">For help, use /root/cong/venv/bin/supervisord -h</span><br></pre></td></tr></table></figure>
+<p>意思是少了 [supervisrod] 配置项，严格按照上方的流程不会出现此问题，可以参考 [supervisord-section-settings增添其他配置选项。</p>
+
+    </div>
+
+    
+    
+    
+      
+        <div class="reward-container">
+  <div><p style="color:#34495e; margin:0 0 5px 0;">🍭支持一根棒棒糖吧！</p></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    <i class="fa fa-qrcode fa-2x" style="line-height:35px;"></i>
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="https://img.wangcong.net/wechat_reward.png" alt="旋律信 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="https://img.wangcong.net/alipay_reward.png" alt="旋律信 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/FlaskNginxGunicorn.html" title="云服务器部署Python Web环境(Flask+Nginx+Gunicorn+Supervisor)">https://wangcong.net/article/FlaskNginxGunicorn.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Nginx/" rel="tag"><i class="fa fa-tag"></i> Nginx</a>
+              <a href="/tags/Gunicorn/" rel="tag"><i class="fa fa-tag"></i> Gunicorn</a>
+              <a href="/tags/Flask/" rel="tag"><i class="fa fa-tag"></i> Flask</a>
+              <a href="/tags/Supervisor/" rel="tag"><i class="fa fa-tag"></i> Supervisor</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/article/iTem2Setting.html" rel="next" title="Mac下终端升级（iTem2 + oh-my-zsh + powerlevel9k）">
+                  <i class="fa fa-chevron-left"></i> Mac下终端升级（iTem2 + oh-my-zsh + powerlevel9k）
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装VirtualEnv"><span class="nav-number">1.</span> <span class="nav-text">安装VirtualEnv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Flask"><span class="nav-number">2.</span> <span class="nav-text">安装Flask</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Nginx"><span class="nav-number">3.</span> <span class="nav-text">安装Nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Gunicorn"><span class="nav-number">4.</span> <span class="nav-text">安装Gunicorn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动应用"><span class="nav-number">5.</span> <span class="nav-text">启动应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭-重启应用"><span class="nav-number">6.</span> <span class="nav-text">关闭/重启应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Supervisor"><span class="nav-number">7.</span> <span class="nav-text">安装 Supervisor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导出pip安装包记录"><span class="nav-number">8.</span> <span class="nav-text">导出pip安装包记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debug"><span class="nav-number">9.</span> <span class="nav-text">Debug</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="旋律信"
+    src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">旋律信</p>
+  <div class="site-description" itemprop="description">旋律信</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">95</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">105</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/cong" title="GitHub &rarr; https://github.com/cong" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/xuanlvxin" title="Twitter &rarr; https://twitter.com/xuanlvxin" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/" title="知乎 &rarr; https://www.zhihu.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/lovedigit" title="微博 &rarr; https://weibo.com/lovedigit" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>微博</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://nacl.ai" title="https://nacl.ai" rel="noopener" target="_blank">NaCl.AI</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.lovedigit.com" title="http://www.lovedigit.com" rel="noopener" target="_blank">LoveDigit</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.zhihu.com/people/wu-qi-18-39" title="https://www.zhihu.com/people/wu-qi-18-39" rel="noopener" target="_blank">吴二狗</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">旋律信</span>
+</div>
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">闽ICP备 15006828号-2 </a>
+  </div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+  <script>
+  function leancloudSelector(url) {
+    return document.getElementById(url).querySelector('.leancloud-visitors-count');
+  }
+  if (CONFIG.page.isPost) {
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = visitors.getAttribute('id').trim();
+      var title = visitors.getAttribute('data-flag-title').trim();
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .then(response => response.json())
+              .then(() => {
+                leancloudSelector(url).innerText = counter.time + 1;
+              })
+              .catch(error => {
+                console.log('Failed to save visitor count', error);
+              })
+          } else {
+              Counter('post', '/classes/Counter', { title: title, url: url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.log('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  } else {
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return element.getAttribute('id').trim();
+      });
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length === 0) {
+            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
+              element.innerText = 0;
+            });
+            return;
+          }
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            leancloudSelector(url).innerText = time;
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = leancloudSelector(url);
+            if (element.innerText == '') {
+              element.innerText = 0;
+            }
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  }
+
+  fetch('https://app-router.leancloud.cn/2/route?appId=QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz')
+    .then(response => response.json())
+    .then(({ api_server }) => {
+      var Counter = (method, url, data) => {
+        return fetch(`https://${api_server}/1.1${url}`, {
+          method: method,
+          headers: {
+            'X-LC-Id': 'QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz',
+            'X-LC-Key': 'DfQofItPxzAfDtSv0TeyYJ0A',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+        if (localhost.test(document.URL)) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz',
+    appKey: 'DfQofItPxzAfDtSv0TeyYJ0A',
+    placeholder: "ヾﾉ≧∀≦)o 欢迎交流!   请输入您的昵称和邮箱，以便您收到回复时能及时得到通知...",
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: true,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

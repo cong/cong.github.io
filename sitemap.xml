@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/article/FlaskNginxGunicorn.html</loc>
+    
+    <lastmod>2020-08-05T08:41:44.492Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/WebpyNginxFastCGI.html</loc>
     
     <lastmod>2020-08-05T08:39:03.074Z</lastmod>

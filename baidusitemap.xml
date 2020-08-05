@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/FlaskNginxGunicorn.html</loc>
+    <lastmod>2020-08-05T08:41:44.492Z</lastmod>
+    <data>
+        <display>
+        <title>云服务器部署Python Web环境(Flask+Nginx+Gunicorn+Supervisor)</title>
+        <pubTime>2020-08-02T12:00:00.000Z</pubTime>
+        
+        <tag>Nginx</tag>
+         
+        <tag>Gunicorn</tag>
+         
+        <tag>Flask</tag>
+         
+        <tag>Supervisor</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://wangcong.net/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/WebpyNginxFastCGI.html</loc>
     <lastmod>2020-08-05T08:39:03.074Z</lastmod>
     <data>
@@ -1712,9 +1738,9 @@
         <title>C++与ROS 回调函数解析</title>
         <pubTime>2018-03-19T13:39:55.000Z</pubTime>
         
-        <tag>C++</tag>
-         
         <tag>ROS</tag>
+         
+        <tag>C++</tag>
          
          
            
