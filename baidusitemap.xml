@@ -3,6 +3,74 @@
 
 
     
+  <url>
+    <loc>https://wangcong.net/article/WebpyNginxFastCGI.html</loc>
+    <lastmod>2020-08-05T08:39:03.074Z</lastmod>
+    <data>
+        <display>
+        <title>云服务器部署Python Web环境(Nginx+Spawn-fcgi+web.py)</title>
+        <pubTime>2019-04-02T12:00:00.000Z</pubTime>
+        
+        <tag>Nginx</tag>
+         
+        <tag>Spawn-fcgi</tag>
+         
+        <tag>web.py</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://wangcong.net/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/UbuntuUpdatePython.html</loc>
+    <lastmod>2020-08-05T02:32:48.135Z</lastmod>
+    <data>
+        <display>
+        <title>Python3.x的安装及相关设置</title>
+        <pubTime>2019-04-01T11:33:30.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://wangcong.net/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/MacInstallOpenCV.html</loc>
+    <lastmod>2020-07-31T05:28:40.440Z</lastmod>
+    <data>
+        <display>
+        <title>Mac中安装OpenCV</title>
+        <pubTime>2019-06-22T01:53:23.000Z</pubTime>
+        
+        <tag>Mac</tag>
+         
+        <tag>OpenCV</tag>
+         
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
     
@@ -66,26 +134,6 @@
            
              
               <breadCrumb title="Notes" url="https://wangcong.net/categories/Notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/UbuntuUpdatePython.html</loc>
-    <lastmod>2020-03-04T07:01:20.829Z</lastmod>
-    <data>
-        <display>
-        <title>Python3.6的安装及相关设置</title>
-        <pubTime>2019-04-01T11:33:30.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://wangcong.net/categories/Python/"/>
           
         </display>
     </data>
@@ -301,9 +349,9 @@
         <title>Jetson开发板刷机及部署教程</title>
         <pubTime>2017-11-21T01:53:26.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -408,30 +456,6 @@
            
              
               <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/MacInstallOpenCV.html</loc>
-    <lastmod>2019-10-15T06:30:38.745Z</lastmod>
-    <data>
-        <display>
-        <title>Mac中安装OpenCV</title>
-        <pubTime>2019-06-22T01:53:23.000Z</pubTime>
-        
-        <tag>Mac</tag>
-         
-        <tag>OpenCV</tag>
-         
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
           
         </display>
     </data>
@@ -652,9 +676,9 @@
         <title>Faster-RCNN的搭建和测试</title>
         <pubTime>2017-08-02T07:36:36.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -696,8 +720,6 @@
         <title>Companion computer 对UAV的外部控制</title>
         <pubTime>2018-02-06T03:30:52.000Z</pubTime>
         
-        <tag>UAV</tag>
-         
         <tag>ROS</tag>
          
         <tag>MAVROS</tag>
@@ -705,6 +727,8 @@
         <tag>Offboard</tag>
          
         <tag>Pixhawk</tag>
+         
+        <tag>UAV</tag>
          
          
            
@@ -1072,9 +1096,9 @@
         <title>Fast-RCNN的搭建和测试</title>
         <pubTime>2017-07-30T01:35:27.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -1420,30 +1444,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>https://wangcong.net/article/WebpyNginxFastCGI.html</loc>
-    <lastmod>2019-05-22T00:57:37.000Z</lastmod>
-    <data>
-        <display>
-        <title>云服务器部署Python Web环境(Nginx+Spawn-fcgi+web.py)</title>
-        <pubTime>2019-04-02T12:00:00.000Z</pubTime>
-        
-        <tag>Nginx</tag>
-         
-        <tag>Spawn-fcgi</tag>
-         
-        <tag>web.py</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://wangcong.net/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial2.html</loc>
@@ -2018,9 +2018,9 @@
         <title>测试Caffe</title>
         <pubTime>2017-07-23T03:30:22.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -2044,9 +2044,9 @@
         <title>安装Caffe</title>
         <pubTime>2017-07-23T02:14:26.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
