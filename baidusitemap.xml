@@ -4,6 +4,57 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/PythonNotes05.html</loc>
+    <lastmod>2021-01-20T13:22:06.185Z</lastmod>
+    <data>
+        <display>
+        <title>Python--目录间.py文件调用</title>
+        <pubTime>2017-05-06T10:53:23.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://wangcong.net/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://wangcong.net/article/DeepLearningServerBuilding.html</loc>
+    <lastmod>2020-08-13T11:51:18.366Z</lastmod>
+    <data>
+        <display>
+        <title>云服务器深度学习服务器环境搭建</title>
+        <pubTime>2019-08-20T02:21:26.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>CUDA</tag>
+         
+        <tag>TensorFlow</tag>
+         
+        <tag>Nvidia Driver</tag>
+         
+        <tag>cuDNN</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/FlaskNginxGunicorn.html</loc>
     <lastmod>2020-08-05T08:41:44.492Z</lastmod>
     <data>
@@ -315,36 +366,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/DeepLearningServerBuilding.html</loc>
-    <lastmod>2019-11-27T06:53:25.773Z</lastmod>
-    <data>
-        <display>
-        <title>云服务器深度学习服务器环境搭建</title>
-        <pubTime>2019-08-20T02:21:26.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>深度学习</tag>
-         
-        <tag>CUDA</tag>
-         
-        <tag>TensorFlow</tag>
-         
-        <tag>Nvidia Driver</tag>
-         
-        <tag>cuDNN</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/PythonSelenium.html</loc>
     <lastmod>2019-11-16T06:57:00.915Z</lastmod>
     <data>
@@ -365,7 +386,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://wangcong.net/article/JetsonPlatformWithAI.html</loc>
@@ -2010,26 +2030,6 @@
            
              
               <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/PythonNotes05.html</loc>
-    <lastmod>2018-05-14T12:12:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>Python--目录间.py文件调用</title>
-        <pubTime>2017-05-06T10:53:23.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://wangcong.net/categories/Python/"/>
           
         </display>
     </data>
