@@ -4,6 +4,52 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/FirstTimeUsingDocker.html</loc>
+    <lastmod>2021-01-21T11:55:12.181Z</lastmod>
+    <data>
+        <display>
+        <title>初用Docker总结</title>
+        <pubTime>2021-01-21T12:00:00.000Z</pubTime>
+        
+        <tag>Docker</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="https://wangcong.net/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/FlaskNginxGunicorn.html</loc>
+    <lastmod>2021-01-21T11:22:06.754Z</lastmod>
+    <data>
+        <display>
+        <title>云服务器部署Python Web环境(Flask+Nginx+Gunicorn+Supervisor)</title>
+        <pubTime>2020-08-02T12:00:00.000Z</pubTime>
+        
+        <tag>Nginx</tag>
+         
+        <tag>Gunicorn</tag>
+         
+        <tag>Flask</tag>
+         
+        <tag>Supervisor</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://wangcong.net/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/PythonNotes05.html</loc>
     <lastmod>2021-01-20T13:22:06.185Z</lastmod>
     <data>
@@ -48,32 +94,6 @@
            
              
               <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/FlaskNginxGunicorn.html</loc>
-    <lastmod>2020-08-05T08:41:44.492Z</lastmod>
-    <data>
-        <display>
-        <title>云服务器部署Python Web环境(Flask+Nginx+Gunicorn+Supervisor)</title>
-        <pubTime>2020-08-02T12:00:00.000Z</pubTime>
-        
-        <tag>Nginx</tag>
-         
-        <tag>Gunicorn</tag>
-         
-        <tag>Flask</tag>
-         
-        <tag>Supervisor</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://wangcong.net/categories/Python/"/>
           
         </display>
     </data>
@@ -395,9 +415,9 @@
         <title>Jetson开发板刷机及部署教程</title>
         <pubTime>2017-11-21T01:53:26.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -722,9 +742,9 @@
         <title>Faster-RCNN的搭建和测试</title>
         <pubTime>2017-08-02T07:36:36.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -1142,9 +1162,9 @@
         <title>Fast-RCNN的搭建和测试</title>
         <pubTime>2017-07-30T01:35:27.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -2044,9 +2064,9 @@
         <title>测试Caffe</title>
         <pubTime>2017-07-23T03:30:22.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -2070,9 +2090,9 @@
         <title>安装Caffe</title>
         <pubTime>2017-07-23T02:14:26.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          

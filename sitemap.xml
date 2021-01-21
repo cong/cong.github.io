@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/article/FirstTimeUsingDocker.html</loc>
+    
+    <lastmod>2021-01-21T11:55:12.181Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/FlaskNginxGunicorn.html</loc>
+    
+    <lastmod>2021-01-21T11:22:06.754Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/PythonNotes05.html</loc>
     
     <lastmod>2021-01-20T13:22:06.185Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>https://wangcong.net/article/DeepLearningServerBuilding.html</loc>
     
     <lastmod>2020-08-13T11:51:18.366Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/FlaskNginxGunicorn.html</loc>
-    
-    <lastmod>2020-08-05T08:41:44.492Z</lastmod>
     
   </url>
   
