@@ -49,14 +49,14 @@
 </script>
 
   <meta name="description" content="NVIDIA® Jetson™ 系统所提供的性能和能效可提高自主机器软件的运行速度，而且功耗更低。每个系统都是一个完备的模块化系统 (SOM)，具备 CPU、GPU、PMIC、DRAM 和闪存，可节省开发时间和资金。Jetson 还具备可扩展性。只需选择适合应用场合的 SOM，即能够以此为基础构建自定义系统，满足特定的应用需求。">
-<meta name="keywords" content="Caffe,Deep Learning,深度学习,Jetson TK1,Jetson TX1">
+<meta name="keywords" content="Deep Learning,Caffe,深度学习,Jetson TK1,Jetson TX1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jetson开发板刷机及部署教程">
 <meta property="og:url" content="https://wangcong.net/article/JetsonPlatformWithAI.html">
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="NVIDIA® Jetson™ 系统所提供的性能和能效可提高自主机器软件的运行速度，而且功耗更低。每个系统都是一个完备的模块化系统 (SOM)，具备 CPU、GPU、PMIC、DRAM 和闪存，可节省开发时间和资金。Jetson 还具备可扩展性。只需选择适合应用场合的 SOM，即能够以此为基础构建自定义系统，满足特定的应用需求。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-14T08:54:44.747Z">
+<meta property="og:updated_time" content="2021-02-27T01:34:18.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jetson开发板刷机及部署教程">
 <meta name="twitter:description" content="NVIDIA® Jetson™ 系统所提供的性能和能效可提高自主机器软件的运行速度，而且功耗更低。每个系统都是一个完备的模块化系统 (SOM)，具备 CPU、GPU、PMIC、DRAM 和闪存，可节省开发时间和资金。Jetson 还具备可扩展性。只需选择适合应用场合的 SOM，即能够以此为基础构建自定义系统，满足特定的应用需求。">
@@ -250,7 +250,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-14 16:54:44" itemprop="dateModified" datetime="2019-11-14T16:54:44+08:00">2019-11-14</time>
+                <time title="修改时间：2021-02-27 09:34:18" itemprop="dateModified" datetime="2021-02-27T09:34:18+08:00">2021-02-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -296,7 +296,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img alt data-src="https://img.wangcong.net/JetsonPlatformWithAI01.jpg"></p>
+        <p><img alt data-src="https://img.wangcong.net/JetsonPlatformWithAI01.jpg?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1"></p>
 <blockquote>
 <p>NVIDIA® Jetson™ 系统所提供的性能和能效可提高自主机器软件的运行速度，而且功耗更低。每个系统都是一个完备的模块化系统 (SOM)，具备 CPU、GPU、PMIC、DRAM 和闪存，可节省开发时间和资金。Jetson 还具备可扩展性。只需选择适合应用场合的 SOM，即能够以此为基础构建自定义系统，满足特定的应用需求。</p>
 </blockquote>
@@ -318,33 +318,33 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./JetPack-<span class="variable">$&#123;VERSION&#125;</span>.run</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p><img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_install.003_700x540.png"></p>
+<p><img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_install.003_700x540.png?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1"></p>
 <ol>
 <li>此处选择 Jetson TX1，同样也支持 TK 1的部署</li>
 </ol>
-<p><img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_dev_environment.001_700x540.png"></p>
+<p><img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_dev_environment.001_700x540.png?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1"></p>
 <ol>
 <li><p>弹出 JetPack L4T Component Manager 对话框</p>
 <p>推荐进行标准<code>Standard</code>安装的开发包，</p>
 </li>
 </ol>
-<p><img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_component_mgr.003_700x613.png"></p>
+<p><img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_component_mgr.003_700x613.png?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1"></p>
 <ol>
 <li><p>Ubuntu主机与Jetson开发板从机建立连接</p>
-<p>之后输入用户名和密码，默认都是Ubuntu。IP的话如果不填，之后程序会自动计算出，请确保此时你有一根网线和你的宿主机相连，或者他们两者连接在同一个路由器上。<img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_device_info.003_700x527.png"></p>
+<p>之后输入用户名和密码，默认都是Ubuntu。IP的话如果不填，之后程序会自动计算出，请确保此时你有一根网线和你的宿主机相连，或者他们两者连接在同一个路由器上。<img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_device_info.003_700x527.png?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1"></p>
 </li>
 <li><p>网络配置和端口选择</p>
 <p>安装完成后进入网络配置选项，可以选择通过路由器连接互联网，同时将Jetson开发板连接到与主机同一个路由器上。</p>
 </li>
 </ol>
-<p><img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_network_layout.003_700x540.png"><br>   如果通过路由器连接，选择<code>eth0</code>端口，点击<code>Next</code></p>
-<p><img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_network_interface.002_700x527.png"><br>   如果通过WIFI连接，分别选择<code>eth0</code>和<code>eth2</code>端口，点击<code>Next</code></p>
-<p><img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_network_selection.003_700x527.png"></p>
+<p><img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_network_layout.003_700x540.png?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1"><br>   如果通过路由器连接，选择<code>eth0</code>端口，点击<code>Next</code></p>
+<p><img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_network_interface.002_700x527.png?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1"><br>   如果通过WIFI连接，分别选择<code>eth0</code>和<code>eth2</code>端口，点击<code>Next</code></p>
+<p><img alt data-src="https://docs.nvidia.com/jetpack-l4t/2_1/content/developertools/mobile/jetpack/images/jetpack_l4t_network_selection.003_700x527.png?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1"></p>
 <ol>
 <li>将Jetson开发板设置为 Force USB Recovery Mode (强制USB恢复模式)</li>
 </ol>
 <p>弹出如图所示终端窗口：</p>
-<p><img alt data-src="https://img.wangcong.net/Jetson_Caffe_06.jpg"></p>
+<p><img alt data-src="https://img.wangcong.net/Jetson_Caffe_06.jpg?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1"></p>
 <p>按照提示，将Jetson开发板设置为强制USB恢复模式</p>
 <ul>
 <li>关闭设备，移除电源适配器</li>
@@ -360,7 +360,7 @@
 <h3 id="运行标检测Demo"><a href="#运行标检测Demo" class="headerlink" title="运行标检测Demo"></a>运行标检测Demo</h3><p>重启Jetson开发板，键盘、鼠标、显示器。</p>
 <p>一般刷机之后，自带CUDA9.0和OPENCV3.3.1，并且已经装过CUDNN</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入backend目录</span></span><br><span class="line">cd home/nvidia/tegra_multimedia_api/samples/backend</span><br><span class="line"><span class="meta">#</span><span class="bash"> 运行</span></span><br><span class="line">nvidia@tegra-ubuntu:~/tegra_multimedia_api/samples/backend$ ./backend 1 ../../data/Video/sample_outdoor_car_1080p_10fps.h264 H264 --trt-deployfile ../../data/Model/GoogleNet_one_class/GoogleNet_modified_oneClass_halfHD.prototxt --trt-modelfile ../../data/Model/GoogleNet_one_class/GoogleNet_modified_oneClass_halfHD.caffemodel --trt-forcefp32 0 --trt-proc-interval 1 -fps 10</span><br></pre></td></tr></table></figure>
-<p><img alt data-src="https://img.wangcong.net/JetsonPlatformWithAI01.jpg"></p>
+<p><img alt data-src="https://img.wangcong.net/JetsonPlatformWithAI01.jpg?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1"></p>
 <p>后续则可以安装Python、TensorFlow及PyTorch等网络框架。</p>
 <p>注：在JetPack开发板上，无论是执行编译还是执行代码，都必须加上<code>sudo</code>，否则会出现编译失败或者<code>cuda error</code>的情况。</p>
 
@@ -411,8 +411,8 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/Caffe/" rel="tag"><i class="fa fa-tag"></i> Caffe</a>
               <a href="/tags/Deep-Learning/" rel="tag"><i class="fa fa-tag"></i> Deep Learning</a>
+              <a href="/tags/Caffe/" rel="tag"><i class="fa fa-tag"></i> Caffe</a>
               <a href="/tags/深度学习/" rel="tag"><i class="fa fa-tag"></i> 深度学习</a>
               <a href="/tags/Jetson-TK1/" rel="tag"><i class="fa fa-tag"></i> Jetson TK1</a>
               <a href="/tags/Jetson-TX1/" rel="tag"><i class="fa fa-tag"></i> Jetson TX1</a>

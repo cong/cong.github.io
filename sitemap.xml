@@ -2,9 +2,366 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangcong.net/article/iTem2Setting.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.949Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/SparkArchitecturalSchemes.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.947Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/UnderWIN10InstallUbuntuSDDAndHDD.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.945Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/FasterRCNNBulidAndTest.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.944Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangcong.net/article/FirstTimeUsingDocker.html</loc>
     
-    <lastmod>2021-01-21T11:55:12.181Z</lastmod>
+    <lastmod>2021-02-27T01:34:18.944Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.940Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/PycharmWithSeverGPU.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.937Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/UAVCoordinateSystemSolving.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.933Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/DeepLearningServerBuilding.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.930Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.927Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/SearchEngines.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.927Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.926Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.921Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/SparkRDD.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.921Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/ROSGazeboPixhawk.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.920Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/DLFrameworkVisualization.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.919Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/JavaTomcatMysql.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.917Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/JetsonPlatformWithAI.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.916Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/UbuntuVIMAndTerminalHarmonizeColors.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.913Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/SparkCluster.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.912Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/UsingROSAndMAVROSOffboardControlPixhawk.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.911Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/FPandBP.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.908Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/MarkdownGrammar.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.906Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/SecureCRTSetting.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.904Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.901Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.900Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/UnderUbuntuInstallL2TP.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.898Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/CentOSMySQL.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.897Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/ConvolutionalLayer.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.896Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/FastRCNNBulidAndTest.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.892Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/JinanInterview.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.891Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/PrecisionRecallFscore.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.890Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/GraduateLife.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.888Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/LabelImgInstall.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.888Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/ICAIBDJourney.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.886Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.884Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.884Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/WhatsBigData.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.884Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/CNNArchitecture.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.883Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/SublimeTextSetting.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.882Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/UAVDevelopMaterials.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.882Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/FCNtoCNN.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.881Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/MachineLearningNote.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.881Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/PythonSelenium.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.879Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/ImageHostingChange.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/BlogUpdate.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.877Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/MatlabPlotFunction.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.877Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/TargetTrackingAlgorithm.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.874Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/TargetDetectionAlgorithm.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.874Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/MapReduceWihtYARN.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.873Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wangcong.net/article/MacWithPyTorch.html</loc>
+    
+    <lastmod>2021-02-27T01:34:18.872Z</lastmod>
     
   </url>
   
@@ -26,13 +383,6 @@
     <loc>https://wangcong.net/specialization/index.html</loc>
     
     <lastmod>2020-08-13T11:59:28.704Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/DeepLearningServerBuilding.html</loc>
-    
-    <lastmod>2020-08-13T11:51:18.366Z</lastmod>
     
   </url>
   
@@ -79,37 +429,9 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/DeepLearningMaterials.html</loc>
-    
-    <lastmod>2020-04-22T06:53:25.538Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangcong.net/article/PyTorchTutorial.html</loc>
     
     <lastmod>2020-04-20T03:36:13.016Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/GraduateLife.html</loc>
-    
-    <lastmod>2020-03-16T10:12:12.972Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/PycharmWithSeverGPU.html</loc>
-    
-    <lastmod>2020-02-26T01:22:52.815Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/FPandBP.html</loc>
-    
-    <lastmod>2020-02-15T04:00:44.225Z</lastmod>
     
   </url>
   
@@ -121,13 +443,6 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/ConvolutionalLayer.html</loc>
-    
-    <lastmod>2020-01-17T06:49:41.899Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangcong.net/article/LinuxStudyNote.html</loc>
     
     <lastmod>2020-01-08T08:31:15.141Z</lastmod>
@@ -135,44 +450,9 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/iTem2Setting.html</loc>
-    
-    <lastmod>2020-01-08T07:48:30.741Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/PythonSelenium.html</loc>
-    
-    <lastmod>2019-11-16T06:57:00.915Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/JetsonPlatformWithAI.html</loc>
-    
-    <lastmod>2019-11-14T08:54:44.747Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/PrecisionRecallFscore.html</loc>
-    
-    <lastmod>2019-11-08T07:22:49.964Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangcong.net/article/MarkdownWithMath.html</loc>
     
     <lastmod>2019-11-08T02:25:07.937Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/JinanInterview.html</loc>
-    
-    <lastmod>2019-11-04T06:30:23.806Z</lastmod>
     
   </url>
   
@@ -212,27 +492,6 @@
   </url>
   
   <url>
-    <loc>https://wangcong.net/article/DLFrameworkVisualization.html</loc>
-    
-    <lastmod>2019-09-16T09:06:26.780Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/UAVCoordinateSystemSolving.html</loc>
-    
-    <lastmod>2019-09-16T02:16:21.078Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/FCNtoCNN.html</loc>
-    
-    <lastmod>2019-08-30T10:52:39.781Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wangcong.net/article/CaffeSSDDemo.html</loc>
     
     <lastmod>2019-08-30T09:29:51.399Z</lastmod>
@@ -243,265 +502,6 @@
     <loc>https://wangcong.net/article/MatlabFunctionl.html</loc>
     
     <lastmod>2019-08-30T02:18:05.593Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/MatlabPlotFunction.html</loc>
-    
-    <lastmod>2019-08-30T02:17:07.906Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/SparkArchitecturalSchemes.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.672Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/UnderWIN10InstallUbuntuSDDAndHDD.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.671Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/FasterRCNNBulidAndTest.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.669Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/SearchEngines.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.666Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/CompanionComputer2Pixhawk.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/NeoDownloader.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/ROSPlotTools.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.663Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/TensorFlowObjectDetectionAPITutorial3.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.663Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/SparkRDD.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.662Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/ROSGazeboPixhawk.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.661Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/JavaTomcatMysql.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.660Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/UbuntuVIMAndTerminalHarmonizeColors.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.659Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/SparkCluster.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.658Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/UsingROSAndMAVROSOffboardControlPixhawk.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.657Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/MarkdownGrammar.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.656Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/SecureCRTSetting.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.655Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/WhatsSpark.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.653Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/labelImgUsing.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.653Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/UnderUbuntuInstallL2TP.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.652Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/CentOSMySQL.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.651Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/FastRCNNBulidAndTest.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.650Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/LabelImgInstall.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.647Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/ICAIBDJourney.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.646Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/ComputerVisionStudyNotes.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/SparkSQLStreamingandMLlib.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.644Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/WhatsBigData.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.642Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/CNNArchitecture.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.641Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/SublimeTextSetting.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.638Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/UAVDevelopMaterials.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.637Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/MachineLearningNote.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.636Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/ImageHostingChange.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.635Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/BlogUpdate.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.634Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/TargetTrackingAlgorithm.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.632Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/TargetDetectionAlgorithm.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.630Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/MapReduceWihtYARN.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.629Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wangcong.net/article/MacWithPyTorch.html</loc>
-    
-    <lastmod>2019-08-01T06:13:48.626Z</lastmod>
     
   </url>
   

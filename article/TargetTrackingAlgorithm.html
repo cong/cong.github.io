@@ -56,7 +56,7 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="目标视觉跟踪(Visual Object Tracking)，大家比较公认分为两大类：生成(generative)模型方法和判别(discriminative)模型方法，目前比较流行的是判别类方法，也叫检测跟踪tracking-by-detection，以下简单介绍。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-01T06:13:48.632Z">
+<meta property="og:updated_time" content="2021-02-27T01:34:18.874Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="目标跟踪算法汇总">
 <meta name="twitter:description" content="目标视觉跟踪(Visual Object Tracking)，大家比较公认分为两大类：生成(generative)模型方法和判别(discriminative)模型方法，目前比较流行的是判别类方法，也叫检测跟踪tracking-by-detection，以下简单介绍。">
@@ -250,7 +250,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-01 14:13:48" itemprop="dateModified" datetime="2019-08-01T14:13:48+08:00">2019-08-01</time>
+                <time title="修改时间：2021-02-27 09:34:18" itemprop="dateModified" datetime="2021-02-27T09:34:18+08:00">2021-02-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -299,7 +299,7 @@
         <p><strong>目标视觉跟踪(Visual Object Tracking)</strong>，大家比较公认分为两大类：<strong>生成(generative)</strong>模型方法和<strong>判别(discriminative)</strong>模型方法，目前比较流行的是判别类方法，也叫检测跟踪tracking-by-detection，以下简单介绍。</p>
 <a id="more"></a>
 <h3 id="生成类方法"><a href="#生成类方法" class="headerlink" title="生成类方法"></a>生成类方法</h3><p>在当前帧对目标区域建模，下一帧寻找与模型最相似的区域就是预测位置，比较著名的有<strong>卡尔曼滤波，粒子滤波，mean-shift</strong>等。举个例子，从当前帧知道了目标区域80%是红色，20%是绿色，然后在下一帧，搜索算法就像无头苍蝇，到处去找最符合这个颜色比例的区域。</p>
-<p><img alt data-src="https://img.wangcong.net/Object_Tracking.jpg"></p>
+<p><img alt data-src="https://img.wangcong.net/Object_Tracking.jpg?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1"></p>
 <ol>
 <li><p><strong>Camshift 算法</strong>全称为 Continuiusly Adaptive Mean-SHIFT，主要通过视频图像中运动目标的颜色特征达到跟踪目的。首先，利用鼠标响应函数手动选择出目标物体，然后提取目标物体的颜色直方图特征，再通过反向投影将目标颜色直方图转换为颜色概率分布图，初始化一个搜索窗大小和位置，并根据上一帧得到的结果自适应调整搜索窗口，进而求解目标在视频图像中的位置。</p>
 </li>
