@@ -4,14 +4,16 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/FirstTimeUsingDocker.html</loc>
-    <lastmod>2021-03-01T14:06:16.863Z</lastmod>
+    <loc>https://wangcong.net/article/AAppExampleWithDocker.html</loc>
+    <lastmod>2021-03-01T14:15:50.444Z</lastmod>
     <data>
         <display>
-        <title>初用Docker总结</title>
-        <pubTime>2021-01-21T12:00:00.000Z</pubTime>
+        <title>一个算法Web API项目的Docker部署示例</title>
+        <pubTime>2021-03-01T14:00:00.000Z</pubTime>
         
         <tag>Docker</tag>
+         
+        <tag>Python</tag>
          
          
            
@@ -24,16 +26,14 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/AAppExampleWithDocker.html</loc>
-    <lastmod>2021-03-01T14:05:55.864Z</lastmod>
+    <loc>https://wangcong.net/article/FirstTimeUsingDocker.html</loc>
+    <lastmod>2021-03-01T14:06:16.863Z</lastmod>
     <data>
         <display>
-        <title>一个算法Web API项目的Docker部署示例</title>
-        <pubTime>2021-03-01T14:00:00.000Z</pubTime>
+        <title>初用Docker总结</title>
+        <pubTime>2021-01-21T12:00:00.000Z</pubTime>
         
         <tag>Docker</tag>
-         
-        <tag>Python</tag>
          
          
            
@@ -125,9 +125,9 @@
         <title>Faster-RCNN的搭建和测试</title>
         <pubTime>2017-08-02T07:36:36.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -289,6 +289,8 @@
         <title>Companion computer 对UAV的外部控制</title>
         <pubTime>2018-02-06T03:30:52.000Z</pubTime>
         
+        <tag>UAV</tag>
+         
         <tag>ROS</tag>
          
         <tag>MAVROS</tag>
@@ -296,8 +298,6 @@
         <tag>Offboard</tag>
          
         <tag>Pixhawk</tag>
-         
-        <tag>UAV</tag>
          
          
            
@@ -455,9 +455,9 @@
         <title>Jetson开发板刷机及部署教程</title>
         <pubTime>2017-11-21T01:53:26.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -741,9 +741,9 @@
         <title>Fast-RCNN的搭建和测试</title>
         <pubTime>2017-07-30T01:35:27.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -2086,9 +2086,9 @@
         <title>测试Caffe</title>
         <pubTime>2017-07-23T03:30:22.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
@@ -2112,9 +2112,9 @@
         <title>安装Caffe</title>
         <pubTime>2017-07-23T02:14:26.000Z</pubTime>
         
-        <tag>Deep Learning</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>Deep Learning</tag>
          
         <tag>深度学习</tag>
          
