@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpeg">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.2',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="本文为上篇文章《初用Docker总结》中所提到的，对自己的一个算法项目的进行Docker镜像制作的一个大致的流程。也算是填了上文中挖的坑，谨做记录，将来遗忘流程时借以查阅。 Pecan 介绍Pecan 的创建是为了填补 Python Web 框架世界中的空白：一个非常轻巧的框架，它提供了对象分派样式路由(object-dispatch style routing)。Pecan 并非旨在成为“全栈”">
+<meta name="keywords" content="Docker,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个算法Web API项目的Docker部署示例">
+<meta property="og:url" content="https://wangcong.net/article/AAppExampleWithDocker.html">
+<meta property="og:site_name" content="旋律信">
+<meta property="og:description" content="本文为上篇文章《初用Docker总结》中所提到的，对自己的一个算法项目的进行Docker镜像制作的一个大致的流程。也算是填了上文中挖的坑，谨做记录，将来遗忘流程时借以查阅。 Pecan 介绍Pecan 的创建是为了填补 Python Web 框架世界中的空白：一个非常轻巧的框架，它提供了对象分派样式路由(object-dispatch style routing)。Pecan 并非旨在成为“全栈”">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-03-01T14:05:55.864Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一个算法Web API项目的Docker部署示例">
+<meta name="twitter:description" content="本文为上篇文章《初用Docker总结》中所提到的，对自己的一个算法项目的进行Docker镜像制作的一个大致的流程。也算是填了上文中挖的坑，谨做记录，将来遗忘流程时借以查阅。 Pecan 介绍Pecan 的创建是为了填补 Python Web 框架世界中的空白：一个非常轻巧的框架，它提供了对象分派样式路由(object-dispatch style routing)。Pecan 并非旨在成为“全栈”">
+
+<link rel="canonical" href="https://wangcong.net/article/AAppExampleWithDocker.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>一个算法Web API项目的Docker部署示例 | 旋律信</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">旋律信</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">The value of knowledge lies not in possession, but in share.</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>时间轴</a>
+
+  </li>
+        <li class="menu-item menu-item-specialization">
+
+    <a href="/specialization/" rel="section"><i class="fa fa-fw fa-university"></i>专题</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        
+            
+  <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+
+
+      
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/AAppExampleWithDocker.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="旋律信">
+      <meta itemprop="description" content="旋律信">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="旋律信">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          一个算法Web API项目的Docker部署示例
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-01 22:00:00 / 修改时间：22:05:55" itemprop="dateCreated datePublished" datetime="2021-03-01T22:00:00+08:00">2021-03-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Docker/" itemprop="url" rel="index">
+                    <span itemprop="name">Docker</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/article/AAppExampleWithDocker.html" class="post-meta-item leancloud_visitors" data-flag-title="一个算法Web API项目的Docker部署示例" title="热度">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">热度：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/article/AAppExampleWithDocker.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/article/AAppExampleWithDocker.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文为上篇文章《<a href="https://wangcong.net/article/FirstTimeUsingDocker.html">初用Docker总结</a>》中所提到的，对自己的一个算法项目的进行Docker镜像制作的一个大致的流程。也算是填了上文中挖的坑，谨做记录，将来遗忘流程时借以查阅。</p>
+<h3 id="Pecan-介绍"><a href="#Pecan-介绍" class="headerlink" title="Pecan 介绍"></a>Pecan 介绍</h3><p>Pecan 的创建是为了填补 Python Web 框架世界中的空白：一个非常轻巧的框架，它提供了对象分派样式路由(object-dispatch style routing)。Pecan 并非旨在成为“全栈”框架，因此不提供对会话（sessions）或数据库之类的现成支持。相反地 Pecan 专注于 HTTP 本身。</p>
+<p>Pecan官网：<a href="http://www.pecanpy.org/" target="_blank" rel="noopener">http://www.pecanpy.org/</a></p>
+<a id="more"></a>
+<h3 id="Pecan-封装算法"><a href="#Pecan-封装算法" class="headerlink" title="Pecan 封装算法"></a>Pecan 封装算法</h3><ol>
+<li><p>安装Pecan</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pecan</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建Pecan项目</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pecan create test_project</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装Pecan默认库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python setup.py develop</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>python setup.py develop：安装某个库或包时,这个包需要你不断修改，这样你就不得不重新安装，这时就采用这种安装方法。<br>python setup.py install：主要是安装典型第三方包，这种包比较稳定，不再需要你去编辑、修改或是调试。</p>
+</blockquote>
+<p>生成的目录结构如下所示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">test_project/</span><br><span class="line">├── config.py</span><br><span class="line">├── MANIFEST.in</span><br><span class="line">├── public           <span class="comment">#一些静态文件包括CSS,JS,images,为你的开发服务</span></span><br><span class="line">│   ├── css</span><br><span class="line">│   │   └── style.css</span><br><span class="line">│   └── images</span><br><span class="line">│       └── logo.png</span><br><span class="line">├── setup.cfg</span><br><span class="line">├── setup.py</span><br><span class="line">└── test_project      <span class="comment">#基于MVC模型生成的结构</span></span><br><span class="line">    ├── app.py        <span class="comment">#决定应用是如何创造的，这个文件必须包含set_app()并返回WSGI应用对象，一般情况下就用原生的，除非不能满足你定制的应用。</span></span><br><span class="line">    ├── controllers   <span class="comment">#控制层实现</span></span><br><span class="line">    │   ├── __init__.py</span><br><span class="line">    │   ├── __init__.pyc</span><br><span class="line">    │   ├── root.py</span><br><span class="line">    │   └── root.pyc</span><br><span class="line">    ├── __init__.py</span><br><span class="line">    ├── __init__.pyc</span><br><span class="line">    ├── model          <span class="comment">#模型实现</span></span><br><span class="line">    │   ├── __init__.py <span class="comment">#在这里可以加入与database交互，定义表和ORM等</span></span><br><span class="line">    │   └── __init__.pyc</span><br><span class="line">    ├── templates      <span class="comment">#模板实现</span></span><br><span class="line">    │   ├── error.html</span><br><span class="line">    │   ├── index.html</span><br><span class="line">    │   └── layout.html</span><br><span class="line">    └── tests          <span class="comment">#单元测试</span></span><br><span class="line">        ├── config.py </span><br><span class="line">        ├── __init__.py</span><br><span class="line">        ├── test_functional.py</span><br><span class="line">        ├── test_units.py</span><br><span class="line">        └── test_units.pyc</span><br><span class="line">8 directories, 23 files</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>封装算法</p>
+<p>一般我个人习惯将待封装的算法脚本放在<code>controllers</code>文件夹下。</p>
+<p>在同目录<code>root.py</code>脚本中封装自己的算法。</p>
+</li>
+</ol>
+<h3 id="制作Python3-8-OpenCV4-5-0-基础镜像"><a href="#制作Python3-8-OpenCV4-5-0-基础镜像" class="headerlink" title="制作Python3.8 + OpenCV4.5.0 基础镜像"></a>制作Python3.8 + OpenCV4.5.0 基础镜像</h3><p><code>Dockerfile</code>内容如下，并将从OpenCV官网下载的<code>opencv-4.5.0.zip</code>放在同目录下，此目录中不可有其他文件。</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.8</span></span><br><span class="line"><span class="keyword">LABEL</span><span class="bash"> mantainer=<span class="string">"Josip Janzic &lt;josip@jjanzic.com&gt;"</span></span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">RUN apt-get update \</span></span><br><span class="line"><span class="bash">    &amp;&amp; apt-get install -y \</span></span><br><span class="line"><span class="bash">        build-essential \</span></span><br><span class="line"><span class="bash">        cmake \</span></span><br><span class="line"><span class="bash">        git \</span></span><br><span class="line"><span class="bash">        wget \</span></span><br><span class="line"><span class="bash">        unzip \</span></span><br><span class="line"><span class="bash">        yasm \</span></span><br><span class="line"><span class="bash">        pkg-config \</span></span><br><span class="line"><span class="bash">        libswscale-dev \</span></span><br><span class="line"><span class="bash">        libtbb2 \</span></span><br><span class="line"><span class="bash">        libtbb-dev \</span></span><br><span class="line"><span class="bash">        libjpeg-dev \</span></span><br><span class="line"><span class="bash">        libpng-dev \</span></span><br><span class="line"><span class="bash">        libtiff-dev \</span></span><br><span class="line"><span class="bash">        libavformat-dev \</span></span><br><span class="line"><span class="bash">        libpq-dev \</span></span><br><span class="line"><span class="bash">    &amp;&amp; rm -rf /var/lib/apt/lists/*</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">RUN pip install numpy</span></span><br><span class="line"><span class="bash">ADD ./opencv-4.5.0.zip /</span></span><br><span class="line"><span class="bash">WORKDIR /</span></span><br><span class="line"><span class="bash">RUN unzip opencv-4.5.0.zip \</span></span><br><span class="line"><span class="bash">&amp;&amp; mkdir /opencv-4.5.0/cmake_binary \</span></span><br><span class="line"><span class="bash">&amp;&amp; <span class="built_in">cd</span> /opencv-4.5.0/cmake_binary \</span></span><br><span class="line"><span class="bash">&amp;&amp; cmake -DBUILD_TIFF=ON \</span></span><br><span class="line"><span class="bash">  -DBUILD_opencv_java=OFF \</span></span><br><span class="line"><span class="bash">  -DWITH_CUDA=OFF \</span></span><br><span class="line"><span class="bash">  -DWITH_OPENGL=ON \</span></span><br><span class="line"><span class="bash">  -DWITH_OPENCL=ON \</span></span><br><span class="line"><span class="bash">  -DWITH_IPP=ON \</span></span><br><span class="line"><span class="bash">  -DWITH_TBB=ON \</span></span><br><span class="line"><span class="bash">  -DWITH_EIGEN=ON \</span></span><br><span class="line"><span class="bash">  -DWITH_V4L=ON \</span></span><br><span class="line"><span class="bash">  -DBUILD_TESTS=OFF \</span></span><br><span class="line"><span class="bash">  -DBUILD_PERF_TESTS=OFF \</span></span><br><span class="line"><span class="bash">  -DCMAKE_BUILD_TYPE=RELEASE \</span></span><br><span class="line"><span class="bash">  -DCMAKE_INSTALL_PREFIX=$(python3.8 -c <span class="string">"import sys; print(sys.prefix)"</span>) \</span></span><br><span class="line"><span class="bash">  -DPYTHON_EXECUTABLE=$(<span class="built_in">which</span> python3.8) \</span></span><br><span class="line"><span class="bash">  -DPYTHON_INCLUDE_DIR=$(python3.8 -c <span class="string">"from distutils.sysconfig import get_python_inc; print(get_python_inc())"</span>) \</span></span><br><span class="line"><span class="bash">  -DPYTHON_PACKAGES_PATH=$(python3.8 -c <span class="string">"from distutils.sysconfig import get_python_lib; print(get_python_lib())"</span>) \</span></span><br><span class="line"><span class="bash">  .. \</span></span><br><span class="line"><span class="bash">&amp;&amp; make install \</span></span><br><span class="line"><span class="bash">&amp;&amp; rm /opencv-4.5.0.zip \</span></span><br><span class="line"><span class="bash">&amp;&amp; rm -r /opencv-4.5.0</span></span><br><span class="line"><span class="bash">RUN ln -s \</span></span><br><span class="line"><span class="bash">  /usr/<span class="built_in">local</span>/python/cv2/python-3.8/cv2.cpython-37m-x86_64-linux-gnu.so \</span></span><br><span class="line"><span class="bash">  /usr/<span class="built_in">local</span>/lib/python3.8/site-packages/cv2.so</span></span><br></pre></td></tr></table></figure>
+<p>构建<strong>Python3.8 + OpenCV4.5.0基础镜像</strong> 。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建镜像</span></span><br><span class="line">docker build -t 10.1.93.164:5000/python38-opencv:v1.0.0 .</span><br><span class="line"><span class="comment"># 注意，最后有一个点，表示在本目录下进行构建</span></span><br><span class="line"><span class="comment"># 其中-t用来指定新镜像的用户信息、tag等。</span></span><br></pre></td></tr></table></figure>
+<h3 id="基于-基础镜像-制作-项目依赖镜像"><a href="#基于-基础镜像-制作-项目依赖镜像" class="headerlink" title="基于 基础镜像 制作 项目依赖镜像"></a>基于 基础镜像 制作 项目依赖镜像</h3><p>可以参考《初用Docker总结》一文中 <a href="https://wangcong.net/article/FirstTimeUsingDocker.html#%E9%80%9A%E8%BF%87%E5%B7%B2%E6%9C%89%E9%95%9C%E5%83%8F%E6%9D%A5%E6%96%B0%E5%BB%BA%E8%87%AA%E6%9C%89%E9%95%9C%E5%83%8F">通过已有镜像来新建自有镜像</a>，来基于<strong>Python3.8 + OpenCV4.5.0基础镜像</strong> 制作 <strong>项目依赖镜像</strong>。</p>
+<h3 id="制作-算法-Web-API-镜像"><a href="#制作-算法-Web-API-镜像" class="headerlink" title="制作 算法 Web API 镜像"></a>制作 算法 Web API 镜像</h3><p>通过Dockerfile，对算法项目进行镜像打包。</p>
+<p><code>Dockerfile</code>内容如下，并将<strong>算法项目</strong>放在同目录下，此目录中不可有其他文件。<code>requirements.txt</code>位于算法项目 目录中。</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> <span class="number">10.1</span>.<span class="number">93.164</span>:<span class="number">5000</span>/python38-opencv:v1.<span class="number">0.0</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> mkdir /pano_stitcher</span></span><br><span class="line"><span class="bash">ADD ./pano_stitcher /pano_stitcher/</span></span><br><span class="line"><span class="bash">WORKDIR /pano_stitcher</span></span><br><span class="line"><span class="bash"><span class="comment">#RUN pip install -r requirements.txt</span></span></span><br><span class="line"><span class="bash">RUN python setup.py develop</span></span><br><span class="line"><span class="bash">ENTRYPOINT [<span class="string">"pecan"</span>, <span class="string">"serve"</span>, <span class="string">"config.py"</span>]</span></span><br></pre></td></tr></table></figure>
+<p>基于<strong>项目依赖镜像</strong> 创建 <strong>算法Web API镜像</strong>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建镜像</span></span><br><span class="line">docker build -t 10.1.93.164:5000/pano_stitcher:v1.0.0 .</span><br><span class="line"><span class="comment"># 注意，最后有一个点，表示在本目录下进行构建</span></span><br><span class="line"><span class="comment"># 其中-t用来指定新镜像的用户信息、tag等。</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+      
+        <div class="reward-container">
+  <div><p style="color:#34495e; margin:0 0 5px 0;">🍭支持一根棒棒糖吧！</p></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    <i class="fa fa-qrcode fa-2x" style="line-height:35px;"></i>
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="https://img.wangcong.net/wechat_reward.png" alt="旋律信 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="https://img.wangcong.net/alipay_reward.png" alt="旋律信 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>旋律信
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wangcong.net/article/AAppExampleWithDocker.html" title="一个算法Web API项目的Docker部署示例">https://wangcong.net/article/AAppExampleWithDocker.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Docker/" rel="tag"><i class="fa fa-tag"></i> Docker</a>
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/article/FirstTimeUsingDocker.html" rel="next" title="初用Docker总结">
+                  <i class="fa fa-chevron-left"></i> 初用Docker总结
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pecan-介绍"><span class="nav-number">1.</span> <span class="nav-text">Pecan 介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pecan-封装算法"><span class="nav-number">2.</span> <span class="nav-text">Pecan 封装算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#制作Python3-8-OpenCV4-5-0-基础镜像"><span class="nav-number">3.</span> <span class="nav-text">制作Python3.8 + OpenCV4.5.0 基础镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于-基础镜像-制作-项目依赖镜像"><span class="nav-number">4.</span> <span class="nav-text">基于 基础镜像 制作 项目依赖镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#制作-算法-Web-API-镜像"><span class="nav-number">5.</span> <span class="nav-text">制作 算法 Web API 镜像</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="旋律信"
+    src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">旋律信</p>
+  <div class="site-description" itemprop="description">旋律信</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">97</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">106</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/cong" title="GitHub &rarr; https://github.com/cong" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/xuanlvxin" title="Twitter &rarr; https://twitter.com/xuanlvxin" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/" title="知乎 &rarr; https://www.zhihu.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/qimenlupai" title="微博 &rarr; https://weibo.com/qimenlupai" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>微博</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://nacl.ai" title="https://nacl.ai" rel="noopener" target="_blank">NaCl.AI</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.qimenlupai.com" title="http://www.qimenlupai.com" rel="noopener" target="_blank">齐门鲁派</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.zhihu.com/people/wu-qi-18-39" title="https://www.zhihu.com/people/wu-qi-18-39" rel="noopener" target="_blank">吴二狗</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">旋律信</span>
+</div>
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">闽ICP备 15006828号-2 </a>
+  </div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+  <script>
+  function leancloudSelector(url) {
+    return document.getElementById(url).querySelector('.leancloud-visitors-count');
+  }
+  if (CONFIG.page.isPost) {
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = visitors.getAttribute('id').trim();
+      var title = visitors.getAttribute('data-flag-title').trim();
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .then(response => response.json())
+              .then(() => {
+                leancloudSelector(url).innerText = counter.time + 1;
+              })
+              .catch(error => {
+                console.log('Failed to save visitor count', error);
+              })
+          } else {
+              Counter('post', '/classes/Counter', { title: title, url: url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.log('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  } else {
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return element.getAttribute('id').trim();
+      });
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length === 0) {
+            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
+              element.innerText = 0;
+            });
+            return;
+          }
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            leancloudSelector(url).innerText = time;
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = leancloudSelector(url);
+            if (element.innerText == '') {
+              element.innerText = 0;
+            }
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  }
+
+  fetch('https://app-router.leancloud.cn/2/route?appId=QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz')
+    .then(response => response.json())
+    .then(({ api_server }) => {
+      var Counter = (method, url, data) => {
+        return fetch(`https://${api_server}/1.1${url}`, {
+          method: method,
+          headers: {
+            'X-LC-Id': 'QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz',
+            'X-LC-Key': 'DfQofItPxzAfDtSv0TeyYJ0A',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+        if (localhost.test(document.URL)) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+  <script>
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66482463";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'QtAanVyY1lpC3B2SHpz0flrW-gzGzoHsz',
+    appKey: 'DfQofItPxzAfDtSv0TeyYJ0A',
+    placeholder: "ヾﾉ≧∀≦)o 欢迎交流!   请输入您的昵称和邮箱，以便您收到回复时能及时得到通知...",
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: true,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+<script src="/js/comment-locate.js"></script>
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

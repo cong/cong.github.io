@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/FirstTimeUsingDocker.html</loc>
+    <lastmod>2021-03-01T14:06:16.863Z</lastmod>
+    <data>
+        <display>
+        <title>初用Docker总结</title>
+        <pubTime>2021-01-21T12:00:00.000Z</pubTime>
+        
+        <tag>Docker</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="https://wangcong.net/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/AAppExampleWithDocker.html</loc>
+    <lastmod>2021-03-01T14:05:55.864Z</lastmod>
+    <data>
+        <display>
+        <title>一个算法Web API项目的Docker部署示例</title>
+        <pubTime>2021-03-01T14:00:00.000Z</pubTime>
+        
+        <tag>Docker</tag>
+         
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="https://wangcong.net/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/iTem2Setting.html</loc>
     <lastmod>2021-02-27T01:34:18.949Z</lastmod>
     <data>
@@ -93,26 +135,6 @@
            
              
               <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/FirstTimeUsingDocker.html</loc>
-    <lastmod>2021-02-27T01:34:18.944Z</lastmod>
-    <data>
-        <display>
-        <title>初用Docker总结</title>
-        <pubTime>2021-01-21T12:00:00.000Z</pubTime>
-        
-        <tag>Docker</tag>
-         
-         
-           
-             
-              <breadCrumb title="Docker" url="https://wangcong.net/categories/Docker/"/>
           
         </display>
     </data>
@@ -267,8 +289,6 @@
         <title>Companion computer 对UAV的外部控制</title>
         <pubTime>2018-02-06T03:30:52.000Z</pubTime>
         
-        <tag>UAV</tag>
-         
         <tag>ROS</tag>
          
         <tag>MAVROS</tag>
@@ -276,6 +296,8 @@
         <tag>Offboard</tag>
          
         <tag>Pixhawk</tag>
+         
+        <tag>UAV</tag>
          
          
            
@@ -1298,11 +1320,11 @@
         <title>Mac中安装OpenCV</title>
         <pubTime>2019-06-22T01:53:23.000Z</pubTime>
         
+        <tag>Python</tag>
+         
         <tag>Mac</tag>
          
         <tag>OpenCV</tag>
-         
-        <tag>Python</tag>
          
          
            

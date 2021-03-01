@@ -218,6 +218,106 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/AAppExampleWithDocker.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="旋律信">
+      <meta itemprop="description" content="旋律信">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="旋律信">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/article/AAppExampleWithDocker.html" class="post-title-link" itemprop="url">一个算法Web API项目的Docker部署示例</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-01 22:00:00 / 修改时间：22:05:55" itemprop="dateCreated datePublished" datetime="2021-03-01T22:00:00+08:00">2021-03-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Docker/" itemprop="url" rel="index">
+                    <span itemprop="name">Docker</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/article/AAppExampleWithDocker.html" class="post-meta-item leancloud_visitors" data-flag-title="一个算法Web API项目的Docker部署示例" title="热度">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">热度：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/article/AAppExampleWithDocker.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/article/AAppExampleWithDocker.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>本文为上篇文章《<a href="https://wangcong.net/article/FirstTimeUsingDocker.html">初用Docker总结</a>》中所提到的，对自己的一个算法项目的进行Docker镜像制作的一个大致的流程。也算是填了上文中挖的坑，谨做记录，将来遗忘流程时借以查阅。</p>
+<h3 id="Pecan-介绍"><a href="#Pecan-介绍" class="headerlink" title="Pecan 介绍"></a>Pecan 介绍</h3><p>Pecan 的创建是为了填补 Python Web 框架世界中的空白：一个非常轻巧的框架，它提供了对象分派样式路由(object-dispatch style routing)。Pecan 并非旨在成为“全栈”框架，因此不提供对会话（sessions）或数据库之类的现成支持。相反地 Pecan 专注于 HTTP 本身。</p>
+<p>Pecan官网：<a href="http://www.pecanpy.org/" target="_blank" rel="noopener">http://www.pecanpy.org/</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/article/AAppExampleWithDocker.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/FirstTimeUsingDocker.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -249,7 +349,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-27 09:34:18" itemprop="dateModified" datetime="2021-02-27T09:34:18+08:00">2021-02-27</time>
+                <time title="修改时间：2021-03-01 22:06:16" itemprop="dateModified" datetime="2021-03-01T22:06:16+08:00">2021-03-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -297,7 +397,7 @@
       
           <p>关于Docker，第一次是在做OCR部署的时候接触，但是项目并没真正使用Docker进行部署。而后也多次在公司其他部门技术分享会上学习，但都没有达到真正的理解，皆是泛泛而过。</p>
 <p>近三天，疯狂捣鼓Docker的云化部署的过程中，同时不断与同事的交流下，终于初步理解了Docker这个工具，以下便是自己对近几天所学到的内容作一个总结，方便以后进行查阅。</p>
-<p>本文主要记录Docker的基本使用流程和用法，后面会出一篇自己项目的Docker部署过程，也算是对今日的一个总结。</p>
+<p>本文主要记录Docker的基本使用流程和用法，后面会出一篇<a href="/article/AAppExampleWithDocker.html">有关算法Web API项目的Docker部署过程</a>，也算是对今日的一个总结。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/article/FirstTimeUsingDocker.html#more" rel="contents">
@@ -1174,110 +1274,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wangcong.net/article/FCNtoCNN.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="旋律信">
-      <meta itemprop="description" content="旋律信">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="旋律信">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/article/FCNtoCNN.html" class="post-title-link" itemprop="url">把全连接层转化为卷积层</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-08-28 18:59:23" itemprop="dateCreated datePublished" datetime="2019-08-28T18:59:23+08:00">2019-08-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-27 09:34:18" itemprop="dateModified" datetime="2021-02-27T09:34:18+08:00">2021-02-27</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Deep-Learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Deep Learning</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/article/FCNtoCNN.html" class="post-meta-item leancloud_visitors" data-flag-title="把全连接层转化为卷积层" title="热度">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">热度：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/article/FCNtoCNN.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/article/FCNtoCNN.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>全连接层可以视作一种特殊的卷积过程，本文将主要介绍如何把全连接层连接的过程转化为卷积的过程。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/article/FCNtoCNN.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1328,7 +1324,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">96</span>
+          <span class="site-state-item-count">97</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1356,7 +1352,7 @@
         <a href="https://www.zhihu.com/" title="知乎 &rarr; https://www.zhihu.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>知乎</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://weibo.com/lovedigit" title="微博 &rarr; https://weibo.com/lovedigit" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>微博</a>
+        <a href="https://weibo.com/qimenlupai" title="微博 &rarr; https://weibo.com/qimenlupai" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>微博</a>
       </span>
   </div>
 
@@ -1371,7 +1367,7 @@
           <a href="https://nacl.ai" title="https://nacl.ai" rel="noopener" target="_blank">NaCl.AI</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://www.lovedigit.com" title="http://www.lovedigit.com" rel="noopener" target="_blank">LoveDigit</a>
+          <a href="http://www.qimenlupai.com" title="http://www.qimenlupai.com" rel="noopener" target="_blank">齐门鲁派</a>
         </li>
         <li class="links-of-blogroll-item">
           <a href="https://www.zhihu.com/people/wu-qi-18-39" title="https://www.zhihu.com/people/wu-qi-18-39" rel="noopener" target="_blank">吴二狗</a>
