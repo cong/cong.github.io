@@ -4,16 +4,38 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/AAppExampleWithDocker.html</loc>
-    <lastmod>2021-03-01T14:15:50.444Z</lastmod>
+    <loc>https://wangcong.net/article/FPandBP.html</loc>
+    <lastmod>2021-03-10T14:12:28.714Z</lastmod>
     <data>
         <display>
-        <title>一个算法Web API项目的Docker部署示例</title>
-        <pubTime>2021-03-01T14:00:00.000Z</pubTime>
+        <title>前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结</title>
+        <pubTime>2019-09-03T12:01:55.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>反向传播</tag>
+         
+        <tag>Back Propagation</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/FirstTimeUsingDocker.html</loc>
+    <lastmod>2021-03-01T14:29:45.476Z</lastmod>
+    <data>
+        <display>
+        <title>初用Docker总结</title>
+        <pubTime>2021-01-21T12:00:00.000Z</pubTime>
         
         <tag>Docker</tag>
-         
-        <tag>Python</tag>
          
          
            
@@ -26,14 +48,16 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/FirstTimeUsingDocker.html</loc>
-    <lastmod>2021-03-01T14:06:16.863Z</lastmod>
+    <loc>https://wangcong.net/article/AAppExampleWithDocker.html</loc>
+    <lastmod>2021-03-01T14:15:50.444Z</lastmod>
     <data>
         <display>
-        <title>初用Docker总结</title>
-        <pubTime>2021-01-21T12:00:00.000Z</pubTime>
+        <title>一个算法Web API项目的Docker部署示例</title>
+        <pubTime>2021-03-01T14:00:00.000Z</pubTime>
         
         <tag>Docker</tag>
+         
+        <tag>Python</tag>
          
          
            
@@ -125,9 +149,9 @@
         <title>Faster-RCNN的搭建和测试</title>
         <pubTime>2017-08-02T07:36:36.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -289,8 +313,6 @@
         <title>Companion computer 对UAV的外部控制</title>
         <pubTime>2018-02-06T03:30:52.000Z</pubTime>
         
-        <tag>UAV</tag>
-         
         <tag>ROS</tag>
          
         <tag>MAVROS</tag>
@@ -298,6 +320,8 @@
         <tag>Offboard</tag>
          
         <tag>Pixhawk</tag>
+         
+        <tag>UAV</tag>
          
          
            
@@ -455,9 +479,9 @@
         <title>Jetson开发板刷机及部署教程</title>
         <pubTime>2017-11-21T01:53:26.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -543,30 +567,6 @@
            
              
               <breadCrumb title="ROS" url="https://wangcong.net/categories/ROS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/FPandBP.html</loc>
-    <lastmod>2021-02-27T01:34:18.908Z</lastmod>
-    <data>
-        <display>
-        <title>前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结</title>
-        <pubTime>2019-09-03T12:01:55.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>反向传播</tag>
-         
-        <tag>Back Propagation</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
           
         </display>
     </data>
@@ -741,9 +741,9 @@
         <title>Fast-RCNN的搭建和测试</title>
         <pubTime>2017-07-30T01:35:27.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -1126,30 +1126,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/TargetTrackingAlgorithm.html</loc>
-    <lastmod>2021-02-27T01:34:18.874Z</lastmod>
-    <data>
-        <display>
-        <title>目标跟踪算法汇总</title>
-        <pubTime>2018-04-02T08:55:31.000Z</pubTime>
-        
-        <tag>Computer Vision</tag>
-         
-        <tag>Object</tag>
-         
-        <tag>Tracking</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/TargetDetectionAlgorithm.html</loc>
     <lastmod>2021-02-27T01:34:18.874Z</lastmod>
     <data>
@@ -1162,6 +1138,30 @@
         <tag>Object</tag>
          
         <tag>Detection</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/TargetTrackingAlgorithm.html</loc>
+    <lastmod>2021-02-27T01:34:18.874Z</lastmod>
+    <data>
+        <display>
+        <title>目标跟踪算法汇总</title>
+        <pubTime>2018-04-02T08:55:31.000Z</pubTime>
+        
+        <tag>Computer Vision</tag>
+         
+        <tag>Object</tag>
+         
+        <tag>Tracking</tag>
          
          
            
@@ -1470,11 +1470,11 @@
         <title>基于ROS安装Caffe和SSD【通用】</title>
         <pubTime>2017-12-24T13:55:23.000Z</pubTime>
         
+        <tag>ROS</tag>
+         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
-         
-        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -1754,11 +1754,11 @@
         <title>基于ROS测试Caffe MobileNet-SSD【通用】</title>
         <pubTime>2017-12-25T01:15:31.000Z</pubTime>
         
+        <tag>ROS</tag>
+         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
-         
-        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -2086,9 +2086,9 @@
         <title>测试Caffe</title>
         <pubTime>2017-07-23T03:30:22.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          
@@ -2112,9 +2112,9 @@
         <title>安装Caffe</title>
         <pubTime>2017-07-23T02:14:26.000Z</pubTime>
         
-        <tag>Caffe</tag>
-         
         <tag>Deep Learning</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>深度学习</tag>
          

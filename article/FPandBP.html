@@ -56,7 +56,7 @@
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="深度学习中的的前向传播（Forward Propagation）与反向传播（Back Propagation）的目的就是，寻找一组最优的参数，使得损失函数（Lost Function）或称为成本函数（Cost Function）获取到最小值。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-02-27T01:34:18.908Z">
+<meta property="og:updated_time" content="2021-03-10T14:12:28.714Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前向传播(Forward Propagation)与反向传播(Back Propagation)个人理解与总结">
 <meta name="twitter:description" content="深度学习中的的前向传播（Forward Propagation）与反向传播（Back Propagation）的目的就是，寻找一组最优的参数，使得损失函数（Lost Function）或称为成本函数（Cost Function）获取到最小值。">
@@ -250,7 +250,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-27 09:34:18" itemprop="dateModified" datetime="2021-02-27T09:34:18+08:00">2021-02-27</time>
+                <time title="修改时间：2021-03-10 22:12:28" itemprop="dateModified" datetime="2021-03-10T22:12:28+08:00">2021-03-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -581,7 +581,7 @@ f(x)=&\frac{1}{1+e ^{-x}}\\
 \end {aligned}</script><p>求解$\frac{\partial F_{loss}}{\partial b_5}$，根据则根据反向传播(BP, Back Propagation)算法可得：</p>
 <script type="math/tex; mode=display">
 \begin {aligned}
-\frac{\partial F_{loss}}{\partial w_{54}}
+\frac{\partial F_{loss}}{\partial b_{5}}
 &=\frac{\partial F_{loss}}{\partial Y_{layer2}}
 \cdot \frac{\partial Y_{layer2}}{\partial Z_{layer2}}
 \cdot \frac{\partial Z_{layer2}}{\partial b_5}\\
