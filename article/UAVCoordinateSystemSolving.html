@@ -51,14 +51,14 @@
   <meta name="description" content="通过小孔成像模型，来结算几个坐标系之间的关系。 分别为机身及摄像机坐标系，图像坐标系和世界坐标系。">
 <meta name="keywords" content="UAV,坐标系结算">
 <meta property="og:type" content="article">
-<meta property="og:title" content="无人机相关坐标系的解算">
+<meta property="og:title" content="图像坐标系到世界坐标系的转换解算">
 <meta property="og:url" content="https://wangcong.net/article/UAVCoordinateSystemSolving.html">
 <meta property="og:site_name" content="旋律信">
 <meta property="og:description" content="通过小孔成像模型，来结算几个坐标系之间的关系。 分别为机身及摄像机坐标系，图像坐标系和世界坐标系。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-02-27T01:34:18.933Z">
+<meta property="og:updated_time" content="2021-06-01T14:57:07.926Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="无人机相关坐标系的解算">
+<meta name="twitter:title" content="图像坐标系到世界坐标系的转换解算">
 <meta name="twitter:description" content="通过小孔成像模型，来结算几个坐标系之间的关系。 分别为机身及摄像机坐标系，图像坐标系和世界坐标系。">
 
 <link rel="canonical" href="https://wangcong.net/article/UAVCoordinateSystemSolving.html">
@@ -75,7 +75,7 @@
   };
 </script>
 
-  <title>无人机相关坐标系的解算 | 旋律信</title>
+  <title>图像坐标系到世界坐标系的转换解算 | 旋律信</title>
   
 
 
@@ -233,7 +233,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          无人机相关坐标系的解算
+          图像坐标系到世界坐标系的转换解算
         </h1>
 
         <div class="post-meta">
@@ -250,7 +250,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-27 09:34:18" itemprop="dateModified" datetime="2021-02-27T09:34:18+08:00">2021-02-27</time>
+                <time title="修改时间：2021-06-01 22:57:07" itemprop="dateModified" datetime="2021-06-01T22:57:07+08:00">2021-06-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -265,7 +265,7 @@
             </span>
 
           
-            <span id="/article/UAVCoordinateSystemSolving.html" class="post-meta-item leancloud_visitors" data-flag-title="无人机相关坐标系的解算" title="热度">
+            <span id="/article/UAVCoordinateSystemSolving.html" class="post-meta-item leancloud_visitors" data-flag-title="图像坐标系到世界坐标系的转换解算" title="热度">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -300,43 +300,40 @@
 <p>分别为<strong>机身及摄像机坐标系</strong>，<strong>图像坐标系</strong>和<strong>世界坐标系</strong>。</p>
 <p><img alt data-src="https://img.wangcong.net/UAVCoordinateSystemSolving.png?watermark/4/text/d2FuZ2NvbmcubmV0/font/6buR5L2T/fontsize/400/fill/Z3JheQ==/dissolve/30/rotate/30/uw/180/uh/180/resize/1"></p>
 <a id="more"></a>
-<h3 id="摄像机坐标系与机身坐标系"><a href="#摄像机坐标系与机身坐标系" class="headerlink" title="摄像机坐标系与机身坐标系"></a>摄像机坐标系与机身坐标系</h3><p><strong>摄像机坐标系（光心坐标系）</strong> $C=[x_C, y_C, z_C]^T$以摄像机光心$O_C$为原点，其$z_C$轴与光轴重合，水平方向为$x_C$轴，$y_C$轴垂直于$X_C, O_c, Z_C$平面，焦距$f$为光心到像平面的距离。</p>
+<h3 id="相机坐标系与机身坐标系"><a href="#相机坐标系与机身坐标系" class="headerlink" title="相机坐标系与机身坐标系"></a>相机坐标系与机身坐标系</h3><p><strong>摄像机坐标系（光心坐标系）</strong> $C=[x_C, y_C, z_C]^T$以摄像机光心$O_C$为原点，其$z_C$轴与光轴重合，水平方向为$x_C$轴，$y_C$轴垂直于$X_C, O_c, Z_C$平面，焦距$f$为光心到像平面的距离。</p>
 <p><strong>机身坐标系</strong>$B=[x_B, y_B, z_B]^T$，即无人机最中心的坐标。</p>
-<p>摄像机坐标系和机身坐标系之间存在一个安装误差，用$T=\begin{bmatrix}<br>   \alpha &amp; 0 &amp; 0 \\\<br>   0 &amp; \beta &amp; 0 \\\<br>   0 &amp; 0 &amp; \gamma<br>  \end{bmatrix}<br>\begin{bmatrix}<br>   x_e &amp; 0 &amp; 0 \\\<br>   0 &amp; y_e &amp; 0 \\\<br>   0 &amp; 0 &amp; z_e<br>  \end{bmatrix}$<br>表示，其中$[\alpha, \beta, \gamma]^T$为安装的误差角，$[x_e, y_e, z_e]^T$为摄像机到机身坐标原点的空间距离。</p>
+<p>摄像机坐标系和机身坐标系之间存在一个安装误差，用$E=\begin{bmatrix}<br>   \alpha &amp; 0 &amp; 0 \\\<br>   0 &amp; \beta &amp; 0 \\\<br>   0 &amp; 0 &amp; \gamma<br>  \end{bmatrix}<br>\begin{bmatrix}<br>   x_e &amp; 0 &amp; 0 \\\<br>   0 &amp; y_e &amp; 0 \\\<br>   0 &amp; 0 &amp; z_e<br>  \end{bmatrix}$<br>表示，其中$[\alpha, \beta, \gamma]^T$为安装的误差角，$[x_e, y_e, z_e]^T$为摄像机到机身坐标原点的空间距离。</p>
 <p><strong>摄像机坐标系</strong>与<strong>机身坐标系</strong>之间的关系为：</p>
 <script type="math/tex; mode=display">
-C=TB \tag{1}</script><h3 id="摄像机坐标系与世界坐标系"><a href="#摄像机坐标系与世界坐标系" class="headerlink" title="摄像机坐标系与世界坐标系"></a>摄像机坐标系与世界坐标系</h3><p><strong>世界坐标系：</strong>是客观三维世界的绝对坐标系，也称客观坐标系。对于空间中的一点$P_E=(x_E, y_E, z_E)$，其对应的摄像机坐标系的坐标$(x_C, y_C, z_C)$与摄像机的姿态角和GPS（所在的位置）有关。在无人机飞行的过程中，可以通过IMU实时获取其姿态角信息$(\phi, \theta, \varphi)$，以便对摄像头姿态校正。</p>
-<p><strong>摄像机坐标系</strong>与<strong>世界坐标系</strong>之间的关系为：</p>
+C=EB \tag{1}</script><h3 id="相机坐标系与世界坐标系"><a href="#相机坐标系与世界坐标系" class="headerlink" title="相机坐标系与世界坐标系"></a>相机坐标系与世界坐标系</h3><p><strong>世界坐标系：</strong>是客观三维世界的绝对坐标系，也称客观坐标系。对于空间中的一点$P_E=(x_E, y_E, z_E)$，其对应的相机坐标系的坐标$(x_C, y_C, z_C)$与相机的姿态角和GPS（所在的位置）有关。在无人机飞行的过程中，可以通过IMU实时获取其姿态角信息$(\phi, \theta, \varphi)$，以便对摄像头姿态校正。</p>
+<p>相机坐标系<strong>与</strong>世界坐标系**之间的关系为：</p>
 <script type="math/tex; mode=display">
 \begin{bmatrix}
    x_C  \\
    y_C  \\
-   z_C 
+   z_C  \\
+   1
   \end{bmatrix}
-  =T
+  =E
   \begin{bmatrix}
-    R(\phi, \theta, \varphi)  &   
-   \begin{bmatrix}
-   x & 0 & 0 \\
-   0 & y & 0 \\
-   0 & 0 & z
-  \end{bmatrix} 
+    R(\phi, \theta, \varphi)  &  t \\
+    0                         &  1
   \end{bmatrix} 
   \begin{bmatrix}  
    x_E \\
    y_E \\
-   z_E
+   z_E \\
+   1
   \end{bmatrix}
-  =T
-  \begin{bmatrix}
-  R & M
-   \end{bmatrix}
+  =E
+  M_B
    \begin{bmatrix}  
    x_E \\
    y_E \\
-   z_E
+   z_E \\
+   1
   \end{bmatrix}
-  \tag{2}</script><p>其中，$R(\phi, \theta, \varphi)$为机身坐标与地面坐标的转换矩阵，$M=<br>\begin{bmatrix}<br>  x &amp; 0 &amp; 0 \\<br>   0 &amp; y &amp; 0 \\<br>   0 &amp; 0 &amp; z<br>  \end{bmatrix}$，其中$(x, y, z)$为无人机在空间中（世界坐标系）的位置信息，$z$即无人机飞行高度。</p>
+  \tag{2}</script><p>其中，$R(\phi, \theta, \varphi)$为机身坐标与地面坐标的转换矩阵，$t $为相机坐标与地面坐标间的平移向量，其中$M=<br>  \begin{bmatrix}<br>    R(\phi, \theta, \varphi)  &amp;  t \\<br>    0                         &amp;  1<br>  \end{bmatrix} $，为相机外部参数矩阵。</p>
 <h3 id="像素坐标系与物理坐标系"><a href="#像素坐标系与物理坐标系" class="headerlink" title="像素坐标系与物理坐标系"></a>像素坐标系与物理坐标系</h3><p><strong>图像像素坐标系</strong>$[u, v]$，该坐标系没有物理单位。像素坐标系中的坐标点$(u_1, v_1)$代表图像在存储数组中的行和列位置，该位置存储的是图像的颜色或灰度信息。</p>
 <p><strong>图像物理坐标系</strong>$I=[x_I, y_I]$，其中$x_I$，$y_I$轴分别和$x_C$，$y_C$轴平行。物理坐标系中的坐标点单位为毫米，如果一个像素点对应物理坐标系中$x_I$轴方向物理尺寸${\rm d}x$和$y_I$轴方向物理尺寸${\rm d}y$，${\rm d}x$和${\rm d}y$与摄像机焦距$f$有关。</p>
 <p><strong>物理坐标系</strong>上的一点$I_1=(x_1, y_1)$与其<strong>像素坐标系</strong>中的点$(u_1, v_1)$对应关系为：</p>
@@ -363,7 +360,7 @@ C=TB \tag{1}</script><h3 id="摄像机坐标系与世界坐标系"><a href="#摄
    1
   \end{bmatrix}
   \tag{3}</script><p>其中，$(u_0, v_0)$为图像像素坐标系中的中心点，也即图像物理坐标系的原点所对应的像素点，$K= \begin{bmatrix}<br>  \frac{1}{dx} &amp; 0 &amp; u_0 \\<br>   0 &amp; \frac{1}{dy} &amp; v_0 \\<br>   0 &amp; 0 &amp; 1<br>  \end{bmatrix}$，为相机的内参矩阵，包含是个与相机内部结构有关的参数。</p>
-<h3 id="摄像机坐标系与物理坐标系"><a href="#摄像机坐标系与物理坐标系" class="headerlink" title="摄像机坐标系与物理坐标系"></a>摄像机坐标系与物理坐标系</h3><p>假设摄像机坐标系中一点$P=(x_C, y_C, z_C,)$，连接光心在$O_C$物理坐标系中的投影点为$P_{I1}=(x_I, y_I)$，则这两点之间的坐标转换关系为：</p>
+<h3 id="相机坐标系与物理坐标系"><a href="#相机坐标系与物理坐标系" class="headerlink" title="相机坐标系与物理坐标系"></a>相机坐标系与物理坐标系</h3><p>假设摄像机坐标系中一点$P=(x_C, y_C, z_C,)$，连接光心在$O_C$物理坐标系中的投影点为$P_{I1}=(x_I, y_I)$，则这两点之间的坐标转换关系为：</p>
 <script type="math/tex; mode=display">
 \begin{cases}
    x_I=\frac{x_C}{z_C}\\
@@ -384,14 +381,15 @@ z_C\begin{bmatrix}
   \end{bmatrix}
   = 
   \begin{bmatrix}
-   f & 0 & 0 \\
-   0 & f & 0 \\
-   0 & 0 & 1
+   f & 0 & 0 & 0 \\
+   0 & f & 0 & 0 \\
+   0 & 0 & 1 & 0 
   \end{bmatrix} 
   \begin{bmatrix}
    x_C \\
    y_C \\
-   z_C
+   z_C \\
+   1
   \end{bmatrix}
   \tag{5}</script><h3 id="像素坐标系与世界坐标系"><a href="#像素坐标系与世界坐标系" class="headerlink" title="像素坐标系与世界坐标系"></a>像素坐标系与世界坐标系</h3><p>结合<u>摄像机</u>与<u>世界</u>坐标系 (2)，<u>摄像机</u>与<u>物理</u>坐标系 (5)，以及<u>像素</u>与<u>物理</u>坐标系 (3)，可得出<strong>像素坐标系</strong>与<strong>世界坐标系</strong>之间关系为：</p>
 <script type="math/tex; mode=display">
@@ -401,20 +399,37 @@ u  \\
    v  \\
    1
   \end{bmatrix}
-  = K
+  = 
   \begin{bmatrix}
-   f & 0 & 0 \\
-   0 & f & 0 \\
+  \frac{1}{dx} & 0 & u_0 \\
+   0 & \frac{1}{dy} & v_0 \\
    0 & 0 & 1
-  \end{bmatrix} 
-  T
-  \begin{bmatrix}
-  R & M
   \end{bmatrix}
+  \begin{bmatrix}
+   f & 0 & 0 & 0 \\
+   0 & f & 0 & 0 \\
+   0 & 0 & 1 & 0 
+  \end{bmatrix} 
+  E
+  \begin{bmatrix}
+  R(\phi, \theta, \varphi)  &  t \\
+  0                         &  1
+  \end{bmatrix} 
   \begin{bmatrix}
    x_E \\
    y_E \\
-   z_E
+   z_E \\
+   1
+  \end{bmatrix}
+  \\
+  =E
+  K
+  M_B
+  \begin{bmatrix}
+   x_E \\
+   y_E \\
+   z_E \\
+   1
   \end{bmatrix}
   \tag{6}</script><p>由上式可知，从空间中（世界坐标系）一点转换到像素坐标系中一点，只有一个位置变量（比例变量）$z_C$，即 (7) 式：</p>
 <script type="math/tex; mode=display">
@@ -425,6 +440,11 @@ z_C=\frac{fh\cos\varphi\cos\theta}{x_I\cos\phi}
 <li>由$(u_1, v_1)$通过式 (3) 求$x_I$；</li>
 <li>由$x_I$通过式 (7) 求比例系数$z_C$；</li>
 <li>由$(u_1, v_1)$通过式 (6) 求$(x_E, y_E, z_E)$</li>
+</ol>
+<hr>
+<p>参考：</p>
+<ol>
+<li><a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&amp;dbname=CMFDTEMP&amp;filename=1019626215.nh&amp;v=MDMxMzNwRWJQSVI4ZVgxTHV4WVM3RGgxVDNxVHJXTTFGckNVUjdxZlp1ZG9GeTNuVkw3TVZGMjZGN1c2R05QTnE=" target="_blank" rel="noopener">《基于深度学习的无人机单目标识别与跟踪算法研究》</a> </li>
 </ol>
 
     </div>
@@ -462,7 +482,7 @@ z_C=\frac{fh\cos\varphi\cos\theta}{x_I\cos\phi}
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://wangcong.net/article/UAVCoordinateSystemSolving.html" title="无人机相关坐标系的解算">https://wangcong.net/article/UAVCoordinateSystemSolving.html</a>
+    <a href="https://wangcong.net/article/UAVCoordinateSystemSolving.html" title="图像坐标系到世界坐标系的转换解算">https://wangcong.net/article/UAVCoordinateSystemSolving.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -532,7 +552,7 @@ z_C=\frac{fh\cos\varphi\cos\theta}{x_I\cos\phi}
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#摄像机坐标系与机身坐标系"><span class="nav-number">1.</span> <span class="nav-text">摄像机坐标系与机身坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#摄像机坐标系与世界坐标系"><span class="nav-number">2.</span> <span class="nav-text">摄像机坐标系与世界坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#像素坐标系与物理坐标系"><span class="nav-number">3.</span> <span class="nav-text">像素坐标系与物理坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#摄像机坐标系与物理坐标系"><span class="nav-number">4.</span> <span class="nav-text">摄像机坐标系与物理坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#像素坐标系与世界坐标系"><span class="nav-number">5.</span> <span class="nav-text">像素坐标系与世界坐标系</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#相机坐标系与机身坐标系"><span class="nav-number">1.</span> <span class="nav-text">相机坐标系与机身坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相机坐标系与世界坐标系"><span class="nav-number">2.</span> <span class="nav-text">相机坐标系与世界坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#像素坐标系与物理坐标系"><span class="nav-number">3.</span> <span class="nav-text">像素坐标系与物理坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相机坐标系与物理坐标系"><span class="nav-number">4.</span> <span class="nav-text">相机坐标系与物理坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#像素坐标系与世界坐标系"><span class="nav-number">5.</span> <span class="nav-text">像素坐标系与世界坐标系</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -548,7 +568,7 @@ z_C=\frac{fh\cos\varphi\cos\theta}{x_I\cos\phi}
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">97</span>
+          <span class="site-state-item-count">98</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -560,7 +580,7 @@ z_C=\frac{fh\cos\varphi\cos\theta}{x_I\cos\phi}
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">106</span>
+        <span class="site-state-item-count">107</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

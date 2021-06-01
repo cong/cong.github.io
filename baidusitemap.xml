@@ -4,6 +4,82 @@
 
     
   <url>
+    <loc>https://wangcong.net/article/UAVCoordinateSystemSolving.html</loc>
+    <lastmod>2021-06-01T14:57:07.926Z</lastmod>
+    <data>
+        <display>
+        <title>图像坐标系到世界坐标系的转换解算</title>
+        <pubTime>2018-04-06T12:57:23.000Z</pubTime>
+        
+        <tag>UAV</tag>
+         
+        <tag>坐标系结算</tag>
+         
+         
+           
+             
+              <breadCrumb title="UAV" url="https://wangcong.net/categories/UAV/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/NotebookUbuntuInstallNvidiaDriver.html</loc>
+    <lastmod>2021-06-01T14:35:06.162Z</lastmod>
+    <data>
+        <display>
+        <title>笔记本双系统中Ubuntu18.04安装NVIDIA驱动</title>
+        <pubTime>2020-08-13T12:00:00.000Z</pubTime>
+        
+        <tag>CUDA</tag>
+         
+        <tag>NVIDIA</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="https://wangcong.net/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/DeepLearningServerBuilding.html</loc>
+    <lastmod>2021-06-01T14:22:00.668Z</lastmod>
+    <data>
+        <display>
+        <title>云服务器深度学习服务器环境搭建</title>
+        <pubTime>2019-08-20T02:21:26.000Z</pubTime>
+        
+        <tag>Deep Learning</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>CUDA</tag>
+         
+        <tag>TensorFlow</tag>
+         
+        <tag>Nvidia Driver</tag>
+         
+        <tag>cuDNN</tag>
+         
+         
+           
+             
+              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wangcong.net/article/FPandBP.html</loc>
     <lastmod>2021-03-10T14:12:28.714Z</lastmod>
     <data>
@@ -151,9 +227,9 @@
         
         <tag>Deep Learning</tag>
          
-        <tag>Caffe</tag>
-         
         <tag>深度学习</tag>
+         
+        <tag>Caffe</tag>
          
          
            
@@ -205,58 +281,6 @@
            
              
               <breadCrumb title="Tools" url="https://wangcong.net/categories/Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/UAVCoordinateSystemSolving.html</loc>
-    <lastmod>2021-02-27T01:34:18.933Z</lastmod>
-    <data>
-        <display>
-        <title>无人机相关坐标系的解算</title>
-        <pubTime>2018-04-06T12:57:23.000Z</pubTime>
-        
-        <tag>UAV</tag>
-         
-        <tag>坐标系结算</tag>
-         
-         
-           
-             
-              <breadCrumb title="UAV" url="https://wangcong.net/categories/UAV/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wangcong.net/article/DeepLearningServerBuilding.html</loc>
-    <lastmod>2021-02-27T01:34:18.930Z</lastmod>
-    <data>
-        <display>
-        <title>云服务器深度学习服务器环境搭建</title>
-        <pubTime>2019-08-20T02:21:26.000Z</pubTime>
-        
-        <tag>Deep Learning</tag>
-         
-        <tag>深度学习</tag>
-         
-        <tag>CUDA</tag>
-         
-        <tag>TensorFlow</tag>
-         
-        <tag>Nvidia Driver</tag>
-         
-        <tag>cuDNN</tag>
-         
-         
-           
-             
-              <breadCrumb title="Deep Learning" url="https://wangcong.net/categories/Deep-Learning/"/>
           
         </display>
     </data>
@@ -481,9 +505,9 @@
         
         <tag>Deep Learning</tag>
          
-        <tag>Caffe</tag>
-         
         <tag>深度学习</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>Jetson TK1</tag>
          
@@ -743,9 +767,9 @@
         
         <tag>Deep Learning</tag>
          
-        <tag>Caffe</tag>
-         
         <tag>深度学习</tag>
+         
+        <tag>Caffe</tag>
          
          
            
@@ -1126,30 +1150,6 @@
 
     
   <url>
-    <loc>https://wangcong.net/article/TargetDetectionAlgorithm.html</loc>
-    <lastmod>2021-02-27T01:34:18.874Z</lastmod>
-    <data>
-        <display>
-        <title>目标检测方法汇总</title>
-        <pubTime>2017-10-27T12:23:36.000Z</pubTime>
-        
-        <tag>Computer Vision</tag>
-         
-        <tag>Object</tag>
-         
-        <tag>Detection</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wangcong.net/article/TargetTrackingAlgorithm.html</loc>
     <lastmod>2021-02-27T01:34:18.874Z</lastmod>
     <data>
@@ -1162,6 +1162,30 @@
         <tag>Object</tag>
          
         <tag>Tracking</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Vision" url="https://wangcong.net/categories/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wangcong.net/article/TargetDetectionAlgorithm.html</loc>
+    <lastmod>2021-02-27T01:34:18.874Z</lastmod>
+    <data>
+        <display>
+        <title>目标检测方法汇总</title>
+        <pubTime>2017-10-27T12:23:36.000Z</pubTime>
+        
+        <tag>Computer Vision</tag>
+         
+        <tag>Object</tag>
+         
+        <tag>Detection</tag>
          
          
            
@@ -2088,9 +2112,9 @@
         
         <tag>Deep Learning</tag>
          
-        <tag>Caffe</tag>
-         
         <tag>深度学习</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>学习笔记</tag>
          
@@ -2114,9 +2138,9 @@
         
         <tag>Deep Learning</tag>
          
-        <tag>Caffe</tag>
-         
         <tag>深度学习</tag>
+         
+        <tag>Caffe</tag>
          
         <tag>学习笔记</tag>
          
