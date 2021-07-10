@@ -228,9 +228,9 @@
         
         <tag>Deep Learning</tag>
          
-        <tag>深度学习</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>深度学习</tag>
          
          
            
@@ -340,13 +340,13 @@
         
         <tag>ROS</tag>
          
-        <tag>UAV</tag>
-         
         <tag>MAVROS</tag>
          
         <tag>Offboard</tag>
          
         <tag>Pixhawk</tag>
+         
+        <tag>UAV</tag>
          
          
            
@@ -506,9 +506,9 @@
         
         <tag>Deep Learning</tag>
          
-        <tag>深度学习</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>深度学习</tag>
          
         <tag>Jetson TK1</tag>
          
@@ -768,9 +768,9 @@
         
         <tag>Deep Learning</tag>
          
-        <tag>深度学习</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>深度学习</tag>
          
          
            
@@ -1494,11 +1494,11 @@
         <title>基于ROS安装Caffe和SSD【通用】</title>
         <pubTime>2017-12-24T13:55:23.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
+         
+        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -1778,11 +1778,11 @@
         <title>基于ROS测试Caffe MobileNet-SSD【通用】</title>
         <pubTime>2017-12-25T01:15:31.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>Caffe</tag>
          
         <tag>SSD</tag>
+         
+        <tag>ROS</tag>
          
         <tag>MobileNet</tag>
          
@@ -2112,9 +2112,9 @@
         
         <tag>Deep Learning</tag>
          
-        <tag>深度学习</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>深度学习</tag>
          
         <tag>学习笔记</tag>
          
@@ -2138,9 +2138,9 @@
         
         <tag>Deep Learning</tag>
          
-        <tag>深度学习</tag>
-         
         <tag>Caffe</tag>
+         
+        <tag>深度学习</tag>
          
         <tag>学习笔记</tag>
          
