@@ -62,9 +62,9 @@
          
         <tag>深度学习</tag>
          
-        <tag>CUDA</tag>
-         
         <tag>TensorFlow</tag>
+         
+        <tag>CUDA</tag>
          
         <tag>Nvidia Driver</tag>
          
@@ -338,6 +338,8 @@
         <title>Companion computer 对UAV的外部控制</title>
         <pubTime>2018-02-06T03:30:52.000Z</pubTime>
         
+        <tag>UAV</tag>
+         
         <tag>ROS</tag>
          
         <tag>MAVROS</tag>
@@ -345,8 +347,6 @@
         <tag>Offboard</tag>
          
         <tag>Pixhawk</tag>
-         
-        <tag>UAV</tag>
          
          
            
@@ -1397,9 +1397,9 @@
          
         <tag>深度学习</tag>
          
-        <tag>CUDA</tag>
-         
         <tag>TensorFlow</tag>
+         
+        <tag>CUDA</tag>
          
         <tag>Nvidia Driver</tag>
          
@@ -1472,9 +1472,9 @@
         <title>Keras快速教程</title>
         <pubTime>2019-01-11T07:28:36.000Z</pubTime>
         
-        <tag>TensorFlow</tag>
-         
         <tag>Keras</tag>
+         
+        <tag>TensorFlow</tag>
          
          
            
@@ -1824,9 +1824,9 @@
         <title>C++与ROS 回调函数解析</title>
         <pubTime>2018-03-19T13:39:55.000Z</pubTime>
         
-        <tag>ROS</tag>
-         
         <tag>C++</tag>
+         
+        <tag>ROS</tag>
          
          
            
